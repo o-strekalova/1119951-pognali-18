@@ -51,81 +51,100 @@
         </ul>
       </section>
 
-      <section class="about" id="about">
-        <h2 class="about__title">О сервисе</h2>
-        <p class="about__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-        <p class="about__text"><b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b></p>
+      <section class="lead" id="about">
+        <h2 class="lead__title">О сервисе</h2>
+        <p class="lead__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+        <p class="lead__text"><b>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b></p>
+      </section>
+
+      <section class="lead">
+        <h2 class="lead__title">Направления</h2>
+        <p class="lead__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
       </section>
 
       <section class="destinations">
-        <h2 class="destinations__title">Направления</h2>
-        <p class="destinations__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
         <ul class="destinations__list">
-          <li class="destinations__item">
-            <h3 class="destinations__country destinations__country--thailand">Таиланд</h3>
-            <p class="destinations__country-slogan">Джунгли зовут!</p>
-            <p class="destinations__country-numbers">18321</p>
-            <img class="destinations__country-img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Направление Таиланд">
+          <li class="destinations__item country-card">
+            <img class="country-card__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Таиланда">
+            <h3 class="country-card__country">Таиланд</h3>
+            <p class="country-card__country-slogan">Джунгли зовут!</p>
+            <p class="country-card__country-numbers">18321</p>
+            <img class="country-card__country-img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Направление Таиланд">
           </li>
-          <li class="destinations__item">
-            <h3 class="destinations__country destinations__country--france">Франция</h3>
-            <p class="destinations__country-slogan">Трэ бьен, манифик!</p>
-            <p class="destinations__country-numbers">12518</p>
-            <img src="https://via.placeholder.com/270x110" width="270" height="110" alt="Направление Франция">
+          <li class="destinations__item country-card">
+            <img class="country-card__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Франции">
+            <h3 class="country-card__country">Франция</h3>
+            <p class="country-card__country-slogan">Трэ бьен, манифик!</p>
+            <p class="country-card__country-numbers">12518</p>
+            <img class="country-card__country-img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Направление Франция">
           </li>
-          <li class="destinations__item">
-            <h3 class="destinations__country destinations__country--czech-republic">Чехия</h3>
-            <p class="destinations__country-slogan">Закоулки старой Европы</p>
-            <p class="destinations__country-numbers">5326</p>
-            <img src="https://via.placeholder.com/270x110" width="270" height="110" alt="Направление Чехия">
+          <li class="destinations__item country-card">
+            <img class="country-card__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+            <h3 class="country-card__country">Чехия</h3>
+            <p class="country-card__country-slogan">Закоулки старой Европы</p>
+            <p class="country-card__country-numbers">5326</p>
+            <img class="country-card__country-img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Направление Чехия">
           </li>
         </ul>
         <a href="#" class="destinations__catalog-link button">Показать все</a>
       </section>
 
+      <section class="lead">
+        <h2 class="lead__title">Попутчики</h2>
+        <p class="lead__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+        <p class="lead__text"><b>Теперь можно легко найти единомышленников!</b></p>
+      </section>
+
       <section class="profiles">
-        <h2 class="profiles__title">Попутчики</h2>
-        <p class="profiles__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <p class="profiles__text"><b>Теперь можно легко найти единомышленников!</b></p>
         <ul class="profiles__list">
-          <li class="profiles__card">
-            <img class="profiles__img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
-            <h3 class="profiles__name">Таня Фрисова</h3>
-            <p class="profiles__level">99 level</p>
-            <p class="profiles__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <ul class="profiles__countries-list">
-              <li class="profiles__country profiles__country--sri-lanka">Шри-Ланка</li>
-              <li class="profiles__country profiles__country--thailand">Таиланд</li>
-              <li class="profiles__country profiles__country--seychelles">Сейшеллы</li>
+          <li class="profiles__item traveler-card">
+            <img class="traveler-card__img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
+            <h3 class="traveler-card__name">Таня Фрисова</h3>
+            <p class="traveler-card__level">99 level</p>
+            <p class="traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <ul class="traveler-card__countries-list">
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="35" height="24" alt="Флаг Шри-Ланки">
+              </li>
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="35" height="24" alt="Флаг Таиланда">
+              </li>
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="35" height="24" alt="Флаг Сейшел">
+              </li>
             </ul>
-            <ul class="profiles__transport-list">
-              <li class="profiles__transport-item profiles__transport-item--plane checked">Самолет</li>
-              <li class="profiles__transport-item profiles__transport-item--bus">Автобус</li>
-              <li class="profiles__transport-item profiles__transport-item--bike">Велосипед</li>
-              <li class="profiles__transport-item profiles__transport-item--on-foot">Пешком</li>
+            <ul class="traveler-card__transport-list">
+              <li class="traveler-card__transport-item traveler-card__transport-item--plane checked">Самолет</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--bus">Автобус</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--bike">Велосипед</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--on-foot">Пешком</li>
             </ul>
           </li>
-          <li class="profiles__card">
-            <img class="profiles__img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Петя Демин">
-            <h3 class="profiles__name">Петя Демин</h3>
-            <p class="profiles__level">80 level</p>
-            <p class="profiles__tags">#бургер #бар #футбол #концерт #крафт</p>
-            <ul class="profiles__countries-list">
-              <li class="profiles__country profiles__country--belgium">Бельгия</li>
-              <li class="profiles__country profiles__country--czech-republic">Чехия</li>
+          <li class="profiles__item traveler-card">
+            <img class="traveler-card__img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Петя Демин">
+            <h3 class="traveler-card__name">Петя Демин</h3>
+            <p class="traveler-card__level">80 level</p>
+            <p class="traveler-card__tags">#бургер #бар #футбол #концерт #крафт</p>
+            <ul class="traveler-card__countries-list">
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="35" height="24" alt="Флаг Бельгии">
+              </li>
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="35" height="24" alt="Флаг Чехии">
+              </li>
             </ul>
-            <ul class="profiles__transport-list">
-              <li class="profiles__transport-item profiles__transport-item--plane checked">Самолет</li>
-              <li class="profiles__transport-item profiles__transport-item--bus checked">Автобус</li>
-              <li class="profiles__transport-item profiles__transport-item--bike">Велосипед</li>
-              <li class="profiles__transport-item profiles__transport-item--on-foot checked">Пешком</li>
+            <ul class="traveler-card__transport-list">
+              <li class="traveler-card__transport-item traveler-card__transport-item--plane checked">Самолет</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--bus checked">Автобус</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--bike">Велосипед</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--on-foot checked">Пешком</li>
             </ul>
           </li>
         </ul>
         <a href="catalog.html" class="profiles__catalog-link button">Показать все</a>
       </section>
 
-      <section class="prices general">
+      <section class="prices">
         <h2 class="prices__title">Добавьте свой профиль</h2>
         <ul class="prices__list">
           <li class="prices__option">
@@ -183,7 +202,7 @@
     </footer>
 
     <section class="prices business">
-      <h2 class="prices__title">Бизнес-тфрифы</h2>
+      <h2 class="prices__title">Бизнес-тарифы</h2>
       <ul class="prices__list">
         <li class="prices__option">
           <p class="prices__text">Реклама у блоггера</p>

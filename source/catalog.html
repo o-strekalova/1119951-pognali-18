@@ -78,95 +78,125 @@
 
       <section class="profiles">
         <ul class="profiles__list">
-          <li class="profiles__card">
-            <img class="profiles__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Таня Фирсова">
-            <h3 class="profiles__name">Таня Фрисова</h3>
-            <button class="profiles__like-button liked" type="button" aria-label="Лайкнуть профиль"></button>
-            <p class="profiles__likes">1,5 М</p>
-            <p class="profiles__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+          <li class="profiles__item traveler-card">
+            <img class="traveler-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Таня Фирсова">
+            <h3 class="traveler-card__name">Таня Фрисова</h3>
+            <button class="traveler-card__like-button liked" type="button" aria-label="Лайкнуть профиль"></button>
+            <p class="traveler-card__likes">1,5 М</p>
+            <p class="traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <h4>хочет посетить:</h4>
-            <ul class="profiles__countries-list">
-              <li class="profiles__country profiles__country--sri-lanka">Шри-Ланка</li>
-              <li class="profiles__country profiles__country--thailand">Таиланд</li>
-              <li class="profiles__country profiles__country--seychelles">Сейшеллы</li>
+            <ul class="traveler-card__countries-list">
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Шри-Ланки">
+                <p>Шри-Ланка</p>
+              </li>
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Таиланда">
+                <p>Таиланд</p>
+              </li>
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Сейшел">
+                <p>Сейшелы</p>
+              </li>
             </ul>
             <h4>транспорт:</h4>
-            <ul class="profiles__transport-list">
-              <li class="profiles__transport-item profiles__transport-item--plane checked">Самолет</li>
-              <li class="profiles__transport-item profiles__transport-item--bus">Автобус</li>
-              <li class="profiles__transport-item profiles__transport-item--bike">Велосипед</li>
-              <li class="profiles__transport-item profiles__transport-item--on-foot">Пешком</li>
+            <ul class="traveler-card__transport-list">
+              <li class="traveler-card__transport-item traveler-card__transport-item checked">Самолет</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--bus">Автобус</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--bike">Велосипед</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--on-foot">Пешком</li>
             </ul>
             <h4>левел:</h4>
-            <p class="profiles__level">99</p>
-            <a class="profiles__invite-link" type="button">Позвать</a>
+            <p class="traveler-card__level">99</p>
+            <a class="traveler-card__invite-link" type="button">Позвать</a>
           </li>
-          <li class="profiles__card">
-            <img class="profiles__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Петя Демин">
-            <h3 class="profiles__name">Петя Демин</h3>
-            <button class="profiles__like-button" type="button" aria-label="Лайкнуть профиль"></button>
-            <p class="profiles__likes">150</p>
-            <p class="profiles__tags">#бургер #бар #футбол #концерт #крафт</p>
+          <li class="profiles__item traveler-card">
+            <img class="traveler-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Петя Демин">
+            <h3 class="traveler-card__name">Петя Демин</h3>
+            <button class="traveler-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
+            <p class="traveler-card__likes">150</p>
+            <p class="traveler-card__tags">#бургер #бар #футбол #концерт #крафт</p>
             <h4>хочет посетить:</h4>
-            <ul class="profiles__countries-list">
-              <li class="profiles__country profiles__country--belgium">Бельгия</li>
-              <li class="profiles__country profiles__country--czech-republic">Чехия</li>
+            <ul class="traveler-card__countries-list">
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Бельгии">
+                <p>Бельгия</p>
+              </li>
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Чехии">
+                <p>Чехия</p>
+              </li>
             </ul>
             <h4>транспорт:</h4>
-            <ul class="profiles__transport-list">
-              <li class="profiles__transport-item profiles__transport-item--plane checked">Самолет</li>
-              <li class="profiles__transport-item profiles__transport-item--bus checked">Автобус</li>
-              <li class="profiles__transport-item profiles__transport-item--bike">Велосипед</li>
-              <li class="profiles__transport-item profiles__transport-item--on-foot checked">Пешком</li>
+            <ul class="traveler-card__transport-list">
+              <li class="traveler-card__transport-item traveler-card__transport-item--plane checked">Самолет</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--bus checked">Автобус</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--bike">Велосипед</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--on-foot checked">Пешком</li>
             </ul>
             <h4>левел:</h4>
-            <p class="profiles__level">80</p>
-            <a class="profiles__invite-link" type="button">Позвать</a>
+            <p class="traveler-card__level">80</p>
+            <a class="traveler-card__invite-link" type="button">Позвать</a>
           </li>
-          <li class="profiles__card">
-            <img class="profiles__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Марк Смолов">
-            <h3 class="profiles__name">Марк Смолов</h3>
-            <button class="profiles__like-button" type="button" aria-label="Лайкнуть профиль"></button>
-            <p class="profiles__likes">1700</p>
-            <p class="profiles__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+          <li class="profiles__item traveler-card">
+            <img class="traveler-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Марк Смолов">
+            <h3 class="traveler-card__name">Марк Смолов</h3>
+            <button class="traveler-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
+            <p class="traveler-card__likes">1700</p>
+            <p class="traveler-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
             <h4>хочет посетить:</h4>
-            <ul class="profiles__countries-list">
-              <li class="profiles__country profiles__country--usa">США</li>
-              <li class="profiles__country profiles__country--australia">Австралия</li>
-              <li class="profiles__country profiles__country--dominicana">Доминикана</li>
+            <ul class="traveler-card__countries-list">
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг США">
+                <p>США</p>
+              </li>
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Австралии">
+                <p>Австралия</p>
+              </li>
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Доминиканы">
+                <p>Доминикана</p>
+              </li>
             </ul>
             <h4>транспорт:</h4>
-            <ul class="profiles__transport-list">
-              <li class="profiles__transport-item profiles__transport-item--plane checked">Самолет</li>
-              <li class="profiles__transport-item profiles__transport-item--bus">Автобус</li>
-              <li class="profiles__transport-item profiles__transport-item--bike checked">Велосипед</li>
-              <li class="profiles__transport-item profiles__transport-item--on-foot">Пешком</li>
+            <ul class="traveler-card__transport-list">
+              <li class="traveler-card__transport-item traveler-card__transport-item--plane checked">Самолет</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--bus">Автобус</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--bike checked">Велосипед</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--on-foot">Пешком</li>
             </ul>
             <h4>левел:</h4>
-            <p class="profiles__level">25</p>
-            <a class="profiles__invite-link" type="button">Позвать</a>
+            <p class="traveler-card__level">25</p>
+            <a class="traveler-card__invite-link" type="button">Позвать</a>
           </li>
-          <li class="profiles__card">
-            <img class="profiles__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Лариса Роговая">
-            <h3 class="profiles__name">Лариса Роговая</h3>
-            <button class="profiles__like-button" type="button" aria-label="Лайкнуть профиль"></button>
-            <p class="profiles__likes">23</p>
-            <p class="profiles__tags">#образование #карьера #учеба #линкедин</p>
+          <li class="profiles__item traveler-card">
+            <img class="traveler-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Лариса Роговая">
+            <h3 class="traveler-card__name">Лариса Роговая</h3>
+            <button class="traveler-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
+            <p class="traveler-card__likes">23</p>
+            <p class="traveler-card__tags">#образование #карьера #учеба #линкедин</p>
             <h4>хочет посетить:</h4>
-            <ul class="profiles__countries-list">
-              <li class="profiles__country profiles__country--uk">Великобритания</li>
-              <li class="profiles__country profiles__country--germany">Германия</li>
+            <ul class="traveler-card__countries-list">
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Великобритании">
+                <p>Великобритания</p>
+              </li>
+              <li class="traveler-card__country">
+                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Германии">
+                <p>Германия</p>
+              </li>
             </ul>
             <h4>транспорт:</h4>
-            <ul class="profiles__transport-list">
-              <li class="profiles__transport-item profiles__transport-item--plane checked">Самолет</li>
-              <li class="profiles__transport-item profiles__transport-item--bus checked">Автобус</li>
-              <li class="profiles__transport-item profiles__transport-item--bike">Велосипед</li>
-              <li class="profiles__transport-item profiles__transport-item--on-foot">Пешком</li>
+            <ul class="traveler-card__transport-list">
+              <li class="traveler-card__transport-item traveler-card__transport-item--plane checked">Самолет</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--bus checked">Автобус</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--bike">Велосипед</li>
+              <li class="traveler-card__transport-item traveler-card__transport-item--on-foot">Пешком</li>
             </ul>
             <h4>левел:</h4>
-            <p class="profiles__level">50</p>
-            <a class="profiles__invite-link" type="button">Позвать</a>
+            <p class="traveler-card__level">50</p>
+            <a class="traveler-card__invite-link" type="button">Позвать</a>
           </li>
         </ul>
         <button class="profiles__show-more" type="button">Показать еще</button>
