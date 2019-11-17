@@ -32,21 +32,327 @@
     </header>
 
     <main>
+      <h1>Направления</h1>
+
+      <section class="profile">
+        <p class="profile__level level">80 level</p>
+        <img class="profile__img" src="https://via.placeholder.com/99x100" width="99" height="100" alt="Аватар профиля">
+        <a class="profile__button button" href="#">Сменить фото</a>
+        <form class="profile__form" method="post" action="https://echo.htmlacademy.ru">
+          <fieldset class="profile__fieldset">
+            <legend class="profile__legend">Тэги</legend>
+            <textarea>#бургер #бар #футбол #концерт #крафт</textarea>
+          </fieldset>
+          <fieldset class="profile__fieldset transport-filter">
+            <legend class="profile__legend legend">Транспорт</legend>
+            <input class="transport-filter__checkbox" type="checkbox" name="plane" id="plane" checked>
+            <label class="transport-filter__label transport-filter__label--plane" for="plane" aria-label="самолет"></label>
+            <input class="transport-filter__checkbox" type="checkbox" name="bus" id="bus" checked>
+            <label class="transport-filter__label transport-filter__label--bus" for="bus" aria-label="автобус"></label>
+            <input class="transport-filter__checkbox" type="checkbox" name="bike" id="bike">
+            <label class="transport-filter__label transport-filter__label--bike" for="bike" aria-label="велосипед"></label>
+            <input class="transport-filter__checkbox" type="checkbox" name="on-foot" id="on-foot" checked>
+            <label class="transport-filter__label transport-filter__label--on-foot" for="on-foot" aria-label="пешком"></label>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="trips-planned">
+        <h2 class="trips-planned__title">Мои планы:</h2>
+        <ol class="trips-planned__list">
+          <li class="trips-planned__item trip-card">
+            <h4 class="trip-card__countries">Франция, Италия</h4>
+            <p class="trip-card__travelers-number">3 попутчика</p>
+            <p class="trip-card__dates">26 мар - 29 мар</p>
+            <a class="trip-card__edit-link" href="#">Изменить</a>
+          </li>
+          <li class="trips-planned__item trip-card">
+            <h4 class="trip-card__countries">Таиланд, Индонезия</h4>
+            <p class="trip-card__travelers-number">1 попутчик</p>
+            <p class="trip-card__dates">1 июл - 15 июл</p>
+            <a class="trip-card__edit-link" href="#">Изменить</a>
+          </li>
+        </ol>
+      </section>
+
+      <section class="new-trip">
+        <h2 class="new-trip__title">Добавить план:</h2>
+        <form class="new-trip__form" method="post" action="https://echo.htmlacademy.ru">
+          <article class="new-trip__article step" id="step-1">
+            <h3 class="step__title">Шаг 1.<br>Даты пребывания</h3>
+            <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <fieldset class="step__fieldset counter">
+              <label class="counter__label" for="travelers-number">Ищу попутчиков:</label>
+              <p class="counter__measure">чел.</p>
+              <button class="counter__minus" type="button">-</button>
+              <input class="counter__input" type="number" name="travelers-number" id="travelers-number" value="2">
+              <button class="counter__plus" type="button">+</button>
+            </fieldset>
+            <fieldset class="step__fieldset counter">
+              <label class="counter__label" for="days-number">Длительность:</label>
+              <p class="counter_measure">дн.</p>
+              <button class="counter__minus" type="button">-</button>
+              <input class="counter__input" type="number" name="days-number" id="days-number" value="2">
+              <button class="counter__plus" type="button">+</button>
+            </fieldset>
+            <input class="step__checkbox" type="checkbox" name="children-allowed" id="children-allowed">
+            <label class="step__checkbox-label" for="children-allowed">Можно с детьми</label>
+            <table class="step__calendar calendar-table">
+              <caption class="calendar-table__month">Март 2019</caption>
+              <tr class="calendar-table__row calendar-table__row--header">
+                <th class="calendar-table__weekday">П</th>
+                <th class="calendar-table__weekday">В</th>
+                <th class="calendar-table__weekday">С</th>
+                <th class="calendar-table__weekday">Ч</th>
+                <th class="calendar-table__weekday">П</th>
+                <th class="calendar-table__weekday calendar-table__weekday--weekend">С</th>
+                <th class="calendar-table__weekday calendar-table__weekday--weekend">В</th>
+              </tr>
+              <tr class="calendar-table__row">
+                <td class="calendar-table__cell calendar-table__cell--disabled">23</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">24</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">25</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">26</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">27</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">28</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">1</td>
+              </tr>
+              <tr class="calendar-table__row">
+                <td class="calendar-table__cell calendar-table__cell--disabled">2</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">3</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">4</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">5</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">6</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">7</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">8</td>
+              </tr>
+              <tr class="calendar-table__row">
+                <td class="calendar-table__cell calendar-table__cell--disabled">9</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">10</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">11</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">12</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">13</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">14</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">15</td>
+              </tr>
+              <tr class="calendar-table__row">
+                <td class="calendar-table__cell calendar-table__cell--disabled">16</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">17</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">18</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">19</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">20</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">21</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">22</td>
+              </tr>
+              <tr class="calendar-table__row">
+                <td class="calendar-table__cell calendar-table__cell--disabled">23</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">24</td>
+                <td class="calendar-table__cell calendar-table__cell--disabled">25</td>
+                <td class="calendar-table__cell calendar-table__cell--chosen calendar-table__cell--focus">26</td>
+                <td class="calendar-table__cell calendar-table__cell--chosen">27</td>
+                <td class="calendar-table__cell calendar-table__cell--chosen">28</td>
+                <td class="calendar-table__cell">29</td>
+              </tr>
+              <tr class="calendar-table__row">
+                <td class="calendar-table__cell">30</td>
+                <td class="calendar-table__cell">31</td>
+                <td class="calendar-table__cell">1</td>
+                <td class="calendar-table__cell">2</td>
+                <td class="calendar-table__cell">3</td>
+                <td class="calendar-table__cell">4</td>
+                <td class="calendar-table__cell">5</td>
+              </tr>
+            </table>
+            <a class="step__next-link yellow-button" href="#step-2">Следующий шаг</a>
+          </article>
+          <article class="new-trip__article step" id="step-2">
+            <h3 class="step__title">Шаг 2.<br>Маршрут</h3>
+            <p class="step__text">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+            <select class="step__select">
+              <option class="step__option">Босния и Герцеговина</option>
+              <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+            </select>
+            <select class="step__select">
+              <option class="step__option">Чехия</option>
+              <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+            </select>
+            <button class="step__select step__select--open" type="button">Выберите страну</button>
+            <div class="step__country-filter country-filter country-filter--white">
+              <table class="country-filter__letter-table letter-table">
+                <tr class="letter-table__row">
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="а" checked>
+                    <label class="letter-table__label" for="а">а</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="б">
+                    <label class="letter-table__label" for="б">б</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="в">
+                    <label class="letter-table__label" for="в">в</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="г">
+                    <label class="letter-table__label" for="г">г</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="д">
+                    <label class="letter-table__label" for="д">д</label>
+                  </td>
+                </tr>
+                <tr class="letter-table__row">
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="е">
+                    <label class="letter-table__label" for="е">е</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="з">
+                    <label class="letter-table__label" for="з">з</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="и">
+                    <label class="letter-table__label" for="и">и</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="к">
+                    <label class="letter-table__label" for="к">к</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="л">
+                    <label class="letter-table__label" for="л">л</label>
+                  </td>
+                </tr>
+                <tr class="letter-table__row">
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="м">
+                    <label class="letter-table__label" for="м">м</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="н">
+                    <label class="letter-table__label" for="н">н</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="о">
+                    <label class="letter-table__label" for="о">о</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="п">
+                    <label class="letter-table__label" for="п">п</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="р">
+                    <label class="letter-table__label" for="р">р</label>
+                  </td>
+                </tr>
+                <tr class="letter-table__row">
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="с">
+                    <label class="letter-table__label" for="с">с</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="т">
+                    <label class="letter-table__label" for="т">т</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="у">
+                    <label class="letter-table__label" for="у">у</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="ф">
+                    <label class="letter-table__label" for="ф">ф</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="х">
+                    <label class="letter-table__label" for="х">х</label>
+                  </td>
+                </tr>
+                <tr class="letter-table__row">
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="ч">
+                    <label class="letter-table__label" for="ч">ч</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="ш">
+                    <label class="letter-table__label" for="ш">ш</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="э">
+                    <label class="letter-table__label" for="э">э</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="ю">
+                    <label class="letter-table__label" for="ю">ю</label>
+                  </td>
+                  <td class="letter-table__cell">
+                    <input class="letter-table__input" type="radio" name="letter" id="я">
+                    <label class="letter-table__label" for="я">я</label>
+                  </td>
+                </tr>
+              </table>
+              <ul class="country-filter__countries-list">
+                <li class="country-filter__country">
+                  <a class="country-filter__country-link" href="/asia/afganistan">Афганистан</a>
+                </li>
+                <li class="country-filter__country">
+                  <a class="country-filter__country-link" href="/europe/albania">Албания</a>
+                </li>
+                <li class="country-filter__country">
+                  <a class="country-filter__country-link" href="/africa/algeria">Алжир</a>
+                </li>
+                <li class="country-filter__country">
+                  <a class="country-filter__country-link" href="/europe/andorra">Андорра</a>
+                </li>
+                <li class="country-filter__country">
+                  <a class="country-filter__country-link" href="/america/argentina">Аргентина</a>
+                </li>
+                <li class="country-filter__country">
+                  <a class="country-filter__country-link" href="/asia/armenia">Армения</a>
+                </li>
+                <li class="country-filter__country">
+                  <a class="country-filter__country-link" href="/australia/australia">Австралия</a>
+                </li>
+                <li class="country-filter__country">
+                  <a class="country-filter__country-link" href="/europe/austria">Австрия</a>
+                </li>
+                <li class="country-filter__country">
+                  <a class="country-filter__country-link" href="/asia/azerbaijan">Азербайджанм</a>
+                </li>
+              </ul>
+            </div>
+            <button class="step__add-another" type="button">Добавить страну</button>
+            <a class="step__next-link yellow-button" href="#step-3">Следующий шаг</a>
+            <a class="step__prev-link" href="#step-1">На шаг назад</a>
+          </article>
+          <article class="new-trip__article step" id="step-3">
+            <h3 class="step__title">Шаг 3.<br>Развлечения</h3>
+            <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+            <label class="step__textarea-label" for="bosnia">Босния и Герцеговина</label>
+            <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+            <textarea class="step__textarea" id="bosnia">План действий</textarea>
+            <label class="step__textarea-label" for="czech republic">Чехия</label>
+            <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+            <textarea class="step__textarea" id="czech republic">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            <button class="new-trip__submit yellow-button" type="submit">Отправить</button>
+            <a class="step__prev-link" href="#step-2">На шаг назад</a>
+          </article>
+        </form>
+      </section>
     </main>
 
     <footer class="page-footer">
-        <a class="page-footer__logo">
-          <img  class="page-footer__logo-img" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип Погнали">
-        </a>
-        <ul class="page-footer__list social-list">
-          <li class="social-list__item social-list__item--fb"><a href="#" aria-label="Погнали в Фейсбуке"></a></li>
-          <li class="social-list__item social-list__item--vk"><a href="#" aria-label="Погнали Вконтакте"></a></li>
-          <li class="social-list__item social-list__item--ig"><a href="#" aria-label="Погнали в Инстаграме"></a></li>
-        </ul>
-        <p class="page-footer__text">Разработано</p>
-        <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="page-footer__academy-img" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
-        </a>
-      </footer>
-    </body>
-  </html>
+      <a class="page-footer__logo">
+        <img  class="page-footer__logo-img" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип Погнали">
+      </a>
+      <ul class="page-footer__list social-list">
+        <li class="social-list__item social-list__item--fb"><a href="#" aria-label="Погнали в Фейсбуке"></a></li>
+        <li class="social-list__item social-list__item--vk"><a href="#" aria-label="Погнали Вконтакте"></a></li>
+        <li class="social-list__item social-list__item--ig"><a href="#" aria-label="Погнали в Инстаграме"></a></li>
+      </ul>
+      <p class="page-footer__text">Разработано</p>
+      <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img class="page-footer__academy-img" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
+      </a>
+    </footer>
+  </body>
+</html>
