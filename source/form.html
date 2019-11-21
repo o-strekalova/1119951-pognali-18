@@ -37,7 +37,8 @@
       <section class="profile">
         <p class="profile__level level">80 level</p>
         <img class="profile__img" src="https://via.placeholder.com/99x100" width="99" height="100" alt="Аватар профиля">
-        <a class="profile__button button" href="#">Сменить фото</a>
+        <input class="profile__img-input" type="file" name="profile-img" id="profile-img">
+        <label class="profile__img-label" for="profile-img">Сменить фото</label>
         <form class="profile__form" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="profile__fieldset">
             <legend class="profile__legend">Тэги</legend>
@@ -45,14 +46,16 @@
           </fieldset>
           <fieldset class="profile__fieldset transport-filter">
             <legend class="profile__legend legend">Транспорт</legend>
-            <input class="transport-filter__checkbox" type="checkbox" name="plane" id="plane" checked>
-            <label class="transport-filter__label transport-filter__label--plane" for="plane" aria-label="самолет"></label>
-            <input class="transport-filter__checkbox" type="checkbox" name="bus" id="bus" checked>
-            <label class="transport-filter__label transport-filter__label--bus" for="bus" aria-label="автобус"></label>
-            <input class="transport-filter__checkbox" type="checkbox" name="bike" id="bike">
-            <label class="transport-filter__label transport-filter__label--bike" for="bike" aria-label="велосипед"></label>
-            <input class="transport-filter__checkbox" type="checkbox" name="on-foot" id="on-foot" checked>
-            <label class="transport-filter__label transport-filter__label--on-foot" for="on-foot" aria-label="пешком"></label>
+            <ul class="transport-filter__list">
+              <input class="transport-filter__checkbox" type="checkbox" name="plane" id="plane" checked>
+              <label class="transport-filter__label transport-filter__label--plane" for="plane" aria-label="самолет"></label>
+              <input class="transport-filter__checkbox" type="checkbox" name="bus" id="bus" checked>
+              <label class="transport-filter__label transport-filter__label--bus" for="bus" aria-label="автобус"></label>
+              <input class="transport-filter__checkbox" type="checkbox" name="bike" id="bike">
+              <label class="transport-filter__label transport-filter__label--bike" for="bike" aria-label="велосипед"></label>
+              <input class="transport-filter__checkbox" type="checkbox" name="on-foot" id="on-foot" checked>
+              <label class="transport-filter__label transport-filter__label--on-foot" for="on-foot" aria-label="пешком"></label>
+            </ul>
           </fieldset>
         </form>
       </section>
@@ -79,7 +82,7 @@
         <h2 class="new-trip__title">Добавить план:</h2>
         <form class="new-trip__form" method="post" action="https://echo.htmlacademy.ru">
           <article class="new-trip__article step" id="step-1">
-            <h3 class="step__title">Шаг 1.<br>Даты пребывания</h3>
+            <h3 class="step__title">Шаг 1. Даты пребывания</h3>
             <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
             <fieldset class="step__fieldset counter">
               <label class="counter__label" for="travelers-number">Ищу попутчиков:</label>
@@ -109,184 +112,156 @@
                 <th class="calendar-table__weekday calendar-table__weekday--weekend">В</th>
               </tr>
               <tr class="calendar-table__row">
-                <td class="calendar-table__cell calendar-table__cell--disabled">23</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">24</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">25</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">26</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">27</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">28</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">1</td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>23</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>24</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>25</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>26</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>27</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>28</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>1</button></td>
               </tr>
               <tr class="calendar-table__row">
-                <td class="calendar-table__cell calendar-table__cell--disabled">2</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">3</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">4</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">5</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">6</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">7</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">8</td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>2</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>3</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>4</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>5</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>6</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>7</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>8</button></td>
               </tr>
               <tr class="calendar-table__row">
-                <td class="calendar-table__cell calendar-table__cell--disabled">9</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">10</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">11</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">12</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">13</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">14</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">15</td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>9</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>10</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>11</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>12</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>13</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>14</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>15</button></td>
               </tr>
               <tr class="calendar-table__row">
-                <td class="calendar-table__cell calendar-table__cell--disabled">16</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">17</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">18</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">19</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">20</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">21</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">22</td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>16</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>17</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>18</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>19</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>20</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>21</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>22</button></td>
               </tr>
               <tr class="calendar-table__row">
-                <td class="calendar-table__cell calendar-table__cell--disabled">23</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">24</td>
-                <td class="calendar-table__cell calendar-table__cell--disabled">25</td>
-                <td class="calendar-table__cell calendar-table__cell--chosen calendar-table__cell--focus">26</td>
-                <td class="calendar-table__cell calendar-table__cell--chosen">27</td>
-                <td class="calendar-table__cell calendar-table__cell--chosen">28</td>
-                <td class="calendar-table__cell">29</td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>23</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>24</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>25</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button calendar-table__button--chosen calendar-table__button--focus" type="button">26</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button calendar-table__button--chosen" type="button">27</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button calendar-table__button--chosen" type="button">28</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button">29</button></td>
               </tr>
               <tr class="calendar-table__row">
-                <td class="calendar-table__cell">30</td>
-                <td class="calendar-table__cell">31</td>
-                <td class="calendar-table__cell">1</td>
-                <td class="calendar-table__cell">2</td>
-                <td class="calendar-table__cell">3</td>
-                <td class="calendar-table__cell">4</td>
-                <td class="calendar-table__cell">5</td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button">30</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button">31</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button">1</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button">2</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button">3</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button">4</button></td>
+                <td class="calendar-table__cell"><button class="calendar-table__button" type="button">5</button></td>
               </tr>
             </table>
+            <input class="step__date-input visually-hidden" type="date" name="date-chosen" id="date-chosen">
             <a class="step__next-link yellow-button" href="#step-2">Следующий шаг</a>
           </article>
           <article class="new-trip__article step" id="step-2">
-            <h3 class="step__title">Шаг 2.<br>Маршрут</h3>
+            <h3 class="step__title">Шаг 2. Маршрут</h3>
             <p class="step__text">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
-            <select class="step__select">
-              <option class="step__option">Босния и Герцеговина</option>
-              <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
-            </select>
-            <select class="step__select">
-              <option class="step__option">Чехия</option>
-              <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
-            </select>
+            <input class="step__select" type="text" name="selected-country-1" id="selected-country-1" value="Босния и Герцеговина">
+            <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+            <input class="step__select" type="text" name="selected-country-2" id="selected-country-2" value="Чехия">
+            <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
             <button class="step__select step__select--open" type="button">Выберите страну</button>
             <div class="step__country-filter country-filter country-filter--white">
               <table class="country-filter__letter-table letter-table">
                 <tr class="letter-table__row">
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="а" checked>
-                    <label class="letter-table__label" for="а">а</label>
+                    <button class="letter-table__button" type="button">а</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="б">
-                    <label class="letter-table__label" for="б">б</label>
+                    <button class="letter-table__button" type="button">б</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="в">
-                    <label class="letter-table__label" for="в">в</label>
+                    <button class="letter-table__button" type="button">в</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="г">
-                    <label class="letter-table__label" for="г">г</label>
+                    <button class="letter-table__button" type="button">г</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="д">
-                    <label class="letter-table__label" for="д">д</label>
+                    <button class="letter-table__button" type="button">д</button>
                   </td>
                 </tr>
                 <tr class="letter-table__row">
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="е">
-                    <label class="letter-table__label" for="е">е</label>
+                    <button class="letter-table__button" type="button">е</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="з">
-                    <label class="letter-table__label" for="з">з</label>
+                    <button class="letter-table__button" type="button">з</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="и">
-                    <label class="letter-table__label" for="и">и</label>
+                    <button class="letter-table__button" type="button">и</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="к">
-                    <label class="letter-table__label" for="к">к</label>
+                    <button class="letter-table__button" type="button">к</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="л">
-                    <label class="letter-table__label" for="л">л</label>
+                    <button class="letter-table__button" type="button">л</button>
                   </td>
                 </tr>
                 <tr class="letter-table__row">
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="м">
-                    <label class="letter-table__label" for="м">м</label>
+                    <button class="letter-table__button" type="button">м</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="н">
-                    <label class="letter-table__label" for="н">н</label>
+                    <button class="letter-table__button" type="button">н</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="о">
-                    <label class="letter-table__label" for="о">о</label>
+                    <button class="letter-table__button" type="button">о</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="п">
-                    <label class="letter-table__label" for="п">п</label>
+                    <button class="letter-table__button" type="button">п</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="р">
-                    <label class="letter-table__label" for="р">р</label>
+                    <button class="letter-table__button" type="button">р</button>
                   </td>
                 </tr>
                 <tr class="letter-table__row">
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="с">
-                    <label class="letter-table__label" for="с">с</label>
+                    <button class="letter-table__button" type="button">с</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="т">
-                    <label class="letter-table__label" for="т">т</label>
+                    <button class="letter-table__button" type="button">т</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="у">
-                    <label class="letter-table__label" for="у">у</label>
+                    <button class="letter-table__button" type="button">у</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="ф">
-                    <label class="letter-table__label" for="ф">ф</label>
+                    <button class="letter-table__button" type="button">ф</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="х">
-                    <label class="letter-table__label" for="х">х</label>
+                    <button class="letter-table__button" type="button">х</button>
                   </td>
                 </tr>
                 <tr class="letter-table__row">
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="ч">
-                    <label class="letter-table__label" for="ч">ч</label>
+                    <button class="letter-table__button" type="button">ч</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="ш">
-                    <label class="letter-table__label" for="ш">ш</label>
+                    <button class="letter-table__button" type="button">ш</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="э">
-                    <label class="letter-table__label" for="э">э</label>
+                    <button class="letter-table__button" type="button">э</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="ю">
-                    <label class="letter-table__label" for="ю">ю</label>
+                    <button class="letter-table__button" type="button">ю</button>
                   </td>
                   <td class="letter-table__cell">
-                    <input class="letter-table__input" type="radio" name="letter" id="я">
-                    <label class="letter-table__label" for="я">я</label>
+                    <button class="letter-table__button" type="button">я</button>
                   </td>
                 </tr>
               </table>
@@ -325,14 +300,20 @@
             <a class="step__prev-link" href="#step-1">На шаг назад</a>
           </article>
           <article class="new-trip__article step" id="step-3">
-            <h3 class="step__title">Шаг 3.<br>Развлечения</h3>
+            <h3 class="step__title">Шаг 3. Развлечения</h3>
             <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
-            <label class="step__textarea-label" for="bosnia">Босния и Герцеговина</label>
-            <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
-            <textarea class="step__textarea" id="bosnia">План действий</textarea>
-            <label class="step__textarea-label" for="czech republic">Чехия</label>
-            <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
-            <textarea class="step__textarea" id="czech republic">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            <ul class="step__plans-list plans-list">
+              <li class="plans-list__item">
+                <label class="plans-list__textarea-label" for="bosnia">Босния и Герцеговина</label>
+                <img class="plans-list__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+                <textarea class="plans-list__textarea" id="bosnia">План действий</textarea>
+              </li>
+              <li class="plans-list__item">
+                <label class="plans-list__textarea-label" for="czech republic">Чехия</label>
+                <img class="plans-list__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+                <textarea class="plans-list__textarea" id="czech republic">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              </li>
+            </ul>
             <button class="new-trip__submit yellow-button" type="submit">Отправить</button>
             <a class="step__prev-link" href="#step-2">На шаг назад</a>
           </article>
