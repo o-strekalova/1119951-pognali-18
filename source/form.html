@@ -31,8 +31,8 @@
       </nav>
     </header>
 
-    <main>
-      <h1>Направления</h1>
+    <main class="page-main">
+      <h1 class="page-main__title--inner">Направления</h1>
 
       <section class="profile">
         <p class="profile__level level">80 level</p>
@@ -42,19 +42,27 @@
         <form class="profile__form" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="profile__fieldset">
             <legend class="profile__legend">Тэги</legend>
-            <textarea>#бургер #бар #футбол #концерт #крафт</textarea>
+            <textarea class="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
           </fieldset>
           <fieldset class="profile__fieldset transport-filter">
             <legend class="profile__legend legend">Транспорт</legend>
             <ul class="transport-filter__list">
-              <input class="transport-filter__checkbox" type="checkbox" name="plane" id="plane" checked>
-              <label class="transport-filter__label transport-filter__label--plane" for="plane" aria-label="самолет"></label>
-              <input class="transport-filter__checkbox" type="checkbox" name="bus" id="bus" checked>
-              <label class="transport-filter__label transport-filter__label--bus" for="bus" aria-label="автобус"></label>
-              <input class="transport-filter__checkbox" type="checkbox" name="bike" id="bike">
-              <label class="transport-filter__label transport-filter__label--bike" for="bike" aria-label="велосипед"></label>
-              <input class="transport-filter__checkbox" type="checkbox" name="on-foot" id="on-foot" checked>
-              <label class="transport-filter__label transport-filter__label--on-foot" for="on-foot" aria-label="пешком"></label>
+              <li class="transport-filter__item">
+                <input class="transport-filter__checkbox" type="checkbox" name="plane" id="plane" checked>
+                <label class="transport-filter__label transport-filter__label--plane" for="plane" aria-label="самолет"></label>
+              </li>
+              <li class="transport-filter__item">
+                <input class="transport-filter__checkbox" type="checkbox" name="bus" id="bus" checked>
+                <label class="transport-filter__label transport-filter__label--bus" for="bus" aria-label="автобус"></label>
+              </li>
+              <li class="transport-filter__item">
+                <input class="transport-filter__checkbox" type="checkbox" name="bike" id="bike">
+                <label class="transport-filter__label transport-filter__label--bike" for="bike" aria-label="велосипед"></label>
+              </li>
+              <li class="transport-filter__item">
+                <input class="transport-filter__checkbox" type="checkbox" name="on-foot" id="on-foot" checked>
+                <label class="transport-filter__label transport-filter__label--on-foot" for="on-foot" aria-label="пешком"></label>
+              </li>
             </ul>
           </fieldset>
         </form>
@@ -82,7 +90,7 @@
         <h2 class="new-trip__title">Добавить план:</h2>
         <form class="new-trip__form" method="post" action="https://echo.htmlacademy.ru">
           <article class="new-trip__article step" id="step-1">
-            <h3 class="step__title">Шаг 1. Даты пребывания</h3>
+            <h3 class="step__title"><span class="step__step-number">Шаг 1. </span>Даты пребывания</h3>
             <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
             <fieldset class="step__fieldset counter">
               <label class="counter__label" for="travelers-number">Ищу попутчиков:</label>
@@ -166,16 +174,22 @@
                 <td class="calendar-table__cell"><button class="calendar-table__button" type="button">5</button></td>
               </tr>
             </table>
-            <input class="step__date-input visually-hidden" type="date" name="date-chosen" id="date-chosen">
+            <input class="step__date-input visually-hidden" type="date" name="date-chosen" id="date-chosen" value="2019-03-26">
             <a class="step__next-link yellow-button" href="#step-2">Следующий шаг</a>
           </article>
           <article class="new-trip__article step" id="step-2">
-            <h3 class="step__title">Шаг 2. Маршрут</h3>
+            <h3 class="step__title"><span class="step__step-number">Шаг 2. </span>Маршрут</h3>
             <p class="step__text">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
-            <input class="step__select" type="text" name="selected-country-1" id="selected-country-1" value="Босния и Герцеговина">
-            <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
-            <input class="step__select" type="text" name="selected-country-2" id="selected-country-2" value="Чехия">
-            <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+            <ul class="step__selected-list">
+              <li class="step__selected-item">
+                <input class="step__select" type="text" name="selected-country-1" id="selected-country-1" value="Босния и Герцеговина">
+                <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+              </li>
+              <li class="step__selected-item">
+                <input class="step__select" type="text" name="selected-country-2" id="selected-country-2" value="Чехия">
+                <img class="step__flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
+              </li>
+            </ul>
             <button class="step__select step__select--open" type="button">Выберите страну</button>
             <div class="step__country-filter country-filter country-filter--white">
               <table class="country-filter__letter-table letter-table">
@@ -300,7 +314,7 @@
             <a class="step__prev-link" href="#step-1">На шаг назад</a>
           </article>
           <article class="new-trip__article step" id="step-3">
-            <h3 class="step__title">Шаг 3. Развлечения</h3>
+            <h3 class="step__title"><span class="step__step-number">Шаг 3. </span>Развлечения</h3>
             <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
             <ul class="step__plans-list plans-list">
               <li class="plans-list__item">
