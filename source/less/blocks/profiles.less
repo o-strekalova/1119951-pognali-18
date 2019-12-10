@@ -1,11 +1,17 @@
 .profiles {
   border-radius: 0 0 30px 30px;
-  position: relative;
   z-index: 4;
-  margin-top: -50px;
   padding-bottom: 30px;
   padding-top: 80px;
   background-color: #192144;
+}
+
+.profiles__lead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
 }
 
 .profiles__list {
@@ -15,10 +21,17 @@
   margin: auto;
 }
 
+.profiles__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 280px;
+}
+
 .profiles__catalog-link {
   color: #1d2e5b;
-  font-family: "Blogger Sans Bold", "Tahoma", sans-serif;
-  font-weight: normal;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-weight: bold;
   font-size: 18px;
   line-height: 18px;
   text-align: left;
@@ -30,5 +43,4 @@
   display: block;
   margin: 20px auto 0;
   padding: 24px;
-  box-sizing: border-box;
 }

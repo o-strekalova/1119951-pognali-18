@@ -1,12 +1,6 @@
 .catalog-card {
   background-color: white;
   border-radius: 20px;
-  position: relative;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 270px;
-  margin: 10px auto;
   padding-bottom: 20px;
 }
 
@@ -16,12 +10,13 @@
   border-radius: 50%;
   padding: 15px;
   position: absolute;
+  box-sizing: content-box;
 }
 
 .catalog-card__name {
   color: #1d2e5b;
-  font-family: "Blogger Sans Bold", "Tahoma", sans-serif;
-  font-weight: normal;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-weight: bold;
   font-size: 21px;
   line-height: 21px;
   text-align: left;
@@ -30,12 +25,15 @@
 
 .catalog-card__level {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .catalog-card__likes {
   color: #161c35;
-  font-family: "Blogger Sans Bold", "Tahoma", sans-serif;
-  font-weight: normal;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-weight: bold;
   font-size: 14px;
   line-height: 21px;
   text-align: left;
@@ -78,8 +76,8 @@
 .catalog-card__countries-list {
   list-style: none;
   color: #1d2e5b;
-  font-family: "Blogger Sans Medium", "Tahoma", sans-serif;
-  font-weight: normal;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-weight: 500;
   font-size: 15px;
   line-height: 18px;
   text-align: left;
@@ -124,13 +122,12 @@
   border-radius: 20px;
   background-color: #ffd74b;
   color: #161c35;
-  font-family: "Blogger Sans Bold", "Tahoma", sans-serif;
-  font-weight: normal;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-weight: bold;
   font-size: 17px;
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
   padding: 8px;
-  box-sizing: border-box;
   margin: 10px auto 0;
 }

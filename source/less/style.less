@@ -1,12 +1,31 @@
-@import "../less/fonts.less";
+@import "./fonts.less";
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   box-sizing: border-box;
-  min-width: 320px;
   margin: 0;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
 }
 
 .visually-hidden {
@@ -20,28 +39,28 @@ body {
   overflow: hidden;
 }
 
-@import "../less/blocks/page-header.less";
-@import "../less/blocks/main-nav.less";
-@import "../less/blocks/site-list.less";
-@import "../less/blocks/contact-list.less";
-@import "../less/blocks/social-list.less";
-@import "../less/blocks/page-main.less";
-@import "../less/blocks/intro.less";
-@import "../less/blocks/lead.less";
-@import "../less/blocks/destinations.less";
-@import "../less/blocks/country-card.less";
-@import "../less/blocks/profiles.less";
-@import "../less/blocks/traveler-card.less";
-@import "../less/blocks/level.less";
-@import "../less/blocks/prices.less";
-@import "../less/blocks/sign-up.less";
-@import "../less/blocks/address.less";
-@import "../less/blocks/page-footer.less";
-@import "../less/blocks/country-filter.less";
-@import "../less/blocks/letter-table.less";
-@import "../less/blocks/profiles-filter.less";
-@import "../less/blocks/transport-filter.less";
-@import "../less/blocks/level-range.less";
-@import "../less/blocks/catalog.less";
-@import "../less/blocks/map.less";
-@import "../less/blocks/catalog-card.less";
+@import "./blocks/page-header.less";
+@import "./blocks/main-nav.less";
+@import "./blocks/site-list.less";
+@import "./blocks/contact-list.less";
+@import "./blocks/social-list.less";
+@import "./blocks/page-main.less";
+@import "./blocks/intro.less";
+@import "./blocks/lead.less";
+@import "./blocks/destinations.less";
+@import "./blocks/country-card.less";
+@import "./blocks/profiles.less";
+@import "./blocks/traveler-card.less";
+@import "./blocks/level.less";
+@import "./blocks/prices.less";
+@import "./blocks/sign-up.less";
+@import "./blocks/address.less";
+@import "./blocks/page-footer.less";
+@import "./blocks/country-filter.less";
+@import "./blocks/letter-table.less";
+@import "./blocks/profiles-filter.less";
+@import "./blocks/transport-filter.less";
+@import "./blocks/level-range.less";
+@import "./blocks/catalog.less";
+@import "./blocks/map.less";
+@import "./blocks/catalog-card.less";
