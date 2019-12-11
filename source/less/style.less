@@ -1,0 +1,66 @@
+@import "./fonts.less";
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@import "./blocks/page-header.less";
+@import "./blocks/main-nav.less";
+@import "./blocks/site-list.less";
+@import "./blocks/contact-list.less";
+@import "./blocks/social-list.less";
+@import "./blocks/page-main.less";
+@import "./blocks/intro.less";
+@import "./blocks/lead.less";
+@import "./blocks/destinations.less";
+@import "./blocks/country-card.less";
+@import "./blocks/profiles.less";
+@import "./blocks/traveler-card.less";
+@import "./blocks/level.less";
+@import "./blocks/prices.less";
+@import "./blocks/sign-up.less";
+@import "./blocks/address.less";
+@import "./blocks/page-footer.less";
+@import "./blocks/country-filter.less";
+@import "./blocks/letter-table.less";
+@import "./blocks/profiles-filter.less";
+@import "./blocks/transport-filter.less";
+@import "./blocks/level-range.less";
+@import "./blocks/catalog.less";
+@import "./blocks/map.less";
+@import "./blocks/catalog-card.less";

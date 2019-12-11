@@ -3,61 +3,67 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип Погнали">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button" aria-label="Открыть меню">Меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item"><a href="#about">О сервисе</a></li>
-            <li class="site-list__item"><a href="form.html">Направления</a></li>
-            <li class="site-list__item"><a href="catalog.html">Попутчики</a></li>
-          </ul>
-          <a class="main-nav__login" href="#">Авторизация</a>
-          <ul class="main-nav__list contact-list">
-            <li class="contact-list__item"><a href="tel:88005558628" aria-label="Позвонить в Погнали">8 800 555-86-28</a></li>
-            <li class="contact-list__item"><a href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали">mail@htmlacademy.ru</a></li>
-          </ul>
-          <ul class="main-nav__list social-list">
-            <li class="social-list__item social-list__item--fb"><a href="#" aria-label="Погнали в Фейсбуке"></a></li>
-            <li class="social-list__item social-list__item--vk"><a href="#" aria-label="Погнали Вконтакте"></a></li>
-            <li class="social-list__item social-list__item--ig"><a href="#" aria-label="Погнали в Инстаграме"></a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrap">
+        <a class="page-header__logo">
+          <img class="page-header__logo-image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип Погнали">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item"><a class="site-list__link" href="#about">О сервисе</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="form.html">Направления</a></li>
+              <li class="site-list__item"><a class="site-list__link" href="catalog.html">Попутчики</a></li>
+            </ul>
+            <a class="main-nav__login" href="#">Авторизация</a>
+            <ul class="main-nav__list contact-list">
+              <li class="contact-list__item"><a class="contact-list__link" href="tel:88005558628" aria-label="Позвонить в Погнали">8 800 555-86-28</a></li>
+              <li class="contact-list__item"><a class="contact-list__link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали">mail@htmlacademy.ru</a></li>
+            </ul>
+            <ul class="main-nav__list social-list">
+              <li class="social-list__item social-list__item--fb"><a href="#" aria-label="Погнали в Фейсбуке"></a></li>
+              <li class="social-list__item social-list__item--vk"><a href="#" aria-label="Погнали Вконтакте"></a></li>
+              <li class="social-list__item social-list__item--ig"><a href="#" aria-label="Погнали в Инстаграме"></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
-    <main class="page-main">
+    <main class="page-main page-main--inner">
       <h1 class="page-main__title page-main__title--inner">Попутчики</h1>
 
-      <section class="country-filter">
-        <h2 class="country-filter__title">Фильтр по странам</h2>
+      <section class="page-main__country-filter country-filter">
+        <a class="country-filter__link" aria-label="открыть фильтр по странам">
+          <h2 class="country-filter__title">Фильтрация по странам</h2>
+        </a>
+        <button class="country-filter__close" aria-label="Закрыть"></button>
         <form class="country-filter__form" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset class="country-filter__continents-fieldset">
+          <fieldset class="country-filter__fieldset">
             <ul class="country-filter__continents-list">
               <li class="country-filter__continents-item">
-                <input class="country-filter__radio" type="radio" name="world-part" id="europe" checked>
+                <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="europe" checked>
                 <label class="country-filter__radio-label" for="europe">Европа</label>
               </li>
               <li class="country-filter__continents-item">
-                <input class="country-filter__radio" type="radio" name="world-part" id="asia">
-                <label class="country-filter__radio-label" for="europe">Азия</label>
+                <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="asia">
+                <label class="country-filter__radio-label" for="asia">Азия</label>
               </li>
               <li class="country-filter__continents-item">
-                <input class="country-filter__radio" type="radio" name="world-part" id="america">
-                <label class="country-filter__radio-label" for="europe">Америка</label>
+                <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="america">
+                <label class="country-filter__radio-label" for="america">Америка</label>
               </li>
               <li class="country-filter__continents-item">
-                <input class="country-filter__radio" type="radio" name="world-part" id="islands">
-                <label class="country-filter__radio-label" for="europe">Острова</label>
+                <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="islands">
+                <label class="country-filter__radio-label" for="islands">Острова</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="country-filter__fieldset">
             <table class="country-filter__letter-table letter-table">
               <tr class="letter-table__row">
                 <td class="letter-table__cell">
@@ -176,14 +182,16 @@
             <a class="country-filter__country-link" href="/asia/azerbaijan">Азербайджанм</a>
           </li>
         </ul>
-        <button class="country-filter__close-button button" type="button">Свернуть</button>
+        <button class="country-filter__close-button" type="button">Свернуть</button>
       </section>
 
-      <section class="profiles-filter">
+      <section class="page-main__profiles-filter profiles-filter">
         <h2 class="profiles-filter__title">Подберите идеального попутчика</h2>
         <form class="profiles-filter__form" method="post" action="https://echo.htmlacademy.ru">
           <fieldset class="profiles-filter__fieldset profiles-filter__fieldset--hobby fieldset-closed">
-            <legend class="profiles-filter__legend legend">Хобби</legend>
+            <legend class="profiles-filter__legend">
+              <button class="profiles-filter__legend-button">Хобби</button>
+            </legend>
             <ul class="profiles-filter__checkbox-list">
               <li class="profiles-filter__checkbox-item">
                 <input class="profiles-filter__checkbox" type="checkbox" name="gym" id="gym">
@@ -200,7 +208,9 @@
             </ul>
           </fieldset>
           <fieldset class="profiles-filter__fieldset profiles-filter__fieldset--music">
-            <legend class="profiles-filter__legend legend">Музыка</legend>
+            <legend class="profiles-filter__legend">
+              <button class="profiles-filter__legend-button">Музыка</button>
+            </legend>
             <ul class="profiles-filter__checkbox-list">
               <li class="profiles-filter__checkbox-item">
                 <input class="profiles-filter__checkbox" type="checkbox" name="hardrock" id="hardrock">
@@ -217,7 +227,9 @@
             </ul>
           </fieldset>
           <fieldset class="profiles-filter__fieldset profiles-filter__fieldset--food fieldset-closed">
-            <legend class="profiles-filter__legend legend">Еда</legend>
+            <legend class="profiles-filter__legend">
+              <button class="profiles-filter__legend-button">Еда</button>
+            </legend>
             <ul class="profiles-filter__checkbox-list">
               <li class="profiles-filter__checkbox-item">
                 <input class="profiles-filter__checkbox" type="checkbox" name="meat-eater" id="meat-eater">
@@ -234,157 +246,194 @@
             </ul>
           </fieldset>
           <fieldset class="profiles-filter__fieldset transport-filter">
-            <legend class="profiles-filter__legend legend">Транспорт</legend>
+            <legend class="profiles-filter__legend">
+              <button class="profiles-filter__legend-button">Транспорт</button>
+            </legend>
             <ul class="transport-filter__list">
               <li class="transport-filter__item">
-                <input class="transport-filter__checkbox" type="checkbox" name="plane" id="plane" checked>
+                <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="plane" id="plane" checked>
                 <label class="transport-filter__label transport-filter__label--plane" for="plane" aria-label="самолет"></label>
               </li>
               <li class="transport-filter__item">
-                <input class="transport-filter__checkbox" type="checkbox" name="bus" id="bus" checked>
+                <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="bus" id="bus" checked>
                 <label class="transport-filter__label transport-filter__label--bus" for="bus" aria-label="автобус"></label>
               </li>
               <li class="transport-filter__item">
-                <input class="transport-filter__checkbox" type="checkbox" name="bike" id="bike">
+                <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="bike" id="bike">
                 <label class="transport-filter__label transport-filter__label--bike" for="bike" aria-label="велосипед"></label>
               </li>
               <li class="transport-filter__item">
-                <input class="transport-filter__checkbox" type="checkbox" name="on-foot" id="on-foot" checked>
+                <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="on-foot" id="on-foot" checked>
                 <label class="transport-filter__label transport-filter__label--on-foot" for="on-foot" aria-label="пешком"></label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="profiles-filter__fieldset level-range">
-            <legend class="profiles-filter__legend legend">Левел</legend>
+            <legend class="profiles-filter__legend">
+              <button class="profiles-filter__legend-button">Левел</button>
+            </legend>
             <input class="level-range__input level-range__input--min" type="number" name="levelmin" id="levelmin" value="30">
             <input class="level-range__input level-range__input--max" type="number" name="levelmax" id="levelmax" value="100">
-            <input class="level-range__scale" type="range" name="level" id="level" min="1" max="100" value="30">
+            <input class="level-range__input-range visually-hidden" type="range" name="level" id="level" min="1" max="100" value="30">
+            <div class="level-range__range-filter">
+              <div class="level-range__controls">
+                <div class="level-range__scale">
+                  <div class="level-range__bar"></div>
+                </div>
+                <div class="level-range__toggle level-range__toggle--min"></div>
+                <div class="level-range__toggle level-range__toggle--max"></div>
+              </div>
+            </div>
           </fieldset>
           <button class="profiles-filter__button" type="submit">Показать</button>
         </form>
       </section>
 
-      <section class="catalog">
+      <section class="page-main__catalog catalog">
         <ul class="catalog__list">
-          <li class="catalog__item traveler-card traveler-card--offline">
-            <img class="traveler-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Таня Фирсова">
-            <h3 class="traveler-card__name">Таня Фрисова</h3>
-            <button class="traveler-card__like-button liked" type="button" aria-label="Лайкнуть профиль"></button>
-            <p class="traveler-card__likes">1,5 М</p>
-            <p class="traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <h4 class="traveler-card__section-title">хочет посетить:</h4>
-            <ul class="traveler-card__countries-list">
-              <li class="traveler-card__country">
-                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Шри-Ланки">
+          <li class="catalog__item catalog-card catalog-card--offline">
+            <img class="catalog-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Таня Фирсова">
+            <h3 class="catalog-card__name">Таня Фрисова</h3>
+            <button class="catalog-card__like-button liked" type="button" aria-label="Лайкнуть профиль"></button>
+            <p class="catalog-card__likes">1,5 М</p>
+            <p class="catalog-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <h4 class="catalog-card__section-title">хочет посетить:</h4>
+            <ul class="catalog-card__countries-list">
+              <li class="catalog-card__country">
+                <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Шри-Ланки">
                 <p>Шри-Ланка</p>
               </li>
-              <li class="traveler-card__country">
-                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Таиланда">
+              <li class="catalog-card__country">
+                <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Таиланда">
                 <p>Таиланд</p>
               </li>
-              <li class="traveler-card__country">
-                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Сейшел">
+              <li class="catalog-card__country">
+                <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Сейшел">
                 <p>Сейшелы</p>
               </li>
             </ul>
-            <h4 class="traveler-card__section-title">транспорт:</h4>
-            <ul class="traveler-card__transport-list">
-              <li class="traveler-card__transport-item traveler-card__transport-item checked">Самолет</li>
-              <li class="traveler-card__transport-item traveler-card__transport-item--bus">Автобус</li>
-              <li class="traveler-card__transport-item traveler-card__transport-item--bike">Велосипед</li>
-              <li class="traveler-card__transport-item traveler-card__transport-item--on-foot">Пешком</li>
-            </ul>
-            <h4 class="traveler-card__section-title">левел:</h4>
-            <p class="traveler-card__level level">99</p>
-            <a class="traveler-card__invite-link button" type="button">Позвать</a>
+            <div class="catalog-card__level-wrap">
+              <article class="catalog-card__transport-article">
+                <h4 class="catalog-card__section-title">транспорт:</h4>
+                <ul class="catalog-card__transport-list">
+                  <li class="catalog-card__transport-item catalog-card__transport-item--plane checked" aria-label="самолет"></li>
+                  <li class="catalog-card__transport-item catalog-card__transport-item--bus" aria-label="автобус"></li>
+                  <li class="catalog-card__transport-item catalog-card__transport-item--bike" aria-label="велосипед"></li>
+                  <li class="catalog-card__transport-item catalog-card__transport-item--on-foot" aria-label="пешком"></li>
+                </ul>
+              </article>
+              <article class="catalog-card__level-article">
+                <h4 class="catalog-card__section-title">левел:</h4>
+                <p class="catalog-card__level level level--blue">99</p>
+              </article>
+            </div>
+            <a class="catalog-card__invite-link" type="button">Позвать!</a>
           </li>
-          <li class="catalog__item traveler-card traveler-card--offline">
-            <img class="traveler-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Петя Демин">
-            <h3 class="traveler-card__name">Петя Демин</h3>
-            <button class="traveler-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
-            <p class="traveler-card__likes">150</p>
-            <p class="traveler-card__tags">#бургер #бар #футбол #концерт #крафт</p>
-            <h4 class="traveler-card__section-title">хочет посетить:</h4>
-            <ul class="traveler-card__countries-list">
-              <li class="traveler-card__country">
-                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Бельгии">
+          <li class="catalog__item catalog-card catalog-card--offline">
+            <img class="catalog-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Петя Демин">
+            <h3 class="catalog-card__name">Петя Демин</h3>
+            <button class="catalog-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
+            <p class="catalog-card__likes">150</p>
+            <p class="catalog-card__tags">#бургер #бар #футбол #концерт #крафт</p>
+            <h4 class="catalog-card__section-title">хочет посетить:</h4>
+            <ul class="catalog-card__countries-list">
+              <li class="catalog-card__country">
+                <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Бельгии">
                 <p>Бельгия</p>
               </li>
-              <li class="traveler-card__country">
-                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Чехии">
+              <li class="catalog-card__country">
+                <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Чехии">
                 <p>Чехия</p>
               </li>
             </ul>
-            <h4 class="traveler-card__section-title">транспорт:</h4>
-            <ul class="traveler-card__transport-list">
-              <li class="traveler-card__transport-item traveler-card__transport-item--plane checked">Самолет</li>
-              <li class="traveler-card__transport-item traveler-card__transport-item--bus checked">Автобус</li>
-              <li class="traveler-card__transport-item traveler-card__transport-item--bike">Велосипед</li>
-              <li class="traveler-card__transport-item traveler-card__transport-item--on-foot checked">Пешком</li>
-            </ul>
-            <h4 class="traveler-card__section-title">левел:</h4>
-            <p class="traveler-card__level level">80</p>
-            <a class="traveler-card__invite-link button" type="button">Позвать</a>
+            <div class="catalog-card__level-wrap">
+              <article class="catalog-card__transport-article">
+                <h4 class="catalog-card__section-title">транспорт:</h4>
+                <ul class="catalog-card__transport-list">
+                  <li class="catalog-card__transport-item catalog-card__transport-item--plane checked" aria-label="самолет"></li>
+                  <li class="catalog-card__transport-item catalog-card__transport-item--bus checked" aria-label="автобус"></li>
+                  <li class="catalog-card__transport-item catalog-card__transport-item--bike" aria-label="велосипед"></li>
+                  <li class="catalog-card__transport-item catalog-card__transport-item--on-foot checked" aria-label="пешком"></li>
+                </ul>
+              </article>
+              <article class="catalog-card__level-article">
+                <h4 class="catalog-card__section-title">левел:</h4>
+                <p class="catalog-card__level level level--blue">80</p>
+              </article>
+            </div>
+            <a class="catalog-card__invite-link" type="button">Позвать!</a>
           </li>
-          <li class="catalog__item traveler-card traveler-card--offline">
-            <img class="traveler-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Марк Смолов">
-            <h3 class="traveler-card__name">Марк Смолов</h3>
-            <button class="traveler-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
-            <p class="traveler-card__likes">1700</p>
-            <p class="traveler-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-            <h4 class="traveler-card__section-title">хочет посетить:</h4>
-            <ul class="traveler-card__countries-list">
-              <li class="traveler-card__country">
-                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг США">
+          <li class="catalog__item catalog-card catalog-card--offline">
+            <img class="catalog-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Марк Смолов">
+            <h3 class="catalog-card__name">Марк Смолов</h3>
+            <button class="catalog-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
+            <p class="catalog-card__likes">1700</p>
+            <p class="catalog-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+            <h4 class="catalog-card__section-title">хочет посетить:</h4>
+            <ul class="catalog-card__countries-list">
+              <li class="catalog-card__country">
+                <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг США">
                 <p>США</p>
               </li>
-              <li class="traveler-card__country">
-                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Австралии">
+              <li class="catalog-card__country">
+                <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Австралии">
                 <p>Австралия</p>
               </li>
-              <li class="traveler-card__country">
-                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Доминиканы">
+              <li class="catalog-card__country">
+                <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Доминиканы">
                 <p>Доминикана</p>
               </li>
             </ul>
-            <h4 class="traveler-card__section-title">транспорт:</h4>
-            <ul class="traveler-card__transport-list">
-              <li class="traveler-card__transport-item traveler-card__transport-item--plane checked">Самолет</li>
-              <li class="traveler-card__transport-item traveler-card__transport-item--bus">Автобус</li>
-              <li class="traveler-card__transport-item traveler-card__transport-item--bike checked">Велосипед</li>
-              <li class="traveler-card__transport-item traveler-card__transport-item--on-foot">Пешком</li>
-            </ul>
-            <h4 class="traveler-card__section-title">левел:</h4>
-            <p class="traveler-card__level level">25</p>
-            <a class="traveler-card__invite-link button" type="button">Позвать</a>
+            <div class="catalog-card__level-wrap">
+              <article class="catalog-card__transport-article">
+                <h4 class="catalog-card__section-title">транспорт:</h4>
+                <ul class="catalog-card__transport-list">
+                  <li class="catalog-card__transport-item catalog-card__transport-item--plane checked" aria-label="самолет"></li>
+                  <li class="catalog-card__transport-item catalog-card__transport-item--bus" aria-label="автобус"></li>
+                  <li class="catalog-card__transport-item catalog-card__transport-item--bike checked" aria-label="велосипед"></li>
+                  <li class="catalog-card__transport-item catalog-card__transport-item--on-foot" aria-label="пешком"></li>
+                </ul>
+              </article>
+              <article class="catalog-card__level-article">
+                <h4 class="catalog-card__section-title">левел:</h4>
+                <p class="catalog-card__level level level--blue">25</p>
+              </article>
+            </div>
+            <a class="catalog-card__invite-link" type="button">Позвать!</a>
           </li>
-          <li class="catalog__item traveler-card traveler-card--online">
-            <img class="traveler-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Лариса Роговая">
-            <h3 class="traveler-card__name">Лариса Роговая</h3>
-            <button class="traveler-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
-            <p class="traveler-card__likes">23</p>
-            <p class="traveler-card__tags">#образование #карьера #учеба #линкедин</p>
-            <h4 class="traveler-card__section-title">хочет посетить:</h4>
-            <ul class="traveler-card__countries-list">
-              <li class="traveler-card__country">
-                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Великобритании">
+          <li class="catalog__item catalog-card catalog-card--online">
+            <img class="catalog-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Лариса Роговая">
+            <h3 class="catalog-card__name">Лариса Роговая</h3>
+            <button class="catalog-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
+            <p class="catalog-card__likes">23</p>
+            <p class="catalog-card__tags">#образование #карьера #учеба #линкедин</p>
+            <h4 class="catalog-card__section-title">хочет посетить:</h4>
+            <ul class="catalog-card__countries-list">
+              <li class="catalog-card__country">
+                <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Великобритании">
                 <p>Великобритания</p>
               </li>
-              <li class="traveler-card__country">
-                <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Германии">
+              <li class="catalog-card__country">
+                <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Германии">
                 <p>Германия</p>
               </li>
             </ul>
-            <h4 class="traveler-card__section-title">транспорт:</h4>
-            <ul class="traveler-card__transport-list">
-              <li class="traveler-card__transport-item traveler-card__transport-item--plane checked">Самолет</li>
-              <li class="traveler-card__transport-item traveler-card__transport-item--bus checked">Автобус</li>
-              <li class="traveler-card__transport-item traveler-card__transport-item--bike">Велосипед</li>
-              <li class="traveler-card__transport-item traveler-card__transport-item--on-foot">Пешком</li>
-            </ul>
-            <h4 class="traveler-card__section-title">левел:</h4>
-            <p class="traveler-card__level level">50</p>
-            <a class="traveler-card__invite-link button" type="button">Позвать</a>
+            <div class="catalog-card__level-wrap">
+              <article class="catalog-card__transport-article">
+                <h4 class="catalog-card__section-title">транспорт:</h4>
+                <ul class="catalog-card__transport-list">
+                  <li class="catalog-card__transport-item catalog-card__transport-item--plane checked" aria-label="самолет"></li>
+                  <li class="catalog-card__transport-item catalog-card__transport-item--bus checked" aria-label="автобус"></li>
+                  <li class="catalog-card__transport-item catalog-card__transport-item--bike" aria-label="велосипед"></li>
+                  <li class="catalog-card__transport-item catalog-card__transport-item--on-foot" aria-label="пешком"></li>
+                </ul>
+              </article>
+              <article class="catalog-card__level-article">
+                <h4 class="catalog-card__section-title">левел:</h4>
+                <p class="catalog-card__level level level--blue">50</p>
+              </article>
+            </div>
+            <a class="catalog-card__invite-link" type="button">Позвать!</a>
           </li>
         </ul>
         <button class="catalog__show-more" type="button">Показать еще</button>
@@ -395,19 +444,21 @@
       </section>
     </main>
 
-    <footer class="page-footer">
-      <a class="page-footer__logo">
-        <img  class="page-footer__logo-img" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип Погнали">
-      </a>
-      <ul class="page-footer__list social-list">
-        <li class="social-list__item social-list__item--fb"><a href="#" aria-label="Погнали в Фейсбуке"></a></li>
-        <li class="social-list__item social-list__item--vk"><a href="#" aria-label="Погнали Вконтакте"></a></li>
-        <li class="social-list__item social-list__item--ig"><a href="#" aria-label="Погнали в Инстаграме"></a></li>
-      </ul>
-      <p class="page-footer__text">Разработано</p>
-      <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="page-footer__academy-img" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
-      </a>
+    <footer class="page-footer page-footer--inner">
+      <div class="page-footer__wrap">
+        <a class="page-footer__logo">
+          <img  class="page-footer__logo-img" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип Погнали">
+        </a>
+        <ul class="page-footer__list social-list">
+          <li class="social-list__item social-list__item--fb"><a href="#" aria-label="Погнали в Фейсбуке"></a></li>
+          <li class="social-list__item social-list__item--vk"><a href="#" aria-label="Погнали Вконтакте"></a></li>
+          <li class="social-list__item social-list__item--ig"><a href="#" aria-label="Погнали в Инстаграме"></a></li>
+        </ul>
+        <p class="page-footer__text">Разработано</p>
+        <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="page-footer__academy-img" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
+        </a>
+      </div>
     </footer>
   </body>
 </html>
