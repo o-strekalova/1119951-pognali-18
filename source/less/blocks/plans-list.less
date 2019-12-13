@@ -1,0 +1,53 @@
+.plans-list {
+  list-style: none;
+  padding: 0;
+}
+
+.plans-list__textarea-label {
+  width: 180px;
+  white-space: nowrap;
+  color: #1d2e5b;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: left;
+  margin: 16px 0;
+  padding-left: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;;
+
+  &::after {
+    content: "";
+    width: 50px;
+    height: 36px;
+    background: linear-gradient(90deg, transparent, white 50%);
+    z-index: 1;
+    position: absolute;
+    top: -10px;
+    right: -5px;
+  }
+}
+
+.plans-list__textarea {
+  width: 220px;
+  height: 220px;
+  border-radius: 4px;
+  border: 1px solid #cbced9;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  color: #444444;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+  text-align: left;
+  padding: 10px 15px;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+.plans-list__flag {
+  margin-bottom: -8px;
+}

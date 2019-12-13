@@ -4,21 +4,46 @@
   padding: 40px 0 25px;
 }
 
+.country-filter__wrap {
+  position: relative;
+  width: 270px;
+}
+
 .country-filter__title {
   color: #192144;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 22px;
   text-align: left;
   text-decoration: none;
   text-transform: uppercase;
+  padding-left: 40px;
+}
+
+.country-filter__close {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 15px;
 }
 
 .country-filter__fieldset {
   border: none;
   margin: 0;
-  padding-left: 50px;
+  padding-left: 40px;
+}
+
+.country-filter__letter-table {
+  width: 220px;
+  box-sizing: border-box;
+
+  &--white {
+    margin-top: -1px;
+    margin-left: -1px;
+  }
 }
 
 .country-filter__continents-list {
@@ -28,7 +53,6 @@
 
 .country-filter__radio-label {
   color: #192144;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 22px;
@@ -51,7 +75,6 @@
 
 .country-filter__country-link {
   color: #444444;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
@@ -66,8 +89,8 @@
   height: 40px;
   border-radius: 20px;
   border: none;
-  color: #161c35;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
+  color: #161c35;
   font-weight: bold;
   font-size: 16.5px;
   line-height: 29.5px;

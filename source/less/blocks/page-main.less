@@ -2,15 +2,14 @@
   background-color: #161c35;
   display: flex;
   flex-direction: column;
-}
 
-.page-main--inner {
-  background-color: #edeff6;
+  &--inner {
+    background-color: #edeff6;
+  }
 }
 
 .page-main__title {
   color: white;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: bold;
   width: 320px;
   font-size: 36px;
@@ -18,17 +17,17 @@
   text-align: center;
   padding: 40px;
   margin: 0 auto;
-}
 
-.page-main__title--inner {
-  text-align: center;
-  border-radius: 0 0 30px 30px;
-  background-color: #161c35;
-  padding: 50px 80px 10px 0;
-  margin: 0;
-  position: relative;
-  z-index: 1;
-  width: 100%;
+  &--inner {
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+    background-color: #161c35;
+    padding: 50px 80px 10px 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
 }
 
 .page-main__intro {
@@ -69,8 +68,13 @@
   &--business {
     width: 270px;
     position: absolute;
+    top: 4095px;
     margin-left: calc(50% - 135px);
     display: none;
+
+    &--open {
+      display: block;
+    }
   }
 }
 
@@ -101,4 +105,24 @@
 .page-main__map {
   display: flex;
   margin-top: -30px;
+}
+
+.page-main__profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main__trips-planned {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-main__new-trip {
+  position: relative;
+  margin-top: -30px;
+  padding-bottom: 74px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

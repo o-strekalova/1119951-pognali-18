@@ -7,20 +7,31 @@
 
 .address__text {
   color: #192144;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 22px;
   text-align: left;
   text-transform: uppercase;
-  width: 143px;
-  padding: 20px;
+  width: 180px;
+  padding: 20px 0 20px 35px;
   margin: 10px auto;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #121936;
+    position: absolute;
+    left: -24px;
+    top: 16px;
+  }
 }
 
 .address__nav-link {
   color: #1d2e5b;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;

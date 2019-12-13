@@ -8,16 +8,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.page-footer--inner {
-  margin-top: -40px;
+  &--inner {
+    margin-top: -40px;
+  }
 }
 
 .page-footer__wrap {
   width: 320px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .page-footer__logo {
@@ -26,11 +27,35 @@
 
 .page-footer__text {
   color: #444444;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
   margin: 25px;
+  margin-top: 40px;
   margin-right: auto;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 270px;
+    height: 1px;
+    background-color: black;
+    opacity: 0.05;
+    display: block;
+    position: absolute;
+    top: -25px;
+
+  }
+}
+
+.page-footer__list {
+  display: flex;
+  margin: 15px auto;
+}
+
+.page-footer__academy-link {
+  position: absolute;
+  right: 25px;
+  bottom: 15px;
 }
