@@ -3,16 +3,32 @@
 }
 
 .contact-list__link {
+  margin-top: 11px;
+  margin-bottom: 11px;
+  display: inline-block;
+  vertical-align: middle;
   color: #192144;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 22px;
   text-align: left;
   text-decoration: none;
   text-transform: uppercase;
-}
+  position: relative;
 
-.contact-list__link--yellow {
-  color: #ffd74b;
+  &--yellow {
+    color: #ffd74b;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #121936;
+    position: absolute;
+    left: -60px;
+    top: -13px;
+  }
 }
