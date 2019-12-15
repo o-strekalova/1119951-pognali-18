@@ -2,6 +2,13 @@
   list-style: none;
 }
 
+@media (min-width: @tablet) {
+  .contact-list {
+    margin-left: 188px;
+    padding: 0;
+  }
+}
+
 .contact-list__link {
   margin-top: 11px;
   margin-bottom: 11px;
@@ -30,5 +37,21 @@
     position: absolute;
     left: -60px;
     top: -13px;
+  }
+}
+
+@media (min-width: @tablet) {
+  .contact-list__link {
+    font-size: 28px;
+    line-height: 28px;
+    margin-top: 19px;
+    margin-bottom: 19px;
+
+    &::before {
+      width: 67px;
+      height: 67px;
+      left: -90px;
+      top: -20px;
+    }
   }
 }

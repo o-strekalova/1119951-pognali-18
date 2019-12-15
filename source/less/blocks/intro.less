@@ -3,11 +3,25 @@
   border-radius: 0 0 20px 20px;
 }
 
+@media (min-width: @tablet) {
+  .intro__wrap {
+    width: @tablet;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .intro__contact-list {
   list-style: none;
   padding: 0;
   display: flex;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet) {
+  .intro__contact-list {
+    display: none;
+  }
 }
 
 .intro__phone-link {
@@ -48,11 +62,25 @@
   padding-right: 50px;
 }
 
+@media (min-width: @tablet) {
+  .intro__quote {
+    width: @tablet;
+    padding: 60px 430px 60px 75px;
+  }
+}
+
 .intro__text {
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
   text-align: left;
+}
+
+@media (min-width: @tablet) {
+  .intro__text {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .intro__author {
@@ -61,6 +89,13 @@
   line-height: 22px;
   text-align: left;
   font-style: normal;
+}
+
+@media (min-width: @tablet) {
+  .intro__author {
+    font-size: 21px;
+    line-height: 35px;
+  }
 }
 
 .intro__list {
@@ -76,6 +111,17 @@
   margin-bottom: 10px;
 }
 
+@media (min-width: @tablet) {
+  .intro__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: @tablet;
+    padding: 40px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
 .intro__list-item {
   min-height: 95px;
   border-radius: 10px;
@@ -83,20 +129,57 @@
   margin-top: -15px;
 }
 
+@media (min-width: @tablet) {
+  .intro__list-item {
+    width: 344px;
+    height: 140px;
+    padding: 31px 100px 60px 31px;
+    margin-top: 0;
+  }
+}
+
 .intro__list-item--1 {
   background-color: #ff8d30;
+  margin-top: 0;
+}
+
+@media (min-width: @tablet) {
+  .intro__list-item--1 {
+    width: 354px;
+    border-radius: 10px 0 0 0;
+  }
 }
 
 .intro__list-item--2 {
   background-color: #ffa530;
 }
 
+@media (min-width: @tablet) {
+  .intro__list-item--2 {
+    border-radius: 10px 10px 0 0;
+    margin-left: -10px;
+  }
+}
+
 .intro__list-item--3 {
   background-color: #ffbd30;
 }
 
+@media (min-width: @tablet) {
+  .intro__list-item--3 {
+    width: 354px;
+    border-radius: 0 0 0 10px;
+  }
+}
+
 .intro__list-item--4 {
   background-color: #ffd74b;
-  border-radius: 10px;
   min-height: 80px;
+}
+
+@media (min-width: @tablet) {
+  .intro__list-item--4 {
+    border-radius: 0 0 10px 10px;
+    margin-left: -10px;
+  }
 }

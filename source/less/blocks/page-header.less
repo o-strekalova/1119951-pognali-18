@@ -4,13 +4,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: fixed;
+  z-index: 8;
+  width: 100%;
+
+  &--white {
+    background-color: white;
+  }
 }
 
 .page-header__wrap {
   width: 320px;
+  display: flex;
 }
 
 .page-header__logo {
   display: block;
-  margin: 25px;
+  margin: 26px;
+}
+
+@media (min-width: @tablet) {
+  .page-header__wrap {
+    width: 768px;
+  }
+
+  .page-header__logo {
+    margin: 53px 100px;
+  }
+}
+
+.page-header__main-nav {
+  position: relative;
 }
