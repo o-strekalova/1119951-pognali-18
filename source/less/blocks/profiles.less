@@ -6,6 +6,12 @@
   background-color: #192144;
 }
 
+@media (min-width: @tablet) {
+  .profiles__wrap {
+    width: @tablet;
+  }
+}
+
 .profiles__lead {
   display: flex;
   flex-direction: column;
@@ -14,18 +20,47 @@
   margin-top: 10px;
 }
 
+@media (min-width: @tablet) {
+  .profiles__lead {
+    padding-left: 0;
+  }
+}
+
 .profiles__list {
   list-style: none;
   padding: 0;
-  width: 270px;
-  margin: auto;
+  margin: 0;
+}
+
+@media (min-width: @tablet) {
+  .profiles__list {
+    width: @tablet;
+    display: flex;
+    padding-right: 75px;
+    padding-left: 75px;
+    margin-top: 10px;
+    margin-bottom: 80px;
+  }
 }
 
 .profiles__item {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: auto;
   margin-top: 280px;
+  width: 270px;
+}
+
+@media (min-width: @tablet) {
+  .profiles__item {
+    margin-right: 0;
+    margin-left: 0;
+
+    &:first-child {
+      margin-right: 48px;
+    }
+  }
 }
 
 .profiles__catalog-link {
@@ -42,4 +77,16 @@
   display: block;
   margin: 20px auto 0;
   padding: 24px;
+}
+
+@media (min-width: @tablet) {
+  .profiles__catalog-link {
+    width: 618px;
+    height: 81px;
+    border-radius: 20px;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 31px 34px;
+    margin: 47px auto 58px;
+  }
 }
