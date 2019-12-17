@@ -15,7 +15,7 @@
         <nav class="page-header__main-nav main-nav">
           <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
           <a class="main-nav__login" href="#">Авторизация</a>
-          <div class="main-nav__wrapper">
+          <div class="main-nav__wrapper main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="site-list__item"><a class="site-list__link" href="#about">О сервисе</a></li>
               <li class="site-list__item"><a class="site-list__link" href="form.html">Направления</a></li>
@@ -156,36 +156,40 @@
       </section>
 
       <section class="page-main__prices prices lead">
-        <h2 class="prices__title lead__title">Добавьте свой профиль</h2>
-        <ul class="prices__list">
-          <li class="prices__option">
-            <p class="prices__text">Базовое размещение</p>
-            <p class="prices__text">Бесплатно</p>
-          </li>
-          <li class="prices__option">
-            <p class="prices__text">Вывод на первых позициях</p>
-            <p class="prices__text">99 руб./мес</p>
-          </li>
-          <li class="prices__option">
-            <p class="prices__text">Кастомный цвет карточки</p>
-            <p class="prices__text">59 руб./мес</p>
-          </li>
-        </ul>
-        <a class="prices__business-link" href="#">Показать тарифы для бизнеса</a>
+        <div class="prices__wrap">
+          <h2 class="prices__title lead__title">Добавьте свой профиль</h2>
+          <ul class="prices__list">
+            <li class="prices__option">
+              <p class="prices__text">Базовое размещение</p>
+              <p class="prices__text prices__text--sum">Бесплатно</p>
+            </li>
+            <li class="prices__option">
+              <p class="prices__text">Вывод на первых позициях</p>
+              <p class="prices__text prices__text--sum">99 руб./мес</p>
+            </li>
+            <li class="prices__option">
+              <p class="prices__text">Кастомный цвет карточки</p>
+              <p class="prices__text prices__text--sum">59 руб./мес</p>
+            </li>
+          </ul>
+          <a class="prices__business-link" href="#">Показать тарифы для бизнеса</a>
+        </div>
       </section>
 
       <section class="page-main__sign-up sign-up page-main__lead lead">
-        <h2 class="sign-up__title lead__title lead__title--center">Заинтересовались?</h2>
-        <p class="sign-up__text lead__text lead__text--center">Зарегистрируйтесь,<br>это быстро и бесплатно!<br>Уже зарегистрированы? Тогда скорее <a class="sign-up__link" href="#">авторизуйтесь</a>.</p>
-        <form class="sign-up__form" action="https://echo.htmlacademy.ru" method="post">
-          <input class="sign-up__input" type="text" name="email" id="email" placeholder="E-mail">
-          <button class="sign-up__button" type="submit" aria-label="Отправить"></button>
-        </form>
-        <p class="sign-up__text lead__text lead__text--center">Остались вопросы?<br>Мы с радостью на них ответим!</p>
-        <ul class="sign-up__list contact-list">
-          <li class="contact-list__item"><a class="contact-list__link contact-list__link--yellow" href="tel:88005558628" aria-label="Позвонить в Погнали">8 800 555-86-28</a></li>
-          <li class="contact-list__item"><a class="contact-list__link contact-list__link--yellow" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали">mail@htmlacademy.ru</a></li>
-        </ul>
+        <div class="sign-up__wrap">
+          <h2 class="sign-up__title lead__title lead__title--center">Заинтересовались?</h2>
+          <p class="sign-up__text lead__text lead__text--center">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="sign-up__link" href="#">авторизуйтесь</a>.</p>
+          <form class="sign-up__form" action="https://echo.htmlacademy.ru" method="post">
+            <input class="sign-up__input" type="text" name="email" id="email" placeholder="E-mail">
+            <button class="sign-up__button" type="submit" aria-label="Отправить"></button>
+          </form>
+          <p class="sign-up__text lead__text lead__text--center">Остались вопросы? Мы с радостью на них ответим!</p>
+          <ul class="sign-up__list contact-list">
+            <li class="contact-list__item"><a class="contact-list__link contact-list__link--yellow" href="tel:88005558628" aria-label="Позвонить в Погнали">8 800 555-86-28</a></li>
+            <li class="contact-list__item"><a class="contact-list__link contact-list__link--yellow" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали">mail@htmlacademy.ru</a></li>
+          </ul>
+        </div>
       </section>
 
       <section class="page-main__address address">
@@ -221,20 +225,20 @@
       <h2 class="prices__title prices__title--business lead__title lead__title--center">Бизнес-тарифы</h2>
       <ul class="prices__list prices__list--business">
         <li class="prices__option">
-          <p class="prices__text">Реклама у блоггера</p>
-          <p class="prices__text">300 000 руб./пост</p>
+          <p class="prices__text prices__text--business">Реклама у блоггера</p>
+          <p class="prices__text prices__text--business prices__text--sum">300 000 руб./пост</p>
         </li>
         <li class="prices__option">
-          <p class="prices__text">Накрутка подписчиков</p>
-          <p class="prices__text">от 1 руб./шт.</p>
+          <p class="prices__text prices__text--business">Накрутка подписчиков</p>
+          <p class="prices__text prices__text--business prices__text--sum">от 1 руб./шт.</p>
         </li>
         <li class="prices__option">
-          <p class="prices__text">Лайки от ботов</p>
-          <p class="prices__text">от 20 коп./лайк</p>
+          <p class="prices__text prices__text--business">Лайки от ботов</p>
+          <p class="prices__text prices__text--business prices__text--sum">от 20 коп./лайк</p>
         </li>
         <li class="prices__option">
-          <p class="prices__text">Ваш продакт-плейсмент</p>
-          <p class="prices__text">Индивидуально</p>
+          <p class="prices__text prices__text--business">Ваш продакт-плейсмент</p>
+          <p class="prices__text prices__text--business prices__text--sum">Индивидуально</p>
         </li>
       </ul>
       <button class="prices__close" type="button">Закрыть окно</button>

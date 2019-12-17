@@ -30,6 +30,24 @@
   }
 }
 
+@media (min-width: @tablet) {
+  .address__text {
+    font-size: 28px;
+    line-height: 28px;
+    width: @tablet;
+    padding: 0;
+    padding-left: 166px;
+    margin: 70px auto 64px;
+
+    &::before {
+      width: 67px;
+      height: 67px;
+      top: -24px;
+      left: 78px;
+    }
+  }
+}
+
 .address__nav-link {
   color: #1d2e5b;
   font-weight: bold;
@@ -43,4 +61,16 @@
   text-decoration: none;
   padding: 20px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet) {
+  .address__nav-link {
+    width: 618px;
+    height: 81px;
+    border-radius: 20px;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 27px 37px;
+    margin-bottom: 50px;
+  }
 }

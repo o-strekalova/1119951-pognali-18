@@ -88,12 +88,13 @@
   margin-top: -30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   &--business {
     width: 270px;
     position: absolute;
     top: 4095px;
-    margin-left: calc(50% - 135px);
+    align-self: center;
     display: none;
 
     &--open {
@@ -102,9 +103,22 @@
   }
 }
 
+@media (min-width: @tablet) {
+  .page-main__prices {
+    &--business {
+      width: 688px;
+      margin: 0;
+      top: 5050px;
+    }
+  }
+}
+
 .page-main__sign-up {
   position: relative;
   margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page-main__address {
@@ -128,7 +142,17 @@
 
 .page-main__map {
   display: flex;
+  justify-content: center;
   margin-top: -30px;
+}
+
+@media (min-width: @tablet) {
+  .page-main__map {
+    width: 768px;
+    height: 965px;
+    align-self: center;
+    margin-top: -350px;
+  }
 }
 
 .page-main__profile {
