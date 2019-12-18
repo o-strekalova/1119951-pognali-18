@@ -3,9 +3,22 @@
   border-collapse: collapse;
 }
 
+@media (min-width: @tablet) {
+  .letter-table {
+    background: transparent;
+  }
+}
+
 .letter-table__cell {
   height: 42px;
   border: 1px solid #cbced9;
+}
+
+@media (min-width: @tablet) {
+  .letter-table__cell {
+    height: 67px;
+    border: none;
+  }
 }
 
 .letter-table__button {
@@ -21,4 +34,20 @@
   text-transform: uppercase;
   width: 40px;
   height: 42px;
+}
+
+@media (min-width: @tablet) {
+  .letter-table__button {
+    color: rgba(25, 33, 68, 0.2);
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 24px;
+    letter-spacing: normal;
+    width: 70px;
+    height: 67px;
+
+    &--current {
+      color: #192144;
+    }
+  }
 }

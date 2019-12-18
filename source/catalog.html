@@ -36,155 +36,175 @@
     </header>
 
     <main class="page-main page-main--inner">
-      <h1 class="page-main__title page-main__title--inner">Попутчики</h1>
+      <div class="page-main__wrap">
+        <h1 class="page-main__title page-main__title--inner">Попутчики</h1>
+        <a class="page-main__index-link">На главную</a>
+      </div>
 
       <section class="page-main__country-filter country-filter">
         <div class="country-filter__wrap">
           <a class="country-filter__link" aria-label="открыть фильтр по странам">
             <h2 class="country-filter__title">Фильтрация по странам</h2>
+            <h2 class="country-filter__title country-filter__title--open-link">Показать все</h2>
           </a>
           <button class="country-filter__close" aria-label="Закрыть"></button>
-          <form class="country-filter__form" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset class="country-filter__fieldset">
-              <ul class="country-filter__continents-list">
-                <li class="country-filter__continents-item">
-                  <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="europe" checked>
-                  <label class="country-filter__radio-label" for="europe">Европа</label>
-                </li>
-                <li class="country-filter__continents-item">
-                  <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="asia">
-                  <label class="country-filter__radio-label" for="asia">Азия</label>
-                </li>
-                <li class="country-filter__continents-item">
-                  <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="america">
-                  <label class="country-filter__radio-label" for="america">Америка</label>
-                </li>
-                <li class="country-filter__continents-item">
-                  <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="islands">
-                  <label class="country-filter__radio-label" for="islands">Острова</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="country-filter__fieldset">
-              <table class="country-filter__letter-table letter-table">
-                <tr class="letter-table__row">
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">а</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">б</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">в</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">г</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">д</button>
-                  </td>
-                </tr>
-                <tr class="letter-table__row">
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">е</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">з</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">и</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">к</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">л</button>
-                  </td>
-                </tr>
-                <tr class="letter-table__row">
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">м</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">н</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">о</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">п</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">р</button>
-                  </td>
-                </tr>
-                <tr class="letter-table__row">
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">с</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">т</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">у</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">ф</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">х</button>
-                  </td>
-                </tr>
-                <tr class="letter-table__row">
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">ч</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">ш</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">э</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">ю</button>
-                  </td>
-                  <td class="letter-table__cell">
-                    <button class="letter-table__button" type="button">я</button>
-                  </td>
-                </tr>
-              </table>
-            </fieldset>
-          </form>
-          <ul class="country-filter__countries-list">
-            <li class="country-filter__country">
-              <a class="country-filter__country-link" href="/asia/afganistan">Афганистан</a>
+          <ul class="country-filter__continents-list">
+            <li class="country-filter__continents-item">
+              <a class="country-filter__radio-label country-filter__radio-label--checked" href="/europe">Европа</a>
             </li>
-            <li class="country-filter__country">
-              <a class="country-filter__country-link" href="/europe/albania">Албания</a>
+            <li class="country-filter__continents-item">
+              <la class="country-filter__radio-label" href="/asia">Азия</a>
             </li>
-            <li class="country-filter__country">
-              <a class="country-filter__country-link" href="/africa/algeria">Алжир</a>
+            <li class="country-filter__continents-item">
+              <a class="country-filter__radio-label" href="/america">Америка</a>
             </li>
-            <li class="country-filter__country">
-              <a class="country-filter__country-link" href="/europe/andorra">Андорра</a>
-            </li>
-            <li class="country-filter__country">
-              <a class="country-filter__country-link" href="/america/argentina">Аргентина</a>
-            </li>
-            <li class="country-filter__country">
-              <a class="country-filter__country-link" href="/asia/armenia">Армения</a>
-            </li>
-            <li class="country-filter__country">
-              <a class="country-filter__country-link" href="/australia/australia">Австралия</a>
-            </li>
-            <li class="country-filter__country">
-              <a class="country-filter__country-link" href="/europe/austria">Австрия</a>
-            </li>
-            <li class="country-filter__country">
-              <a class="country-filter__country-link" href="/asia/azerbaijan">Азербайджанм</a>
+            <li class="country-filter__continents-item">
+              <a class="country-filter__radio-label" href="/islands">Острова</a>
             </li>
           </ul>
-          <button class="country-filter__close-button" type="button">Свернуть</button>
+          <div class="country-filter__block country-filter__block--open">
+            <form class="country-filter__form" method="post" action="https://echo.htmlacademy.ru">
+              <fieldset class="country-filter__fieldset country-filter__fieldset--continents">
+                <ul class="country-filter__continents-list">
+                  <li class="country-filter__continents-item">
+                    <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="europe" checked>
+                    <label class="country-filter__radio-label" for="europe">Европа</label>
+                  </li>
+                  <li class="country-filter__continents-item">
+                    <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="asia">
+                    <label class="country-filter__radio-label" for="asia">Азия</label>
+                  </li>
+                  <li class="country-filter__continents-item">
+                    <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="america">
+                    <label class="country-filter__radio-label" for="america">Америка</label>
+                  </li>
+                  <li class="country-filter__continents-item">
+                    <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="islands">
+                    <label class="country-filter__radio-label" for="islands">Острова</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="country-filter__fieldset">
+                <table class="country-filter__letter-table letter-table">
+                  <tr class="letter-table__row">
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button letter-table__button--current" type="button">а</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">б</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">в</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">г</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">д</button>
+                    </td>
+                  </tr>
+                  <tr class="letter-table__row">
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">е</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">з</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">и</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">к</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">л</button>
+                    </td>
+                  </tr>
+                  <tr class="letter-table__row">
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">м</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">н</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">о</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">п</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">р</button>
+                    </td>
+                  </tr>
+                  <tr class="letter-table__row">
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">с</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">т</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">у</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">ф</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">х</button>
+                    </td>
+                  </tr>
+                  <tr class="letter-table__row">
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">ч</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">ш</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">э</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">ю</button>
+                    </td>
+                    <td class="letter-table__cell">
+                      <button class="letter-table__button" type="button">я</button>
+                    </td>
+                  </tr>
+                </table>
+              </fieldset>
+            </form>
+            <ul class="country-filter__countries-list">
+              <li class="country-filter__country">
+                <a class="country-filter__country-link" href="/asia/afganistan">Афганистан</a>
+              </li>
+              <li class="country-filter__country">
+                <a class="country-filter__country-link" href="/europe/albania">Албания</a>
+              </li>
+              <li class="country-filter__country">
+                <a class="country-filter__country-link" href="/africa/algeria">Алжир</a>
+              </li>
+              <li class="country-filter__country">
+                <a class="country-filter__country-link" href="/europe/andorra">Андорра</a>
+              </li>
+              <li class="country-filter__country">
+                <a class="country-filter__country-link" href="/america/argentina">Аргентина</a>
+              </li>
+              <li class="country-filter__country">
+                <a class="country-filter__country-link" href="/asia/armenia">Армения</a>
+              </li>
+              <li class="country-filter__country">
+                <a class="country-filter__country-link" href="/australia/australia">Австралия</a>
+              </li>
+              <li class="country-filter__country">
+                <a class="country-filter__country-link" href="/europe/austria">Австрия</a>
+              </li>
+              <li class="country-filter__country">
+                <a class="country-filter__country-link" href="/asia/azerbaijan">Азербайджанм</a>
+              </li>
+            </ul>
+            <button class="country-filter__close-button" type="button">Свернуть</button>
+          </div>
         </div>
       </section>
 
