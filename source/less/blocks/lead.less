@@ -26,6 +26,12 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .lead__title {
+    margin-left: 131px;
+  }
+}
+
 .lead__text {
   color: white;
   font-weight: 300;
@@ -71,6 +77,17 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .lead__text {
+    width: 620px;
+    margin-left: 131px;
+
+    &--bold {
+      width: 410px;
+    }
+  }
+}
+
 .lead__about-link {
   display: none;
 }
@@ -93,8 +110,20 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .lead__about-link {
+    margin-left: 131px;
+  }
+}
+
 @media (min-width: @tablet) {
   .lead__wrap {
     width: @tablet;
+  }
+}
+
+@media (min-width: @desktop) {
+  .lead__wrap {
+    width: @desktop;
   }
 }

@@ -19,18 +19,40 @@
   display: flex;
 }
 
+@media (min-width: @tablet) {
+  .page-header__wrap {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-header__wrap {
+    width: @desktop;
+  }
+}
+
 .page-header__logo {
   display: block;
   margin: 26px;
 }
 
 @media (min-width: @tablet) {
-  .page-header__wrap {
-    width: 768px;
-  }
-
   .page-header__logo {
     margin: 53px 100px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-header__logo {
+    margin: 55px 150px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-header__logo-image {
+    width: 126px;
+    height: 24px;
+    margin: 0;
   }
 }
 

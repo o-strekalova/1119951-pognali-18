@@ -12,6 +12,10 @@
 @media (min-width: @tablet) {
   .page-main {
     margin-top: 131px;
+
+    &--inner {
+      margin-bottom: 130px;
+    }
   }
 }
 
@@ -65,6 +69,19 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .page-main__title {
+    width: @desktop;
+    text-align: left;
+    padding: 100px 880px 0 129px;
+    position: absolute;
+    align-self: center;
+
+    &--inner {
+    }
+  }
+}
+
 .page-main__index-link {
   display: none;
 }
@@ -101,7 +118,7 @@
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 50% 20px;
-  background-color: #161c35;
+  background-color: #192144;
 }
 
 .page-main__destinations {

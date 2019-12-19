@@ -12,16 +12,21 @@
         <a class="page-header__logo">
           <img class="page-header__logo-image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип Погнали">
         </a>
-        <nav class="page-header__main-nav main-nav">
+        <nav class="page-header__main-nav main-nav intro">
           <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-          <a class="main-nav__login" href="#">Авторизация</a>
-          <div class="main-nav__wrapper main-nav__wrapper">
-            <ul class="main-nav__list site-list">
+          <ul class="intro__contact-list intro__contact-list--inner">
+            <li class="intro__phone"><a class="intro__phone-link" href="tel:88005558628" aria-label="Позвонить в Погнали"></a></li>
+            <li class="intro__email"><a class="intro__email-link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали"></a></li>
+            <li class="intro__login"><a class="intro__login-link" href="#">Авторизация</a></li>
+          </ul>
+          <div class="main-nav__wrapper main-nav__wrapper--open">
+            <ul class="main-nav__site-list site-list">
               <li class="site-list__item"><a class="site-list__link" href="#about">О сервисе</a></li>
               <li class="site-list__item"><a class="site-list__link" href="form.html">Направления</a></li>
               <li class="site-list__item"><a class="site-list__link" href="catalog.html">Попутчики</a></li>
             </ul>
-            <ul class="main-nav__list contact-list">
+            <a class="main-nav__login" href="#">Авторизация</a>
+            <ul class="main-nav__contact-list contact-list">
               <li class="contact-list__item"><a class="contact-list__link" href="tel:88005558628" aria-label="Позвонить в Погнали">8 800 555-86-28</a></li>
               <li class="contact-list__item"><a class="contact-list__link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали">mail@htmlacademy.ru</a></li>
             </ul>
@@ -316,28 +321,28 @@
         <ul class="catalog__list">
           <li class="catalog__item catalog-card catalog-card--offline">
             <img class="catalog-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Таня Фирсова">
-            <h3 class="catalog-card__name">Таня Фрисова</h3>
-            <button class="catalog-card__like-button liked" type="button" aria-label="Лайкнуть профиль"></button>
+            <h3 class="catalog-card__name">Таня Фирсова</h3>
+            <button class="catalog-card__like-button catalog-card__like-button--liked" type="button" aria-label="Лайкнуть профиль"></button>
             <p class="catalog-card__likes">1,5 М</p>
             <p class="catalog-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <h4 class="catalog-card__section-title">хочет посетить:</h4>
+            <h4 class="catalog-card__section-title catalog-card__section-title--countries-list">хочет посетить:</h4>
             <ul class="catalog-card__countries-list">
               <li class="catalog-card__country">
                 <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Шри-Ланки">
-                <p>Шри-Ланка</p>
+                <p class="catalog-card__country-name">Шри-Ланка</p class="catalog-card__country-flag">
               </li>
               <li class="catalog-card__country">
                 <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Таиланда">
-                <p>Таиланд</p>
+                <p class="catalog-card__country-name">Таиланд</p class="catalog-card__country-name">
               </li>
               <li class="catalog-card__country">
                 <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Сейшел">
-                <p>Сейшелы</p>
+                <p class="catalog-card__country-name">Сейшелы</p class="catalog-card__country-name">
               </li>
             </ul>
             <div class="catalog-card__level-wrap">
               <article class="catalog-card__transport-article">
-                <h4 class="catalog-card__section-title">транспорт:</h4>
+                <h4 class="catalog-card__section-title catalog-card__section-title--transport">транспорт:</h4>
                 <ul class="catalog-card__transport-list">
                   <li class="catalog-card__transport-item catalog-card__transport-item--plane checked" aria-label="самолет"></li>
                   <li class="catalog-card__transport-item catalog-card__transport-item--bus" aria-label="автобус"></li>
@@ -346,8 +351,8 @@
                 </ul>
               </article>
               <article class="catalog-card__level-article">
-                <h4 class="catalog-card__section-title">левел:</h4>
-                <p class="catalog-card__level level level--blue">99</p>
+                <h4 class="catalog-card__section-title catalog-card__section-title--level">левел:</h4>
+                <p class="catalog-card__level level level--blue">99<span class="level__level">level</span></p>
               </article>
             </div>
             <a class="catalog-card__invite-link" type="button">Позвать!</a>
@@ -358,20 +363,20 @@
             <button class="catalog-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
             <p class="catalog-card__likes">150</p>
             <p class="catalog-card__tags">#бургер #бар #футбол #концерт #крафт</p>
-            <h4 class="catalog-card__section-title">хочет посетить:</h4>
+            <h4 class="catalog-card__section-title catalog-card__section-title--countries-list">хочет посетить:</h4>
             <ul class="catalog-card__countries-list">
               <li class="catalog-card__country">
                 <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Бельгии">
-                <p>Бельгия</p>
+                <p class="catalog-card__country-name">Бельгия</p class="catalog-card__country-name">
               </li>
               <li class="catalog-card__country">
                 <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Чехии">
-                <p>Чехия</p>
+                <p class="catalog-card__country-name">Чехия</p class="catalog-card__country-name">
               </li>
             </ul>
             <div class="catalog-card__level-wrap">
               <article class="catalog-card__transport-article">
-                <h4 class="catalog-card__section-title">транспорт:</h4>
+                <h4 class="catalog-card__section-title catalog-card__section-title--transport">транспорт:</h4>
                 <ul class="catalog-card__transport-list">
                   <li class="catalog-card__transport-item catalog-card__transport-item--plane checked" aria-label="самолет"></li>
                   <li class="catalog-card__transport-item catalog-card__transport-item--bus checked" aria-label="автобус"></li>
@@ -380,8 +385,8 @@
                 </ul>
               </article>
               <article class="catalog-card__level-article">
-                <h4 class="catalog-card__section-title">левел:</h4>
-                <p class="catalog-card__level level level--blue">80</p>
+                <h4 class="catalog-card__section-title catalog-card__section-title--level">левел:</h4>
+                <p class="catalog-card__level level level--blue">80<span class="level__level">level</span></p>
               </article>
             </div>
             <a class="catalog-card__invite-link" type="button">Позвать!</a>
@@ -392,24 +397,24 @@
             <button class="catalog-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
             <p class="catalog-card__likes">1700</p>
             <p class="catalog-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-            <h4 class="catalog-card__section-title">хочет посетить:</h4>
+            <h4 class="catalog-card__section-title catalog-card__section-title--countries-list">хочет посетить:</h4>
             <ul class="catalog-card__countries-list">
               <li class="catalog-card__country">
                 <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг США">
-                <p>США</p>
+                <p class="catalog-card__country-name">США</p class="catalog-card__country-name">
               </li>
               <li class="catalog-card__country">
                 <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Австралии">
-                <p>Австралия</p>
+                <p class="catalog-card__country-name">Австралия</p class="catalog-card__country-name">
               </li>
               <li class="catalog-card__country">
                 <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Доминиканы">
-                <p>Доминикана</p>
+                <p class="catalog-card__country-name">Доминикана</p class="catalog-card__country-name">
               </li>
             </ul>
             <div class="catalog-card__level-wrap">
               <article class="catalog-card__transport-article">
-                <h4 class="catalog-card__section-title">транспорт:</h4>
+                <h4 class="catalog-card__section-title catalog-card__section-title--transport">транспорт:</h4>
                 <ul class="catalog-card__transport-list">
                   <li class="catalog-card__transport-item catalog-card__transport-item--plane checked" aria-label="самолет"></li>
                   <li class="catalog-card__transport-item catalog-card__transport-item--bus" aria-label="автобус"></li>
@@ -418,8 +423,8 @@
                 </ul>
               </article>
               <article class="catalog-card__level-article">
-                <h4 class="catalog-card__section-title">левел:</h4>
-                <p class="catalog-card__level level level--blue">25</p>
+                <h4 class="catalog-card__section-title catalog-card__section-title--level">левел:</h4>
+                <p class="catalog-card__level level level--blue">25<span class="level__level">level</span></p>
               </article>
             </div>
             <a class="catalog-card__invite-link" type="button">Позвать!</a>
@@ -430,20 +435,20 @@
             <button class="catalog-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
             <p class="catalog-card__likes">23</p>
             <p class="catalog-card__tags">#образование #карьера #учеба #линкедин</p>
-            <h4 class="catalog-card__section-title">хочет посетить:</h4>
+            <h4 class="catalog-card__section-title catalog-card__section-title--countries-list">хочет посетить:</h4>
             <ul class="catalog-card__countries-list">
               <li class="catalog-card__country">
                 <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Великобритании">
-                <p>Великобритания</p>
+                <p class="catalog-card__country-name">Великобритания</p class="catalog-card__country-name">
               </li>
               <li class="catalog-card__country">
                 <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Германии">
-                <p>Германия</p>
+                <p class="catalog-card__country-name">Германия</p class="catalog-card__country-name">
               </li>
             </ul>
             <div class="catalog-card__level-wrap">
               <article class="catalog-card__transport-article">
-                <h4 class="catalog-card__section-title">транспорт:</h4>
+                <h4 class="catalog-card__section-title catalog-card__section-title--transport">транспорт:</h4>
                 <ul class="catalog-card__transport-list">
                   <li class="catalog-card__transport-item catalog-card__transport-item--plane checked" aria-label="самолет"></li>
                   <li class="catalog-card__transport-item catalog-card__transport-item--bus checked" aria-label="автобус"></li>
@@ -452,8 +457,8 @@
                 </ul>
               </article>
               <article class="catalog-card__level-article">
-                <h4 class="catalog-card__section-title">левел:</h4>
-                <p class="catalog-card__level level level--blue">50</p>
+                <h4 class="catalog-card__section-title catalog-card__section-title--level">левел:</h4>
+                <p class="catalog-card__level level level--blue">50<span class="level__level">level</span></p>
               </article>
             </div>
             <a class="catalog-card__invite-link" type="button">Позвать!</a>
@@ -461,6 +466,12 @@
         </ul>
         <button class="catalog__show-more" type="button">Показать еще</button>
         <ul class="catalog__pagination">
+          <ul class="catalog__pages-list">
+            <li class="catalog__page-number catalog__page-number--current"><a class="catalog__page-link">1</a></li>
+            <li class="catalog__page-number"><a class="catalog__page-link">2</a></li>
+            <li class="catalog__page-number"><a class="catalog__page-link">3</a></li>
+            <li class="catalog__page-number"><a class="catalog__page-link">4</a></li>
+          </ul>
           <li class="catalog__prev"><a href="#" aria-label="Предыдущая страница"></a></li>
           <li class="catalog__next"><a href="#" aria-label="Следующая страница"></a></li>
         </ul>
