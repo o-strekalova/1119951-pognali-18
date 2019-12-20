@@ -2,6 +2,15 @@
   padding: 30px 60px 40px 50px;
 }
 
+@media (min-width: @desktop) {
+  .lead {
+    &--about{
+      padding-top: 100px;
+      padding-bottom: 110px;
+    }
+  }
+}
+
 .lead__title {
   color: #ff8d30;
   font-weight: bold;
@@ -20,6 +29,7 @@
 
 @media (min-width: @tablet) {
   .lead__title {
+    width: 300px;
     margin-left: 75px;
     font-size: 45px;
     line-height: 45px;
@@ -29,6 +39,8 @@
 @media (min-width: @desktop) {
   .lead__title {
     margin-left: 131px;
+    margin-bottom: 60px;
+    width: 340px;
   }
 }
 
@@ -84,6 +96,21 @@
 
     &--bold {
       width: 410px;
+      margin-top: 40px;
+      margin-bottom: 65px;
+    }
+
+    &--grey {
+      width: 340px;
+      margin-top: 0;
+      margin-bottom: 0;
+
+    }
+
+    &--profiles {
+      width: 425px;
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 }

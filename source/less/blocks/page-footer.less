@@ -36,6 +36,12 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .page-footer__wrap {
+    width: @desktop;
+  }
+}
+
 .page-footer__logo {
   margin: 30px auto;
 }
@@ -75,7 +81,7 @@
   .page-footer__text {
     font-size: 20px;
     line-height: 24px;
-    margin: auto 20px;
+    margin: auto 25px;
 
     &::before {
       display: none;
@@ -106,5 +112,12 @@
     margin-right: 40px;
     margin-left: 0;
     position: static;
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-footer__academy-link {
+    margin-top: 62px;
+    margin-right: 60px;
   }
 }

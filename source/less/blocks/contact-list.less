@@ -9,6 +9,14 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .contact-list__item {
+    :first-child {
+      margin-right: 234px;
+    }
+  }
+}
+
 .contact-list__link {
   margin-top: 11px;
   margin-bottom: 11px;
@@ -52,6 +60,17 @@
       height: 67px;
       left: -90px;
       top: -20px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .contact-list__link {
+    &::before {
+      width: 90px;
+      height: 90px;
+      left: -122px;
+      top: -31px;
     }
   }
 }
