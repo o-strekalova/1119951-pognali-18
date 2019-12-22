@@ -10,6 +10,15 @@
   margin-top: 10px;
 }
 
+@media (min-width: @tablet) {
+  .counter__label {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 24px 0;
+  }
+}
+
 .counter__measure {
   width: 20px;
   color: rgba(29, 46, 91, 0.3);
@@ -26,6 +35,17 @@
 
   &--days {
     right: 7px;
+  }
+}
+
+@media (min-width: @tablet) {
+  .counter__measure {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 24px 0;
+    width: 43px;
+    right: 0;
   }
 }
 
@@ -46,6 +66,17 @@
   margin: 10px auto;
 }
 
+@media (min-width: @tablet) {
+  .counter__input {
+    width: 531px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+  }
+}
+
 .counter__minus {
   position: absolute;
   z-index: 1;
@@ -57,11 +88,26 @@
   background-color: #cbced9;
 }
 
+@media (min-width: @tablet) {
+  .counter__minus {
+    width: 20px;
+    top: 98px;
+    left: 23px;
+  }
+}
+
 .counter__plus {
   position: absolute;
   z-index: 1;
   border: none;
   background: transparent;
   top: 50px;
-  left: 187px;
+  right: 14px;
+}
+
+@media (min-width: @tablet) {
+  .counter__plus {
+    top: 93px;
+    right: 20px;
+  }
 }

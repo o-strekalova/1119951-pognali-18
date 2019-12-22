@@ -4,6 +4,12 @@
   padding: 25px;
 }
 
+@media (min-width: @tablet) {
+  .step {
+    padding: 43px;
+  }
+}
+
 .step__title {
   margin: 0;
   color: #1d2e5b;
@@ -11,6 +17,14 @@
   font-weight: bold;
   line-height: 20px;
   text-align: left;
+}
+
+@media (min-width: @tablet) {
+  .step__title {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 6px;
+  }
 }
 
 .step__step-number {
@@ -25,6 +39,14 @@
   padding: 2px;
 }
 
+@media (min-width: @tablet) {
+  .step__text {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 37px 0 42px;
+  }
+}
+
 .step__fieldset {
   border: none;
   margin: 0;
@@ -32,6 +54,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: @tablet) {
+  .step__fieldset {
+    margin-bottom: 87px;
+  }
 }
 
 .step__checkbox-label {
@@ -56,8 +84,36 @@
   }
 }
 
+@media (min-width: @tablet) {
+  .step__checkbox-label {
+    position: absolute;
+    top: 412px;
+    font-family: "Blogger Sans", "Tahoma", sans-serif;
+    color: #1d2e5b;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    padding-left: 59px;
+    margin: 35px 0;
+
+    &::before {
+      width: 36px;
+      height: 36px;
+      top: -12px;
+    }
+  }
+}
+
 .step__calendar {
   width: 221px;
+}
+
+@media (min-width: @tablet) {
+  .step__calendar {
+    width: 531px;
+  }
 }
 
 .step__next-link {
@@ -77,6 +133,20 @@
   margin-right: auto;
 }
 
+@media (min-width: @tablet) {
+  .step__next-link {
+    width: 285px;
+    height: 81px;
+    color: #1d2e5b;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: left;
+    text-transform: none;
+    padding: 30px 34px;
+    margin: 46px auto 12px 0;
+  }
+}
+
 .step__prev-link {
   color: #161c35;
   font-size: 17px;
@@ -86,6 +156,17 @@
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: -10px;
+}
+
+@media (min-width: @tablet) {
+  .step__prev-link {
+    color: #1d2e5b;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+    margin: 0;
+    margin-left: auto;
+  }
 }
 
 .step__selected-list {
@@ -99,6 +180,12 @@
   position: relative;
   margin-top: 6px;
   margin-bottom: 20px;
+}
+
+@media (min-width: @tablet) {
+  .step__selected-item {
+    margin: 15px 0;
+  }
 }
 
 .step__select {
@@ -117,11 +204,34 @@
   padding: 12px 30px 8px 12px;
 }
 
+@media (min-width: @tablet) {
+  .step__select {
+    width: 369px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    padding: 27px;
+    padding-bottom: 22px;
+  }
+}
+
 .step__flag {
   padding: 8px;
   border: 1px solid #cbced9;
   border-radius: 4px;
   box-sizing: content-box;
+}
+
+@media (min-width: @tablet) {
+  .step__flag {
+    width: 70px;
+    height: 47px;
+    border: none;
+    padding: 0;
+    margin: 11px 0;
+    margin-left: 53px;
+  }
 }
 
 .step__delete-button {
@@ -172,6 +282,47 @@
   }
 }
 
+@media (min-width: @tablet) {
+  .step__delete-button {
+    width: 17px;
+    height: 17px;
+    background: transparent;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 25px 0;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-color: #1d2e5b;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: 129px;
+    }
+
+    &--choose {
+      top: 437px;
+      right: 42px;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        border: solid 1px #cbced9;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
 .step__choose-another {
   width: 220px;
   height: 42px;
@@ -210,6 +361,31 @@
   }
 }
 
+@media (min-width: @tablet) {
+  .step__choose-another {
+    width: 369px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    padding: 27px;
+    padding-bottom: 22px;
+    margin: 0 0 15px;
+
+    &--add {
+      margin-bottom: 3px;
+
+      &::before {
+        width: 15px;
+        height: 15px;
+        top: 26px;
+        right: -37px;
+        background-color: #edeff6;
+      }
+    }
+  }
+}
+
 .step__country-filter {
   display: none;
   background: white;
@@ -229,4 +405,10 @@
 
 .step__plans-list {
   margin-top: 0;
+}
+
+@media (min-width: @tablet) {
+  .step__plans-list {
+    margin-bottom: 0;
+  }
 }

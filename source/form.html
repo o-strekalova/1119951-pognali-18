@@ -19,7 +19,7 @@
             <li class="intro__email"><a class="intro__email-link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали"></a></li>
             <li class="intro__login"><a class="intro__login-link" href="#">Авторизация</a></li>
           </ul>
-          <div class="main-nav__wrapper main-nav__wrapper--open">
+          <div class="main-nav__wrapper main-nav__wrapper">
             <ul class="main-nav__site-list site-list">
               <li class="site-list__item"><a class="site-list__link" href="#about">О сервисе</a></li>
               <li class="site-list__item"><a class="site-list__link" href="form.html">Направления</a></li>
@@ -41,11 +41,13 @@
     </header>
 
     <main class="page-main page-main--inner">
-      <h1 class="page-main__title page-main__title--inner">Направления</h1>
+      <div class="page-main__wrap page-main__wrap--inner">
+        <h1 class="page-main__title page-main__title--inner">Направления</h1>
+      </div>
 
       <section class="page-main__profile profile">
         <div class="profile__wrap">
-          <p class="profile__level level"><span class="level__number level__number--blue">80</span> level</p>
+          <p class="profile__level level"><span class="profile__level-number level__number level__number--blue">80</span> level</p>
           <img class="profile__img" src="https://via.placeholder.com/99x100" width="99" height="100" alt="Аватар профиля">
           <input class="profile__img-input visually-hidden" type="file" name="profile-img" id="profile-img">
           <label class="profile__img-label" for="profile-img">Сменить фото</label>
@@ -54,9 +56,9 @@
               <legend class="profile__legend">Тэги</legend>
               <textarea class="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
             </fieldset>
-            <fieldset class="profile__fieldset transport-filter">
-              <legend class="profile__legend legend">Транспорт</legend>
-              <ul class="transport-filter__list">
+            <fieldset class="profile__fieldset profile__fieldset--transport transport-filter">
+              <legend class="profile__legend profile__legend--transport legend">Транспорт</legend>
+              <ul class="transport-filter__list transport-filter__list--form">
                 <li class="transport-filter__item">
                   <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="plane" id="plane" checked>
                   <label class="transport-filter__label transport-filter__label--plane" for="plane" aria-label="самолет"></label>
@@ -85,15 +87,19 @@
           <ul class="trips-planned__list">
             <li class="trips-planned__item trip-card">
               <h4 class="trip-card__countries"><span class="trip-card__item-number">1.</span> Франция, Италия</h4>
-              <p class="trip-card__travelers-number">3 попутчика</p>
-              <p class="trip-card__dates">26 мар - 29 мар</p>
-              <a class="trip-card__edit-link" href="#">Изменить</a>
+              <div class="trip-card__details">
+                <p class="trip-card__travelers-number">3 попутчика</p>
+                <p class="trip-card__dates">26 мар - 29 мар</p>
+                <a class="trip-card__edit-link" href="#">Изменить</a>
+              </div>
             </li>
             <li class="trips-planned__item trip-card">
               <h4 class="trip-card__countries"><span class="trip-card__item-number">2.</span> Таиланд, Индонезия</h4>
-              <p class="trip-card__travelers-number">1 попутчик</p>
-              <p class="trip-card__dates">1 июл - 15 июл</p>
-              <a class="trip-card__edit-link" href="#">Изменить</a>
+              <div class="trip-card__details">
+                <p class="trip-card__travelers-number">1 попутчик</p>
+                <p class="trip-card__dates">1 июл - 15 июл</p>
+                <a class="trip-card__edit-link" href="#">Изменить</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -127,13 +133,13 @@
                 <caption class="calendar-table__month">Март 2019</caption>
                 <button class="calendar-table__next visually-hidden" type="button"></button>
                 <tr class="calendar-table__row calendar-table__row--header">
-                  <th class="calendar-table__weekday">П</th>
-                  <th class="calendar-table__weekday">В</th>
-                  <th class="calendar-table__weekday">С</th>
-                  <th class="calendar-table__weekday">Ч</th>
-                  <th class="calendar-table__weekday">П</th>
-                  <th class="calendar-table__weekday calendar-table__weekday--weekend">С</th>
-                  <th class="calendar-table__weekday calendar-table__weekday--weekend">В</th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">П</span><span class="calendar-table__weekday--two-letters">Пн</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">В</span><span class="calendar-table__weekday--two-letters">Вт</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">С</span><span class="calendar-table__weekday--two-letters">Ср</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">Ч</span><span class="calendar-table__weekday--two-letters">Чт</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">П</span><span class="calendar-table__weekday--two-letters">Пт</span></th>
+                  <th class="calendar-table__weekday calendar-table__weekday--weekend"><span class="calendar-table__weekday--one-letter">С</span><span class="calendar-table__weekday--two-letters">Сб</span></th>
+                  <th class="calendar-table__weekday calendar-table__weekday--weekend"><span class="calendar-table__weekday--one-letter">В</span><span class="calendar-table__weekday--two-letters">Вс</span></th>
                 </tr>
                 <tr class="calendar-table__row">
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>23</button></td>
@@ -329,8 +335,10 @@
                 </ul>
               </div>
               <button class="step__selected-item step__choose-another step__choose-another--add" type="button">Добавить страну</button>
-              <a class="step__next-link" href="#step-3">Следующий шаг</a>
-              <a class="step__prev-link" href="#step-1">На шаг назад</a>
+              <div class="new-trip__links">
+                <a class="step__next-link" href="#step-3">Следующий шаг</a>
+                <a class="step__prev-link" href="#step-1">На шаг назад</a>
+              </div>
             </article>
             <article class="new-trip__article step" id="step-3">
               <h3 class="step__title"><p class="step__step-number">Шаг 3.</p>Развлечения</h3>
@@ -347,8 +355,10 @@
                   <textarea class="plans-list__textarea" id="czech republic">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </li>
               </ul>
-              <button class="new-trip__submit" type="submit">Отправить</button>
-              <a class="step__prev-link" href="#step-2">На шаг назад</a>
+              <div class="new-trip__links">
+                <button class="new-trip__submit" type="submit">Отправить</button>
+                <a class="step__prev-link" href="#step-2">На шаг назад</a>
+              </div>
             </article>
           </form>
         </div>
