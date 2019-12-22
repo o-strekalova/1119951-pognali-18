@@ -41,6 +41,18 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .level-range__input {
+    position: static;
+    width: 96px;
+    height: 46px;
+
+    &--max {
+      margin-left: -6px;
+    }
+  }
+}
+
 .level-range__range-filter {
   width: 220px;
   position: relative;
@@ -52,9 +64,21 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .level-range__range-filter {
+    width: 191px;
+  }
+}
+
 .level-range__controls {
   position: relative;
   margin: 25px 0;
+}
+
+@media (min-width: @desktop) {
+  .level-range__controls {
+    margin: 40px 0;
+  }
 }
 
 .level-range__scale {
@@ -72,6 +96,12 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .level-range__scale {
+    width: 191px;
+  }
+}
+
 .level-range__bar {
   width: 144px;
   height: 2px;
@@ -85,6 +115,12 @@
 @media (min-width: @tablet) {
   .level-range__bar {
     width: 201px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .level-range__bar {
+    width: 125px;
   }
 }
 
@@ -118,6 +154,14 @@
 
     &--max {
       right: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .level-range__toggle {
+    &--min {
+      right: 125px;
     }
   }
 }

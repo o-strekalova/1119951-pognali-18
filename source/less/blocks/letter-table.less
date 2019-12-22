@@ -21,6 +21,13 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .letter-table__cell {
+    vertical-align: top;
+    width: 250px;
+  }
+}
+
 .letter-table__button {
   border: none;
   background: none;
@@ -49,5 +56,26 @@
     &--current {
       color: #192144;
     }
+  }
+}
+
+@media (min-width: @desktop) {
+  .letter-table__button {
+    color: #192144;
+    text-align: left;
+    padding: 0;
+    margin-left: -4px;
+  }
+}
+
+.letter-table__countries-list {
+  display: none;
+}
+
+@media (min-width: @desktop) {
+  .letter-table__countries-list {
+    display: block;
+    margin: 50px 0;
+    width: 253px;
   }
 }

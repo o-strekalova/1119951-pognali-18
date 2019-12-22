@@ -28,6 +28,16 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .catalog-card__img {
+    width: 285px;
+    height: 285px;
+    border-radius: 20px 0 0 20px;
+    top: 0;
+    left: 0;
+  }
+}
+
 .catalog-card__name {
   color: #1d2e5b;
   font-weight: bold;
@@ -43,6 +53,13 @@
     margin-left: 250px;
     font-size: 30px;
     line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catalog-card__name {
+    margin-left: 310px;
+    margin-top: 10px;
   }
 }
 
@@ -66,6 +83,13 @@
     position: relative;
     top: -88px;
     left: 457px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catalog-card__likes {
+    left: 520px;
+    margin: 48px 0;
   }
 }
 
@@ -97,6 +121,14 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .catalog-card__like-button {
+    position: absolute;
+    left: 493px;
+    top: 190px;
+  }
+}
+
 .catalog-card__tags {
   color: #444444;
   font-weight: normal;
@@ -113,6 +145,12 @@
     margin-left: 250px;
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catalog-card__tags {
+    margin-left: 310px;
   }
 }
 
@@ -145,6 +183,12 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .catalog-card__section-title {
+    display: none;
+  }
+}
+
 .catalog-card__countries-list {
   list-style: none;
   color: #1d2e5b;
@@ -170,6 +214,15 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .catalog-card__countries-list {
+    width: 250px;
+    flex-direction: column;
+    position: absolute;
+    right: 35px;
+  }
+}
+
 .catalog-card__country {
   position: relative;
 }
@@ -180,10 +233,15 @@
   }
 }
 
-
 @media (min-width: @tablet) {
   .catalog-card__country-name {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catalog-card__country-name {
+    margin-top: 10px;
   }
 }
 
@@ -202,6 +260,13 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .catalog-card__country-flag {
+    top: 12px;
+    left: -50px;
+  }
+}
+
 .catalog-card__level-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -214,6 +279,14 @@
     align-items: center;
     position: absolute;
     right: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catalog-card__level-wrap {
+    flex-direction: row;
+    right: 25px;
+    bottom: 40px;
   }
 }
 
@@ -241,6 +314,12 @@
   .catalog-card__transport-list {
     flex-direction: column;
     margin: 0 45px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catalog-card__transport-list {
+    flex-direction: row;
   }
 }
 
@@ -285,5 +364,12 @@
     margin: 0;
     margin-top: 14px;
     margin-left: 250px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catalog-card__invite-link {
+    margin-left: 310px;
+    margin-top: 20px;
   }
 }

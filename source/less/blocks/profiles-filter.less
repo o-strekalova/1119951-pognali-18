@@ -10,6 +10,12 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .profiles-filter {
+    padding: 47px;
+  }
+}
+
 .profiles-filter__title {
   color: #1d2e5b;
   font-weight: bold;
@@ -28,6 +34,19 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .profiles-filter__title {
+    margin: 0 0 30px 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .profiles-filter__form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .profiles-filter__fieldset {
   border: none;
   padding: 0;
@@ -42,6 +61,17 @@
 
     &--level-range {
       margin-bottom: 70px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .profiles-filter__fieldset {
+    width: 190px;
+    padding: 0;
+
+    &--level-range {
+      margin-bottom: 45px;
     }
   }
 }
@@ -69,6 +99,13 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .profiles-filter__legend-button {
+    position: static;
+    margin: 15px 0;
+  }
+}
+
 .profiles-filter__checkbox-list {
   list-style: none;
   padding: 0;
@@ -79,6 +116,13 @@
   .profiles-filter__checkbox-list {
     display: flex;
     width: 480px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .profiles-filter__checkbox-list {
+    display: block;
+    width: 190px;
   }
 }
 
@@ -160,5 +204,12 @@
     border-radius: 25px;
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .profiles-filter__button {
+    width: 196px;
+    margin: 0 auto;
   }
 }
