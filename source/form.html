@@ -12,7 +12,7 @@
         <a class="page-header__logo">
           <img class="page-header__logo-image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип Погнали">
         </a>
-        <nav class="page-header__main-nav main-nav intro">
+        <nav class="page-header__main-nav main-nav intro intro--inner">
           <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
           <ul class="intro__contact-list intro__contact-list--inner">
             <li class="intro__phone"><a class="intro__phone-link" href="tel:88005558628" aria-label="Позвонить в Погнали"></a></li>
@@ -50,7 +50,7 @@
           <p class="profile__level level"><span class="profile__level-number level__number level__number--blue">80</span> level</p>
           <img class="profile__img" src="https://via.placeholder.com/99x100" width="99" height="100" alt="Аватар профиля">
           <input class="profile__img-input visually-hidden" type="file" name="profile-img" id="profile-img">
-          <label class="profile__img-label" for="profile-img">Сменить фото</label>
+          <label class="profile__img-label" for="profile-img"><span class="profile__img-label--long">Сменить фото</span><span class="profile__img-label--short">Фото</span></label>
           <form class="profile__form" method="post" action="https://echo.htmlacademy.ru">
             <fieldset class="profile__fieldset">
               <legend class="profile__legend">Тэги</legend>
@@ -108,6 +108,20 @@
       <section class="page-main__new-trip new-trip">
         <div class="new-trip__wrap">
           <h2 class="new-trip__title">Добавить план:</h2>
+          <ul class="new-trip__slider-controls">
+            <li class="new-trip__controls-item">
+              <input class="visually-hidden" type="radio" id="dates" name="choose-article">
+              <label class="new-trip__controls-label" for="dates">Даты</label>
+            </li class="new-trip__slider-controls">
+            <li class="new-trip__controls-item">
+              <input class="visually-hidden" type="radio" id="itinerary" name="choose-article">
+              <label class="new-trip__controls-label" for="itinerary">Маршрут</label class="new-trip__controls-label">
+            </li>
+            <li class="new-trip__controls-item">
+              <input class="visually-hidden" type="radio" id="plans" name="choose-article">
+              <label class="new-trip__controls-label" for="plans">Развлечения</label class="new-trip__controls-label">
+            </li>
+          </ul>
           <form class="new-trip__form" method="post" action="https://echo.htmlacademy.ru">
             <article class="new-trip__article step" id="step-1">
               <h3 class="step__title"><p class="step__step-number">Шаг 1.</p>Даты пребывания</h3>
@@ -217,94 +231,94 @@
               <button class="step__selected-item step__choose-another step__choose-another" type="button">Выберите страну</button>
               <button class="step__delete-button step__delete-button--choose" type="button"></button>
               <div class="step__country-filter step__country-filter--open country-filter">
-                <table class="country-filter__letter-table country-filter__letter-table--white letter-table">
+                <table class="country-filter__letter-table  country-filter__letter-table--step country-filter__letter-table--white letter-table">
                   <tr class="letter-table__row">
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">а</button>
+                    <td class="letter-table__cell letter-table__cell--step letter-table__cell--step--current">
+                      <button class="letter-table__button letter-table__button--step letter-table__button--step--current" type="button">а</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">б</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">б</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">в</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">в</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">г</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">г</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">д</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">д</button>
                     </td>
                   </tr>
                   <tr class="letter-table__row">
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">е</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">е</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">з</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">з</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">и</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">и</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">к</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">к</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">л</button>
-                    </td>
-                  </tr>
-                  <tr class="letter-table__row">
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">м</button>
-                    </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">н</button>
-                    </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">о</button>
-                    </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">п</button>
-                    </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">р</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">л</button>
                     </td>
                   </tr>
                   <tr class="letter-table__row">
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">с</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">м</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">т</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">н</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">у</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">о</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">ф</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">п</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">х</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">р</button>
                     </td>
                   </tr>
                   <tr class="letter-table__row">
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">ч</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">с</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">ш</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">т</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">э</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">у</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">ю</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">ф</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">я</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">х</button>
+                    </td>
+                  </tr>
+                  <tr class="letter-table__row">
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">ч</button>
+                    </td>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">ш</button>
+                    </td>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">э</button>
+                    </td>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">ю</button>
+                    </td>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">я</button>
                     </td>
                   </tr>
                 </table>
-                <ul class="country-filter__countries-list">
+                <ul class="country-filter__countries-list country-filter__countries-list--step">
                   <li class="country-filter__country">
                     <a class="country-filter__country-link" href="/asia/afganistan">Афганистан</a>
                   </li>

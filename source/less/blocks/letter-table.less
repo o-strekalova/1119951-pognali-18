@@ -1,6 +1,7 @@
 .letter-table {
   background: white;
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
 @media (min-width: @tablet) {
@@ -12,12 +13,25 @@
 .letter-table__cell {
   height: 42px;
   border: 1px solid #cbced9;
+
+  &--step {
+    &--current {
+      background-color: #edeff6;
+    }
+  }
 }
 
 @media (min-width: @tablet) {
   .letter-table__cell {
     height: 67px;
     border: none;
+
+    &--step {
+      border: 1px solid #cbced9;
+      &--current {
+        background-color: #1d2e5b;
+      }
+    }
   }
 }
 
@@ -55,6 +69,20 @@
 
     &--current {
       color: #192144;
+    }
+
+    &--step {
+      width: 50px;
+      height: 68px;
+      font-weight: 500;
+      color: #1d2e5b;
+      font-size: 20px;
+      line-height: 18px;
+      letter-spacing: 2px;
+
+      &--current {
+        color: white;
+      }
     }
   }
 }

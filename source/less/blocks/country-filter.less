@@ -138,6 +138,11 @@
   .country-filter__letter-table {
     width: 350px;
     margin-left: 62px;
+
+    &--step {
+      width: 267px;
+      margin: 0;
+    }
   }
 }
 
@@ -211,6 +216,24 @@
     padding: 0;
     margin: 0;
     margin-left: 90px;
+
+    &--step {
+      width: 206px;
+      margin-left: 75px;
+      padding: 0 25px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -34px;
+        left: 0;
+        width: 1px;
+        min-height: 476px;
+        height: 100%;
+        background-color: #d6d9e6;
+      }
+    }
   }
 }
 

@@ -21,6 +21,7 @@
 @media (min-width: @desktop) {
   .profile__wrap {
     width: @desktop;
+    margin-bottom: 45px;
   }
 }
 
@@ -108,6 +109,10 @@
   text-transform: uppercase;
   padding: 8px;
   margin-bottom: 10px;
+
+  &--short {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet) {
@@ -123,6 +128,32 @@
     color: #1d2e5b;
     padding-top: 24px;
     margin-bottom: 30px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .profile__img-label {
+    width: 190px;
+    height: 47px;
+    border-radius: 0 0 10px 10px;
+    padding-top: 15px;
+    margin-right: 123px;
+    margin-left: auto;
+
+    &--long {
+      display: none;
+    }
+
+    &--short {
+      display: inline;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .profile__form {
+    display: flex;
+    width: @desktop;
   }
 }
 
@@ -147,6 +178,25 @@
       top: 44px;
       left: calc(50% - 180px);
       padding: 2px 25px;
+      padding-top: 7px;
+      min-height: 94px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .profile__fieldset {
+    width: 730px;
+    margin-right: auto;
+    margin-left: 124px;
+
+    &--transport {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 384px;
+      margin-right: 60px;
+      margin-left: auto;
     }
   }
 }
@@ -180,11 +230,22 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .profile__legend {
+    left: 19px;
+
+    &--transport {
+      left: 115px;
+    }
+  }
+}
+
 .profile__tags {
   width: 220px;
   padding: 0;
   background: transparent;
   border: none;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-size: 16px;
   line-height: 22px;
   text-align: left;
@@ -196,5 +257,13 @@
     width: 538px;
     vertical-align: middle;
     padding: 20px 0 0 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .profile__tags {
+    width: 690px;
   }
 }

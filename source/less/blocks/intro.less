@@ -1,6 +1,17 @@
 .intro {
   color: white;
   border-radius: 0 0 30px 30px;
+  padding-top: 277px;
+
+  &--inner {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: @tablet) {
+  .intro {
+    padding-top: 0;
+  }
 }
 
 @media (min-width: @tablet) {
@@ -118,14 +129,14 @@
 
 .intro__quote {
   width: 220px;
-  margin: 5px auto 30px;
+  margin: 30px auto 30px;
   padding-right: 50px;
 }
 
 @media (min-width: @tablet) {
   .intro__quote {
     width: @tablet;
-    padding: 60px 430px 60px 75px;
+    padding: 25px 430px 60px 75px;
   }
 }
 
@@ -133,7 +144,7 @@
   .intro__quote {
     width: 260px;
     padding: 0;
-    margin: 80px 0 50px auto;
+    margin: 97px 0 50px auto;
   }
 }
 
