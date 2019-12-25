@@ -19,6 +19,14 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .counter__label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px;
+  }
+}
+
 .counter__measure {
   width: 20px;
   color: rgba(29, 46, 91, 0.3);
@@ -46,6 +54,15 @@
     margin: 24px 0;
     width: 43px;
     right: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .counter__measure {
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px;
   }
 }
 
@@ -77,6 +94,14 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .counter__input {
+    width: 181px;
+    margin: 0;
+    padding-left: 18px;
+  }
+}
+
 .counter__minus {
   position: absolute;
   z-index: 1;
@@ -96,6 +121,14 @@
   }
 }
 
+@media (min-width: @desktop)  {
+  .counter__minus {
+    position: relative;
+    top: -8px;
+    left: 40px;
+  }
+}
+
 .counter__plus {
   position: absolute;
   z-index: 1;
@@ -109,5 +142,13 @@
   .counter__plus {
     top: 93px;
     right: 20px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .counter__plus {
+    position: relative;
+    top: -4px;
+    right: 40px;
   }
 }
