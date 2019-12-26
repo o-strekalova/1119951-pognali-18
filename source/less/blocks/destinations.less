@@ -4,40 +4,12 @@
   padding: 70px 0 15px 0;
 }
 
-@media (min-width: @tablet) {
-  .destinations__wrap {
-    width: @tablet;
-  }
-}
-
-@media (min-width: @desktop) {
-  .destinations__wrap {
-    width: @desktop;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 .destinations__lead {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
   margin-top: 10px;
-}
-
-@media (min-width: @tablet) {
-  .destinations__lead {
-    padding-left: 0;
-  }
-}
-
-@media (min-width: @desktop) {
-  .destinations__lead {
-    width: 620px;
-    margin: 130px 90px 80px auto;
-    padding: 0;
-  }
 }
 
 .destinations__list {
@@ -47,37 +19,9 @@
   margin: auto;
 }
 
-@media (min-width: @tablet) {
-  .destinations__list {
-    margin-top: 60px;
-    margin-bottom: 47px;
-    width: 618px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .destinations__list {
-    width: 560px;
-    position: absolute;
-    margin: 160px 130px 140px;
-  }
-}
-
 .destinations__item {
   position: relative;
   margin-top: 110px;
-}
-
-@media (min-width: @tablet) {
-  .destinations__item {
-    margin-top: 10px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .destinations__item {
-    width: 560px;
-  }
 }
 
 .destinations__catalog-link {
@@ -97,6 +41,20 @@
 }
 
 @media (min-width: @tablet) {
+  .destinations__lead {
+    padding-left: 0;
+  }
+
+  .destinations__list {
+    margin-top: 60px;
+    margin-bottom: 47px;
+    width: 618px;
+  }
+
+  .destinations__item {
+    margin-top: 10px;
+  }
+
   .destinations__catalog-link {
     width: 618px;
     height: 81px;
@@ -109,6 +67,27 @@
 }
 
 @media (min-width: @desktop) {
+  .destinations__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .destinations__lead {
+    width: 620px;
+    margin: 130px 90px 80px auto;
+    padding: 0;
+  }
+
+  .destinations__list {
+    width: 560px;
+    position: absolute;
+    margin: 160px 130px 140px;
+  }
+
+  .destinations__item {
+    width: 560px;
+  }
+
   .destinations__catalog-link {
     width: 274px;
     margin: 0 300px 120px auto;

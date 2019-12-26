@@ -5,21 +5,6 @@
   background-color: #192144;
 }
 
-@media (min-width: @tablet) {
-  .profiles__wrap {
-    width: @tablet;
-    margin-top: 70px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .profiles__wrap {
-    width: @desktop;
-    position: relative;
-    margin-top: 20px;
-  }
-}
-
 .profiles__lead {
   display: flex;
   flex-direction: column;
@@ -28,46 +13,10 @@
   margin-top: 10px;
 }
 
-@media (min-width: @tablet) {
-  .profiles__lead {
-    padding-left: 0;
-  }
-}
-
-@media (min-width: @desktop) {
-  .profiles__lead {
-    width: 620px;
-    margin: 50px 0 0 0;
-    padding-bottom: 0;
-  }
-}
-
 .profiles__list {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-@media (min-width: @tablet) {
-  .profiles__list {
-    width: @tablet;
-    display: flex;
-    padding-right: 75px;
-    padding-left: 75px;
-    margin-top: 10px;
-    margin-bottom: 80px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .profiles__list {
-    position: absolute;
-    margin: 110px 60px 120px auto;
-    top: 0;
-    right: 0;
-    padding: 0;
-    width: 630px;
-  }
 }
 
 .profiles__item {
@@ -78,27 +27,6 @@
   margin-top: 280px;
   width: 270px;
   min-height: 157px;
-}
-
-@media (min-width: @tablet) {
-  .profiles__item {
-    margin-right: 0;
-    margin-left: 0;
-    width: 285px;
-    min-height: 198px;
-
-    &:first-child {
-      margin-right: 48px;
-    }
-  }
-}
-
-@media (min-width: @desktop) {
-  .profiles__item {
-    &:first-child {
-      margin-right: 60px;
-    }
-  }
 }
 
 .profiles__catalog-link {
@@ -118,6 +46,34 @@
 }
 
 @media (min-width: @tablet) {
+  .profiles__wrap {
+    margin-top: 70px;
+  }
+
+  .profiles__lead {
+    padding-left: 0;
+  }
+
+  .profiles__list {
+    width: @tablet;
+    display: flex;
+    padding-right: 75px;
+    padding-left: 75px;
+    margin-top: 10px;
+    margin-bottom: 80px;
+  }
+
+  .profiles__item {
+    margin-right: 0;
+    margin-left: 0;
+    width: 285px;
+    min-height: 198px;
+
+    &:first-child {
+      margin-right: 48px;
+    }
+  }
+
   .profiles__catalog-link {
     width: 618px;
     height: 81px;
@@ -130,6 +86,32 @@
 }
 
 @media (min-width: @desktop) {
+  .profiles__wrap {
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .profiles__lead {
+    width: 620px;
+    margin: 50px 0 0 0;
+    padding-bottom: 0;
+  }
+
+  .profiles__list {
+    position: absolute;
+    margin: 110px 60px 120px auto;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: 630px;
+  }
+
+  .profiles__item {
+    &:first-child {
+      margin-right: 60px;
+    }
+  }
+
   .profiles__catalog-link {
     width: 270px;
     margin: 0 0 130px 130px;

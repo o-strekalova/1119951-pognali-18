@@ -4,18 +4,6 @@
   padding: 25px;
 }
 
-@media (min-width: @tablet) {
-  .profiles-filter {
-    padding: 35px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .profiles-filter {
-    padding: 47px;
-  }
-}
-
 .profiles-filter__title {
   color: #1d2e5b;
   font-weight: bold;
@@ -24,56 +12,10 @@
   text-align: left;
 }
 
-@media (min-width: @tablet) {
-  .profiles-filter__title {
-    font-size: 30px;
-    line-height: 30px;
-    margin-top: 10px;
-    margin-bottom: 70px;
-    margin-left: 10px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .profiles-filter__title {
-    margin: 0 0 30px 0;
-  }
-}
-
-@media (min-width: @desktop) {
-  .profiles-filter__form {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 .profiles-filter__fieldset {
   border: none;
   padding: 0;
   margin: 0;
-}
-
-@media (min-width: @tablet) {
-  .profiles-filter__fieldset {
-    width: 618px;
-    position: relative;
-    padding-left: 145px;
-
-    &--level-range {
-      margin-bottom: 70px;
-    }
-  }
-}
-
-@media (min-width: @desktop) {
-  .profiles-filter__fieldset {
-    width: 190px;
-    padding: 0;
-
-    &--level-range {
-      margin-bottom: 45px;
-    }
-  }
 }
 
 .profiles-filter__legend-button {
@@ -89,51 +31,14 @@
   padding: 0;
 }
 
-@media (min-width: @tablet) {
-  .profiles-filter__legend-button {
-    margin: 15px 10px;
-    font-size: 20px;
-    line-height: 30px;
-    position: absolute;
-    left: 0;
-  }
-}
-
-@media (min-width: @desktop) {
-  .profiles-filter__legend-button {
-    position: static;
-    margin: 15px 0;
-  }
-}
-
 .profiles-filter__checkbox-list {
   list-style: none;
   padding: 0;
   margin: 10px 0 20px;
 }
 
-@media (min-width: @tablet) {
-  .profiles-filter__checkbox-list {
-    display: flex;
-    width: 480px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .profiles-filter__checkbox-list {
-    display: block;
-    width: 190px;
-  }
-}
-
 .profiles-filter__checkbox-item {
   margin: 10px 0;
-}
-
-@media (min-width: @tablet) {
-  .profiles-filter__checkbox-item {
-    width: 160px;
-  }
 }
 
 .profiles-filter__checkbox {
@@ -161,24 +66,11 @@
   }
 }
 
-@media (min-width: @tablet) {
-  .profiles-filter__label {
-    font-size: 20px;
-    line-height: 20px;
-  }
-}
-
 .profiles-filter__transport-list {
   margin-top: 15px;
   margin-right: 80px;
   margin-bottom: 15px;
   margin-left: 0;
-}
-
-@media (min-width: @tablet) {
-  .profiles-filter__transport-list {
-    margin: 0;
-  }
 }
 
 .profiles-filter__button {
@@ -198,6 +90,54 @@
 }
 
 @media (min-width: @tablet) {
+  .profiles-filter {
+    padding: 35px;
+  }
+
+  .profiles-filter__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    margin-left: 10px;
+  }
+
+  .profiles-filter__fieldset {
+    width: 618px;
+    position: relative;
+    padding-left: 145px;
+
+    &--level-range {
+      margin-bottom: 70px;
+    }
+  }
+
+  .profiles-filter__legend-button {
+    margin: 15px 10px;
+    font-size: 20px;
+    line-height: 30px;
+    position: absolute;
+    left: 0;
+  }
+
+  .profiles-filter__checkbox-list {
+    display: flex;
+    width: 480px;
+  }
+
+  .profiles-filter__checkbox-item {
+    width: 160px;
+  }
+
+  .profiles-filter__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .profiles-filter__transport-list {
+    margin: 0;
+  }
+
   .profiles-filter__button {
     width: 618px;
     height: 50px;
@@ -208,6 +148,38 @@
 }
 
 @media (min-width: @desktop) {
+  .profiles-filter {
+    padding: 47px;
+  }
+
+  .profiles-filter__title {
+    margin: 0 0 30px 0;
+  }
+
+  .profiles-filter__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profiles-filter__fieldset {
+    width: 190px;
+    padding: 0;
+
+    &--level-range {
+      margin-bottom: 45px;
+    }
+  }
+
+  .profiles-filter__legend-button {
+    position: static;
+    margin: 15px 0;
+  }
+
+  .profiles-filter__checkbox-list {
+    display: block;
+    width: 190px;
+  }
+
   .profiles-filter__button {
     width: 196px;
     margin: 0 auto;

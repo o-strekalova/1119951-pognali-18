@@ -32,35 +32,6 @@
   }
 }
 
-@media (min-width: @tablet) {
-  .calendar-table__month {
-    font-size: 36px;
-    line-height: 36px;
-    margin-bottom: 60px;
-
-    &::before {
-      width: 531px;
-      top: -29px;
-    }
-
-    &::after {
-      width: 531px;
-      top: 58px;
-    }
-  }
-}
-
-@media (min-width: @desktop) {
-  .calendar-table__month {
-    margin-bottom: 22px;
-
-    &::before,
-    &::after {
-      width: 1000px;
-    }
-  }
-}
-
 .calendar-table__prev::before {
   content: "";
   position: absolute;
@@ -96,30 +67,6 @@
   }
 }
 
-@media (min-width: @tablet) {
-  .calendar-table__weekday {
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: 1.8px;
-
-    &--one-letter {
-      display: none;
-    }
-
-    &--two-letters {
-      display: inline;
-    }
-  }
-}
-
-@media (min-width: @desktop) {
-  .calendar-table__weekday {
-    height: 55px;
-    text-align: left;
-    padding-left: 15px;
-  }
-}
-
 .calendar-table__button {
   width: 30.5px;
   height: 30px;
@@ -145,44 +92,12 @@
   }
 }
 
-@media (min-width: @tablet) {
-  .calendar-table__button {
-    width: 75px;
-    height: 70px;
-    font-weight: 500;
-    font-size: 20px;
-    letter-spacing: 2;
-  }
-}
-
-@media (min-width: @desktop) {
-  .calendar-table__button {
-    width: 142px;
-    font-weight: normal;
-    text-align: left;
-    padding: 15px 0 40px 15px;
-  }
-}
-
 .calendar-table__first-of-month {
   display: none;
 }
 
-@media (min-width: @desktop) {
-  .calendar-table__first-of-month {
-    display: inline;
-  }
-}
-
 .calendar-table__note {
   display: none;
-}
-
-@media (min-width: @desktop) {
-  .calendar-table__note {
-    display: block;
-    margin: 8px 0;
-  }
 }
 
 .calendar-table__cell {
@@ -204,6 +119,44 @@
 }
 
 @media (min-width: @tablet) {
+  .calendar-table__month {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 60px;
+
+    &::before {
+      width: 531px;
+      top: -29px;
+    }
+
+    &::after {
+      width: 531px;
+      top: 58px;
+    }
+  }
+
+  .calendar-table__weekday {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1.8px;
+
+    &--one-letter {
+      display: none;
+    }
+
+    &--two-letters {
+      display: inline;
+    }
+  }
+
+  .calendar-table__button {
+    width: 75px;
+    height: 70px;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 2;
+  }
+
   .calendar-table__cell {
     &--focus::after {
       width: 79px;
@@ -214,6 +167,37 @@
 }
 
 @media (min-width: @desktop) {
+  .calendar-table__month {
+    margin-bottom: 22px;
+
+    &::before,
+    &::after {
+      width: 1000px;
+    }
+  }
+
+  .calendar-table__weekday {
+    height: 55px;
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  .calendar-table__button {
+    width: 142px;
+    font-weight: normal;
+    text-align: left;
+    padding: 15px 0 40px 15px;
+  }
+
+  .calendar-table__first-of-month {
+    display: inline;
+  }
+
+  .calendar-table__note {
+    display: block;
+    margin: 8px 0;
+  }
+
   .calendar-table__cell {
     &--focus::after {
       cursor: pointer;

@@ -3,25 +3,10 @@
   border-radius: 0 0 10px 10px;
 }
 
-@media (min-width: @tablet) {
-  .traveler-card {
-    border-radius: 0 0 20px 20px;
-  }
-}
-
 .traveler-card__img {
   position: absolute;
   border-radius: 10px 10px 0 0;
   top: -270px;
-}
-
-@media (min-width: @tablet) {
-  .traveler-card__img {
-    border-radius: 20px 20px 0 0;
-    top: -285px;
-    width: 285px;
-    height: 285px;
-  }
 }
 
 .traveler-card__name {
@@ -31,13 +16,6 @@
   line-height: 21px;
   text-align: center;
   margin: 27px 0 8px;
-}
-
-@media (min-width: @tablet) {
-  .traveler-card__name {
-    font-size: 24px;
-    line-height: 24px;
-  }
 }
 
 .traveler-card__level {
@@ -60,14 +38,6 @@
   margin: 8px auto;
 }
 
-@media (min-width: @tablet) {
-  .traveler-card__tags {
-    font-size: 20px;
-    line-height: 24px;
-    width: 222px;
-  }
-}
-
 .traveler-card__countries-list {
   list-style: none;
   padding: 0;
@@ -81,13 +51,6 @@
   margin: 0 9px;
 }
 
-@media (min-width: @tablet) {
-  .traveler-card__country-flag {
-    width: 35px;
-    height: 24px;
-  }
-}
-
 .traveler-card__transport-list {
   list-style: none;
   padding: 0;
@@ -98,4 +61,33 @@
 .traveler-card__transport-item {
   width: 24px;
   height: 21px;
+}
+
+@media (min-width: @tablet) {
+  .traveler-card {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .traveler-card__img {
+    border-radius: 20px 20px 0 0;
+    top: -285px;
+    width: 285px;
+    height: 285px;
+  }
+
+  .traveler-card__name {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .traveler-card__tags {
+    font-size: 20px;
+    line-height: 24px;
+    width: 222px;
+  }
+
+  .traveler-card__country-flag {
+    width: 35px;
+    height: 24px;
+  }
 }

@@ -4,12 +4,6 @@
   padding: 0;
 }
 
-@media (min-width: @tablet) {
-  .site-list {
-    text-align: left;
-  }
-}
-
 .site-list__link {
   color: #192144;
   text-decoration: none;
@@ -20,6 +14,10 @@
 }
 
 @media (min-width: @tablet) {
+  .site-list {
+    text-align: left;
+  }
+
   .site-list__link {
     font-size: 60px;
     line-height: 71px;
@@ -27,10 +25,17 @@
 }
 
 @media (min-width: @desktop) {
+  .site-list__item {
+    margin-left: 36px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
   .site-list__link {
     font-size: 20px;
     line-height: 30px;
     color: white;
-    margin-left: 36px;
   }
 }

@@ -4,36 +4,9 @@
   background: #192144;
 }
 
-@media (min-width: @tablet) {
-  .sign-up__wrap {
-    width: @tablet;
-  }
-}
-
-@media (min-width: @desktop) {
-  .sign-up__wrap {
-    width: @desktop;
-    margin-top: 28px;
-  }
-}
-
-@media (min-width: @tablet) {
-  .sign-up__title {
-    width: @tablet;
-    margin: 30px auto 60px;
-  }
-}
-
 .sign-up__text {
   width: 220px;
   margin: 20px auto;
-}
-
-@media (min-width: @tablet) {
-  .sign-up__text {
-    width: 606px;
-    margin: 60px auto;
-  }
 }
 
 .sign-up__link {
@@ -45,18 +18,6 @@
   position: relative;
   margin-right: auto;
   margin-left: auto;
-}
-
-@media (min-width: @tablet) {
-  .sign-up__form {
-    width: 618px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .sign-up__form {
-    width: 1174px;
-  }
 }
 
 .sign-up__input {
@@ -74,24 +35,6 @@
   margin: 0 auto;
 }
 
-@media (min-width: @tablet) {
-  .sign-up__input {
-    width: 618px;
-    height: 81px;
-    border-radius: 20px;
-    font-size: 24px;
-    line-height: 24px;
-    padding-top: 27px;
-    padding-left: 35px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .sign-up__input {
-    width: 1174px;
-  }
-}
-
 .sign-up__button {
   width: 60px;
   height: 62px;
@@ -102,15 +45,61 @@
   right: 0;
 }
 
+.sign-up__list {
+  padding-left: 86px;
+  margin: 20px auto;
+}
+
 @media (min-width: @tablet) {
+  .sign-up__title {
+    width: @tablet;
+    margin: 30px auto 60px;
+  }
+
+  .sign-up__text {
+    width: 606px;
+    margin: 60px auto;
+  }
+
+  .sign-up__form {
+    width: 618px;
+  }
+
+  .sign-up__input {
+    width: 618px;
+    height: 81px;
+    border-radius: 20px;
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 27px;
+    padding-left: 35px;
+  }
+
   .sign-up__button {
     width: 82px;
     height: 81px;
     border-radius: 0 20px 20px 0;
   }
+
+  .sign-up__list {
+    padding-left: 166px;
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: @desktop) {
+  .sign-up__wrap {
+    margin-top: 28px;
+  }
+
+  .sign-up__form {
+    width: 1174px;
+  }
+
+  .sign-up__input {
+    width: 1174px;
+  }
+
   .sign-up__button {
     width: 324px;
 
@@ -127,26 +116,11 @@
       padding: 30px 37px;
     }
   }
-}
 
-.sign-up__list {
-  padding-left: 60px;
-  margin: 20px auto;
-}
-
-@media (min-width: @tablet) {
-  .sign-up__list {
-    padding-left: 166px;
-    margin-bottom: 40px;
-  }
-}
-
-@media (min-width: @desktop) {
   .sign-up__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-left: 380px;
     margin-bottom: 65px;
   }
 }

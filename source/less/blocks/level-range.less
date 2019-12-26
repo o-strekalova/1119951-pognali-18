@@ -18,67 +18,14 @@
   }
 }
 
-@media (min-width: @tablet) {
-  .level-range__input {
-    position: absolute;
-    top: 0;
-    width: 75px;
-    height: 46px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 18px;
-    letter-spacing: 2px;
-    margin: 0;
-    padding: 5px 0 0 15px;
-
-    &--min {
-      right: 75px;
-    }
-
-    &--max {
-      right: 0;
-    }
-  }
-}
-
-@media (min-width: @desktop) {
-  .level-range__input {
-    position: static;
-    width: 96px;
-    height: 46px;
-
-    &--max {
-      margin-left: -6px;
-    }
-  }
-}
-
 .level-range__range-filter {
   width: 220px;
   position: relative;
 }
 
-@media (min-width: @tablet) {
-  .level-range__range-filter {
-    width: 277px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .level-range__range-filter {
-    width: 191px;
-  }
-}
-
 .level-range__controls {
   position: relative;
   margin: 25px 0;
-}
-
-@media (min-width: @desktop) {
-  .level-range__controls {
-    margin: 40px 0;
-  }
 }
 
 .level-range__scale {
@@ -90,18 +37,6 @@
   z-index: 0;
 }
 
-@media (min-width: @tablet) {
-  .level-range__scale {
-    width: 277px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .level-range__scale {
-    width: 191px;
-  }
-}
-
 .level-range__bar {
   width: 144px;
   height: 2px;
@@ -110,18 +45,6 @@
   position: absolute;
   z-index: 1;
   right: 0;
-}
-
-@media (min-width: @tablet) {
-  .level-range__bar {
-    width: 201px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .level-range__bar {
-    width: 125px;
-  }
 }
 
 .level-range__toggle {
@@ -143,6 +66,39 @@
 }
 
 @media (min-width: @tablet) {
+  .level-range__input {
+    position: absolute;
+    top: 0;
+    width: 75px;
+    height: 46px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 5px 0 0 15px;
+
+    &--min {
+      right: 75px;
+    }
+
+    &--max {
+      right: 0;
+    }
+  }
+
+  .level-range__range-filter {
+    width: 277px;
+  }
+
+  .level-range__scale {
+    width: 277px;
+  }
+
+  .level-range__bar {
+    width: 201px;
+  }
+
   .level-range__toggle {
     width: 13px;
     height: 13px;
@@ -159,6 +115,32 @@
 }
 
 @media (min-width: @desktop) {
+  .level-range__input {
+    position: static;
+    width: 96px;
+    height: 46px;
+
+    &--max {
+      margin-left: -6px;
+    }
+  }
+
+  .level-range__range-filter {
+    width: 191px;
+  }
+
+  .level-range__controls {
+    margin: 40px 0;
+  }
+
+  .level-range__scale {
+    width: 191px;
+  }
+
+  .level-range__bar {
+    width: 125px;
+  }
+
   .level-range__toggle {
     &--min {
       right: 125px;

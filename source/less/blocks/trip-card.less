@@ -6,12 +6,6 @@
   text-align: left;
 }
 
-@media (min-width: @tablet) {
-  .trip-card {
-    padding: 25px 35px;
-  }
-}
-
 .trip-card__countries {
   margin: 0;
   margin-bottom: 20px;
@@ -20,44 +14,10 @@
   line-height: 16px;
 }
 
-@media (min-width: @tablet) {
-  .trip-card__countries {
-    font-size: 24px;
-    line-height: 50px;
-    margin-bottom: 20px;
-  }
-}
-
-@media (min-width: @desktop) {
-  .trip-card__countries {
-    width: 400px;
-    margin-left: 61px;
-    margin-right: 131px;
-    margin-bottom: 0;
-  }
-}
-
 .trip-card__item-number {
   letter-spacing: 1.6px;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: 500;
-}
-
-@media (min-width: @tablet) {
-  .trip-card__item-number {
-    position: absolute;
-    right: 32px;
-    font-size: 20px;
-    line-height: 18px;
-    letter-spacing: 2px;
-    margin: 16px 0;
-  }
-}
-
-@media (min-width: @desktop) {
-  .trip-card__item-number {
-    left: 44px;
-  }
 }
 
 .trip-card__details {
@@ -66,7 +26,59 @@
   flex-direction: column;
 }
 
+.trip-card__travelers-number {
+  margin: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 1.4px;
+}
+
+.trip-card__dates {
+  margin: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 1.4px;
+}
+
+.trip-card__edit-link {
+  margin-top: auto;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 1.4px;
+}
+
 @media (min-width: @tablet) {
+  .trip-card {
+    padding: 25px 35px;
+  }
+
+  .trip-card__countries {
+    font-size: 24px;
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .trip-card__item-number {
+    position: absolute;
+    right: 32px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 16px 0;
+  }
+
   .trip-card__details {
     flex-direction: row;
     min-height: 40px;
@@ -84,9 +96,42 @@
       left: -35px;
     }
   }
+
+  .trip-card__travelers-number {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    width: 150px;
+    margin-right: 35px;
+  }
+
+  .trip-card__dates {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  .trip-card__edit-link {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-left: auto;
+  }
 }
 
 @media (min-width: @desktop) {
+  .trip-card__countries {
+    width: 400px;
+    margin-left: 61px;
+    margin-right: 131px;
+    margin-bottom: 0;
+  }
+
+  .trip-card__item-number {
+    left: 44px;
+  }
+
   .trip-card__details {
     min-height: 0;
     width: 590px;
@@ -96,77 +141,12 @@
       display: none;
     }
   }
-}
 
-.trip-card__travelers-number {
-  margin: 0;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
-  font-weight: 500;
-  line-height: 14px;
-  letter-spacing: 1.4px;
-}
-
-@media (min-width: @tablet) {
-  .trip-card__travelers-number {
-    font-size: 20px;
-    line-height: 18px;
-    letter-spacing: 2px;
-    width: 150px;
-    margin-right: 35px;
-  }
-}
-
-@media (min-width: @desktop) {
   .trip-card__travelers-number {
     margin-bottom: 0;
   }
-}
 
-.trip-card__dates {
-  margin: 0;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
-  font-weight: 500;
-  line-height: 14px;
-  letter-spacing: 1.4px;
-}
-
-@media (min-width: @tablet) {
-  .trip-card__dates {
-    font-size: 20px;
-    line-height: 18px;
-    letter-spacing: 2px;
-  }
-}
-
-@media (min-width: @desktop) {
   .trip-card__dates {
     margin-bottom: 0;
-  }
-}
-
-.trip-card__edit-link {
-  margin-top: auto;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.3);
-  font-size: 14px;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
-  font-weight: 500;
-  line-height: 18px;
-  letter-spacing: 1.4px;
-}
-
-@media (min-width: @tablet) {
-  .trip-card__edit-link {
-    font-size: 20px;
-    line-height: 18px;
-    letter-spacing: 2px;
-    margin-top: 0;
-    margin-left: auto;
   }
 }
