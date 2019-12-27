@@ -9,7 +9,6 @@
   height: 70px;
   border-radius: 50%;
   padding: 15px;
-  position: absolute;
   box-sizing: content-box;
 }
 
@@ -37,9 +36,6 @@
   border-radius: 50%;
   background-color: #edeff6;
   border: none;
-  position: absolute;
-  top: 52px;
-  left: 63px;
 
   &--liked {
     background-color: #f9eaea;
@@ -128,12 +124,23 @@
   text-align: center;
   text-transform: uppercase;
   padding: 8px;
-  margin: 10px auto 0;
+  margin-top: 10px auto 0;
 }
 
 @media (min-width: @tablet) {
   .catalog-card {
-    padding: 35px;
+    padding: 35px 25px 25px 35px;
+  }
+
+  .catalog-card__outer-wrap {
+    display: flex;
+  }
+
+  .catalog-card__inner-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+    justify-content: flex-start;
   }
 
   .catalog-card__img {
@@ -144,41 +151,47 @@
   }
 
   .catalog-card__name {
-    margin-top: 0;
-    margin-left: 250px;
+    margin: 0;
     font-size: 30px;
     line-height: 30px;
   }
 
+  .catalog-card__tags {
+    width: 225px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 0;
+  }
+
+  .catalog-card__likes-wrap {
+    display: flex;
+  }
+
+  .catalog-card__invite-link {
+    width: 148px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 12px;
+    margin: 0;
+    margin-top: 14px;
+  }
+
+  .catalog-card__like-button {
+    width: 50px;
+    height: 50px;
+    margin-top: 14px;
+    position: relative;
+  }
+
   .catalog-card__likes {
-    order: 3;
-    display: inline-block;
-    vertical-align: middle;
     font-size: 20px;
     line-height: 30px;
     width: 50px;
     margin: 0;
+    margin-top: 24px;
+    margin-left: 14px;
     position: relative;
-    top: -88px;
-    left: 457px;
-  }
-
-  .catalog-card__like-button {
-    order: 2;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    top: -50px;
-    left: 398px;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .catalog-card__tags {
-    width: 222px;
-    margin-left: 250px;
-    font-size: 20px;
-    line-height: 24px;
   }
 
   .catalog-card__section-title {
@@ -186,7 +199,7 @@
     margin-left: 50px;
 
     &--countries-list {
-      margin-top: -50px;
+      margin-top: 20px;
     }
 
     &--transport {
@@ -223,38 +236,28 @@
   }
 
   .catalog-card__level-wrap {
-    order: 6;
     flex-direction: column;
-    align-items: center;
-    position: absolute;
-    right: 0;
+    width: 60px;
+    margin-left: auto;
   }
 
   .catalog-card__level-article {
-    width: 100px;
+    width: 60px;
+  }
+
+  .catalog-card__level {
+    position: static;
   }
 
   .catalog-card__transport-list {
     flex-direction: column;
-    margin: 0 45px;
+    margin: 0;
+    width: 60px;
+    align-items: center;
   }
 
   .catalog-card__transport-item {
     background-color: transparent;
-  }
-
-  .catalog-card__invite-link {
-    width: 148px;
-    height: 50px;
-    border-radius: 25px;
-    font-size: 20px;
-    padding: 12px;
-    order: 1;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0;
-    margin-top: 14px;
-    margin-left: 250px;
   }
 }
 
@@ -278,7 +281,6 @@
   }
 
   .catalog-card__like-button {
-    position: absolute;
     left: 493px;
     top: 190px;
   }
@@ -294,7 +296,6 @@
   .catalog-card__countries-list {
     width: 250px;
     flex-direction: column;
-    position: absolute;
     right: 35px;
   }
 
