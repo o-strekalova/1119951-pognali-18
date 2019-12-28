@@ -5,7 +5,7 @@
 
 .catalog__item {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   position: relative;
   width: 270px;
   margin: 10px auto;
@@ -88,7 +88,7 @@
 @media (min-width: @desktop) {
   .catalog__item {
     width: 950px;
-    height: 285px;
+    min-height: 285px;
     margin: 30px auto 30px 60px;
   }
 
