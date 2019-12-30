@@ -1,7 +1,7 @@
 .destinations {
   background-color: #edeff6;
   border-radius: 0 0 30px 30px;
-  padding: 70px 0 15px 0;
+  padding: 70px 0 15px;
 }
 
 .destinations__lead {
@@ -9,13 +9,13 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
-  margin-top: 10px;
+  margin: 40px auto 165px;
+  padding: 0;
 }
 
 .destinations__list {
   list-style: none;
   padding: 0;
-  width: 270px;
   margin: auto;
 }
 
@@ -41,10 +41,6 @@
 }
 
 @media (min-width: @tablet) {
-  .destinations__lead {
-    padding-left: 0;
-  }
-
   .destinations__list {
     margin-top: 60px;
     margin-bottom: 47px;
@@ -73,15 +69,14 @@
   }
 
   .destinations__lead {
-    width: 620px;
-    margin: 130px 90px 80px auto;
-    padding: 0;
+    width: 420px;
+    margin: 130px 160px 80px auto;
   }
 
   .destinations__list {
     width: 560px;
     position: absolute;
-    margin: 160px 130px 140px;
+    margin: 160px 70px 140px;
   }
 
   .destinations__item {
@@ -90,6 +85,6 @@
 
   .destinations__catalog-link {
     width: 274px;
-    margin: 0 300px 120px auto;
+    margin: 0 240px 120px auto;
   }
 }

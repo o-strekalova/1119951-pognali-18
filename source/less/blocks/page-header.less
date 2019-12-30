@@ -16,11 +16,12 @@
 
 .page-header__wrap {
   display: flex;
+  justify-content: flex-start;
 }
 
 .page-header__logo {
   display: block;
-  margin: 26px;
+  margin: 26px auto 26px 0;
 }
 
 .page-header__main-nav {
@@ -29,13 +30,17 @@
 
 @media (min-width: @tablet) {
   .page-header__logo {
-    margin: 53px 100px;
+    margin: 53px auto 53px 60px;
+  }
+
+  .page-header__main-nav {
+    right: calc(50% - 17px);
   }
 }
 
 @media (min-width: @desktop) {
   .page-header__logo {
-    margin: 55px 150px;
+    margin: 55px auto 55px 70px;
   }
 
   .page-header__logo-image {

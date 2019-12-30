@@ -2,9 +2,7 @@
   display: none;
   position: absolute;
   z-index: 2;
-  width: 320px;
-  margin: 0;
-  margin-left: -125px;
+  right: -25px;
 
   &--open {
     display: flex;
@@ -19,7 +17,7 @@
   width: 25px;
   height: 11px;
   border: none;
-  margin: 30px 25px 30px 145px;
+  margin: 30px 0;
 
   &--scroll {
     background-color: #cccccc;
@@ -53,12 +51,11 @@
 @media (min-width: @tablet) {
   .main-nav__wrapper {
     width: @tablet;
-    margin-left: -300px;
+    right: -367px;
   }
 
   .main-nav__toggle {
-    align-self: center;
-    margin: 60px 100px 60px 67px;
+    margin: 60px 0;
   }
 
   .main-nav__site-list {
@@ -80,7 +77,6 @@
 
 @media (min-width: @desktop) {
   .main-nav__wrapper {
-    width: 634px;
     display: flex;
     margin: 0;
 
@@ -95,8 +91,8 @@
 
   .main-nav__site-list {
     display: flex;
-    width: 680px;
-    margin: 53px 0 50px;
+    width: 600px;
+    margin: 53px auto 50px 75px;
   }
 
   .main-nav__contact-list {
