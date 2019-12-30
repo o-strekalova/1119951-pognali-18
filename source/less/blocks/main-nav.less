@@ -1,6 +1,8 @@
 .main-nav__wrapper {
-  display: none;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
   z-index: 2;
   right: -25px;
 
@@ -13,7 +15,9 @@
 }
 
 .main-nav__toggle {
-  background-color: white;
+  background-image: url("../../img/menu.svg");
+  background-color: transparent;
+  fill: white;
   width: 25px;
   height: 11px;
   border: none;
