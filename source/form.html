@@ -2,29 +2,35 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__wrap">
-        <a class="page-header__logo">
+      <div class="page-header__wrap container">
+        <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип Погнали">
         </a>
-        <nav class="main-nav">
+        <nav class="page-header__main-nav main-nav intro intro--inner">
           <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
+          <ul class="intro__contact-list intro__contact-list--inner">
+            <li class="intro__phone"><a class="intro__phone-link" href="tel:88005558628" aria-label="Позвонить в Погнали"></a></li>
+            <li class="intro__email"><a class="intro__email-link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали"></a></li>
+            <li class="intro__login"><a class="intro__login-link" href="#">Авторизация</a></li>
+          </ul>
+          <div class="main-nav__wrapper main-nav__wrapper">
+            <ul class="main-nav__site-list site-list">
               <li class="site-list__item"><a class="site-list__link" href="#about">О сервисе</a></li>
               <li class="site-list__item"><a class="site-list__link" href="form.html">Направления</a></li>
               <li class="site-list__item"><a class="site-list__link" href="catalog.html">Попутчики</a></li>
             </ul>
             <a class="main-nav__login" href="#">Авторизация</a>
-            <ul class="main-nav__list contact-list">
+            <ul class="main-nav__contact-list contact-list">
               <li class="contact-list__item"><a class="contact-list__link" href="tel:88005558628" aria-label="Позвонить в Погнали">8 800 555-86-28</a></li>
               <li class="contact-list__item"><a class="contact-list__link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали">mail@htmlacademy.ru</a></li>
             </ul>
-            <ul class="main-nav__list social-list">
+            <ul class="main-nav__social-list social-list">
               <li class="social-list__item social-list__item--fb"><a href="#" aria-label="Погнали в Фейсбуке"></a></li>
               <li class="social-list__item social-list__item--vk"><a href="#" aria-label="Погнали Вконтакте"></a></li>
               <li class="social-list__item social-list__item--ig"><a href="#" aria-label="Погнали в Инстаграме"></a></li>
@@ -35,22 +41,24 @@
     </header>
 
     <main class="page-main page-main--inner">
-      <h1 class="page-main__title page-main__title--inner">Направления</h1>
+      <div class="page-main__wrap page-main__wrap--inner">
+        <h1 class="page-main__title page-main__title--inner">Направления</h1>
+      </div>
 
       <section class="page-main__profile profile">
-        <div class="profile__wrap">
-          <p class="profile__level level"><span class="level__number level__number--blue">80</span> level</p>
+        <div class="profile__wrap container">
+          <p class="profile__level level"><span class="profile__level-number level__number level__number--blue">80</span> level</p>
           <img class="profile__img" src="https://via.placeholder.com/99x100" width="99" height="100" alt="Аватар профиля">
           <input class="profile__img-input visually-hidden" type="file" name="profile-img" id="profile-img">
-          <label class="profile__img-label" for="profile-img">Сменить фото</label>
+          <label class="profile__img-label" for="profile-img"><span class="profile__img-label--long">Сменить фото</span><span class="profile__img-label--short">Фото</span></label>
           <form class="profile__form" method="post" action="https://echo.htmlacademy.ru">
             <fieldset class="profile__fieldset">
               <legend class="profile__legend">Тэги</legend>
               <textarea class="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
             </fieldset>
-            <fieldset class="profile__fieldset transport-filter">
-              <legend class="profile__legend legend">Транспорт</legend>
-              <ul class="transport-filter__list">
+            <fieldset class="profile__fieldset profile__fieldset--transport transport-filter">
+              <legend class="profile__legend profile__legend--transport legend">Транспорт</legend>
+              <ul class="transport-filter__list transport-filter__list--form">
                 <li class="transport-filter__item">
                   <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="plane" id="plane" checked>
                   <label class="transport-filter__label transport-filter__label--plane" for="plane" aria-label="самолет"></label>
@@ -74,60 +82,82 @@
       </section>
 
       <section class="page-main__trips-planned trips-planned">
-        <div class="trips-planned__wrap">
+        <div class="trips-planned__wrap container">
           <h2 class="trips-planned__title">Мои планы:</h2>
           <ul class="trips-planned__list">
             <li class="trips-planned__item trip-card">
               <h4 class="trip-card__countries"><span class="trip-card__item-number">1.</span> Франция, Италия</h4>
-              <p class="trip-card__travelers-number">3 попутчика</p>
-              <p class="trip-card__dates">26 мар - 29 мар</p>
-              <a class="trip-card__edit-link" href="#">Изменить</a>
+              <div class="trip-card__details">
+                <p class="trip-card__travelers-number">3 попутчика</p>
+                <p class="trip-card__dates">26 мар - 29 мар</p>
+                <a class="trip-card__edit-link" href="#">Изменить</a>
+              </div>
             </li>
             <li class="trips-planned__item trip-card">
               <h4 class="trip-card__countries"><span class="trip-card__item-number">2.</span> Таиланд, Индонезия</h4>
-              <p class="trip-card__travelers-number">1 попутчик</p>
-              <p class="trip-card__dates">1 июл - 15 июл</p>
-              <a class="trip-card__edit-link" href="#">Изменить</a>
+              <div class="trip-card__details">
+                <p class="trip-card__travelers-number">1 попутчик</p>
+                <p class="trip-card__dates">1 июл - 15 июл</p>
+                <a class="trip-card__edit-link" href="#">Изменить</a>
+              </div>
             </li>
           </ul>
         </div>
       </section>
 
       <section class="page-main__new-trip new-trip">
-        <div class="new-trip__wrap">
-          <h2 class="new-trip__title">Добавить план:</h2>
+        <div class="new-trip__wrap container">
+          <div class="new-trip__title-wrap">
+            <h2 class="new-trip__title">Добавить план:</h2>
+            <ul class="new-trip__slider-controls">
+              <li class="new-trip__controls-item">
+                <input class="new-trip__controls-input visually-hidden" type="radio" id="dates" name="choose-article" checked>
+                <label class="new-trip__controls-label" for="dates"><span class="new-trip__controls-span">Даты</span></label>
+              </li class="new-trip__slider-controls">
+              <li class="new-trip__controls-item">
+                <input class="new-trip__controls-input visually-hidden" type="radio" id="itinerary" name="choose-article">
+                <label class="new-trip__controls-label" for="itinerary"><span class="new-trip__controls-span">Маршрут</span></label class="new-trip__controls-label">
+              </li>
+              <li class="new-trip__controls-item">
+                <input class="new-trip__controls-input visually-hidden" type="radio" id="plans" name="choose-article">
+                <label class="new-trip__controls-label" for="plans"><span class="new-trip__controls-span">Развлечения</span></label class="new-trip__controls-label">
+              </li>
+            </ul>
+          </div>
           <form class="new-trip__form" method="post" action="https://echo.htmlacademy.ru">
             <article class="new-trip__article step" id="step-1">
-              <h3 class="step__title"><p class="step__step-number">Шаг 1.</p>Даты пребывания</h3>
+              <h3 class="step__title"><p class="step__step-number">Шаг 1. </p>Даты пребывания</h3>
               <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-              <fieldset class="step__fieldset counter">
-                <label class="counter__label" for="travelers-number">Ищу попутчиков:</label>
-                <p class="counter__measure">чел.</p>
-                <button class="counter__minus" type="button"></button>
-                <input class="counter__input" type="number" name="travelers-number" id="travelers-number" value="2">
-                <button class="counter__plus" type="button">+</button>
-              </fieldset>
-              <fieldset class="step__fieldset counter">
-                <label class="counter__label" for="days-number">Длительность:</label>
-                <p class="counter__measure counter__measure--days">дн.</p>
-                <button class="counter__minus" type="button"></button>
-                <input class="counter__input" type="number" name="days-number" id="days-number" value="2">
-                <button class="counter__plus" type="button">+</button>
-              </fieldset>
-              <input class="step__checkbox visually-hidden" type="checkbox" name="children-allowed" id="children-allowed">
-              <label class="step__checkbox-label" for="children-allowed">Можно с детьми</label>
+              <div class="step__fieldsets">
+                <fieldset class="step__fieldset counter">
+                  <label class="counter__label" for="travelers-number">Ищу попутчиков:</label>
+                  <button class="counter__minus" type="button"></button>
+                  <input class="counter__input" type="number" name="travelers-number" id="travelers-number" value="2">
+                  <button class="counter__plus" type="button">+</button>
+                  <p class="counter__measure">чел.</p>
+                </fieldset>
+                <fieldset class="step__fieldset counter">
+                  <label class="counter__label" for="days-number">Длительность:</label>
+                  <button class="counter__minus" type="button"></button>
+                  <input class="counter__input" type="number" name="days-number" id="days-number" value="2">
+                  <button class="counter__plus" type="button">+</button>
+                  <p class="counter__measure counter__measure--days">дн.</p>
+                </fieldset>
+                <input class="step__checkbox visually-hidden" type="checkbox" name="children-allowed" id="children-allowed">
+                <label class="step__checkbox-label" for="children-allowed">Можно с детьми</label>
+              </div>
               <table class="step__calendar calendar-table">
                 <button class="calendar-table__prev visually-hidden" type="button"></button>
                 <caption class="calendar-table__month">Март 2019</caption>
                 <button class="calendar-table__next visually-hidden" type="button"></button>
                 <tr class="calendar-table__row calendar-table__row--header">
-                  <th class="calendar-table__weekday">П</th>
-                  <th class="calendar-table__weekday">В</th>
-                  <th class="calendar-table__weekday">С</th>
-                  <th class="calendar-table__weekday">Ч</th>
-                  <th class="calendar-table__weekday">П</th>
-                  <th class="calendar-table__weekday calendar-table__weekday--weekend">С</th>
-                  <th class="calendar-table__weekday calendar-table__weekday--weekend">В</th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">П</span><span class="calendar-table__weekday--two-letters">Пн</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">В</span><span class="calendar-table__weekday--two-letters">Вт</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">С</span><span class="calendar-table__weekday--two-letters">Ср</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">Ч</span><span class="calendar-table__weekday--two-letters">Чт</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">П</span><span class="calendar-table__weekday--two-letters">Пт</span></th>
+                  <th class="calendar-table__weekday calendar-table__weekday--weekend"><span class="calendar-table__weekday--one-letter">С</span><span class="calendar-table__weekday--two-letters">Сб</span></th>
+                  <th class="calendar-table__weekday calendar-table__weekday--weekend"><span class="calendar-table__weekday--one-letter">В</span><span class="calendar-table__weekday--two-letters">Вс</span></th>
                 </tr>
                 <tr class="calendar-table__row">
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>23</button></td>
@@ -136,7 +166,7 @@
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>26</button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>27</button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>28</button></td>
-                  <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>1</button></td>
+                  <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>1 <span class="calendar-table__first-of-month">мар</span></button></td>
                 </tr>
                 <tr class="calendar-table__row">
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>2</button></td>
@@ -169,15 +199,15 @@
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>23</button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>24</button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>25</button></td>
-                  <td class="calendar-table__cell calendar-table__cell--focus"><button class="calendar-table__button calendar-table__button--chosen" type="button">26</button></td>
+                  <td class="calendar-table__cell calendar-table__cell--focus"><button class="calendar-table__button calendar-table__button--chosen" type="button">26<p class="calendar-table__note">Заезд</p></button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button calendar-table__button--chosen" type="button">27</button></td>
-                  <td class="calendar-table__cell"><button class="calendar-table__button calendar-table__button--chosen" type="button">28</button></td>
+                  <td class="calendar-table__cell"><button class="calendar-table__button calendar-table__button--chosen" type="button">28<p class="calendar-table__note">Выезд</p></button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button">29</button></td>
                 </tr>
                 <tr class="calendar-table__row">
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button">30</button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button">31</button></td>
-                  <td class="calendar-table__cell"><button class="calendar-table__button" type="button">1</button></td>
+                  <td class="calendar-table__cell"><button class="calendar-table__button" type="button">1 <span class="calendar-table__first-of-month">апр</span></button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button">2</button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button">3</button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button">4</button></td>
@@ -188,7 +218,7 @@
               <a class="step__next-link" href="#step-2">Следующий шаг</a>
             </article>
             <article class="new-trip__article step" id="step-2">
-              <h3 class="step__title"><p class="step__step-number">Шаг 2.</p>Маршрут</h3>
+              <h3 class="step__title"><p class="step__step-number">Шаг 2. </p>Маршрут</h3>
               <p class="step__text">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
               <ul class="step__selected-list">
                 <li class="step__selected-item">
@@ -205,94 +235,94 @@
               <button class="step__selected-item step__choose-another step__choose-another" type="button">Выберите страну</button>
               <button class="step__delete-button step__delete-button--choose" type="button"></button>
               <div class="step__country-filter step__country-filter--open country-filter">
-                <table class="country-filter__letter-table country-filter__letter-table--white letter-table">
+                <table class="country-filter__letter-table  country-filter__letter-table--step country-filter__letter-table--white letter-table">
                   <tr class="letter-table__row">
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">а</button>
+                    <td class="letter-table__cell letter-table__cell--step letter-table__cell--step--current">
+                      <button class="letter-table__button letter-table__button--step letter-table__button--step--current" type="button">а</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">б</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">б</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">в</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">в</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">г</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">г</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">д</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">д</button>
                     </td>
                   </tr>
                   <tr class="letter-table__row">
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">е</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">е</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">з</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">з</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">и</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">и</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">к</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">к</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">л</button>
-                    </td>
-                  </tr>
-                  <tr class="letter-table__row">
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">м</button>
-                    </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">н</button>
-                    </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">о</button>
-                    </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">п</button>
-                    </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">р</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">л</button>
                     </td>
                   </tr>
                   <tr class="letter-table__row">
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">с</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">м</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">т</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">н</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">у</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">о</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">ф</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">п</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">х</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">р</button>
                     </td>
                   </tr>
                   <tr class="letter-table__row">
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">ч</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">с</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">ш</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">т</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">э</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">у</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">ю</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">ф</button>
                     </td>
-                    <td class="letter-table__cell">
-                      <button class="letter-table__button" type="button">я</button>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">х</button>
+                    </td>
+                  </tr>
+                  <tr class="letter-table__row">
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">ч</button>
+                    </td>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">ш</button>
+                    </td>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">э</button>
+                    </td>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">ю</button>
+                    </td>
+                    <td class="letter-table__cell letter-table__cell--step">
+                      <button class="letter-table__button letter-table__button--step" type="button">я</button>
                     </td>
                   </tr>
                 </table>
-                <ul class="country-filter__countries-list">
+                <ul class="country-filter__countries-list country-filter__countries-list--step">
                   <li class="country-filter__country">
                     <a class="country-filter__country-link" href="/asia/afganistan">Афганистан</a>
                   </li>
@@ -323,11 +353,13 @@
                 </ul>
               </div>
               <button class="step__selected-item step__choose-another step__choose-another--add" type="button">Добавить страну</button>
-              <a class="step__next-link" href="#step-3">Следующий шаг</a>
-              <a class="step__prev-link" href="#step-1">На шаг назад</a>
+              <div class="new-trip__links">
+                <a class="step__next-link" href="#step-3">Следующий шаг</a>
+                <a class="step__prev-link" href="#step-1">На шаг назад</a>
+              </div>
             </article>
             <article class="new-trip__article step" id="step-3">
-              <h3 class="step__title"><p class="step__step-number">Шаг 3.</p>Развлечения</h3>
+              <h3 class="step__title"><p class="step__step-number">Шаг 3. </p>Развлечения</h3>
               <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
               <ul class="step__plans-list plans-list">
                 <li class="plans-list__item">
@@ -341,8 +373,10 @@
                   <textarea class="plans-list__textarea" id="czech republic">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </li>
               </ul>
-              <button class="new-trip__submit" type="submit">Отправить</button>
-              <a class="step__prev-link" href="#step-2">На шаг назад</a>
+              <div class="new-trip__links">
+                <button class="new-trip__submit" type="submit">Отправить</button>
+                <a class="step__prev-link" href="#step-2">На шаг назад</a>
+              </div>
             </article>
           </form>
         </div>
@@ -350,8 +384,8 @@
     </main>
 
     <footer class="page-footer page-footer--inner">
-      <div class="page-footer__wrap">
-        <a class="page-footer__logo">
+      <div class="page-footer__wrap container">
+        <a class="page-footer__logo" href="index.html">
           <img  class="page-footer__logo-img" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип Погнали">
         </a>
         <ul class="page-footer__list social-list">

@@ -65,16 +65,85 @@
   }
 }
 
-.range-controls .toggle {
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 4px;
-  height: 4px;
-  padding: 0;
-  border: 8px solid #ffffff;
-  background-color: #ababab;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
-  border-radius: 50%;
-  cursor: pointer;
+@media (min-width: @tablet) {
+  .level-range__input {
+    position: absolute;
+    top: 0;
+    width: 75px;
+    height: 46px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 5px 0 0 15px;
+
+    &--min {
+      right: 75px;
+    }
+
+    &--max {
+      right: 0;
+    }
+  }
+
+  .level-range__range-filter {
+    width: 277px;
+  }
+
+  .level-range__scale {
+    width: 277px;
+  }
+
+  .level-range__bar {
+    width: 201px;
+  }
+
+  .level-range__toggle {
+    width: 13px;
+    height: 13px;
+    top: -6px;
+
+    &--min {
+      right: 201px;
+    }
+
+    &--max {
+      right: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .level-range__input {
+    position: static;
+    width: 96px;
+    height: 46px;
+
+    &--max {
+      margin-left: -6px;
+    }
+  }
+
+  .level-range__range-filter {
+    width: 191px;
+  }
+
+  .level-range__controls {
+    margin: 40px 0;
+  }
+
+  .level-range__scale {
+    width: 191px;
+  }
+
+  .level-range__bar {
+    width: 125px;
+  }
+
+  .level-range__toggle {
+    &--min {
+      right: 125px;
+    }
+  }
 }

@@ -37,12 +37,12 @@
   margin: 10px 0 20px;
 }
 
+.profiles-filter__checkbox-item {
+  margin: 10px 0;
+}
+
 .profiles-filter__checkbox {
-  width: 18px;
-  height: 18px;
-  background: white;
-  border: none;
-  border-radius: 4px;
+  display: none;
 }
 
 .profiles-filter__label {
@@ -51,9 +51,22 @@
   font-size: 15px;
   line-height: 15px;
   text-align: left;
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: white;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: -3px;
+  }
 }
 
-.profile-filter__transport-list {
+.profiles-filter__transport-list {
   margin-top: 15px;
   margin-right: 80px;
   margin-bottom: 15px;
@@ -74,4 +87,101 @@
   padding: 13px;
   width: 230px;
   margin-top: 25px;
+}
+
+@media (min-width: @tablet) {
+  .profiles-filter {
+    padding: 35px;
+  }
+
+  .profiles-filter__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    margin-left: 10px;
+  }
+
+  .profiles-filter__fieldset {
+    width: 618px;
+    position: relative;
+    padding-left: 145px;
+
+    &--level-range {
+      margin-bottom: 70px;
+    }
+  }
+
+  .profiles-filter__legend-button {
+    margin: 15px 10px;
+    font-size: 20px;
+    line-height: 30px;
+    position: absolute;
+    left: 0;
+  }
+
+  .profiles-filter__checkbox-list {
+    display: flex;
+    width: 480px;
+  }
+
+  .profiles-filter__checkbox-item {
+    width: 160px;
+  }
+
+  .profiles-filter__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .profiles-filter__transport-list {
+    margin: 0;
+  }
+
+  .profiles-filter__button {
+    width: 618px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .profiles-filter {
+    padding: 47px;
+  }
+
+  .profiles-filter__title {
+    margin: 0 0 30px 0;
+  }
+
+  .profiles-filter__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profiles-filter__fieldset {
+    width: 190px;
+    padding: 0;
+
+    &--level-range {
+      margin-bottom: 45px;
+    }
+  }
+
+  .profiles-filter__legend-button {
+    position: static;
+    margin: 15px 0;
+  }
+
+  .profiles-filter__checkbox-list {
+    display: block;
+    width: 190px;
+  }
+
+  .profiles-filter__button {
+    width: 196px;
+    margin: 0 auto;
+  }
 }

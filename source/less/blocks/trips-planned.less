@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 270px;
 }
 
 .trips-planned__title {
@@ -32,4 +31,45 @@
   display: flex;
   flex-direction: column;
   margin: 10px auto;
+}
+
+@media (min-width: @tablet) {
+  .trips-planned__title {
+    font-size: 36px;
+    line-height: 50px;
+    margin: 56px auto 46px 35px;
+  }
+
+  .trips-planned__list {
+    width: 618px;
+    margin-bottom: 94px;
+  }
+
+  .trips-planned__item {
+    width: 618px;
+    min-height: 152px;
+    position: relative;
+  }
+}
+
+@media (min-width: @desktop) {
+  .trips-planned__title {
+    margin-left: 70px;
+    margin-bottom: 42px;
+  }
+
+  .trips-planned__list {
+    width: 1256px;
+    margin-left: 63px;
+  }
+
+  .trips-planned__item {
+    width: 1256px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 97px;
+    height: 97px;
+    align-items: baseline;
+    margin-top: 15px;
+  }
 }

@@ -8,7 +8,34 @@
   color: #192144;
   text-decoration: none;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
-  font-size: 30px;
   font-weight: 500;
+  font-size: 30px;
   line-height: 36px;
+}
+
+@media (min-width: @tablet) {
+  .site-list {
+    text-align: left;
+  }
+
+  .site-list__link {
+    font-size: 60px;
+    line-height: 71px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .site-list__item {
+    margin-left: 36px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .site-list__link {
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+  }
 }

@@ -1,52 +1,33 @@
 .catalog-card {
   background-color: white;
   border-radius: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
+  padding-bottom: 85px;
 }
 
 .catalog-card__img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  padding: 15px;
-  position: absolute;
-  box-sizing: content-box;
+}
+
+.catalog-card__info-wrap {
+  display: flex;
+  flex-direction: column;
+  order: 1;
 }
 
 .catalog-card__name {
   color: #1d2e5b;
   font-weight: bold;
-  font-size: 21px;
-  line-height: 21px;
+  font-size: 20px;
+  line-height: 20px;
   text-align: left;
-  margin: 15px 100px 8px;
-}
-
-.catalog-card__level {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.catalog-card__likes {
-  color: #161c35;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: left;
-  margin: 0 0 10px 100px;
-}
-
-.catalog-card__like-button {
-  width: 31px;
-  height: 31px;
-  border-radius: 50%;
-  background: #f9eaea;
-  border: none;
-  position: absolute;
-  top: 52px;
-  left: 63px;
+  padding-left: 90px;
+  margin-top: -70px;
+  margin-bottom: 0;
+  width: 190px;
+  order: 1;
 }
 
 .catalog-card__tags {
@@ -56,60 +37,14 @@
   line-height: 18px;
   text-align: left;
   width: 177px;
-  margin-left: 25px;
+  order: 3;
+  padding: 0 5px;
 }
 
-.catalog-card__section-title {
-  color: #444444;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 18px;
-  text-align: left;
-  margin: 0;
-  margin-left: 25px;
-}
-
-.catalog-card__countries-list {
-  list-style: none;
-  color: #1d2e5b;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
-  text-align: left;
-  text-transform: uppercase;
-  padding: 0;
-  padding-left: 40px;
-  margin-left: 25px;
-}
-
-.catalog-card__country {
-  position: relative;
-}
-
-.catalog-card__country-flag {
-  position: absolute;
-  top: -2px;
-  left: -40px;
-}
-
-.catalog-card__level-wrap {
+.catalog-card__likes-wrap {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.catalog-card__transport-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  margin: 15px 25px;
-}
-
-.catalog-card__transport-item {
-  width: 33px;
-  height: 32px;
-  border-radius: 50%;
-  background: #edeff6;
+  order: 2;
+  width: 230px;
 }
 
 .catalog-card__invite-link {
@@ -124,5 +59,304 @@
   text-align: center;
   text-transform: uppercase;
   padding: 8px;
-  margin: 10px auto 0;
+  position: absolute;
+  bottom: 22px;
+}
+
+.catalog-card__like-button {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background-color: #edeff6;
+  border: none;
+  margin-left: 50px;
+  margin-top: -2px;
+
+  &--liked {
+    background-color: #f9eaea;
+  }
+}
+
+.catalog-card__likes {
+  color: #161c35;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+  margin: 5px 10px;
+}
+
+.catalog-card__level-wrap {
+  width: 230px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 5px;
+  order: 3;
+}
+
+.catalog-card__level-article {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalog-card__level {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.catalog-card__transport-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin-top: 15px;
+}
+
+.catalog-card__transport-item {
+  width: 33px;
+  height: 32px;
+  border-radius: 50%;
+  background: #edeff6;
+}
+
+.catalog-card__countries-article {
+  padding: 0 5px;
+  order: 2;
+}
+
+.catalog-card__section-title {
+  color: #444444;
+  background-color: white;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: left;
+  margin: 0;
+}
+
+.catalog-card__countries-list {
+  list-style: none;
+  color: #1d2e5b;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 18px;
+  margin-bottom: 16px;
+}
+
+.catalog-card__country {
+  position: relative;
+}
+
+.catalog-card__country-flag {
+  position: absolute;
+  top: -2px;
+  left: -40px;
+}
+
+@media (min-width: @tablet) {
+  .catalog-card {
+    padding: 35px 25px 25px 35px;
+  }
+
+  .catalog-card__info-wrap {
+    margin-left: 35px;
+    order: 1;
+  }
+
+  .catalog-card__img {
+    width: 190px;
+    height: 190px;
+    border-radius: 30px;
+    padding: 0;
+  }
+
+  .catalog-card__name {
+    margin: 0;
+    font-size: 30px;
+    line-height: 30px;
+    width: 220px;
+    padding: 0;
+  }
+
+  .catalog-card__tags {
+    width: 225px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 0;
+    order: 2;
+  }
+
+  .catalog-card__likes-wrap {
+    display: flex;
+    width: 270px;
+    order: 3;
+  }
+
+  .catalog-card__invite-link {
+    position: static;
+    width: 148px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 12px;
+    margin: 0;
+    margin-top: 14px;
+  }
+
+  .catalog-card__like-button {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    margin-top: 14px;
+    position: relative;
+  }
+
+  .catalog-card__likes {
+    font-size: 20px;
+    line-height: 30px;
+    width: 50px;
+    margin: 0;
+    margin-top: 24px;
+    margin-left: 10px;
+    position: relative;
+  }
+
+  .catalog-card__level-wrap {
+    position: static;
+    flex-direction: column;
+    width: 60px;
+    margin-left: auto;
+    padding: 0;
+    order: 2;
+  }
+
+  .catalog-card__level-article {
+    width: 60px;
+  }
+
+  .catalog-card__transport-list {
+    flex-direction: column;
+    margin: 0;
+    width: 60px;
+    align-items: center;
+  }
+
+  .catalog-card__transport-item {
+    background-color: transparent;
+  }
+
+  .catalog-card__section-title {
+    margin-left: 50px;
+
+    &--countries-list {
+      margin-top: 20px;
+    }
+
+    &--transport {
+      display: none;
+    }
+
+    &--level {
+      display: none;
+    }
+  }
+
+  .catalog-card__countries-article {
+    padding: 0;
+    order: 3;
+  }
+
+  .catalog-card__countries-list {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+    padding-left: 50px;
+  }
+
+  .catalog-card__country {
+    margin-right: 75px;
+  }
+
+  .catalog-card__country-name {
+    margin-bottom: 0;
+  }
+
+  .catalog-card__country-flag {
+    width: 35px;
+    height: 24px;
+    top: 20px;
+    left: -44px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catalog-card {
+    padding: 40px;
+  }
+
+  .catalog-card__info-wrap {
+    margin-left: 300px;
+    order: 1;
+  }
+
+  .catalog-card__img {
+    width: 285px;
+    height: 285px;
+    border-radius: 20px 0 0 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .catalog-card__name {
+    margin-top: 10px;
+  }
+
+  .catalog-card__likes-wrap {
+    margin-top: auto;
+  }
+
+  .catalog-card__level-wrap {
+    flex-direction: row;
+    width: 250px;
+    margin-top: -60px;
+    margin-left: auto;
+    order: 3;
+  }
+
+  .catalog-card__transport-list {
+    flex-direction: row;
+    min-width: 140px;
+    padding: 0 10px;
+  }
+
+  .catalog-card__countries-article {
+    order: 2;
+    width: 250px;
+    margin-left: auto;
+    padding-bottom: 85px;
+    flex-direction: column;
+  }
+
+  .catalog-card__section-title {
+    display: none;
+  }
+
+  .catalog-card__country-name {
+    margin-top: 10px;
+  }
+
+  .catalog-card__country-flag {
+    top: 12px;
+    left: -50px;
+  }
 }

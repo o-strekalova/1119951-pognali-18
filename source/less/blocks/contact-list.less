@@ -32,3 +32,41 @@
     top: -13px;
   }
 }
+
+@media (min-width: @tablet) {
+  .contact-list {
+    margin-left: 188px;
+    padding: 0;
+  }
+
+  .contact-list__link {
+    font-size: 28px;
+    line-height: 28px;
+    margin-top: 19px;
+    margin-bottom: 19px;
+
+    &::before {
+      width: 67px;
+      height: 67px;
+      left: -90px;
+      top: -20px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .contact-list__item {
+    &:first-child {
+      margin-right: 234px;
+    }
+  }
+
+  .contact-list__link {
+    &::before {
+      width: 90px;
+      height: 90px;
+      left: -122px;
+      top: -31px;
+    }
+  }
+}

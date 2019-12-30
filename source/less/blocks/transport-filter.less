@@ -11,3 +11,36 @@
   border-radius: 50%;
   background-color: white;
 }
+
+@media (min-width: @tablet) {
+  .transport-filter__list {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+
+    &--form {
+      justify-content: center;
+      margin: 12px 0;
+    }
+  }
+
+  .transport-filter__item {
+    width: 43px;
+    height: 43px;
+    margin-right: 13px;
+    margin-top: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .transport-filter__list {
+    margin-bottom: 30px;
+  }
+
+  .transport-filter__item {
+    margin-right: 0;
+  }
+}

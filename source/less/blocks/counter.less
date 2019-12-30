@@ -63,5 +63,76 @@
   border: none;
   background: transparent;
   top: 50px;
-  left: 187px;
+  right: 14px;
+}
+
+@media (min-width: @tablet) {
+  .counter__label {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 24px 0;
+  }
+
+  .counter__measure {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 24px 0;
+    width: 43px;
+    right: 0;
+  }
+
+  .counter__input {
+    width: 531px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+  }
+
+  .counter__minus {
+    width: 20px;
+    top: 98px;
+    left: 23px;
+  }
+
+  .counter__plus {
+    top: 93px;
+    right: 20px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .counter__label {
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px;
+  }
+
+  .counter__measure {
+    position: static;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px;
+  }
+
+  .counter__input {
+    width: 181px;
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  .counter__minus {
+    position: relative;
+    top: -8px;
+    left: 40px;
+  }
+
+  .counter__plus {
+    position: relative;
+    top: -4px;
+    right: 40px;
+  }
 }

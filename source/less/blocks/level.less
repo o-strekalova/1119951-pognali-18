@@ -17,7 +17,6 @@
     line-height: 18px;
     text-align: center;
     top: 7px;
-    left: 20px;
     width: 45px;
     height: 45px;
     padding: 13px 7px;
@@ -36,5 +35,29 @@
     color: #161c35;
     font-size: 38px;
     line-height: 38px;
+  }
+}
+
+.level__level {
+  display: none;
+}
+
+@media (min-width: @tablet) {
+  .level {
+    &--blue {
+      line-height: 24px;
+      padding: 9px 0;
+      width: 60px;
+      height: 60px;
+      top: 0;
+    }
+  }
+
+  .level__level {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    color: rgba(68, 68, 68, 0.4);
+    font-weight: normal;
   }
 }

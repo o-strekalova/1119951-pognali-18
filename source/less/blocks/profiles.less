@@ -1,6 +1,5 @@
 .profiles {
   border-radius: 0 0 30px 30px;
-  z-index: 4;
   padding-bottom: 30px;
   padding-top: 80px;
   background-color: #192144;
@@ -17,15 +16,17 @@
 .profiles__list {
   list-style: none;
   padding: 0;
-  width: 270px;
-  margin: auto;
+  margin: 0;
 }
 
 .profiles__item {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: auto;
   margin-top: 280px;
+  width: 270px;
+  min-height: 157px;
 }
 
 .profiles__catalog-link {
@@ -42,4 +43,74 @@
   display: block;
   margin: 20px auto 0;
   padding: 24px;
+}
+
+@media (min-width: @tablet) {
+  .profiles__wrap {
+    margin-top: 70px;
+  }
+
+  .profiles__lead {
+    padding-left: 0;
+  }
+
+  .profiles__list {
+    width: 618px;
+    display: flex;
+    margin: 10px auto 80px;
+  }
+
+  .profiles__item {
+    margin-right: 0;
+    margin-left: 0;
+    width: 285px;
+    min-height: 198px;
+
+    &:first-child {
+      margin-right: 48px;
+    }
+  }
+
+  .profiles__catalog-link {
+    width: 618px;
+    height: 81px;
+    border-radius: 20px;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 31px 34px;
+    margin: 47px auto 58px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .profiles__wrap {
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .profiles__lead {
+    width: 620px;
+    margin: 50px 0 0 0;
+    padding-bottom: 0;
+  }
+
+  .profiles__list {
+    position: absolute;
+    margin: 110px 60px 120px auto;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: 630px;
+  }
+
+  .profiles__item {
+    &:first-child {
+      margin-right: 60px;
+    }
+  }
+
+  .profiles__catalog-link {
+    width: 270px;
+    margin: 0 0 70px 70px;
+  }
 }

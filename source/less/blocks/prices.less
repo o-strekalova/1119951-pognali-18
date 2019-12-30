@@ -2,19 +2,18 @@
   background-color: #edeff6;
   border-radius: 0 0 30px 30px;
   padding-top: 60px;
-  padding-right: 50px;
-  z-index: 3;
 
   &--business {
     background-color: white;
     border-radius: 20px;
-    z-index: 7;
+    z-index: 1;
     padding: 33px 0 0;
   }
 }
 
 .prices__title {
   width: 220px;
+  margin-left: 25px;
   padding-right: 105px;
 
   &--business {
@@ -27,10 +26,8 @@
 .prices__list {
   list-style: none;
   padding: 0;
-  padding-left: 25px;
-  width: 270px;
+  margin-left: 25px;
   margin-right: auto;
-  margin-left: auto;
 
   &--business {
     padding: 0 25px;
@@ -57,9 +54,7 @@
   line-height: 16px;
   text-align: left;
   text-decoration: none;
-  margin-top: 20px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 20px auto 35px 25px;
   display: block;
 }
 
@@ -76,4 +71,108 @@
   padding: 23px 81px 23px 79.5px;
   border-radius: 0 0 20px 20px;
   box-sizing: border-box;
+}
+
+@media (min-width: @tablet) {
+  .prices {
+    &--business {
+      border-radius: 30px;
+    }
+  }
+
+  .prices__title {
+    width: 618px;
+    text-align: center;
+    padding-right: 0;
+    margin-top: 45px;
+    margin-bottom: 80px;
+    margin-left: auto;
+
+    &--business {
+      width: 688px;
+      margin: 30px auto 40px;
+    }
+  }
+
+  .prices__list {
+    margin-right: 35px;
+    margin-left: 90px;
+
+    &--business {
+      width: 688px;
+      padding-right: 90px;
+      padding-left: 90px;
+      margin-bottom: 60px;
+    }
+  }
+
+  .prices__option {
+    display: flex;
+    position: relative;
+    padding: 16px 0;
+  }
+
+  .prices__text {
+    font-size: 28px;
+    line-height: 33px;
+
+    &--sum {
+      position: absolute;
+      right: 0;
+    }
+
+    &--business {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+
+  .prices__business-link {
+    color: #132576;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 80px;
+    margin-left: 90px;
+    margin-bottom: 46px;
+  }
+
+  .prices__close {
+    font-size: 24px;
+    text-transform: none;
+    width: 688px;
+    height: 108px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .prices__wrap {
+    margin-top: 48px;
+  }
+
+  .prices__title {
+    &--business {
+      margin-top: 20px;
+    }
+  }
+
+  .prices__list {
+    width: 814px;
+    padding: 0;
+    margin: 140px 344px 60px 162px;
+
+    &--business {
+      width: 630px;
+      margin: 20px auto 65px;
+    }
+  }
+
+  .prices__business-link {
+    width: 814px;
+    padding: 0;
+    margin: 60px auto 140px 162px;
+  }
+
+  .prices__close {
+    width: 750px;
+  }
 }

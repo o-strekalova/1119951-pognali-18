@@ -25,17 +25,23 @@
   padding: 2px;
 }
 
+.step__fieldsets {
+  min-height: 202px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .step__fieldset {
   border: none;
   margin: 0;
   padding: 0;
   position: relative;
   display: flex;
-  flex-direction: column;
 }
 
 .step__checkbox-label {
-  margin-top: 25px;
+  margin-top: 15px;
   margin-bottom: 40px;
   font-size: 15px;
   line-height: 15px;
@@ -216,7 +222,7 @@
   width: 220px;
   position: absolute;
   z-index: 2;
-  top: 411px;
+  top: 344px;
   padding-top: 0;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
@@ -229,4 +235,254 @@
 
 .step__plans-list {
   margin-top: 0;
+}
+
+@media (min-width: @tablet) {
+  .step {
+    padding: 43px;
+  }
+
+  .step__title {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 6px;
+  }
+
+  .step__text {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 37px 0 42px;
+  }
+
+  .step__fieldset {
+    margin-bottom: 87px;
+  }
+
+  .step__checkbox-label {
+    position: absolute;
+    top: 140px;
+    font-family: "Blogger Sans", "Tahoma", sans-serif;
+    color: #1d2e5b;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    padding-left: 59px;
+    margin: 35px 0;
+
+    &::before {
+      width: 36px;
+      height: 36px;
+      top: -12px;
+    }
+  }
+
+  .step__calendar {
+    width: 531px;
+  }
+
+  .step__next-link {
+    width: 285px;
+    height: 81px;
+    color: #1d2e5b;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: left;
+    text-transform: none;
+    padding: 30px 34px;
+    margin: 46px auto 12px 0;
+  }
+
+  .step__prev-link {
+    color: #1d2e5b;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  .step__selected-list {
+    padding-top: 25px;
+  }
+
+  .step__selected-item {
+    margin: 15px 0;
+  }
+
+  .step__select {
+    width: 369px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    padding: 27px;
+    padding-bottom: 22px;
+  }
+
+  .step__flag {
+    width: 70px;
+    height: 47px;
+    border: none;
+    padding: 0;
+    margin: 11px 0;
+    margin-left: 53px;
+  }
+
+  .step__delete-button {
+    width: 17px;
+    height: 17px;
+    background: transparent;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 25px 0;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-color: #1d2e5b;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: 129px;
+    }
+
+    &--choose {
+      top: 463px;
+      right: 42px;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        border: solid 1px #cbced9;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .step__choose-another {
+    width: 369px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    padding: 27px;
+    padding-bottom: 22px;
+    margin: 0 0 15px;
+
+    &--add {
+      margin-bottom: 3px;
+
+      &::before {
+        width: 15px;
+        height: 15px;
+        top: 26px;
+        right: -37px;
+        background-color: #edeff6;
+      }
+    }
+  }
+
+  .step__country-filter {
+    width: 575px;
+    min-height: 476px;
+    border: none;
+    top: 530px;
+    padding: 34px 27px;
+
+    &--open {
+      display: flex;
+    }
+  }
+
+  .step__plans-list {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .step {
+    border-radius: 60px;
+    padding: 100px 160px;
+  }
+
+  .step__step-number {
+    display: inline;
+  }
+
+  .step__text {
+    width: 580px;
+    margin-bottom: 56px;
+  }
+
+  .step__fieldsets {
+    padding: 30px 0 32px;
+    margin-bottom: 30px;
+  }
+
+  .step__fieldset {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .step__checkbox-label {
+    top: 0;
+    left: 755px;
+    margin-top: 56px;
+  }
+
+  .step__calendar {
+    width: 1000px;
+    margin-bottom: 10px;
+  }
+
+  .step__selected-list {
+    padding-top: 47px;
+  }
+
+  .step__select {
+    width: 730px;
+  }
+
+  .step__flag {
+    margin-left: 85px;
+  }
+
+  .step__delete-button {
+    &::after {
+      right: 220px;
+    }
+
+    &--choose {
+      top: 520px;
+      right: 158px;
+    }
+  }
+
+  .step__choose-another {
+    width: 730px;
+
+    &--add {
+      margin-bottom: 10px;
+
+      &::before {
+        right: -53px;
+      }
+    }
+  }
+
+  .step__country-filter {
+    width: 730px;
+    padding: 27px;
+    top: 588px;
+  }
 }

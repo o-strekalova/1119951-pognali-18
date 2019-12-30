@@ -1,11 +1,18 @@
 .letter-table {
   background: white;
   border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .letter-table__cell {
   height: 42px;
   border: 1px solid #cbced9;
+
+  &--step {
+    &--current {
+      background-color: #edeff6;
+    }
+  }
 }
 
 .letter-table__button {
@@ -21,4 +28,99 @@
   text-transform: uppercase;
   width: 40px;
   height: 42px;
+}
+
+.letter-table__countries-list {
+  display: none;
+}
+
+@media (min-width: @tablet) {
+  .letter-table {
+    background: transparent;
+  }
+
+  .letter-table__cell {
+    height: 67px;
+    border: none;
+
+    &--step {
+      border: 1px solid #cbced9;
+
+      &--current {
+        background-color: #1d2e5b;
+      }
+    }
+  }
+
+  .letter-table__button {
+    color: rgba(25, 33, 68, 0.2);
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 24px;
+    letter-spacing: normal;
+    width: 70px;
+    height: 67px;
+
+    &--current {
+      color: #192144;
+    }
+
+    &--step {
+      width: 50px;
+      height: 68px;
+      font-weight: 500;
+      color: #1d2e5b;
+      font-size: 20px;
+      line-height: 18px;
+      letter-spacing: 2px;
+
+      &--current {
+        color: white;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .letter-table__cell {
+    vertical-align: top;
+    width: 250px;
+
+    &--step {
+      border: none;
+      padding: 7px;
+
+      &--current {
+        background: transparent;
+      }
+    }
+  }
+
+  .letter-table__button {
+    color: #192144;
+    text-align: left;
+    padding: 0;
+    margin-left: -4px;
+
+    &--step {
+      width: 60px;
+      height: 70px;
+      border: 1px solid #cbced9;
+      border-radius: 4px;
+      text-align: center;
+      padding-top: 7px;
+      padding-left: 3px;
+
+      &--current {
+        color: white;
+        background-color: #1d2e5b;
+      }
+    }
+  }
+
+  .letter-table__countries-list {
+    display: block;
+    margin: 50px 0;
+    width: 253px;
+  }
 }

@@ -32,7 +32,7 @@
 
 .plans-list__textarea {
   width: 220px;
-  height: 220px;
+  min-height: 220px;
   border-radius: 4px;
   border: 1px solid #cbced9;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
@@ -50,4 +50,69 @@
 
 .plans-list__flag {
   margin-bottom: -8px;
+}
+
+@media (min-width: @tablet) {
+  .plans-list__item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .plans-list__textarea-label {
+    font-size: 30px;
+    font-weight: bold;
+    width: 400px;
+    padding: 0;
+    margin: 32px 57px 40px 0;
+
+    &::after {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #1d2e5b;
+      position: absolute;
+      top: 0;
+      right: -28px;
+    }
+  }
+
+  .plans-list__textarea {
+    width: 527px;
+    min-height: 142px;
+    padding: 19px;
+    padding-right: 100px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .plans-list__flag {
+    width: 70px;
+    height: 47px;
+    margin: 16px 0 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .plans-list {
+    padding-top: 50px;
+  }
+
+  .plans-list__textarea-label {
+    width: 730px;
+
+    &::after {
+      right: -52px;
+    }
+  }
+
+  .plans-list__textarea {
+    width: 730px;
+    padding: 25px;
+    padding-right: 15px;
+  }
+
+  .plans-list__flag {
+    margin: 16px 112px 0 auto;
+  }
 }
