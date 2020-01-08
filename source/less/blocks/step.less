@@ -1,7 +1,7 @@
 .step {
   background: white;
   border-radius: 10px;
-  padding: 25px;
+  padding: 25px 25px 22px;
 }
 
 .step__title {
@@ -22,7 +22,7 @@
   font-size: 16px;
   line-height: 22px;
   text-align: left;
-  padding: 2px;
+  margin-bottom: 10px;
 }
 
 .step__fieldsets {
@@ -41,13 +41,13 @@
 }
 
 .step__checkbox-label {
-  margin-top: 15px;
-  margin-bottom: 40px;
+  margin-top: 18px;
+  margin-bottom: 37px;
   font-size: 15px;
   line-height: 15px;
   text-align: left;
   color: #444444;
-  padding-left: 40px;
+  padding-left: 39px;
   position: relative;
 
   &::before {
@@ -56,9 +56,18 @@
     height: 26px;
     border-radius: 4px;
     border: 1px solid #cbced9;
+    background-size: 9px;
+    background-repeat: no-repeat;
+    background-position: 50%;
     position: absolute;
-    top: -6px;
+    top: -8px;
     left: 0;
+  }
+}
+
+.step__checkbox:checked + .step__checkbox-label {
+  &::before {
+    background-image: url("../../img/tick.svg");
   }
 }
 
@@ -78,7 +87,7 @@
   text-align: center;
   text-transform: uppercase;
   padding-top: 7px;
-  margin-top: 20px;
+  margin-top: 22px;
   margin-left: -5px;
   margin-right: auto;
 }
@@ -90,8 +99,8 @@
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 10px;
-  margin-bottom: -10px;
+  margin-top: 13px;
+  margin-bottom: -13px;
 }
 
 .step__selected-list {
@@ -103,8 +112,35 @@
 .step__selected-item {
   display: flex;
   position: relative;
-  margin-top: 6px;
+  margin-top: 10px;
   margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    width: 12px;
+    height: 7px;
+    background-image: url("../../img/dropdown-form.svg");
+    opacity: 0.3;
+    background-size: 12px 7px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 18px;
+    left: 142px;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    width: 5px;
+    height: 10px;
+    background-image: url("../../img/small-arrow.svg");
+    opacity: 0.3;
+    background-size: 5px 10px;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -15px;
+    right: 50px;
+  }
 }
 
 .step__select {
@@ -120,7 +156,7 @@
   text-align: left;
   color: #1d2e5b;
   text-transform: uppercase;
-  padding: 12px 30px 8px 12px;
+  padding: 12px 30px 8px 10px;
 }
 
 .step__flag {
@@ -134,6 +170,10 @@
   width: 21px;
   height: 21px;
   background-color: #edeff6;
+  background-image: url("../../img/small-cross.svg");
+  background-size: 9px;
+  background-position: 50%;
+  background-repeat: no-repeat;
   border-radius: 50%;
   border: none;
   position: absolute;
@@ -149,7 +189,7 @@
     z-index: 1;
     position: absolute;
     top: 13px;
-    right: 70px;
+    right: 73px;
   }
 
   &::after {
@@ -160,12 +200,12 @@
     border-radius: 50%;
     position: absolute;
     top: 27px;
-    right: 58px;
+    right: 59px;
   }
 
   &--choose {
-    top: 293px;
-    right: 16px;
+    top: 284px;
+    right: 15px;
 
     &::before {
       display: none;
@@ -192,7 +232,8 @@
   text-align: left;
   color: #1d2e5b;
   text-transform: uppercase;
-  padding: 12px 30px 8px 12px;
+  padding: 12px 30px 8px 10px;
+  margin-top: 2px;
 
   &--open-filter {
     background-color: #1d2e5b;
@@ -201,9 +242,18 @@
 
   &--add {
     background-color: #edeff6;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 
     &::before {
+      width: 14px;
+      height: 14px;
+      background-image: url("../../img/qty-plus-mobile.svg");
+      background-size: 14px;
+      opacity: 1;
+      top: 14px;
+    }
+
+    &::after {
       content: "";
       width: 8px;
       height: 8px;
@@ -212,7 +262,13 @@
       position: absolute;
       top: 16px;
       right: 48px;
+      background-image: none;
+      opacity: 1;
     }
+  }
+
+  &::before {
+    left: 190px;
   }
 }
 
@@ -221,8 +277,8 @@
   background: white;
   width: 220px;
   position: absolute;
-  z-index: 2;
-  top: 344px;
+  z-index: 3;
+  top: 334px;
   padding-top: 0;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
@@ -234,7 +290,8 @@
 }
 
 .step__plans-list {
-  margin-top: 0;
+  margin: 0;
+  position: relative;
 }
 
 @media (min-width: @tablet) {

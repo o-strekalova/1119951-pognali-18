@@ -1,13 +1,15 @@
+.lead__wrap {
+  padding-top: 5px;
+}
+
 .lead__title {
   color: #ff8d30;
   font-weight: bold;
   font-size: 24px;
   line-height: 24px;
   text-align: left;
-  width: 215px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 30px;
+  width: 220px;
+  margin: 27px auto 19px;
 
   &--center {
     text-align: center;
@@ -21,9 +23,8 @@
   font-size: 16px;
   line-height: 22px;
   text-align: left;
-  width: 215px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 220px;
+  margin: 19px auto;
 
   &--center {
     text-align: center;
@@ -35,6 +36,11 @@
 
   &--grey {
     color: #444444;
+    margin: 0 auto;
+  }
+
+  &--profiles {
+    margin: 0 auto;
   }
 }
 
@@ -45,12 +51,14 @@
 @media (min-width: @tablet) {
   .lead__title {
     width: 300px;
+    margin-bottom: 40px;
     margin-left: 35px;
     font-size: 45px;
     line-height: 45px;
   }
 
   .lead__text {
+    margin-bottom: 32px;
     margin-left: 35px;
     font-size: 28px;
     line-height: 33px;
@@ -63,10 +71,13 @@
 
     &--grey {
       width: 340px;
+      margin-top: 20px;
     }
 
     &--profiles {
       width: 425px;
+      margin-top: 18px;
+      margin-bottom: 18px;
     }
   }
 
@@ -80,6 +91,10 @@
     width: 274px;
     height: 81px;
     background-color: #ffd74b;
+    background-image: url("../../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: 10px 14px;
+    background-position: 228px 50%;
     border-radius: 20px;
     text-decoration: none;
     padding: 31px 34px;
@@ -99,9 +114,12 @@
     }
   }
 
+  .lead__wrap {
+    margin-top: 20px;
+  }
+
   .lead__title {
-    margin-left: 70px;
-    margin-bottom: 60px;
+    margin: 31px auto 59px 70px;
     width: 340px;
   }
 
@@ -111,24 +129,25 @@
 
     &--bold {
       width: 410px;
-      margin-top: 40px;
-      margin-bottom: 65px;
+      margin-top: 38px;
+      margin-bottom: 84px;
     }
 
     &--grey {
       width: 340px;
-      margin-top: 0;
+      margin-top: -2px;
       margin-bottom: 0;
     }
 
     &--profiles {
       width: 425px;
-      margin-top: 0;
+      margin-top: -2px;
       margin-bottom: 0;
     }
   }
 
   .lead__about-link {
     margin-left: 70px;
+    margin-bottom: 54px;
   }
 }

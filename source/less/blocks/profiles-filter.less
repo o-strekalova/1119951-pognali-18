@@ -2,6 +2,7 @@
   background: #ffd74b;
   border-radius: 20px;
   padding: 25px;
+  padding-bottom: 21px;
 }
 
 .profiles-filter__title {
@@ -10,6 +11,8 @@
   font-size: 22.5px;
   line-height: 22.5px;
   text-align: left;
+  margin-top: 2px;
+  margin-bottom: 21px;
 }
 
 .profiles-filter__fieldset {
@@ -18,7 +21,13 @@
   margin: 0;
 }
 
+.profiles-filter__legend {
+  padding: 12px 0 9px 1px;
+  border-top: 1px solid #f3c72b;
+}
+
 .profiles-filter__legend-button {
+  width: 220px;
   color: #1d2e5b;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: bold;
@@ -27,18 +36,34 @@
   text-align: left;
   text-transform: uppercase;
   border: none;
-  background: none;
   padding: 0;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 8px;
+    height: 4px;
+    background-image: url("../../img/dropdown.svg");
+    background-repeat: no-repeat;
+    background-size: 8px 4px;
+    transform: rotate(180deg);
+  }
 }
 
 .profiles-filter__checkbox-list {
   list-style: none;
   padding: 0;
-  margin: 10px 0 20px;
+  margin: -3px 0 18px -1px;
 }
 
 .profiles-filter__checkbox-item {
-  margin: 10px 0;
+  margin: 10px 0 13px;
 }
 
 .profiles-filter__checkbox {
@@ -51,26 +76,36 @@
   font-size: 15px;
   line-height: 15px;
   text-align: left;
+  cursor: pointer;
 
   &::before {
     content: "";
     width: 18px;
     height: 18px;
-    background: white;
+    background-color: white;
+    background-size: 9px;
+    background-repeat: no-repeat;
+    background-position: 50%;
     border: none;
     border-radius: 4px;
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
-    margin-top: -3px;
+    margin-top: -4px;
+  }
+}
+
+.profiles-filter__checkbox:checked + .profiles-filter__label {
+  &::before {
+    background-image: url("../../img/tick.svg");
   }
 }
 
 .profiles-filter__transport-list {
-  margin-top: 15px;
+  margin-top: 5px;
   margin-right: 80px;
-  margin-bottom: 15px;
-  margin-left: 0;
+  margin-bottom: 19px;
+  margin-left: -12px;
 }
 
 .profiles-filter__button {
@@ -84,9 +119,23 @@
   border: none;
   background: white;
   border-radius: 20px;
-  padding: 13px;
+  padding: 14px;
   width: 230px;
-  margin-top: 25px;
+  margin-top: 28px;
+  margin-left: -5px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .profiles-filter__fieldset--closed .profiles-filter__input-block {
+    display: none;
+  }
+
+  .profiles-filter__fieldset--closed .profiles-filter__legend-button {
+    &::after {
+      transform: rotate(0deg);
+    }
+  }
 }
 
 @media (min-width: @tablet) {
@@ -97,45 +146,102 @@
   .profiles-filter__title {
     font-size: 30px;
     line-height: 30px;
-    margin-top: 10px;
+    margin-top: 1px;
     margin-bottom: 70px;
-    margin-left: 10px;
+    margin-left: -1px;
+  }
+
+  .profiles-filter__form {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -33px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #f3c72b;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 86px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #f3c72b;
+    }
   }
 
   .profiles-filter__fieldset {
     width: 618px;
     position: relative;
-    padding-left: 145px;
+    padding-left: 127px;
 
     &--level-range {
+      margin-top: 4px;
       margin-bottom: 70px;
     }
   }
 
+  .profiles-filter__legend {
+    padding: 0;
+    border-top: none;
+  }
+
   .profiles-filter__legend-button {
+    width: auto;
     margin: 15px 10px;
     font-size: 20px;
     line-height: 30px;
     position: absolute;
-    left: 0;
+    left: -11px;
+    top: -14px;
+
+    &::after {
+      display: none;
+    }
+
+    &--transport {
+      top: -7px;
+    }
   }
 
   .profiles-filter__checkbox-list {
     display: flex;
-    width: 480px;
+    margin-bottom: 10px;
   }
 
   .profiles-filter__checkbox-item {
     width: 160px;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .profiles-filter__label {
     font-size: 20px;
     line-height: 20px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      background-size: 12px;
+      margin-right: 12px;
+      margin-top: -4px;
+    }
   }
 
   .profiles-filter__transport-list {
     margin: 0;
+    margin-top: -5px;
+    margin-left: -7px;
   }
 
   .profiles-filter__button {
@@ -144,6 +250,10 @@
     border-radius: 25px;
     font-size: 20px;
     line-height: 30px;
+    margin-left: 0;
+    margin-bottom: 5px;
+    padding: 13px;
+    padding-right: 17px;
   }
 }
 
@@ -153,12 +263,17 @@
   }
 
   .profiles-filter__title {
-    margin: 0 0 30px 0;
+    margin: 0 0 18px 0;
   }
 
   .profiles-filter__form {
     display: flex;
     flex-direction: column;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .profiles-filter__fieldset {
@@ -172,12 +287,36 @@
 
   .profiles-filter__legend-button {
     position: static;
-    margin: 15px 0;
+    margin: 10px 0 0 -2px;
+
+    &::after {
+      display: block;
+      top: 20px;
+    }
   }
 
   .profiles-filter__checkbox-list {
     display: block;
     width: 190px;
+    margin: 25px 0 15px;
+  }
+
+  .profiles-filter__checkbox-item {
+    margin: 10px 0 20px;
+  }
+
+  .profiles-filter__fieldset--closed .profiles-filter__input-block {
+    display: none;
+  }
+
+  .profiles-filter__fieldset--closed .profiles-filter__legend-button {
+    &::after {
+      transform: rotate(0deg);
+    }
+  }
+
+  .profiles-filter__transport-list {
+    margin: 8px 0;
   }
 
   .profiles-filter__button {

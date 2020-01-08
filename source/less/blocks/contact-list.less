@@ -3,8 +3,7 @@
 }
 
 .contact-list__link {
-  margin-top: 11px;
-  margin-bottom: 11px;
+  margin: 9px 0 14px;
   display: inline-block;
   vertical-align: middle;
   color: #192144;
@@ -28,14 +27,29 @@
     border-radius: 50%;
     background-color: #121936;
     position: absolute;
-    left: -60px;
+    left: -62px;
     top: -13px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  &--phone {
+    &::before {
+      background-image: url("../../img/contacts-phone.svg");
+      background-size: 18px;
+    }
+  }
+
+  &--email {
+    &::before {
+      background-image: url("../../img/contacts-mail.svg");
+      background-size: 18px 13px;
+    }
   }
 }
 
 @media (min-width: @tablet) {
   .contact-list {
-    margin-left: 188px;
     padding: 0;
   }
 
@@ -49,7 +63,19 @@
       width: 67px;
       height: 67px;
       left: -90px;
-      top: -20px;
+      top: -22px;
+    }
+
+    &--phone {
+      &::before {
+        background-size: 27px;
+      }
+    }
+
+    &--email {
+      &::before {
+        background-size: 27px 19px;
+      }
     }
   }
 }
@@ -67,6 +93,18 @@
       height: 90px;
       left: -122px;
       top: -31px;
+    }
+
+    &--phone {
+      &::before {
+        background-size: 36px;
+      }
+    }
+
+    &--email {
+      &::before {
+        background-size: 36px 26px;
+      }
     }
   }
 }

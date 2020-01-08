@@ -1,6 +1,34 @@
 .plans-list {
   list-style: none;
   padding: 0;
+
+  &::before {
+    content: "";
+    width: 2px;
+    height: 281px;
+    background-color: #1d2e5b;
+    position: absolute;
+    top: 21px;
+    left: -14px;
+  }
+}
+
+.plans-list__item {
+  position: relative;
+  margin-bottom: 11px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 2px;
+    border-radius: 1px;
+    background-size: 15px 2px;
+    background-color: #1d2e5b;
+    position: absolute;
+    top: 19px;
+    left: -13px;
+  }
 }
 
 .plans-list__textarea-label {
@@ -12,11 +40,22 @@
   font-weight: 500;
   line-height: 18px;
   text-align: left;
-  margin: 16px 0;
-  padding-left: 12px;
+  margin: 11px 0 16px;
+  padding-left: 10px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1d2e5b;
+    position: absolute;
+    top: 6px;
+    left: -3px;
+  }
 
   &::after {
     content: "";
@@ -41,7 +80,7 @@
   font-weight: normal;
   line-height: 22px;
   text-align: left;
-  padding: 10px 15px;
+  padding: 9px 13px;
 
   &::placeholder {
     opacity: 0.3;
@@ -49,7 +88,7 @@
 }
 
 .plans-list__flag {
-  margin-bottom: -8px;
+  margin-bottom: -5px;
 }
 
 @media (min-width: @tablet) {

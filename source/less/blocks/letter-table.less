@@ -5,7 +5,7 @@
 }
 
 .letter-table__cell {
-  height: 42px;
+  height: 40px;
   border: 1px solid #cbced9;
 
   &--step {
@@ -27,7 +27,16 @@
   text-align: center;
   text-transform: uppercase;
   width: 40px;
-  height: 42px;
+  height: 38px;
+  padding: 12px 9px 12px 14px;
+  cursor: pointer;
+
+  &--current {
+    color: white;
+    background-color: #1d2e5b;
+    outline: 1px solid #1d2e5b;
+    cursor: auto;
+  }
 }
 
 .letter-table__countries-list {
@@ -40,7 +49,7 @@
   }
 
   .letter-table__cell {
-    height: 67px;
+    height: 80px;
     border: none;
 
     &--step {
@@ -58,10 +67,12 @@
     font-size: 60px;
     line-height: 24px;
     letter-spacing: normal;
-    width: 70px;
-    height: 67px;
+    width: 75px;
+    height: 80px;
 
     &--current {
+      background-color: transparent;
+      outline: none;
       color: #192144;
     }
 
@@ -120,7 +131,7 @@
 
   .letter-table__countries-list {
     display: block;
-    margin: 50px 0;
-    width: 253px;
+    margin: 20px 0 37px;
+    width: 250px;
   }
 }

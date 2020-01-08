@@ -7,14 +7,14 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header">
       <div class="page-header__wrap container">
         <a class="page-header__logo">
           <img class="page-header__logo-image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип Погнали">
         </a>
         <nav class="page-header__main-nav main-nav">
           <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-          <div class="main-nav__wrapper main-nav__wrapper container">
+          <div class="main-nav__wrapper">
             <ul class="main-nav__site-list site-list">
               <li class="site-list__item"><a class="site-list__link" href="#about">О сервисе</a></li>
               <li class="site-list__item"><a class="site-list__link" href="form.html">Направления</a></li>
@@ -22,13 +22,13 @@
             </ul>
             <a class="main-nav__login" href="#">Авторизация</a>
             <ul class="main-nav__contact-list contact-list">
-              <li class="contact-list__item"><a class="contact-list__link" href="tel:88005558628" aria-label="Позвонить в Погнали">8 800 555-86-28</a></li>
-              <li class="contact-list__item"><a class="contact-list__link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали">mail@htmlacademy.ru</a></li>
+              <li class="contact-list__item"><a class="contact-list__link contact-list__link--phone" href="tel:88005558628" aria-label="Позвонить в Погнали">8 800 555-86-28</a></li>
+              <li class="contact-list__item"><a class="contact-list__link contact-list__link--email" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали">mail@htmlacademy.ru</a></li>
             </ul>
             <ul class="main-nav__social-list social-list">
-              <li class="social-list__item social-list__item--fb"><a href="#" aria-label="Погнали в Фейсбуке"></a></li>
-              <li class="social-list__item social-list__item--vk"><a href="#" aria-label="Погнали Вконтакте"></a></li>
-              <li class="social-list__item social-list__item--ig"><a href="#" aria-label="Погнали в Инстаграме"></a></li>
+              <li><a class="social-list__item social-list__item--fb" href="#" aria-label="Погнали в Фейсбуке"></a></li>
+              <li><a class="social-list__item social-list__item--vk" href="#" aria-label="Погнали Вконтакте"></a></li>
+              <li><a class="social-list__item social-list__item--ig" href="#" aria-label="Погнали в Инстаграме"></a></li>
             </ul>
           </div>
         </nav>
@@ -60,17 +60,29 @@
       <section class="page-main__lead lead lead--about" id="about">
         <div class="lead__wrap  container">
           <h2 class="lead__title">О сервисе</h2>
-          <p class="lead__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+          <p class="lead__text">
+            Любое путешествие веселее<br class="page-main__lines--mobile">
+            с попутчиками, которые на<br class="page-main__lines--mobile">
+            одной волне с тобой! Делитесь<br class="page-main__lines--mobile">
+            своими идеями путешествий <br class="page-main__lines--tablet page-main__lines--about">и<br class="page-main__lines--mobile">
+            черпайте вдохновение в чужих.<br class="page-main__lines--mobile">
+          </p>
           <p class="lead__text lead__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-          <a class="lead__about-link"  href="#">Показать все</a>
+          <a class="lead__about-link"  href="#">Подробнее</a>
         </div>
       </section>
 
       <section class="page-main__destinations destinations">
         <div class="destinations__wrap container">
           <article class="destinations__lead lead">
-            <h2 class="lead__title lead__title">Направления</h2>
-            <p class="lead__text lead__text--grey">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+            <h2 class="lead__title">Направления</h2>
+            <p class="lead__text lead__text--grey">
+              Мы не продаем туры<br class="page-main__lines--mobile"><br class="page-main__lines--tablet">
+              и ничего не рекламируем.<br class="page-main__lines--mobile">
+              Люди сами пишут о странах,<br class="page-main__lines--mobile">
+              куда хотели бы отправиться<br class="page-main__lines--mobile">
+              и чем можно там заняться.<br class="page-main__lines--mobile">
+            </p>
           </article>
           <ul class="destinations__list">
             <li class="destinations__item country-card">
@@ -91,11 +103,11 @@
               <img class="country-card__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Флаг Чехии">
               <h3 class="country-card__country">Чехия</h3>
               <p class="country-card__country-slogan">Закоулки старой Европы</p>
-              <p class="country-card__country-numbers">5326</p>
+              <p class="country-card__country-numbers country-card__country-numbers--short">5326</p>
               <img class="country-card__country-img" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Направление Чехия">
             </li>
           </ul>
-          <a href="#" class="destinations__catalog-link">Показать все</a>
+          <a href="form.html" class="destinations__catalog-link">Показать все</a>
         </div>
       </section>
 
@@ -103,14 +115,14 @@
         <div class="profiles__wrap container">
           <article class="profiles__lead lead">
             <h2 class="lead__title">Попутчики</h2>
-            <p class="lead__text lead__text--profiles">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-            <p class="lead__text lead__text--bold">Теперь можно легко найти единомышленников!</p>
+            <p class="lead__text lead__text--profiles">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, <br class="page-main__lines--tablet">а другому маршрут для хайкинга.</p>
+            <p class="lead__text lead__text--bold">Теперь можно легко <br class="page-main__lines--tablet">найти единомышленников!</p>
           </article>
           <ul class="profiles__list">
             <li class="profiles__item traveler-card">
               <img class="traveler-card__img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
-              <h3 class="traveler-card__name">Таня Фирсова</h3>
-              <p class="traveler-card__level level"><span class="level__number">99</span>level</p>
+              <h3 class="traveler-card__name traveler-card__name--offline">Таня Фирсова</h3>
+              <p class="traveler-card__level level level--99"><span class="level__number">99</span><span class="level__word">level</span></p>
               <p class="traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
               <ul class="traveler-card__countries-list">
                 <li class="traveler-card__country">
@@ -124,7 +136,7 @@
                 </li>
               </ul>
               <ul class="traveler-card__transport-list">
-                <li class="traveler-card__transport-item traveler-card__transport-item--plane checked" aria-label="самолет"></li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--plane traveler-card__transport-item--checked" aria-label="самолет"></li>
                 <li class="traveler-card__transport-item traveler-card__transport-item--bus" aria-label="автобус"></li>
                 <li class="traveler-card__transport-item traveler-card__transport-item--bike" aria-label="велосипед"></li>
                 <li class="traveler-card__transport-item traveler-card__transport-item--on-foot" aria-label="пешком"></li>
@@ -132,9 +144,9 @@
             </li>
             <li class="profiles__item traveler-card">
               <img class="traveler-card__img" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Петя Демин">
-              <h3 class="traveler-card__name">Петя Демин</h3>
-              <p class="traveler-card__level level"><span class="level__number">80</span> level</p>
-              <p class="traveler-card__tags">#бургер #бар #футбол #концерт #крафт</p>
+              <h3 class="traveler-card__name traveler-card__name--online">Петя Демин</h3>
+              <p class="traveler-card__level level level--80"><span class="level__number">80</span><span class="level__word">level</span></p>
+              <p class="traveler-card__tags traveler-card__tags--short">#бургер #бар #футбол #концерт #крафт</p>
               <ul class="traveler-card__countries-list">
                 <li class="traveler-card__country">
                   <img class="traveler-card__country-flag" src="https://via.placeholder.com/26x18" width="35" height="24" alt="Флаг Бельгии">
@@ -144,14 +156,14 @@
                 </li>
               </ul>
               <ul class="traveler-card__transport-list">
-                <li class="traveler-card__transport-item traveler-card__transport-item--plane checked" aria-label="самолет"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--bus checked" aria-label="автобус"></li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--plane traveler-card__transport-item--checked" aria-label="самолет"></li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--bus traveler-card__transport-item--checked" aria-label="автобус"></li>
                 <li class="traveler-card__transport-item traveler-card__transport-item--bike" aria-label="велосипед"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--on-foot checked" aria-label="пешком"></li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--on-foot traveler-card__transport-item--checked" aria-label="пешком"></li>
               </ul>
             </li>
           </ul>
-          <a class="profiles__catalog-link" href="catalog.html">Показать все</a>
+          <a class="profiles__catalog-link" href="catalog.html">Показать всеx</a>
         </div>
       </section>
 
@@ -160,14 +172,17 @@
           <h2 class="prices__title lead__title">Добавьте свой профиль</h2>
           <ul class="prices__list">
             <li class="prices__option">
+              <span class="prices__number prices__number--1">1</span>
               <p class="prices__text">Базовое размещение</p>
               <p class="prices__text prices__text--sum">Бесплатно</p>
             </li>
             <li class="prices__option">
+              <span class="prices__number prices__number--2">2</span>
               <p class="prices__text">Вывод на первых позициях</p>
               <p class="prices__text prices__text--sum">99 руб./мес</p>
             </li>
             <li class="prices__option">
+              <span class="prices__number prices__number--3">3</span>
               <p class="prices__text">Кастомный цвет карточки</p>
               <p class="prices__text prices__text--sum">59 руб./мес</p>
             </li>
@@ -176,25 +191,33 @@
         </div>
       </section>
 
-      <section class="page-main__sign-up sign-up page-main__lead lead">
+      <section class="page-main__sign-up sign-up lead">
         <div class="sign-up__wrap container">
           <h2 class="sign-up__title lead__title lead__title--center">Заинтересовались?</h2>
-          <p class="sign-up__text lead__text lead__text--center">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a class="sign-up__link" href="#">авторизуйтесь</a>.</p>
+          <p class="sign-up__text lead__text lead__text--center">
+            <span class="page-main__lines--mobile">Зарегистрируйтесь,</span>
+            <span class="page-main__lines--mobile">это быстро и бесплатно!<br class="page-main__lines--tablet"></span>
+            <span class="page-main__lines--mobile">Уже зарегистрированы? Тогда</span>
+            <span class="page-main__lines--mobile">скорее <a class="sign-up__link" href="#">авторизуйтесь</a>.</span>
+          </p>
           <form class="sign-up__form" action="https://echo.htmlacademy.ru" method="post">
             <input class="sign-up__input" type="text" name="email" id="email" placeholder="E-mail">
             <button class="sign-up__button" type="submit" aria-label="Отправить"></button>
           </form>
-          <p class="sign-up__text lead__text lead__text--center">Остались вопросы? Мы с радостью на них ответим!</p>
+          <p class="sign-up__text lead__text lead__text--center">
+            <span class="page-main__lines--mobile">Остались вопросы?</span>
+            <span class="page-main__lines--mobile">Мы с радостью на них ответим!</span>
+          </p>
           <ul class="sign-up__list contact-list">
-            <li class="contact-list__item"><a class="contact-list__link contact-list__link--yellow" href="tel:88005558628" aria-label="Позвонить в Погнали">8 800 555-86-28</a></li>
-            <li class="contact-list__item"><a class="contact-list__link contact-list__link--yellow" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали">mail@htmlacademy.ru</a></li>
+            <li class="contact-list__item"><a class="contact-list__link contact-list__link--yellow contact-list__link--phone" href="tel:88005558628" aria-label="Позвонить в Погнали">8 800 555-86-28</a></li>
+            <li class="contact-list__item"><a class="contact-list__link contact-list__link--yellow contact-list__link--email" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали">mail@htmlacademy.ru</a></li>
           </ul>
         </div>
       </section>
 
       <section class="page-main__address address">
         <div class="address__wrap container">
-          <p class="address__text">ул.Большая Конюшенная, 19/8</p>
+          <p class="address__text">ул. Большая Конюшенная, 19/8</p>
           <a href="#" class="address__nav-link">Проложить маршрут</a>
         </div>
       </section>
@@ -212,9 +235,9 @@
           <img  class="page-footer__logo-img" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип Погнали">
         </a>
         <ul class="page-footer__list social-list">
-          <li class="social-list__item social-list__item--yellow social-list__item--fb"><a href="#" aria-label="Погнали в Фейсбуке"></a></li>
-          <li class="social-list__item social-list__item--yellow social-list__item--vk"><a href="#" aria-label="Погнали Вконтакте"></a></li>
-          <li class="social-list__item social-list__item--yellow social-list__item--ig"><a href="#" aria-label="Погнали в Инстаграме"></a></li>
+          <li><a class="social-list__item social-list__item--fb social-list__item--yellow" href="#" aria-label="Погнали в Фейсбуке"></a></li>
+          <li><a class="social-list__item social-list__item--vk social-list__item--yellow" href="#" aria-label="Погнали Вконтакте"></a></li>
+          <li><a class="social-list__item social-list__item--ig social-list__item--yellow" href="#" aria-label="Погнали в Инстаграме"></a></li>
         </ul>
         <p class="page-footer__text">Разработано</p>
         <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
@@ -226,19 +249,19 @@
     <section class="page-main__prices page-main__prices--business page-main__prices--business prices prices--business lead">
       <h2 class="prices__title prices__title--business lead__title lead__title--center">Бизнес-тарифы</h2>
       <ul class="prices__list prices__list--business">
-        <li class="prices__option">
+        <li class="prices__option prices__option--business">
           <p class="prices__text prices__text--business">Реклама у блоггера</p>
           <p class="prices__text prices__text--business prices__text--sum">300 000 руб./пост</p>
         </li>
-        <li class="prices__option">
+        <li class="prices__option prices__option--business">
           <p class="prices__text prices__text--business">Накрутка подписчиков</p>
           <p class="prices__text prices__text--business prices__text--sum">от 1 руб./шт.</p>
         </li>
-        <li class="prices__option">
+        <li class="prices__option prices__option--business">
           <p class="prices__text prices__text--business">Лайки от ботов</p>
           <p class="prices__text prices__text--business prices__text--sum">от 20 коп./лайк</p>
         </li>
-        <li class="prices__option">
+        <li class="prices__option prices__option--business">
           <p class="prices__text prices__text--business">Ваш продакт-плейсмент</p>
           <p class="prices__text prices__text--business prices__text--sum">Индивидуально</p>
         </li>

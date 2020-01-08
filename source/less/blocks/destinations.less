@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px auto 165px;
+  margin: 43px auto 160px;
   padding: 0;
 }
 
@@ -32,14 +32,45 @@
   width: 270px;
   height: 62px;
   background-color: #ffd74b;
+  background-image: url("../../img/triangle-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 14px;
+  background-position: 237px 50%;
   border-radius: 10px;
   text-decoration: none;
   display: block;
-  padding: 24px;
-  margin: 30px auto 15px;
+  padding: 22px 24px;
+  margin: 25px auto 15px;
 }
 
 @media (min-width: @tablet) {
+  .destinations {
+    border-radius: 0 0 60px 60px;
+  }
+
+  .destinations__wrap {
+    background-image: url("../../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 40px) 80px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 141px;
+      height: 141px;
+      border-radius: 20px;
+      background-color: #e2e5f2;
+      position: absolute;
+      top: 406px;
+      z-index: -4;
+    }
+  }
+
+  .destinations__lead {
+    margin-top: 44px;
+    margin-bottom: 70px;
+  }
+
   .destinations__list {
     margin-top: 60px;
     margin-bottom: 47px;
@@ -58,6 +89,7 @@
     line-height: 24px;
     padding: 31px 34px;
     margin: 47px auto 65px;
+    background-position: 573px 50%;
   }
 }
 
@@ -65,17 +97,22 @@
   .destinations__wrap {
     display: flex;
     flex-direction: column;
+    background-position: calc(100% - 60px) 88px;
+
+    &::after {
+      top: 90px;
+    }
   }
 
   .destinations__lead {
     width: 420px;
-    margin: 130px 160px 80px auto;
+    margin: 135px 168px 95px auto;
   }
 
   .destinations__list {
     width: 560px;
     position: absolute;
-    margin: 160px 70px 140px;
+    margin: 152px 70px 124px;
   }
 
   .destinations__item {
@@ -84,6 +121,8 @@
 
   .destinations__catalog-link {
     width: 274px;
-    margin: 0 240px 120px auto;
+    margin: 0 242px 124px auto;
+    padding: 30px 33px;
+    background-position: 228px 50%;
   }
 }

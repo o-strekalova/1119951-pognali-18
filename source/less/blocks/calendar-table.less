@@ -9,7 +9,7 @@
   line-height: 20px;
   text-align: center;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
 
   &::before {
     content: "";
@@ -17,7 +17,7 @@
     width: 221px;
     height: 1px;
     background-color: #d4d9eb;
-    top: -10px;
+    top: -13px;
     left: 0;
   }
 
@@ -27,19 +27,33 @@
     width: 221px;
     height: 1px;
     background-color: #d4d9eb;
-    top: 25px;
+    top: 30px;
     left: 0;
   }
 }
 
-.calendar-table__prev::before {
-  content: "";
+.calendar-table__prev,
+.calendar-table__next {
+  display: block;
+  width: 9px;
+  height: 18px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 9px 18px;
+  background-position: 0 0;
   position: absolute;
 }
 
-.calendar-table__next::after {
-  content: "";
-  position: absolute;
+.calendar-table__prev {
+  background-image: url("../../img/month-arrow-left.svg");
+}
+
+.calendar-table__next {
+  background-image: url("../../img/month-arrow-left.svg");
+  transform: rotate(180deg);
+  right: 0;
+  top: 0;
 }
 
 .calendar-table__row {
@@ -68,7 +82,7 @@
 }
 
 .calendar-table__button {
-  width: 30.5px;
+  width: 30px;
   height: 30px;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: normal;
