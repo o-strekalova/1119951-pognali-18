@@ -1,14 +1,21 @@
 .intro {
   color: white;
-  border-radius: 0 0 30px 30px;
+  background-image: linear-gradient(transparent, transparent 438px, #161c35 438px, #161c35 722px, #192144 722px, #192144),
+    url("../../img/traveller-illustration-mobile@1x.png"),
+    url("../../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0,
+    calc(50% + 15px) 182px,
+    50% -41px;
 
   &--inner {
     padding-top: 0;
+    background-image: none;
   }
 }
 
 .intro__wrap {
-  margin-top: 55px;
+  margin-top: 53px;
 }
 
 .intro__contact-list {
@@ -27,6 +34,10 @@
   height: 40px;
   border-radius: 50%;
   background-color: #ff8d30;
+  background-image: url("../../img/topmenu-phone.svg");
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 12px;
   display: block;
 }
 
@@ -35,6 +46,10 @@
   height: 40px;
   border-radius: 50%;
   background-color: #ffbd30;
+  background-image: url("../../img/topmenu-mail.svg");
+  background-size: 18px 14px;
+  background-repeat: no-repeat;
+  background-position: 12px;
   display: block;
 }
 
@@ -56,7 +71,7 @@
 
 .intro__quote {
   width: 220px;
-  margin: 30px auto;
+  margin: 27px auto 30px;
   padding-right: 50px;
 }
 
@@ -65,6 +80,8 @@
   font-size: 16px;
   line-height: 22px;
   text-align: left;
+  margin-top: 0;
+  margin-bottom: 18px;
 }
 
 .intro__author {
@@ -88,33 +105,53 @@
 }
 
 .intro__list-item {
+  display: flex;
   min-height: 95px;
   border-radius: 10px;
-  padding: 23px 90px 23px 26px;
+  padding: 21px 22px 21px 24px;
   margin-top: -15px;
+
+  &--1 {
+    background-color: #ff8d30;
+    margin-top: 0;
+  }
+
+  &--2 {
+    background-color: #ffa530;
+  }
+
+  &--3 {
+    background-color: #ffbd30;
+  }
+
+  &--4 {
+    background-color: #ffd74b;
+    min-height: 80px;
+  }
 }
 
-.intro__list-item--1 {
-  background-color: #ff8d30;
-  margin-top: 0;
+.intro__list-text {
+  width: 140px;
 }
 
-.intro__list-item--2 {
-  background-color: #ffa530;
-}
-
-.intro__list-item--3 {
-  background-color: #ffbd30;
-}
-
-.intro__list-item--4 {
-  background-color: #ffd74b;
-  min-height: 80px;
+.intro__list-number {
+  color: white;
+  margin-left: auto;
 }
 
 @media (min-width: @tablet) {
   .intro {
     padding-top: 0;
+    background-image: linear-gradient(transparent, transparent 940px, #161c35 940px, #161c35 722px, #192144 722px, #192144),
+      url("../../img/traveller-illustration-tablet@1x.png"),
+      url("../../img/globe-back-tablet@1x.jpg");
+    background-position: 0 0,
+      calc(50% + 87px) 312px,
+      50% 290px;
+
+    &--inner {
+      background-image: none;
+    }
   }
 
   .intro__wrap {
@@ -149,12 +186,13 @@
   .intro__quote {
     width: 260px;
     padding: 0;
-    margin: 40px auto 100px 35px;
+    margin: 45px auto 100px 35px;
   }
 
   .intro__text {
     font-size: 28px;
     line-height: 33px;
+    margin-bottom: 45px;
   }
 
   .intro__author {
@@ -167,69 +205,101 @@
     flex-wrap: wrap;
     font-size: 24px;
     line-height: 24px;
-    margin-top: 140px;
+    margin-top: 110px;
   }
 
   .intro__list-item {
     width: 344px;
     height: 140px;
-    padding: 31px 100px 60px 31px;
+    padding: 30px 34px 22px;
     margin-top: 0;
+    flex-direction: column;
+
+    &--1 {
+      width: 364px;
+      border-radius: 20px 0 0 0;
+    }
+
+    &--2 {
+      border-radius: 20px 20px 0 0;
+      margin-left: -20px;
+    }
+
+    &--3 {
+      width: 364px;
+      border-radius: 0 0 0 20px;
+    }
+
+    &--4 {
+      border-radius: 0 0 20px 20px;
+      margin-left: -20px;
+    }
   }
 
-  .intro__list-item--1 {
-    width: 354px;
-    border-radius: 10px 0 0 0;
+  .intro__list-text {
+    width: 190px;
   }
 
-  .intro__list-item--2 {
-    border-radius: 10px 10px 0 0;
-    margin-left: -10px;
-  }
-
-  .intro__list-item--3 {
-    width: 354px;
-    border-radius: 0 0 0 10px;
-  }
-
-  .intro__list-item--4 {
-    border-radius: 0 0 10px 10px;
-    margin-left: -10px;
+  .intro__list-number {
+    margin: auto auto 0 0;
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: @desktop) {
+  .intro {
+    border-radius: 0 0 60px 60px;
+    background-color: #161c35;
+    background-image: url("../../img/traveller-illustration-desktop@1x.png"),
+      url("../../img/globe-back-desktop@1x.jpg");
+    background-position: calc(50% + 100px) 19px,
+      50% -90px;
+
+    &--inner {
+      background-image: none;
+    }
+  }
+
   .intro__wrap {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 100px;
   }
 
   .intro__contact-list {
-    margin-left: 370px;
+    top: 49px;
+    margin-left: 371px;
   }
 
   .intro__phone-link {
     display: block;
     width: 50px;
     height: 50px;
+    background-position: 50%;
   }
 
   .intro__email-link {
     display: block;
     width: 50px;
     height: 50px;
+    background-position: 50%;
   }
 
   .intro__quote {
     width: 260px;
     padding: 0;
-    margin: 40px 25px 50px auto;
+    margin: 30px 25px 50px auto;
+  }
+
+  .intro__text {
+    margin-bottom: 43px;
   }
 
   .intro__list {
     padding: 0;
-    margin: 40px auto 123px;
+    margin: 60px auto 123px;
   }
 
   .intro__list-item {
@@ -237,25 +307,39 @@
     border-radius: 20px;
     height: 107px;
     margin-left: -35px;
+    flex-direction: row;
+    padding: 28px 68px 30px 30px;
+
+    &--1 {
+      border-radius: 20px;
+      margin-left: 0;
+      width: 350px;
+      padding-top: 30px;
+      padding-left: 35px;
+    }
+
+    &--2 {
+      border-radius: 20px;
+    }
+
+    &--3 {
+      border-radius: 20px;
+    }
+
+    &--4 {
+      width: 315px;
+      border-radius: 20px;
+      padding-right: 33px;
+    }
   }
 
-  .intro__list-item--1 {
-    border-radius: 20px;
-    margin-left: 0;
-    width: 350px;
-    padding-right: 200px;
+  .intro__list-text {
+    width: 190px;
   }
 
-  .intro__list-item--2 {
-    border-radius: 20px;
-  }
-
-  .intro__list-item--3 {
-    border-radius: 20px;
-  }
-
-  .intro__list-item--4 {
-    width: 315px;
-    border-radius: 20px;
+  .intro__list-number {
+    margin: 0 0 auto auto;
+    font-size: 24px;
+    line-height: 24px;
   }
 }

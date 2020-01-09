@@ -21,15 +21,20 @@
   line-height: 22px;
   text-align: center;
   color: #444444;
-  padding: 20px;
+  padding: 25px;
+  margin-top: 22px;
 }
 
 .profile__img {
   border-radius: 50%;
-  margin-top: 18px;
+  margin-top: 22px;
   margin-right: 17px;
   margin-bottom: 20px;
   margin-left: auto;
+}
+
+.profile__form {
+  margin-bottom: 15px;
 }
 
 .profile__img-label {
@@ -43,8 +48,8 @@
   text-align: center;
   color: #161c35;
   text-transform: uppercase;
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 7px;
+  margin-bottom: 8px;
 
   &--short {
     display: none;
@@ -53,11 +58,15 @@
 
 .profile__fieldset {
   width: 270px;
-  margin: 20px;
+  margin: 17px;
   border: 1px solid #cbced9;
   border-radius: 10px;
-  padding: 10px 25px;
+  padding: 13px 25px 16px;
   box-sizing: border-box;
+
+  &--transport {
+    padding: 5px 5px 15px;
+  }
 }
 
 .profile__legend {
@@ -67,6 +76,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #1d2e5b;
+  padding: 0 17px;
 }
 
 .profile__tags {
@@ -83,23 +93,23 @@
 
 @media (min-width: @tablet) {
   .profile__wrap {
-    margin-bottom: 50px;
+    margin-bottom: 27px;
   }
 
   .profile__level {
     width: 94px;
     height: 94px;
-    padding-top: 18px;
-    padding-left: 22px;
+    padding-top: 23px;
+    padding-left: 27px;
     left: 0;
-    margin: 64px 75px 52px;
+    margin: 61px 73px 50px;
   }
 
   .profile__img {
     width: 94px;
     height: 94px;
     border-radius: 10px;
-    margin: 64px 35px 52px auto;
+    margin: 64px 35px 50px auto;
   }
 
   .profile__img-label {
@@ -113,19 +123,19 @@
     letter-spacing: 2px;
     color: #1d2e5b;
     padding-top: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
 
   .profile__fieldset {
     position: relative;
     width: 618px;
-    padding: 15px 40px;
+    padding: 15px 40px 10px;
 
     &--transport {
       width: 308px;
       position: absolute;
-      top: 44px;
-      left: calc(50% - 180px);
+      top: 46px;
+      left: calc(50% - 172px);
       padding: 2px 25px;
       padding-top: 7px;
       min-height: 94px;
@@ -146,7 +156,7 @@
     color: #1d2e5b;
 
     &--transport {
-      left: 77px;
+      left: 75px;
     }
   }
 

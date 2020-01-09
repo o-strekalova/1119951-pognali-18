@@ -1,27 +1,35 @@
 .main-nav__wrapper {
   display: none;
-  position: absolute;
+  flex-direction: column;
+  background-color: white;
   z-index: 2;
   right: -25px;
+}
 
-  &--open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-  }
+.page-header--open .main-nav__wrapper {
+  display: flex;
 }
 
 .main-nav__toggle {
-  background-color: white;
+  background-image: url("../../img/menu.svg");
+  background-color: transparent;
   width: 25px;
   height: 11px;
   border: none;
+  padding: 0;
   margin: 30px 0;
+  margin-left: auto;
+  cursor: pointer;
 
   &--scroll {
     background-color: #cccccc;
   }
+}
+
+.page-header--open .main-nav__toggle {
+  width: 19px;
+  height: 19px;
+  background-image: url("../../img/menu-close.svg");
 }
 
 .main-nav__site-list {
@@ -29,7 +37,7 @@
 }
 
 .main-nav__contact-list {
-  margin: 30px auto;
+  margin: 30px auto 0;
 }
 
 .main-nav__login {
@@ -48,18 +56,33 @@
   margin: 30px auto;
 }
 
+.main-nav__social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
 @media (min-width: @tablet) {
   .main-nav__wrapper {
-    width: @tablet;
+    width: 688px;
     right: -367px;
   }
 
   .main-nav__toggle {
     margin: 60px 0;
+    margin-left: 167px;
+  }
+
+  .page-header--open .main-nav__toggle {
+    width: 19px;
+    height: 19px;
+    margin-left: 0;
+    align-self: center;
   }
 
   .main-nav__site-list {
-    margin-left: 100px;
+    margin-left: 50px;
   }
 
   .main-nav__login {
@@ -73,16 +96,23 @@
       margin: 40px;
     }
   }
+
+  .main-nav__contact-list {
+    margin-left: 138px;
+  }
+
+  .main-nav__social-list {
+    margin: 130px 80px 90px;
+    justify-content: flex-start;
+  }
 }
 
 @media (min-width: @desktop) {
   .main-nav__wrapper {
     display: flex;
     margin: 0;
-
-    &--open {
-      background-color: transparent;
-    }
+    background: transparent;
+    align-self: center;
   }
 
   .main-nav__toggle {
@@ -92,10 +122,26 @@
   .main-nav__site-list {
     display: flex;
     width: 600px;
-    margin: 53px auto 50px 75px;
+    margin: 62px auto 15px 13px;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 60px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: white;
+      position: absolute;
+      top: 12px;
+      left: -105px;
+    }
   }
 
   .main-nav__contact-list {
+    display: none;
+  }
+
+  .main-nav__social-list {
     display: none;
   }
 }

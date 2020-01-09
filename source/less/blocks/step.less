@@ -1,7 +1,7 @@
 .step {
   background: white;
   border-radius: 10px;
-  padding: 25px;
+  padding: 25px 25px 22px;
 }
 
 .step__title {
@@ -22,7 +22,7 @@
   font-size: 16px;
   line-height: 22px;
   text-align: left;
-  padding: 2px;
+  margin-bottom: 10px;
 }
 
 .step__fieldsets {
@@ -41,13 +41,13 @@
 }
 
 .step__checkbox-label {
-  margin-top: 15px;
-  margin-bottom: 40px;
+  margin-top: 18px;
+  margin-bottom: 37px;
   font-size: 15px;
   line-height: 15px;
   text-align: left;
   color: #444444;
-  padding-left: 40px;
+  padding-left: 39px;
   position: relative;
 
   &::before {
@@ -56,9 +56,18 @@
     height: 26px;
     border-radius: 4px;
     border: 1px solid #cbced9;
+    background-size: 9px;
+    background-repeat: no-repeat;
+    background-position: 50%;
     position: absolute;
-    top: -6px;
+    top: -8px;
     left: 0;
+  }
+}
+
+.step__checkbox:checked + .step__checkbox-label {
+  &::before {
+    background-image: url("../../img/tick.svg");
   }
 }
 
@@ -78,7 +87,7 @@
   text-align: center;
   text-transform: uppercase;
   padding-top: 7px;
-  margin-top: 20px;
+  margin-top: 22px;
   margin-left: -5px;
   margin-right: auto;
 }
@@ -90,8 +99,8 @@
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
-  margin-top: 10px;
-  margin-bottom: -10px;
+  margin-top: 13px;
+  margin-bottom: -13px;
 }
 
 .step__selected-list {
@@ -103,8 +112,35 @@
 .step__selected-item {
   display: flex;
   position: relative;
-  margin-top: 6px;
+  margin-top: 10px;
   margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    width: 12px;
+    height: 7px;
+    background-image: url("../../img/dropdown-form.svg");
+    opacity: 0.3;
+    background-size: 12px 7px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 18px;
+    left: 142px;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    width: 5px;
+    height: 10px;
+    background-image: url("../../img/small-arrow.svg");
+    opacity: 0.3;
+    background-size: 5px 10px;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -15px;
+    right: 50px;
+  }
 }
 
 .step__select {
@@ -120,7 +156,7 @@
   text-align: left;
   color: #1d2e5b;
   text-transform: uppercase;
-  padding: 12px 30px 8px 12px;
+  padding: 12px 30px 8px 10px;
 }
 
 .step__flag {
@@ -134,6 +170,10 @@
   width: 21px;
   height: 21px;
   background-color: #edeff6;
+  background-image: url("../../img/small-cross.svg");
+  background-size: 9px;
+  background-position: 50%;
+  background-repeat: no-repeat;
   border-radius: 50%;
   border: none;
   position: absolute;
@@ -149,7 +189,7 @@
     z-index: 1;
     position: absolute;
     top: 13px;
-    right: 70px;
+    right: 73px;
   }
 
   &::after {
@@ -160,12 +200,12 @@
     border-radius: 50%;
     position: absolute;
     top: 27px;
-    right: 58px;
+    right: 59px;
   }
 
   &--choose {
-    top: 293px;
-    right: 16px;
+    top: 284px;
+    right: 15px;
 
     &::before {
       display: none;
@@ -192,18 +232,24 @@
   text-align: left;
   color: #1d2e5b;
   text-transform: uppercase;
-  padding: 12px 30px 8px 12px;
-
-  &--open-filter {
-    background-color: #1d2e5b;
-    color: white;
-  }
+  padding: 12px 30px 8px 10px;
+  margin-top: 2px;
 
   &--add {
     background-color: #edeff6;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 
     &::before {
+      width: 14px;
+      height: 14px;
+      background-image: url("../../img/qty-plus-mobile.svg");
+      background-size: 14px;
+      background-repeat: no-repeat;
+      opacity: 1;
+      top: 14px;
+    }
+
+    &::after {
       content: "";
       width: 8px;
       height: 8px;
@@ -212,6 +258,33 @@
       position: absolute;
       top: 16px;
       right: 48px;
+      background-image: none;
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    left: 190px;
+  }
+
+  &--choose {
+    &--open {
+      background-color: #1d2e5b;
+      color: white;
+      border-radius: 5px 5px 0 0;
+
+      &::before {
+        width: 9px;
+        height: 9px;
+        background-image: none;
+        mask-image: url("../../img/filter-close.svg");
+        background-color: white;
+        background-size: 9px;
+        background-repeat: no-repeat;
+        opacity: 1;
+        top: 17px;
+        left: 193px;
+      }
     }
   }
 }
@@ -221,25 +294,31 @@
   background: white;
   width: 220px;
   position: absolute;
-  z-index: 2;
-  top: 344px;
+  z-index: 3;
+  top: 334px;
   padding-top: 0;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
   border: solid 1px #cbced9;
+}
 
-  &--open {
-    display: block;
-  }
+.step__choose-another--choose--open ~ .step__country-filter {
+  display: block;
+}
+
+.step__choose-another--choose--open + .step__delete-button {
+  display: none;
 }
 
 .step__plans-list {
-  margin-top: 0;
+  margin: 0;
+  position: relative;
 }
 
 @media (min-width: @tablet) {
   .step {
     padding: 43px;
+    border-radius: 30px;
   }
 
   .step__title {
@@ -251,11 +330,12 @@
   .step__text {
     font-size: 20px;
     line-height: 24px;
-    margin: 37px 0 42px;
+    margin: 33px 0 38px;
   }
 
   .step__fieldset {
     margin-bottom: 87px;
+    border-top: 1px solid #d6d9e6;
   }
 
   .step__checkbox-label {
@@ -269,12 +349,13 @@
     line-height: 18px;
     letter-spacing: 2px;
     padding-left: 59px;
-    margin: 35px 0;
+    margin: 33px 0;
 
     &::before {
       width: 36px;
       height: 36px;
-      top: -12px;
+      top: -10px;
+      background-size: 12px;
     }
   }
 
@@ -292,6 +373,10 @@
     text-transform: none;
     padding: 30px 34px;
     margin: 46px auto 12px 0;
+    background-image: url("../../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: 10px 14px;
+    background-position: 240px 35px;
   }
 
   .step__prev-link {
@@ -301,14 +386,45 @@
     text-transform: none;
     margin: 0;
     margin-left: auto;
+    padding-left: 32px;
+    background-image: url("../../img/triangle-arrow-left.svg");
+    background-repeat: no-repeat;
+    background-size: 10px 14px;
+    background-position: 0 50%;
   }
 
   .step__selected-list {
-    padding-top: 25px;
+    padding-top: 26px;
+    border-top: 1px solid #d6d9e6;
+    position: relative;
+    margin-top: -4px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 435px;
+      background-image: linear-gradient(#d6d9e6 70%, transparent);
+      position: absolute;
+      top: 0;
+      right: 136px;
+    }
   }
 
   .step__selected-item {
     margin: 15px 0;
+
+    &::before {
+      width: 17px;
+      height: 9px;
+      background-size: 17px 9px;
+      top: 30px;
+      left: 325px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .step__select {
@@ -317,8 +433,7 @@
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 2px;
-    padding: 27px;
-    padding-bottom: 22px;
+    padding: 27px 25px 22px;
   }
 
   .step__flag {
@@ -331,11 +446,12 @@
   }
 
   .step__delete-button {
-    width: 17px;
-    height: 17px;
-    background: transparent;
-    top: 0;
-    right: 0;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    background-size: 24px;
+    top: -3px;
+    right: -3px;
     padding: 0;
     margin: 25px 0;
 
@@ -350,21 +466,20 @@
       background-color: #1d2e5b;
       border-radius: 50%;
       position: absolute;
-      top: 0;
-      right: 129px;
+      top: 4px;
+      right: 132px;
     }
 
     &--choose {
-      top: 463px;
-      right: 42px;
+      top: 445px;
+      right: 40px;
 
       &::before {
         display: none;
       }
 
       &::after {
-        border: solid 1px #cbced9;
-        background-color: transparent;
+        background-color: white;
       }
     }
   }
@@ -375,19 +490,38 @@
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 2px;
-    padding: 27px;
-    padding-bottom: 22px;
+    padding: 27px 25px;
     margin: 0 0 15px;
 
     &--add {
-      margin-bottom: 3px;
+      margin-bottom: 1px;
 
       &::before {
+        width: 20px;
+        height: 20px;
+        top: 23px;
+        left: 322px;
+        background-size: 20px;
+      }
+
+      &::after {
+        display: block;
         width: 15px;
         height: 15px;
-        top: 26px;
-        right: -37px;
+        top: 24px;
+        right: -35px;
         background-color: #edeff6;
+      }
+    }
+
+    &--choose {
+      &--open {
+        &::before {
+          width: 17px;
+          height: 17px;
+          background-size: 17px;
+          top: 26px;
+        }
       }
     }
   }
@@ -397,7 +531,7 @@
     min-height: 476px;
     border: none;
     top: 530px;
-    padding: 34px 27px;
+    padding: 22px 27px;
 
     &--open {
       display: flex;
@@ -405,6 +539,7 @@
   }
 
   .step__plans-list {
+    margin-top: 15px;
     margin-bottom: 0;
   }
 }

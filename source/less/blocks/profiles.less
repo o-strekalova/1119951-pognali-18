@@ -5,12 +5,34 @@
   background-color: #192144;
 }
 
+.profiles__wrap {
+  position: relative;
+  padding-top: 30px;
+  background-image: url("../../img/smolov-back-desktop@1x.png"),
+    url("../../img/rogovaya-back-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 152px 39px, -10px 311px;
+
+  &::before {
+    content: "";
+    display: block;
+    z-index: -5;
+    position: absolute;
+    top: 39px;
+    left: -10px;
+    width: 123px;
+    height: 132px;
+    border-radius: 20px;
+    background-color: #141b3b;
+  }
+}
+
 .profiles__lead {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .profiles__list {
@@ -27,6 +49,10 @@
   margin-top: 280px;
   width: 270px;
   min-height: 157px;
+
+  &:first-child {
+    margin-top: 308px;
+  }
 }
 
 .profiles__catalog-link {
@@ -38,6 +64,10 @@
   width: 270px;
   height: 62px;
   background-color: #ffd74b;
+  background-image: url("../../img/triangle-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 14px;
+  background-position: 237px 50%;
   border-radius: 10px;
   text-decoration: none;
   display: block;
@@ -46,8 +76,23 @@
 }
 
 @media (min-width: @tablet) {
+  .profiles {
+    border-radius: 0 0 60px 60px;
+  }
+
   .profiles__wrap {
     margin-top: 70px;
+    background-image: url("../../img/smolov-back-desktop@1x.png"),
+      url("../../img/rogovaya-back-desktop@1x.png");
+    background-position: 40px 358px,
+      408px 11px;
+
+    &::before {
+      top: 10px;
+      left: 40px;
+      width: 213px;
+      height: 213px;
+    }
   }
 
   .profiles__lead {
@@ -57,12 +102,11 @@
   .profiles__list {
     width: 618px;
     display: flex;
-    margin: 10px auto 80px;
+    margin: 5px auto 80px;
   }
 
   .profiles__item {
-    margin-right: 0;
-    margin-left: 0;
+    margin: 308px 0 0;
     width: 285px;
     min-height: 198px;
 
@@ -77,26 +121,34 @@
     border-radius: 20px;
     font-size: 24px;
     line-height: 24px;
-    padding: 31px 34px;
+    padding: 29px 33px;
     margin: 47px auto 58px;
+    background-position: 572px 50%;
   }
 }
 
 @media (min-width: @desktop) {
   .profiles__wrap {
     position: relative;
-    margin-top: 20px;
+    margin-top: 22px;
+    background-position: 547px 113px,
+      191px 365px;
+
+    &::before {
+      top: 46px;
+      left: 60px;
+    }
   }
 
   .profiles__lead {
     width: 620px;
-    margin: 50px 0 0 0;
+    margin: 47px 0 0 0;
     padding-bottom: 0;
   }
 
   .profiles__list {
     position: absolute;
-    margin: 110px 60px 120px auto;
+    margin: 90px 60px 120px auto;
     top: 0;
     right: 0;
     padding: 0;
@@ -110,7 +162,8 @@
   }
 
   .profiles__catalog-link {
-    width: 270px;
-    margin: 0 0 70px 70px;
+    width: 280px;
+    margin: 0 0 105px 70px;
+    background-position: 234px 50%;
   }
 }

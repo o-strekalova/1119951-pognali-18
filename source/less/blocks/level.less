@@ -1,13 +1,53 @@
 .level {
   border-radius: 50%;
-  border: 3px solid #ff8d30;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   font-weight: normal;
   font-size: 14px;
   line-height: 14px;
   text-align: center;
-  padding: 10px;
+  padding: 13px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 62px;
+    height: 62px;
+    background-size: 62px;
+    background-repeat: no-repeat;
+    background-position: -1px;
+  }
+
+  &--99 {
+    &::before {
+      background-image: url("../../img/level-99.svg");
+      transform: rotate(65deg);
+    }
+  }
+
+  &--80 {
+    &::before {
+      background-image: url("../../img/level-80.svg");
+      transform: rotate(30deg);
+    }
+  }
+
+  &--50 {
+    &::before {
+      background-image: url("../../img/level-50.svg");
+      transform: rotate(-10deg);
+    }
+  }
+
+  &--25 {
+    &::before {
+      background-image: url("../../img/level-25.svg");
+      transform: rotate(-90deg);
+    }
+  }
 
   &--blue {
     background-color: transparent;
@@ -19,8 +59,27 @@
     top: 7px;
     width: 45px;
     height: 45px;
-    padding: 13px 7px;
+    padding: 15px 8px;
     margin: 0;
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 45px;
+      height: 45px;
+      background-size: 45px;
+      background-position: 0;
+    }
+  }
+
+  &--form {
+    padding: 40px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      background-size: 100px;
+    }
   }
 }
 
@@ -38,26 +97,64 @@
   }
 }
 
-.level__level {
-  display: none;
+.level__word {
+  position: relative;
+
+  &--catalog {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -3px;
+    width: 31px;
+    height: 1px;
+    background-color: white;
+    opacity: 0.3;
+  }
+
+  &--form {
+    &::before {
+      width: 49px;
+      height: 2px;
+      background-color: #cbced9;
+      top: 20px;
+      right: 0;
+    }
+  }
 }
 
 @media (min-width: @tablet) {
   .level {
     &--blue {
       line-height: 24px;
-      padding: 9px 0;
+      padding: 12px 14px;
       width: 60px;
       height: 60px;
       top: 0;
+
+      &::before {
+        width: 60px;
+        height: 60px;
+        background-size: 60px;
+      }
     }
   }
 
-  .level__level {
-    display: block;
-    font-size: 14px;
-    line-height: 14px;
-    color: rgba(68, 68, 68, 0.4);
-    font-weight: normal;
+  .level__word {
+    &--catalog {
+      display: block;
+      font-size: 14px;
+      line-height: 14px;
+      color: rgba(68, 68, 68, 0.4);
+      font-weight: normal;
+      margin-top: 2px;
+
+      &::before {
+        background-color: rgba(68, 68, 68, 0.4);
+      }
+    }
   }
 }

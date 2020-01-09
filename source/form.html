@@ -7,7 +7,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header--inner">
       <div class="page-header__wrap container">
         <a class="page-header__logo" href="index.html">
           <img class="page-header__logo-image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип Погнали">
@@ -42,12 +42,12 @@
 
     <main class="page-main page-main--inner">
       <div class="page-main__wrap page-main__wrap--inner">
-        <h1 class="page-main__title page-main__title--inner">Направления</h1>
+        <h1 class="page-main__title page-main__title--inner page-main__title--form">Направления</h1>
       </div>
 
       <section class="page-main__profile profile">
         <div class="profile__wrap container">
-          <p class="profile__level level"><span class="profile__level-number level__number level__number--blue">80</span> level</p>
+          <p class="profile__level level level--80 level--form"><span class="profile__level-number level__number level__number--blue">80</span><span class="level__word level__word--form">level</span></p>
           <img class="profile__img" src="https://via.placeholder.com/99x100" width="99" height="100" alt="Аватар профиля">
           <input class="profile__img-input visually-hidden" type="file" name="profile-img" id="profile-img">
           <label class="profile__img-label" for="profile-img"><span class="profile__img-label--long">Сменить фото</span><span class="profile__img-label--short">Фото</span></label>
@@ -59,19 +59,19 @@
             <fieldset class="profile__fieldset profile__fieldset--transport transport-filter">
               <legend class="profile__legend profile__legend--transport legend">Транспорт</legend>
               <ul class="transport-filter__list transport-filter__list--form">
-                <li class="transport-filter__item">
+                <li class="transport-filter__item transport-filter__item--form">
                   <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="plane" id="plane" checked>
                   <label class="transport-filter__label transport-filter__label--plane" for="plane" aria-label="самолет"></label>
                 </li>
-                <li class="transport-filter__item">
+                <li class="transport-filter__item transport-filter__item--form">
                   <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="bus" id="bus" checked>
                   <label class="transport-filter__label transport-filter__label--bus" for="bus" aria-label="автобус"></label>
                 </li>
-                <li class="transport-filter__item">
+                <li class="transport-filter__item transport-filter__item--form">
                   <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="bike" id="bike">
                   <label class="transport-filter__label transport-filter__label--bike" for="bike" aria-label="велосипед"></label>
                 </li>
-                <li class="transport-filter__item">
+                <li class="transport-filter__item transport-filter__item--form">
                   <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="on-foot" id="on-foot" checked>
                   <label class="transport-filter__label transport-filter__label--on-foot" for="on-foot" aria-label="пешком"></label>
                 </li>
@@ -127,29 +127,31 @@
           <form class="new-trip__form" method="post" action="https://echo.htmlacademy.ru">
             <article class="new-trip__article step" id="step-1">
               <h3 class="step__title"><p class="step__step-number">Шаг 1. </p>Даты пребывания</h3>
-              <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              <p class="step__text">Укажите предпочтительное количество попутчиков, которых <br class="page-main__lines--tablet">вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
               <div class="step__fieldsets">
                 <fieldset class="step__fieldset counter">
                   <label class="counter__label" for="travelers-number">Ищу попутчиков:</label>
                   <button class="counter__minus" type="button"></button>
                   <input class="counter__input" type="number" name="travelers-number" id="travelers-number" value="2">
-                  <button class="counter__plus" type="button">+</button>
+                  <button class="counter__plus" type="button"></button>
                   <p class="counter__measure">чел.</p>
                 </fieldset>
                 <fieldset class="step__fieldset counter">
                   <label class="counter__label" for="days-number">Длительность:</label>
                   <button class="counter__minus" type="button"></button>
                   <input class="counter__input" type="number" name="days-number" id="days-number" value="2">
-                  <button class="counter__plus" type="button">+</button>
+                  <button class="counter__plus" type="button"></button>
                   <p class="counter__measure counter__measure--days">дн.</p>
                 </fieldset>
                 <input class="step__checkbox visually-hidden" type="checkbox" name="children-allowed" id="children-allowed">
                 <label class="step__checkbox-label" for="children-allowed">Можно с детьми</label>
               </div>
               <table class="step__calendar calendar-table">
-                <button class="calendar-table__prev visually-hidden" type="button"></button>
-                <caption class="calendar-table__month">Март 2019</caption>
-                <button class="calendar-table__next visually-hidden" type="button"></button>
+                <caption class="calendar-table__month">
+                  <button class="calendar-table__prev" type="button"></button>
+                  Март 2019
+                  <button class="calendar-table__next" type="button"></button>
+                </caption>
                 <tr class="calendar-table__row calendar-table__row--header">
                   <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">П</span><span class="calendar-table__weekday--two-letters">Пн</span></th>
                   <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">В</span><span class="calendar-table__weekday--two-letters">Вт</span></th>
@@ -219,7 +221,7 @@
             </article>
             <article class="new-trip__article step" id="step-2">
               <h3 class="step__title"><p class="step__step-number">Шаг 2. </p>Маршрут</h3>
-              <p class="step__text">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+              <p class="step__text">Укажите страны, которые вы хотели по посетить. <br class="page-main__lines--tablet">Это может быть одна или сразу несколько.</p>
               <ul class="step__selected-list">
                 <li class="step__selected-item">
                   <input class="step__select" type="text" name="selected-country-1" id="selected-country-1" value="Босния и Герцеговина">
@@ -232,9 +234,9 @@
                   <button class="step__delete-button" type="button"></button>
                 </li>
               </ul>
-              <button class="step__selected-item step__choose-another step__choose-another" type="button">Выберите страну</button>
+              <button class="step__selected-item step__choose-another step__choose-another--choose--open" type="button">Выберите страну</button>
               <button class="step__delete-button step__delete-button--choose" type="button"></button>
-              <div class="step__country-filter step__country-filter--open country-filter">
+              <div class="step__country-filter country-filter">
                 <table class="country-filter__letter-table  country-filter__letter-table--step country-filter__letter-table--white letter-table">
                   <tr class="letter-table__row">
                     <td class="letter-table__cell letter-table__cell--step letter-table__cell--step--current">
