@@ -136,7 +136,7 @@
   .calendar-table__month {
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 
     &::before {
       width: 531px;
@@ -147,6 +147,22 @@
       width: 531px;
       top: 58px;
     }
+  }
+
+  .calendar-table__prev,
+  .calendar-table__next {
+    width: 15px;
+    height: 28px;
+    background-size: 15px 28px;
+    top: 1px;
+  }
+
+  .calendar-table__prev {
+    left: 18px;
+  }
+
+  .calendar-table__next {
+    right: 18px;
   }
 
   .calendar-table__weekday {
@@ -164,8 +180,8 @@
   }
 
   .calendar-table__button {
-    width: 75px;
-    height: 70px;
+    width: 74px;
+    height: 68px;
     font-weight: 500;
     font-size: 20px;
     letter-spacing: 2;

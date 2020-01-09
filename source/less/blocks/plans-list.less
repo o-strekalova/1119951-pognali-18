@@ -92,9 +92,24 @@
 }
 
 @media (min-width: @tablet) {
+  .plans-list {
+    &::before {
+      display: none;
+    }
+  }
+
   .plans-list__item {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 22px;
+
+    &::before {
+      display: none;
+    }
+
+    &:last-child {
+      margin-bottom: 12px;
+    }
   }
 
   .plans-list__textarea-label {
@@ -102,7 +117,11 @@
     font-weight: bold;
     width: 400px;
     padding: 0;
-    margin: 32px 57px 40px 0;
+    margin: 22px 57px 43px 0;
+
+    &::before {
+      display: none;
+    }
 
     &::after {
       width: 15px;
@@ -110,8 +129,8 @@
       border-radius: 50%;
       background: #1d2e5b;
       position: absolute;
-      top: 0;
-      right: -28px;
+      top: 2px;
+      right: -26px;
     }
   }
 
@@ -120,7 +139,7 @@
     min-height: 142px;
     padding: 19px;
     padding-right: 100px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -128,7 +147,7 @@
   .plans-list__flag {
     width: 70px;
     height: 47px;
-    margin: 16px 0 0;
+    margin: 10px 0 0 2px;
   }
 }
 

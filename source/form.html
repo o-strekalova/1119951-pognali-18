@@ -59,19 +59,19 @@
             <fieldset class="profile__fieldset profile__fieldset--transport transport-filter">
               <legend class="profile__legend profile__legend--transport legend">Транспорт</legend>
               <ul class="transport-filter__list transport-filter__list--form">
-                <li class="transport-filter__item">
+                <li class="transport-filter__item transport-filter__item--form">
                   <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="plane" id="plane" checked>
                   <label class="transport-filter__label transport-filter__label--plane" for="plane" aria-label="самолет"></label>
                 </li>
-                <li class="transport-filter__item">
+                <li class="transport-filter__item transport-filter__item--form">
                   <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="bus" id="bus" checked>
                   <label class="transport-filter__label transport-filter__label--bus" for="bus" aria-label="автобус"></label>
                 </li>
-                <li class="transport-filter__item">
+                <li class="transport-filter__item transport-filter__item--form">
                   <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="bike" id="bike">
                   <label class="transport-filter__label transport-filter__label--bike" for="bike" aria-label="велосипед"></label>
                 </li>
-                <li class="transport-filter__item">
+                <li class="transport-filter__item transport-filter__item--form">
                   <input class="transport-filter__checkbox visually-hidden" type="checkbox" name="on-foot" id="on-foot" checked>
                   <label class="transport-filter__label transport-filter__label--on-foot" for="on-foot" aria-label="пешком"></label>
                 </li>
@@ -127,7 +127,7 @@
           <form class="new-trip__form" method="post" action="https://echo.htmlacademy.ru">
             <article class="new-trip__article step" id="step-1">
               <h3 class="step__title"><p class="step__step-number">Шаг 1. </p>Даты пребывания</h3>
-              <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              <p class="step__text">Укажите предпочтительное количество попутчиков, которых <br class="page-main__lines--tablet">вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
               <div class="step__fieldsets">
                 <fieldset class="step__fieldset counter">
                   <label class="counter__label" for="travelers-number">Ищу попутчиков:</label>
@@ -221,7 +221,7 @@
             </article>
             <article class="new-trip__article step" id="step-2">
               <h3 class="step__title"><p class="step__step-number">Шаг 2. </p>Маршрут</h3>
-              <p class="step__text">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+              <p class="step__text">Укажите страны, которые вы хотели по посетить. <br class="page-main__lines--tablet">Это может быть одна или сразу несколько.</p>
               <ul class="step__selected-list">
                 <li class="step__selected-item">
                   <input class="step__select" type="text" name="selected-country-1" id="selected-country-1" value="Босния и Герцеговина">
@@ -234,9 +234,9 @@
                   <button class="step__delete-button" type="button"></button>
                 </li>
               </ul>
-              <button class="step__selected-item step__choose-another" type="button">Выберите страну</button>
+              <button class="step__selected-item step__choose-another step__choose-another--choose--open" type="button">Выберите страну</button>
               <button class="step__delete-button step__delete-button--choose" type="button"></button>
-              <div class="step__country-filter step__country-filter country-filter">
+              <div class="step__country-filter country-filter">
                 <table class="country-filter__letter-table  country-filter__letter-table--step country-filter__letter-table--white letter-table">
                   <tr class="letter-table__row">
                     <td class="letter-table__cell letter-table__cell--step letter-table__cell--step--current">
