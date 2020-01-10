@@ -47,7 +47,13 @@
 
       <section class="page-main__profile profile">
         <div class="profile__wrap container">
-          <p class="profile__level level level--80 level--form"><span class="profile__level-number level__number level__number--blue">80</span><span class="level__word level__word--form">level</span></p>
+          <article class="profile__level level level--form">
+            <span class="profile__level-number level__number level__number--blue">80</span>
+            <span class="level__word level__word--form">level</span>
+            <svg class="level__border level__border--form level__border--80">
+              <circle class="level__circle level__circle--form" fill="none" stroke="#ff8d30" stroke-width="3"/>
+            </svg>
+          </article>
           <img class="profile__img" src="https://via.placeholder.com/99x100" width="99" height="100" alt="Аватар профиля">
           <input class="profile__img-input visually-hidden" type="file" name="profile-img" id="profile-img">
           <label class="profile__img-label" for="profile-img"><span class="profile__img-label--long">Сменить фото</span><span class="profile__img-label--short">Фото</span></label>
@@ -234,7 +240,7 @@
                   <button class="step__delete-button" type="button"></button>
                 </li>
               </ul>
-              <button class="step__selected-item step__choose-another step__choose-another--choose--open" type="button">Выберите страну</button>
+              <button class="step__selected-item step__choose-another step__choose-another--choose" type="button">Выберите страну</button>
               <button class="step__delete-button step__delete-button--choose" type="button"></button>
               <div class="step__country-filter country-filter">
                 <table class="country-filter__letter-table  country-filter__letter-table--step country-filter__letter-table--white letter-table">
@@ -362,7 +368,7 @@
             </article>
             <article class="new-trip__article step" id="step-3">
               <h3 class="step__title"><p class="step__step-number">Шаг 3. </p>Развлечения</h3>
-              <p class="step__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <p class="step__text">Наконец, расскажите о своих планах времяпровождения. <br class="page-main__lines--tablet">Можно писать в свободной форме и ставить тэги.</p>
               <ul class="step__plans-list plans-list">
                 <li class="plans-list__item">
                   <label class="plans-list__textarea-label" for="bosnia">Босния и Герцеговина</label>
