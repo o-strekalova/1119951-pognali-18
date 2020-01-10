@@ -154,6 +154,21 @@
 @media (min-width: @desktop) {
   .plans-list {
     padding-top: 50px;
+
+    &::before {
+      display: block;
+      width: 3px;
+      height: 261px;
+      top: 80px;
+      left: auto;
+      right: 224px;
+    }
+  }
+
+  .plans-list__item {
+    &:last-child {
+      margin-bottom: 7px;
+    }
   }
 
   .plans-list__textarea-label {
@@ -171,6 +186,6 @@
   }
 
   .plans-list__flag {
-    margin: 16px 112px 0 auto;
+    margin: 10px 115px 0 auto;
   }
 }

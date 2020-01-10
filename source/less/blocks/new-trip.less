@@ -151,8 +151,12 @@
 }
 
 @media (min-width: @desktop) {
+  .new-trip {
+    border-radius: 60px 60px 0 0;
+  }
+
   .new-trip__title {
-    margin: 60px 70px 16px;
+    margin: 50px 70px 4px;
   }
 
   .new-trip__title-wrap {
@@ -164,19 +168,20 @@
     justify-content: space-between;
     margin: 0;
     position: absolute;
-    left: 974px;
-    top: 280px;
+    left: 1035px;
+    top: 261px;
     z-index: 1;
   }
 
   .new-trip__controls-label {
     display: block;
-    margin-bottom: 38px;
+    margin-bottom: 31px;
     position: relative;
 
     &::before {
       position: absolute;
-      left: -66px;
+      top: 3px;
+      left: -72px;
     }
   }
 
@@ -196,10 +201,14 @@
 
   .new-trip__article {
     margin: 45px auto;
+
+    &:last-child {
+      margin-top: 45px;
+    }
   }
 
   .new-trip__links {
-    margin-top: 10px;
+    margin-top: 13px;
     margin-bottom: 0;
   }
 }
