@@ -29,8 +29,13 @@
 .page-header--scroll .page-header__logo {
   width: 100px;
   height: 19px;
-  background-image: url("../../img/logo-mobile-blue@1x.png");
+  background-image: url("../img/logo-mobile-blue@1x.png");
+  background-size: 100px 19px;
   background-repeat: no-repeat;
+
+  @media (min-resolution: @retina) {
+    background-image: url("../img/logo-mobile-blue@2x.png");
+  }
 }
 
 .page-header--scroll .page-header__logo-image {
@@ -47,7 +52,12 @@
     display: block;
     width: 100px;
     height: 19px;
-    background-image: url("../../img/logo-mobile-blue@1x.png");
+    background-image: url("../img/logo-mobile-blue@1x.png");
+    background-size: 100px 19px;
+
+    @media (min-resolution: @retina) {
+      background-image: url("../img/logo-mobile-blue@2x.png");
+    }
   }
 }
 
@@ -85,7 +95,12 @@
   .page-header--scroll .page-header__logo {
     width: 166px;
     height: 42px;
-    background-image: url("../../img/logo-tablet-blue@1x.png");
+    background-image: url("../img/logo-tablet-blue@1x.png");
+    background-size: 166px 42px;
+
+    @media (min-resolution: @retina) {
+      background-image: url("../img/logo-tablet-blue@2x.png");
+    }
   }
 
   .page-header--open .page-header__logo,
@@ -93,8 +108,21 @@
     &::before {
       width: 166px;
       height: 42px;
-      background-image: url("../../img/logo-tablet-blue@1x.png");
+      background-image: url("../img/logo-tablet-blue@1x.png");
+      background-size: 166px 42px;
+
+      @media (min-resolution: @retina) {
+        background-image: url("../img/logo-tablet-blue@2x.png");
+      }
     }
+  }
+
+  .page-header--open .page-header__logo {
+    position: absolute;
+  }
+
+  .page-header--open .page-header__logo-image {
+    display: none;
   }
 
   .page-header--open .page-header__main-nav {
@@ -134,7 +162,12 @@
     margin: 19px auto 19px 0;
     width: 200px;
     height: 52px;
-    background-image: url("../../img/logo-desktop-blue@1x.png");
+    background-image: url("../img/logo-desktop-blue@1x.png");
+    background-size: 200px 52px;
+
+    @media (min-resolution: @retina) {
+      background-image: url("../img/logo-desktop-blue@2x.png");
+    }
   }
 
   .page-header--open .page-header__logo,
@@ -142,6 +175,14 @@
     &::before {
       display: none;
     }
+  }
+
+  .page-header--open .page-header__logo {
+    position: static;
+  }
+
+  .page-header--open .page-header__logo-image {
+    display: block;
   }
 
   .page-header__main-nav {

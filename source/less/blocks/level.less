@@ -59,20 +59,6 @@
   }
 }
 
-.level__circle {
-  &--catalog {
-    r: 22px;
-    cx: 23.5px;
-    cy: 23.5px;
-  }
-
-  &--form {
-    r: 48px;
-    cx: 50px;
-    cy: 50px;
-  }
-}
-
 .level__number {
   color: white;
   font-weight: bold;
@@ -107,11 +93,12 @@
 
   &--form {
     &::before {
+      position: relative;
       width: 49px;
       height: 2px;
       background-color: #cbced9;
-      top: 20px;
-      right: -3px;
+      top: 0;
+      left: 0;
     }
   }
 }
@@ -169,13 +156,6 @@
 
       &::before {
         background-color: rgba(68, 68, 68, 0.4);
-      }
-    }
-
-    &--form {
-      &::before {
-        top: -5px;
-        left: -8px;
       }
     }
   }

@@ -107,6 +107,10 @@
     background-repeat: no-repeat;
     background-position: 5px 0;
     z-index: -2;
+
+    @media (min-resolution: @retina) {
+      background-image: url("../img/about-mobile@2x.png");
+    }
   }
 }
 
@@ -139,6 +143,7 @@
   &--business {
     width: 270px;
     position: absolute;
+    left: calc(50% - 135px);
     top: 3725px;
     min-height: 443px;
     align-self: center;
@@ -185,6 +190,7 @@
 .page-main__map {
   display: flex;
   justify-content: center;
+  align-self: center;
   margin-top: -40px;
   z-index: -8;
 }
@@ -192,6 +198,7 @@
 .page-main__profile {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .page-main__trips-planned {
@@ -245,10 +252,8 @@
 
     &--inner {
       width: @tablet;
-      align-self: center;
       text-align: left;
-      margin-top: 87px;
-      margin-bottom: 64px;
+      margin: 87px 0 64px;
       padding: 0;
       padding-left: 74px;
 
@@ -282,7 +287,7 @@
     text-decoration: none;
     text-transform: uppercase;
     padding-right: 136px;
-    background-image: url("../../img/return.svg");
+    background-image: url("../img/return.svg");
     background-repeat: no-repeat;
     background-size: 32px 16px;
     background-position: 661px 0;
@@ -314,6 +319,10 @@
       background-image: url("../img/about-tablet@1x.png");
       background-size: 376px 548px;
       background-position: 0 0;
+
+      @media (min-resolution: @retina) {
+        background-image: url("../img/about-tablet@2x.png");
+      }
     }
   }
 
@@ -322,6 +331,7 @@
       width: 688px;
       margin: 0;
       top: 4870px;
+      left: calc(50% - 344px);
     }
   }
 
@@ -336,9 +346,9 @@
   }
 
   .page-main__map {
-    height: 965px;
+    height: 700px;
     align-self: center;
-    margin-top: -350px;
+    margin-top: -85px;
   }
 
   .page-main__catalog {
@@ -414,6 +424,10 @@
       background-image: url("../img/about-desktop@1x.png");
       background-size: 630px 665px;
       background-position: 0 0;
+
+      @media (min-resolution: @retina) {
+        background-image: url("../img/about-desktop@2x.png");
+      }
     }
   }
 
@@ -421,6 +435,7 @@
     &--business {
       top: 3100px;
       width: 750px;
+      left: calc(50% - 375px);
     }
   }
 

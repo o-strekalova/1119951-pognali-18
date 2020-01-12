@@ -32,7 +32,7 @@
   width: 270px;
   height: 62px;
   background-color: #ffd74b;
-  background-image: url("../../img/triangle-arrow-right.svg");
+  background-image: url("../img/triangle-arrow-right.svg");
   background-repeat: no-repeat;
   background-size: 10px 14px;
   background-position: 237px 50%;
@@ -49,7 +49,8 @@
   }
 
   .destinations__wrap {
-    background-image: url("../../img/flags-back@1x.png");
+    background-image: url("../img/flags-back@1x.png");
+    background-size: 289px 575px;
     background-repeat: no-repeat;
     background-position: calc(100% - 40px) 80px;
     position: relative;
@@ -63,6 +64,10 @@
       position: absolute;
       top: 406px;
       z-index: -4;
+    }
+
+    @media (min-resolution: @retina) {
+      background-image: url("../img/flags-back@2x.png");
     }
   }
 
@@ -113,6 +118,7 @@
     width: 560px;
     position: absolute;
     margin: 152px 70px 124px;
+    top: 0;
   }
 
   .destinations__item {

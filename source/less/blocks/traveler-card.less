@@ -7,6 +7,7 @@
   position: absolute;
   border-radius: 10px 10px 0 0;
   top: -270px;
+  left: 0;
 }
 
 .traveler-card__name {
@@ -28,7 +29,7 @@
       background-color: #81e31e;
       position: absolute;
       top: 7px;
-      left: 63px;
+      left: -17px;
     }
   }
 
@@ -42,14 +43,14 @@
       background-color: #f97676;
       position: absolute;
       top: 7px;
-      left: 53px;
+      left: -17px;
     }
   }
 }
 
 .traveler-card__level {
   position: absolute;
-  top: -253px;
+  top: -267px;
   left: 17px;
   display: flex;
   flex-direction: column;
@@ -75,9 +76,11 @@
   list-style: none;
   padding: 0;
   display: flex;
+  justify-content: center;
   position: absolute;
   top: -13px;
-  align-self: center;
+  left: 0;
+  width: 100%;
 }
 
 .traveler-card__country {
@@ -103,21 +106,21 @@
   }
 
   &--plane {
-    background-image: url("../../img/plane.svg");
+    background-image: url("../img/plane.svg");
     margin-right: 12px;
   }
 
   &--bus {
-    background-image: url("../../img/bus.svg");
+    background-image: url("../img/bus.svg");
     margin-right: 8px;
   }
 
   &--bike {
-    background-image: url("../../img/bike.svg");
+    background-image: url("../img/bike.svg");
   }
 
   &--on-foot {
-    background-image: url("../../img/run.svg");
+    background-image: url("../img/run.svg");
   }
 
   &--checked {
@@ -148,7 +151,7 @@
         width: 7px;
         height: 7px;
         top: 8px;
-        left: 57px;
+        left: -20px;
       }
     }
 
@@ -157,7 +160,7 @@
         width: 7px;
         height: 7px;
         top: 8px;
-        left: 47px;
+        left: -20px;
       }
     }
   }

@@ -38,6 +38,7 @@
   padding: 0;
   position: relative;
   display: flex;
+  flex-direction: column;
 }
 
 .step__checkbox-label {
@@ -67,7 +68,7 @@
 
 .step__checkbox:checked + .step__checkbox-label {
   &::before {
-    background-image: url("../../img/tick.svg");
+    background-image: url("../img/tick.svg");
   }
 }
 
@@ -119,7 +120,7 @@
     content: "";
     width: 12px;
     height: 7px;
-    background-image: url("../../img/dropdown-form.svg");
+    background-image: url("../img/dropdown-form.svg");
     opacity: 0.3;
     background-size: 12px 7px;
     background-repeat: no-repeat;
@@ -133,7 +134,7 @@
     content: "";
     width: 5px;
     height: 10px;
-    background-image: url("../../img/small-arrow.svg");
+    background-image: url("../img/small-arrow.svg");
     opacity: 0.3;
     background-size: 5px 10px;
     background-repeat: no-repeat;
@@ -170,7 +171,7 @@
   width: 21px;
   height: 21px;
   background-color: #edeff6;
-  background-image: url("../../img/small-cross.svg");
+  background-image: url("../img/small-cross.svg");
   background-size: 9px;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -180,6 +181,7 @@
   right: -10px;
   top: -10px;
   z-index: 1;
+  overflow: visible;
 
   &::before {
     content: "";
@@ -242,7 +244,7 @@
     &::before {
       width: 14px;
       height: 14px;
-      background-image: url("../../img/qty-plus-mobile.svg");
+      background-image: url("../img/qty-plus-mobile.svg");
       background-size: 14px;
       background-repeat: no-repeat;
       opacity: 1;
@@ -278,7 +280,7 @@
         width: 9px;
         height: 9px;
         background-image: none;
-        mask-image: url("../../img/filter-close.svg");
+        mask-image: url("../img/filter-close.svg");
         background-color: white;
         background-size: 9px;
         background-repeat: no-repeat;
@@ -374,7 +376,7 @@
     text-transform: none;
     padding: 30px 34px;
     margin: 46px auto 12px 0;
-    background-image: url("../../img/triangle-arrow-right.svg");
+    background-image: url("../img/triangle-arrow-right.svg");
     background-repeat: no-repeat;
     background-size: 10px 14px;
     background-position: 240px 35px;
@@ -388,7 +390,7 @@
     margin: 0;
     margin-left: auto;
     padding-left: 32px;
-    background-image: url("../../img/triangle-arrow-left.svg");
+    background-image: url("../img/triangle-arrow-left.svg");
     background-repeat: no-repeat;
     background-size: 10px 14px;
     background-position: 0 50%;
