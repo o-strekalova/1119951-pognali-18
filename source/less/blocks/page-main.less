@@ -13,7 +13,7 @@
   background-color: #161c35;
   border-radius: 0 0 20px 20px;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 
 .page-main__title {
@@ -69,6 +69,7 @@
   align-items: center;
   background-color: #161c35;
   margin-top: -30px;
+  z-index: 9;
 }
 
 .page-main__lead {
@@ -81,7 +82,7 @@
   padding-bottom: 63px;
   width: 100%;
   border-radius: 0 0 30px 30px;
-  z-index: -1;
+  z-index: 8;
   background-color: #192144;
   position: relative;
 
@@ -93,7 +94,7 @@
     background-color: #141b3b;
     position: absolute;
     left: calc(50% - 170px);
-    z-index: -3;
+    z-index: -1;
   }
 
   &::after {
@@ -106,7 +107,7 @@
     background-size: 292px 352px;
     background-repeat: no-repeat;
     background-position: 5px 0;
-    z-index: -2;
+    z-index: -1;
 
     @media (min-resolution: @retina) {
       background-image: url("../img/about-mobile@2x.png");
@@ -120,7 +121,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: -3;
+  z-index: 6;
 }
 
 .page-main__profiles {
@@ -129,7 +130,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: -4;
+  z-index: 5;
 }
 
 .page-main__prices {
@@ -138,7 +139,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: -5;
+  z-index: 4;
 
   &--business {
     width: 270px;
@@ -148,6 +149,7 @@
     min-height: 443px;
     align-self: center;
     display: none;
+    z-index: 10;
 
     &--open {
       display: block;
@@ -161,7 +163,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: -6;
+  z-index: 3;
 }
 
 .page-main__address {
@@ -170,7 +172,7 @@
   align-items: center;
   position: relative;
   margin-top: -50px;
-  z-index: -7;
+  z-index: 2;
 }
 
 .page-main__country-filter {
@@ -192,7 +194,7 @@
   justify-content: center;
   align-self: center;
   margin-top: -40px;
-  z-index: -8;
+  z-index: 1;
 }
 
 .page-main__profile {
@@ -406,20 +408,20 @@
   }
 
   .page-main__lead {
-    margin-top: -50px;
-    z-index: -2;
+    margin-top: -60px;
+    z-index: 7;
 
     &::before {
       width: 213px;
       height: 213px;
       left: calc(50% - 660px);
-      top: 121px;
+      top: 131px;
     }
 
     &::after {
       width: 630px;
       height: 665px;
-      top: 136px;
+      top: 146px;
       left: calc(50% + 30px);
       background-image: url("../img/about-desktop@1x.png");
       background-size: 630px 665px;
