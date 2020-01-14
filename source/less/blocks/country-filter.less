@@ -87,6 +87,10 @@
   display: block;
 }
 
+.country-filter__form {
+  padding-bottom: 285px;
+}
+
 .country-filter__close {
   width: 12px;
   height: 12px;
@@ -121,14 +125,6 @@
   padding: 0;
   margin-top: 20px;
   margin-bottom: 18px;
-
-  &--mobile {
-    display: block;
-  }
-
-  &--desktop {
-    display: none;
-  }
 }
 
 .country-filter__continents-item {
@@ -154,7 +150,7 @@
 .country-filter__countries-list {
   list-style: none;
   padding: 0;
-  margin: 49px 26px 38px;
+  margin: 214px 0 38px;
 
   &--step {
     margin: 57px 19px 12px;
@@ -267,21 +263,31 @@
     }
   }
 
-  .country-filter__wrap--open .country-filter__block {
+  .country-filter__block {
     display: flex;
+    margin-bottom: 0;
   }
 
-  .country-filter__block {
+  .country-filter__fieldset--letter-table,
+  .country-filter__close-button {
+    display: none;
+  }
+
+  .country-filter__wrap--open .country-filter__block {
     margin-bottom: 230px;
-    margin-top: 45px;
+  }
+
+  .country-filter__wrap--open .country-filter__block .country-filter__fieldset--letter-table,
+  .country-filter__wrap--open .country-filter__block .country-filter__close-button {
+    display: block;
+  }
+
+  .country-filter__form {
+    padding-bottom: 0;
   }
 
   .country-filter__fieldset {
     margin-left: 0;
-
-    &--continents {
-      display: none;
-    }
   }
 
   .country-filter__letter-table {
@@ -327,7 +333,7 @@
       &::before {
         content: "";
         position: absolute;
-        top: -33px;
+        top: -32px;
         left: 0;
         width: 1px;
         min-height: 476px;
@@ -352,6 +358,7 @@
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 74px;
+    padding-top: 0;
     padding-left: 40px;
     background-image: url("../img/close.svg");
     background-size: 19px;
@@ -397,6 +404,10 @@
 
   .country-filter__block {
     margin-top: 56px;
+    margin-bottom: 0;
+  }
+
+  .country-filter__wrap--open .country-filter__block {
     margin-bottom: 245px;
   }
 
@@ -406,22 +417,20 @@
 
     &--step {
       width: 360px;
-      margin-left: 0;
+      margin-left: -10px;
     }
   }
 
   .country-filter__continents-list {
-    margin: 60px 20px 43px 343px;
+    margin: 3px 20px 52px 343px;
   }
 
   .country-filter__countries-list {
-    display: none;
-
     &--step {
       display: block;
       margin-top: 5px;
-      margin-left: 95px;
-      padding-left: 23px;
+      margin-left: 93px;
+      padding-left: 25px;
     }
   }
 

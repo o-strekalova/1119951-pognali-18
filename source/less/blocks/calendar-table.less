@@ -83,7 +83,7 @@
 }
 
 .calendar-table__button {
-  width: 30px;
+  width: 100%;
   height: 30px;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: normal;
@@ -182,7 +182,6 @@
   }
 
   .calendar-table__button {
-    width: 74px;
     height: 68px;
     font-weight: 500;
     font-size: 20px;
@@ -230,8 +229,17 @@
     padding-left: 15px;
   }
 
-  .calendar-table__button {
+  .calendar-table__cell {
     width: 141px;
+
+    &--focus::after {
+      cursor: pointer;
+      width: 145px;
+      height: 74px;
+    }
+  }
+
+  .calendar-table__button {
     height: 70px;
     font-weight: normal;
     text-align: left;
@@ -245,13 +253,5 @@
   .calendar-table__note {
     display: block;
     margin: 8px 0;
-  }
-
-  .calendar-table__cell {
-    &--focus::after {
-      cursor: pointer;
-      width: 145px;
-      height: 74px;
-    }
   }
 }

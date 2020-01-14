@@ -18,7 +18,7 @@
     Открытое меню .page-header--open.
     Прокрутка .page-header--scroll
     -->
-    <header class="page-header page-header--scroll">
+    <header class="page-header page-header">
       <div class="page-header__wrap container">
         <a class="page-header__logo">
           <picture>
@@ -166,8 +166,8 @@
               <p class="traveler-card__level level">
                 <span class="level__number">99</span>
                 <span class="level__word">level</span>
-                <svg class="level__border level__border--99" width="62" height="62">
-                  <circle r="29" cx="31" cy="31" fill="none" stroke="#ff8d30" stroke-width="3"/>
+                <svg class="level__border level__border--99" viewBox="0 0 60 60">
+                  <circle r="29" cx="30" cy="30" fill="none" stroke="#ff8d30" stroke-width="3"/>
                 </svg>
               </p>
               <p class="traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
@@ -198,8 +198,8 @@
               <p class="traveler-card__level level">
                 <span class="level__number">80</span>
                 <span class="level__word">level</span>
-                <svg class="level__border level__border--80" width="62" height="62">
-                  <circle r="29" cx="31" cy="31" fill="none" stroke="#ff8d30" stroke-width="3"/>
+                <svg class="level__border level__border--80" viewBox="0 0 60 60">
+                  <circle r="29" cx="30" cy="30" fill="none" stroke="#ff8d30" stroke-width="3"/>
                 </svg>
               </p>
               <p class="traveler-card__tags traveler-card__tags--short">#бургер #бар #футбол #концерт #крафт</p>
@@ -245,6 +245,30 @@
           </ul>
           <a class="prices__business-link" href="#">Показать тарифы для бизнеса</a>
         </div>
+      </section>
+
+      <!--Для открытия бизнес-тарифов page-main__prices--business--open -->
+      <section class="page-main__prices page-main__prices--business page-main__prices--business prices prices--business lead">
+        <h2 class="prices__title prices__title--business lead__title lead__title--center">Бизнес-тарифы</h2>
+        <ul class="prices__list prices__list--business">
+          <li class="prices__option prices__option--business">
+            <p class="prices__text prices__text--business">Реклама у блоггера</p>
+            <p class="prices__text prices__text--business prices__text--sum">300 000 руб./пост</p>
+          </li>
+          <li class="prices__option prices__option--business">
+            <p class="prices__text prices__text--business">Накрутка подписчиков</p>
+            <p class="prices__text prices__text--business prices__text--sum">от 1 руб./шт.</p>
+          </li>
+          <li class="prices__option prices__option--business">
+            <p class="prices__text prices__text--business">Лайки от ботов</p>
+            <p class="prices__text prices__text--business prices__text--sum">от 20 коп./лайк</p>
+          </li>
+          <li class="prices__option prices__option--business">
+            <p class="prices__text prices__text--business">Ваш продакт-плейсмент</p>
+            <p class="prices__text prices__text--business prices__text--sum">Индивидуально</p>
+          </li>
+        </ul>
+        <button class="prices__close" type="button">Закрыть окно</button>
       </section>
 
       <section class="page-main__sign-up sign-up lead">
@@ -315,28 +339,5 @@
         </a>
       </div>
     </footer>
-
-    <section class="page-main__prices page-main__prices--business page-main__prices--business--open prices prices--business lead">
-      <h2 class="prices__title prices__title--business lead__title lead__title--center">Бизнес-тарифы</h2>
-      <ul class="prices__list prices__list--business">
-        <li class="prices__option prices__option--business">
-          <p class="prices__text prices__text--business">Реклама у блоггера</p>
-          <p class="prices__text prices__text--business prices__text--sum">300 000 руб./пост</p>
-        </li>
-        <li class="prices__option prices__option--business">
-          <p class="prices__text prices__text--business">Накрутка подписчиков</p>
-          <p class="prices__text prices__text--business prices__text--sum">от 1 руб./шт.</p>
-        </li>
-        <li class="prices__option prices__option--business">
-          <p class="prices__text prices__text--business">Лайки от ботов</p>
-          <p class="prices__text prices__text--business prices__text--sum">от 20 коп./лайк</p>
-        </li>
-        <li class="prices__option prices__option--business">
-          <p class="prices__text prices__text--business">Ваш продакт-плейсмент</p>
-          <p class="prices__text prices__text--business prices__text--sum">Индивидуально</p>
-        </li>
-      </ul>
-      <button class="prices__close" type="button">Закрыть окно</button>
-    </section>
   </body>
 </html>
