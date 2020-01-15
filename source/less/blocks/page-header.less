@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   position: fixed;
-  z-index: 2;
+  z-index: 11;
   width: 100%;
   min-width: 320px;
 
@@ -21,13 +21,51 @@
 
 .page-header__logo {
   display: block;
-  margin: 26px auto 26px 0;
+  margin: 27px auto 27px 0;
+  width: 100px;
+  height: 19px;
+}
+
+.page-header--scroll .page-header__logo {
+  width: 100px;
+  height: 19px;
+  background-image: url("../img/logo-mobile-blue@1x.png");
+  background-size: 100px 19px;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: @retina) {
+    background-image: url("../img/logo-mobile-blue@2x.png");
+  }
+}
+
+.page-header--scroll .page-header__logo-image {
+  display: none;
+}
+
+.page-header--open .page-header__logo,
+.page-header--no-js .page-header__logo {
+  z-index: 12;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 19px;
+    background-image: url("../img/logo-mobile-blue@1x.png");
+    background-size: 100px 19px;
+
+    @media (min-resolution: @retina) {
+      background-image: url("../img/logo-mobile-blue@2x.png");
+    }
+  }
 }
 
 .page-header__main-nav {
   position: relative;
   display: flex;
   flex-direction: column;
+  z-index: 10;
 }
 
 @media (min-width: @tablet) {
@@ -37,26 +75,70 @@
     &--inner {
       background-color: #161c35;
     }
+
+    &--scroll {
+      background-color: white;
+    }
   }
 
   .page-header__logo {
-    margin: 43px auto 43px 0;
+    margin: 45px auto 45px 0;
+    width: 166px;
+    height: 42px;
   }
 
   .page-header__logo-image {
-    width: 216px;
-    height: 46px;
+    width: 166px;
+    height: 42px;
   }
 
-  .page-header__main-nav {
+  .page-header--scroll .page-header__logo {
+    width: 166px;
+    height: 42px;
+    background-image: url("../img/logo-tablet-blue@1x.png");
+    background-size: 166px 42px;
+
+    @media (min-resolution: @retina) {
+      background-image: url("../img/logo-tablet-blue@2x.png");
+    }
+  }
+
+  .page-header--open .page-header__logo,
+  .page-header--no-js .page-header__logo {
+    &::before {
+      width: 166px;
+      height: 42px;
+      background-image: url("../img/logo-tablet-blue@1x.png");
+      background-size: 166px 42px;
+
+      @media (min-resolution: @retina) {
+        background-image: url("../img/logo-tablet-blue@2x.png");
+      }
+    }
+  }
+
+  .page-header--open .page-header__logo {
+    position: absolute;
+  }
+
+  .page-header--open .page-header__logo-image {
+    display: none;
+  }
+
+  .page-header--open .page-header__main-nav {
     width: 688px;
   }
 }
 
 @media (max-width: 1439px) {
   .page-header {
-    &--open {
+    &--open,
+    &--no-js {
       background-color: white;
+    }
+
+    &--no-js {
+      position: static;
     }
   }
 }
@@ -64,12 +146,43 @@
 @media (min-width: @desktop) {
   .page-header {
     background-color: #161c35;
+
+    &--scroll {
+      background-color: white;
+    }
   }
 
   .page-header__logo {
     margin: 49px auto 5px 0;
     width: 200px;
     height: 52px;
+  }
+
+  .page-header--scroll .page-header__logo {
+    margin: 19px auto 19px 0;
+    width: 200px;
+    height: 52px;
+    background-image: url("../img/logo-desktop-blue@1x.png");
+    background-size: 200px 52px;
+
+    @media (min-resolution: @retina) {
+      background-image: url("../img/logo-desktop-blue@2x.png");
+    }
+  }
+
+  .page-header--open .page-header__logo,
+  .page-header--no-js .page-header__logo {
+    &::before {
+      display: none;
+    }
+  }
+
+  .page-header--open .page-header__logo {
+    position: static;
+  }
+
+  .page-header--open .page-header__logo-image {
+    display: block;
   }
 
   .page-header__main-nav {

@@ -5,12 +5,30 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
+    <!--
+    По умолчанию используется класс .page-header--no-js.
+    Закрытое меню .page-header.
+    Открытое меню .page-header--open.
+    Прокрутка .page-header--scroll
+    -->
     <header class="page-header page-header page-header--inner">
       <div class="page-header__wrap container">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип Погнали">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+            <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
+            <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" src="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
+          </picture>
         </a>
         <nav class="page-header__main-nav main-nav intro intro--inner">
           <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
@@ -47,6 +65,7 @@
       </div>
 
       <section class="page-main__country-filter country-filter">
+        <!--Для открытия фильтра по странам country-filter__wrap--open -->
         <div class="country-filter__wrap country-filter__wrap--open container">
           <a class="country-filter__link" aria-label="открыть фильтр по странам">
             <h2 class="country-filter__title country-filter__title--main">Фильтрация по странам</h2>
@@ -55,24 +74,10 @@
               <span class="country-filter__title--close-link">Свернуть</span>
             </h2>
           </a>
-          <ul class="country-filter__continents-list country-filter__continents-list--desktop">
-            <li class="country-filter__continents-item">
-              <a class="country-filter__radio-label country-filter__radio-label--checked" href="/europe">Европа</a>
-            </li>
-            <li class="country-filter__continents-item">
-              <la class="country-filter__radio-label" href="/asia">Азия</a>
-            </li>
-            <li class="country-filter__continents-item">
-              <a class="country-filter__radio-label" href="/america">Америка</a>
-            </li>
-            <li class="country-filter__continents-item">
-              <a class="country-filter__radio-label" href="/islands">Острова</a>
-            </li>
-          </ul>
           <div class="country-filter__block">
             <form class="country-filter__form" method="post" action="https://echo.htmlacademy.ru">
               <fieldset class="country-filter__fieldset country-filter__fieldset--continents">
-                <ul class="country-filter__continents-list country-filter__continents-list--mobile">
+                <ul class="country-filter__continents-list">
                   <li class="country-filter__continents-item">
                     <input class="country-filter__radio visually-hidden" type="radio" name="world-part" id="europe" checked>
                     <label class="country-filter__radio-label" for="europe">Европа</label>
@@ -91,7 +96,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="country-filter__fieldset">
+              <fieldset class="country-filter__fieldset country-filter__fieldset--letter-table">
                 <table class="country-filter__letter-table letter-table">
                   <tr class="letter-table__row">
                     <td class="letter-table__cell">
@@ -123,12 +128,6 @@
                         </li>
                         <li class="country-filter__country">
                           <a class="country-filter__country-link" href="/europe/argentina">Аргентина</a>
-                        </li>
-                        <li class="country-filter__country">
-                          <a class="country-filter__country-link" href="/asia/armenia">Армения</a>
-                        </li>
-                        <li class="country-filter__country">
-                          <a class="country-filter__country-link" href="/asia/afganistan">Афганистан</a>
                         </li>
                       </ul>
                     </td>
@@ -720,45 +719,17 @@
                 </table>
               </fieldset>
             </form>
-            <ul class="country-filter__countries-list">
-              <li class="country-filter__country">
-                <a class="country-filter__country-link" href="/asia/afganistan">Афганистан</a>
-              </li>
-              <li class="country-filter__country">
-                <a class="country-filter__country-link" href="/europe/albania">Албания</a>
-              </li>
-              <li class="country-filter__country">
-                <a class="country-filter__country-link" href="/africa/algeria">Алжир</a>
-              </li>
-              <li class="country-filter__country">
-                <a class="country-filter__country-link" href="/europe/andorra">Андорра</a>
-              </li>
-              <li class="country-filter__country">
-                <a class="country-filter__country-link" href="/america/argentina">Аргентина</a>
-              </li>
-              <li class="country-filter__country">
-                <a class="country-filter__country-link" href="/asia/armenia">Армения</a>
-              </li>
-              <li class="country-filter__country">
-                <a class="country-filter__country-link" href="/australia/australia">Австралия</a>
-              </li>
-              <li class="country-filter__country">
-                <a class="country-filter__country-link" href="/europe/austria">Австрия</a>
-              </li>
-              <li class="country-filter__country">
-                <a class="country-filter__country-link" href="/asia/azerbaijan">Азербайджан</a>
-              </li>
-            </ul>
             <button class="country-filter__close-button" type="button">Свернуть</button>
           </div>
         </div>
       </section>
 
-    <div class="page-main__catalog-wrap container">
-      <section class="page-main__profiles-filter profiles-filter">
+      <div class="page-main__catalog-wrap container">
+        <section class="page-main__profiles-filter profiles-filter">
           <h2 class="profiles-filter__title">Подберите идеального попутчика</h2>
           <form class="profiles-filter__form" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset class="profiles-filter__fieldset profiles-filter__fieldset--hobby profiles-filter__fieldset--closed">
+            <!-- Для скрытия филдсета profiles-filter__fieldset--closed -->
+            <fieldset class="profiles-filter__fieldset profiles-filter__fieldset--hobby">
               <legend class="profiles-filter__legend">
                 <button class="profiles-filter__legend-button" type="button">Хобби</button>
               </legend>
@@ -796,7 +767,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="profiles-filter__fieldset profiles-filter__fieldset--food profiles-filter__fieldset--closed">
+            <fieldset class="profiles-filter__fieldset profiles-filter__fieldset--food">
               <legend class="profiles-filter__legend">
                 <button class="profiles-filter__legend-button" type="button">Еда</button>
               </legend>
@@ -859,17 +830,28 @@
             </fieldset>
             <button class="profiles-filter__button" type="submit">Показать</button>
           </form>
-        </section>
+      </section>
 
         <section class="page-main__catalog catalog">
           <ul class="catalog__list">
             <li class="catalog__item catalog-card">
-              <img class="catalog-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Таня Фирсова">
+              <a href="#">
+                <picture>
+                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
+                  <img class="catalog-card__img" src="img/firsova-mobile@1x.jpg" src="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
+                </picture>
+              </a>
               <div class="catalog-card__info-wrap">
-                <h3 class="catalog-card__name catalog-card__name--offline">Таня Фирсова</h3>
+                <a href="#">
+                  <h3 class="catalog-card__name catalog-card__name--offline">Таня Фирсова</h3>
+                </a>
                 <p class="catalog-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 <div class="catalog-card__likes-wrap">
-                  <a class="catalog-card__invite-link" type="button">Позвать!</a>
+                  <a class="catalog-card__invite-link">Позвать!</a>
                   <button class="catalog-card__like-button catalog-card__like-button--liked" type="button" aria-label="Лайкнуть профиль"></button>
                   <p class="catalog-card__likes">1,5 М</p>
                 </div>
@@ -889,8 +871,8 @@
                   <p class="catalog-card__level level level--blue">
                     99
                     <span class="level__word level__word--catalog">level</span>
-                    <svg class="level__border level__border--catalog level__border--99">
-                      <circle class="level__circle level__circle--catalog" fill="none" stroke="#ff8d30" stroke-width="3"/>
+                    <svg class="level__border level__border--catalog level__border--99" viewBox="0 0 47 47">
+                      <circle class="level__circle level__circle--catalog" r="22" cx="23.5" cy="23.5" fill="none" stroke="#ff8d30" stroke-width="3"/>
                     </svg>
                   </p>
                 </article>
@@ -899,27 +881,38 @@
                 <h4 class="catalog-card__section-title catalog-card__section-title--countries-list">хочет посетить:</h4>
                 <ul class="catalog-card__countries-list">
                   <li class="catalog-card__country">
-                    <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Шри-Ланки">
+                    <img class="catalog-card__country-flag" src="img/flag-sri-lanka.svg" width="26" height="18" alt="Флаг Шри-Ланки">
                     <p class="catalog-card__country-name">Шри-Ланка</p class="catalog-card__country-flag">
                   </li>
                   <li class="catalog-card__country">
-                    <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Таиланда">
+                    <img class="catalog-card__country-flag" src="img/flag-thailand.svg" width="26" height="18" alt="Флаг Таиланда">
                     <p class="catalog-card__country-name">Таиланд</p class="catalog-card__country-name">
                   </li>
                   <li class="catalog-card__country">
-                    <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Сейшел">
+                    <img class="catalog-card__country-flag" src="img/flag-seychelles.svg" width="26" height="18" alt="Флаг Сейшел">
                     <p class="catalog-card__country-name">Сейшелы</p class="catalog-card__country-name">
                   </li>
                 </ul>
               </article>
             </li>
             <li class="catalog__item catalog-card">
-              <img class="catalog-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Петя Демин">
+              <a href="#">
+                <picture>
+                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+                  <img class="catalog-card__img" src="img/demin-mobile@1x.jpg" src="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
+                </picture>
+              </a>
               <div class="catalog-card__info-wrap">
-                <h3 class="catalog-card__name catalog-card__name--offline">Петя Демин</h3>
+                <a href="#">
+                  <h3 class="catalog-card__name catalog-card__name--offline">Петя Демин</h3>
+                </a>
                 <p class="catalog-card__tags">#бургер #бар #футбол #концерт #крафт</p>
                 <div class="catalog-card__likes-wrap">
-                  <a class="catalog-card__invite-link" type="button">Позвать!</a>
+                  <a class="catalog-card__invite-link">Позвать!</a>
                   <button class="catalog-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
                   <p class="catalog-card__likes">150</p>
                 </div>
@@ -939,8 +932,8 @@
                   <p class="catalog-card__level level level--blue">
                     80
                     <span class="level__word level__word--catalog">level</span>
-                    <svg class="level__border level__border--catalog level__border--80">
-                      <circle class="level__circle level__circle--catalog" fill="none" stroke="#ff8d30" stroke-width="3"/>
+                    <svg class="level__border level__border--catalog level__border--80" viewBox="0 0 47 47">
+                      <circle class="level__circle level__circle--catalog" r="22" cx="23.5" cy="23.5" fill="none" stroke="#ff8d30" stroke-width="3"/>
                     </svg>
                   </p>
                 </article>
@@ -949,23 +942,34 @@
                 <h4 class="catalog-card__section-title catalog-card__section-title--countries-list">хочет посетить:</h4>
                 <ul class="catalog-card__countries-list">
                   <li class="catalog-card__country">
-                    <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Бельгии">
+                    <img class="catalog-card__country-flag" src="img/flag-belgium.svg" width="26" height="18" alt="Флаг Бельгии">
                     <p class="catalog-card__country-name">Бельгия</p class="catalog-card__country-name">
                   </li>
                   <li class="catalog-card__country">
-                    <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Чехии">
+                    <img class="catalog-card__country-flag" src="img/flag-czech.svg" width="26" height="18" alt="Флаг Чехии">
                     <p class="catalog-card__country-name">Чехия</p class="catalog-card__country-name">
                   </li>
                 </ul>
               </article>
             </li>
             <li class="catalog__item catalog-card">
-              <img class="catalog-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Марк Смолов">
+              <a href="#">
+                <picture>
+                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
+                  <img class="catalog-card__img" src="img/smolov-mobile@1x.jpg" src="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
+                </picture>
+              </a>
               <div class="catalog-card__info-wrap">
-                <h3 class="catalog-card__name catalog-card__name--offline">Марк Смолов</h3>
+                <a href="#">
+                  <h3 class="catalog-card__name catalog-card__name--offline">Марк Смолов</h3>
+                </a>
                 <p class="catalog-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
                 <div class="catalog-card__likes-wrap">
-                  <a class="catalog-card__invite-link" type="button">Позвать!</a>
+                  <a class="catalog-card__invite-link">Позвать!</a>
                   <button class="catalog-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
                   <p class="catalog-card__likes">1700</p>
                 </div>
@@ -985,8 +989,8 @@
                   <p class="catalog-card__level level level--blue">
                     25
                     <span class="level__word level__word--catalog">level</span>
-                    <svg class="level__border level__border--catalog level__border--25">
-                      <circle class="level__circle level__circle--catalog" fill="none" stroke="#ff8d30" stroke-width="3"/>
+                    <svg class="level__border level__border--catalog level__border--25" viewBox="0 0 47 47">
+                      <circle class="level__circle level__circle--catalog" r="22" cx="23.5" cy="23.5" fill="none" stroke="#ff8d30" stroke-width="3"/>
                     </svg>
                   </p>
                 </article>
@@ -995,27 +999,38 @@
                 <h4 class="catalog-card__section-title catalog-card__section-title--countries-list">хочет посетить:</h4>
                 <ul class="catalog-card__countries-list">
                   <li class="catalog-card__country">
-                    <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг США">
+                    <img class="catalog-card__country-flag" src="img/flag-usa.svg" width="26" height="18" alt="Флаг США">
                     <p class="catalog-card__country-name">США</p class="catalog-card__country-name">
                   </li>
                   <li class="catalog-card__country">
-                    <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Австралии">
+                    <img class="catalog-card__country-flag" src="img/flag-australia.svg" width="26" height="18" alt="Флаг Австралии">
                     <p class="catalog-card__country-name">Австралия</p class="catalog-card__country-name">
                   </li>
                   <li class="catalog-card__country">
-                    <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Доминиканы">
+                    <img class="catalog-card__country-flag" src="img/flag-dominica.svg" width="26" height="18" alt="Флаг Доминиканы">
                     <p class="catalog-card__country-name">Доминикана</p class="catalog-card__country-name">
                   </li>
                 </ul>
               </article>
             </li>
             <li class="catalog__item catalog-card">
-              <img class="catalog-card__img" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Лариса Роговая">
+              <a href="#">
+                <picture>
+                  <source media="(min-width: 1440px)" type="image/webp" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
+                  <img class="catalog-card__img" src="img/rogovaya-mobile@1x.jpg" src="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
+                </picture>
+              </a>
               <div class="catalog-card__info-wrap">
-                <h3 class="catalog-card__name catalog-card__name--online">Лариса Роговая</h3>
+                <a href="#">
+                  <h3 class="catalog-card__name catalog-card__name--online">Лариса Роговая</h3>
+                </a>
                 <p class="catalog-card__tags">#образование #карьера #учеба #линкедин</p>
                 <div class="catalog-card__likes-wrap">
-                  <a class="catalog-card__invite-link" type="button">Позвать!</a>
+                  <a class="catalog-card__invite-link">Позвать!</a>
                   <button class="catalog-card__like-button" type="button" aria-label="Лайкнуть профиль"></button>
                   <p class="catalog-card__likes">23</p>
                 </div>
@@ -1035,8 +1050,8 @@
                   <p class="catalog-card__level level level--blue">
                     50
                     <span class="level__word level__word--catalog">level</span>
-                    <svg class="level__border level__border--catalog level__border--50">
-                      <circle class="level__circle level__circle--catalog" fill="none" stroke="#ff8d30" stroke-width="3"/>
+                    <svg class="level__border level__border--catalog level__border--50" viewBox="0 0 47 47">
+                      <circle class="level__circle level__circle--catalog" r="22" cx="23.5" cy="23.5" fill="none" stroke="#ff8d30" stroke-width="3"/>
                     </svg>
                   </p>
                 </article>
@@ -1045,11 +1060,11 @@
                 <h4 class="catalog-card__section-title catalog-card__section-title--countries-list">хочет посетить:</h4>
                 <ul class="catalog-card__countries-list">
                   <li class="catalog-card__country">
-                    <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Великобритании">
+                    <img class="catalog-card__country-flag" src="img/flag-united-kingdom.svg" width="26" height="18" alt="Флаг Великобритании">
                     <p class="catalog-card__country-name">Великобритания</p class="catalog-card__country-name">
                   </li>
                   <li class="catalog-card__country">
-                    <img class="catalog-card__country-flag" src="https://via.placeholder.com/26x18" width="26" height="18" alt="Флаг Германии">
+                    <img class="catalog-card__country-flag" src="img/flag-bosnia.svg" width="26" height="18" alt="Флаг Германии">
                     <p class="catalog-card__country-name">Германия</p class="catalog-card__country-name">
                   </li>
                 </ul>
@@ -1060,9 +1075,9 @@
           <ul class="catalog__pagination">
             <ul class="catalog__pages-list">
               <li class="catalog__page-number catalog__page-number--current"><a class="catalog__page-link">1</a></li>
-              <li class="catalog__page-number"><a class="catalog__page-link">2</a></li>
-              <li class="catalog__page-number"><a class="catalog__page-link">3</a></li>
-              <li class="catalog__page-number"><a class="catalog__page-link">4</a></li>
+              <li class="catalog__page-number"><a class="catalog__page-link" href="#">2</a></li>
+              <li class="catalog__page-number"><a class="catalog__page-link" href="#">3</a></li>
+              <li class="catalog__page-number"><a class="catalog__page-link" href="#">4</a></li>
             </ul>
             <li class="catalog__prev"><a href="#" aria-label="Предыдущая страница"></a></li>
             <li class="catalog__next"><a href="#" aria-label="Следующая страница"></a></li>
@@ -1074,7 +1089,14 @@
     <footer class="page-footer page-footer--inner">
       <div class="page-footer__wrap container">
         <a class="page-footer__logo" href="index.html">
-          <img  class="page-footer__logo-img" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип Погнали">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+            <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" src="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
+          </picture>
         </a>
         <ul class="page-footer__list social-list">
           <li class="social-list__item social-list__item--yellow social-list__item--fb"><a href="#" aria-label="Погнали в Фейсбуке"></a></li>
@@ -1083,7 +1105,7 @@
         </ul>
         <p class="page-footer__text">Разработано</p>
         <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="page-footer__academy-img" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
+          <img class="page-footer__academy-img" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </div>
     </footer>

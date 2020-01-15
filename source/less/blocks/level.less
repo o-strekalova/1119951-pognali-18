@@ -25,8 +25,8 @@
 
 .level__border {
   position: absolute;
-  top: -1px;
-  left: -1px;
+  top: 0;
+  left: 0;
   stroke-dashoffset: 50%;
 
   &--99 {
@@ -48,28 +48,14 @@
   }
 
   &--catalog {
-    width: 47px;
-    height: 47px;
+    width: 45px;
+    height: 45px;
   }
 
   &--form {
     width: 100px;
     height: 100px;
     transform: rotate(5deg);
-  }
-}
-
-.level__circle {
-  &--catalog {
-    r: 22px;
-    cx: 23.5px;
-    cy: 23.5px;
-  }
-
-  &--form {
-    r: 48px;
-    cx: 50px;
-    cy: 50px;
   }
 }
 
@@ -98,7 +84,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: -3px;
+    top: -2px;
     width: 31px;
     height: 1px;
     background-color: white;
@@ -107,11 +93,12 @@
 
   &--form {
     &::before {
+      position: relative;
       width: 49px;
       height: 2px;
       background-color: #cbced9;
-      top: 20px;
-      right: -3px;
+      top: 0;
+      left: 0;
     }
   }
 }
@@ -128,33 +115,14 @@
   }
 
   .level__border {
-    top: -1px;
-    left: -1px;
-
     &--catalog {
-      width: 62px;
-      height: 62px;
+      width: 60px;
+      height: 60px;
     }
 
     &--form {
-      width: 96px;
-      height: 96px;
-      top: 1px;
-      left: 1px;
-    }
-  }
-
-  .level__circle {
-    &--catalog {
-      r: 29px;
-      cx: 31px;
-      cy: 31px;
-    }
-
-    &--form {
-      r: 46px;
-      cx: 48px;
-      cy: 48px;
+      width: 94px;
+      height: 94px;
     }
   }
 
@@ -169,13 +137,6 @@
 
       &::before {
         background-color: rgba(68, 68, 68, 0.4);
-      }
-    }
-
-    &--form {
-      &::before {
-        top: -5px;
-        left: -8px;
       }
     }
   }
