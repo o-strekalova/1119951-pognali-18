@@ -18,7 +18,7 @@
     Открытое меню .page-header--open.
     Прокрутка .page-header--scroll
     -->
-    <header class="page-header page-header page-header--inner">
+    <header class="page-header page-header--inner">
       <div class="page-header__wrap container">
         <a class="page-header__logo" href="index.html">
           <picture>
@@ -27,7 +27,7 @@
             <source media="(min-width: 768px)" type="image/webp" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
             <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
-            <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" src="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
+            <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png, img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
           </picture>
         </a>
         <nav class="page-header__main-nav main-nav intro intro--inner">
@@ -78,10 +78,10 @@
             <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
             <source type="image/webp" srcset="img/photo-account-mobile@1x.webp 1x, img/photo-account-mobile@2x.webp 2x">
-            <img class="profile__img" src="img/photo-account-mobile@1x.jpg" src="img/photo-account-mobile@2x.jpg 2x" width="99" height="100" alt="Аватар профиля">
+            <img class="profile__img" src="img/photo-account-mobile@1x.jpg, img/photo-account-mobile@2x.jpg 2x" width="99" height="100" alt="Аватар профиля">
           </picture>
           <input class="profile__img-input visually-hidden" type="file" name="profile-img" id="profile-img">
-          <label class="profile__img-label" for="profile-img"><span class="profile__img-label--long">Сменить фото</span><span class="profile__img-label--short">Фото</span></label>
+          <label class="profile__img-label" for="profile-img"><span class="profile__img-label profile__img-label--long">Сменить фото</span><span class="profile__img-label profile__img-label--short">Фото</span></label>
           <form class="profile__form" method="post" action="https://echo.htmlacademy.ru">
             <fieldset class="profile__fieldset">
               <legend class="profile__legend">Тэги</legend>
@@ -147,17 +147,17 @@
               </li class="new-trip__slider-controls">
               <li class="new-trip__controls-item">
                 <input class="new-trip__controls-input visually-hidden" type="radio" id="itinerary" name="choose-article">
-                <label class="new-trip__controls-label" for="itinerary"><span class="new-trip__controls-span">Маршрут</span></label class="new-trip__controls-label">
+                <label class="new-trip__controls-label" for="itinerary"><span class="new-trip__controls-span">Маршрут</span></label>
               </li>
               <li class="new-trip__controls-item">
                 <input class="new-trip__controls-input visually-hidden" type="radio" id="plans" name="choose-article">
-                <label class="new-trip__controls-label" for="plans"><span class="new-trip__controls-span">Развлечения</span></label class="new-trip__controls-label">
+                <label class="new-trip__controls-label" for="plans"><span class="new-trip__controls-span">Развлечения</span></label>
               </li>
             </ul>
           </div>
           <form class="new-trip__form" method="post" action="https://echo.htmlacademy.ru">
             <article class="new-trip__article step" id="step-1">
-              <h3 class="step__title"><p class="step__step-number">Шаг 1. </p>Даты пребывания</h3>
+              <h3 class="step__title"><span class="step__step-number">Шаг 1. </span>Даты пребывания</h3>
               <p class="step__text">Укажите предпочтительное количество попутчиков, которых <br class="page-main__lines--tablet">вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
               <div class="step__fieldsets">
                 <fieldset class="step__fieldset counter">
@@ -184,13 +184,13 @@
                   <button class="calendar-table__next" type="button"></button>
                 </caption>
                 <tr class="calendar-table__row calendar-table__row--header">
-                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">П</span><span class="calendar-table__weekday--two-letters">Пн</span></th>
-                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">В</span><span class="calendar-table__weekday--two-letters">Вт</span></th>
-                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">С</span><span class="calendar-table__weekday--two-letters">Ср</span></th>
-                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">Ч</span><span class="calendar-table__weekday--two-letters">Чт</span></th>
-                  <th class="calendar-table__weekday"><span class="calendar-table__weekday--one-letter">П</span><span class="calendar-table__weekday--two-letters">Пт</span></th>
-                  <th class="calendar-table__weekday calendar-table__weekday--weekend"><span class="calendar-table__weekday--one-letter">С</span><span class="calendar-table__weekday--two-letters">Сб</span></th>
-                  <th class="calendar-table__weekday calendar-table__weekday--weekend"><span class="calendar-table__weekday--one-letter">В</span><span class="calendar-table__weekday--two-letters">Вс</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday calendar-table__weekday--one-letter">П</span><span class="calendar-table__weekday calendar-table__weekday--two-letters">Пн</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday calendar-table__weekday--one-letter">В</span><span class="calendar-table__weekday calendar-table__weekday--two-letters">Вт</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday calendar-table__weekday--one-letter">С</span><span class="calendar-table__weekday calendar-table__weekday--two-letters">Ср</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday calendar-table__weekday--one-letter">Ч</span><span class="calendar-table__weekday calendar-table__weekday--two-letters">Чт</span></th>
+                  <th class="calendar-table__weekday"><span class="calendar-table__weekday calendar-table__weekday--one-letter">П</span><span class="calendar-table__weekday calendar-table__weekday--two-letters">Пт</span></th>
+                  <th class="calendar-table__weekday calendar-table__weekday--weekend"><span class="calendar-table__weekday calendar-table__weekday--one-letter">С</span><span class="calendar-table__weekday calendar-table__weekday--two-letters">Сб</span></th>
+                  <th class="calendar-table__weekday calendar-table__weekday--weekend"><span class="calendar-table__weekday calendar-table__weekday--one-letter">В</span><span class="calendar-table__weekday calendar-table__weekday--two-letters">Вс</span></th>
                 </tr>
                 <tr class="calendar-table__row">
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>23</button></td>
@@ -232,9 +232,9 @@
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>23</button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>24</button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button" disabled>25</button></td>
-                  <td class="calendar-table__cell calendar-table__cell--focus"><button class="calendar-table__button calendar-table__button--chosen" type="button">26<p class="calendar-table__note">Заезд</p></button></td>
+                  <td class="calendar-table__cell calendar-table__cell--focus"><button class="calendar-table__button calendar-table__button--chosen" type="button">26<span class="calendar-table__note">Заезд</span></button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button calendar-table__button--chosen" type="button">27</button></td>
-                  <td class="calendar-table__cell"><button class="calendar-table__button calendar-table__button--chosen" type="button">28<p class="calendar-table__note">Выезд</p></button></td>
+                  <td class="calendar-table__cell"><button class="calendar-table__button calendar-table__button--chosen" type="button">28<span class="calendar-table__note">Выезд</span></button></td>
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button">29</button></td>
                 </tr>
                 <tr class="calendar-table__row">
@@ -251,7 +251,7 @@
               <a class="step__next-link" href="#step-2">Следующий шаг</a>
             </article>
             <article class="new-trip__article step" id="step-2">
-              <h3 class="step__title"><p class="step__step-number">Шаг 2. </p>Маршрут</h3>
+              <h3 class="step__title"><span class="step__step-number">Шаг 2. </span>Маршрут</h3>
               <p class="step__text">Укажите страны, которые вы хотели по посетить. <br class="page-main__lines--tablet">Это может быть одна или сразу несколько.</p>
               <ul class="step__selected-list">
                 <li class="step__selected-item">
@@ -393,7 +393,7 @@
               </div>
             </article>
             <article class="new-trip__article step" id="step-3">
-              <h3 class="step__title"><p class="step__step-number">Шаг 3. </p>Развлечения</h3>
+              <h3 class="step__title"><span class="step__step-number">Шаг 3. </span>Развлечения</h3>
               <p class="step__text">Наконец, расскажите о своих планах времяпровождения. <br class="page-main__lines--tablet">Можно писать в свободной форме и ставить тэги.</p>
               <ul class="step__plans-list plans-list">
                 <li class="plans-list__item">
@@ -402,9 +402,9 @@
                   <textarea class="plans-list__textarea" id="bosnia" placeholder="План действий"></textarea>
                 </li>
                 <li class="plans-list__item">
-                  <label class="plans-list__textarea-label" for="czech republic">Чехия</label>
+                  <label class="plans-list__textarea-label" for="czech-republic">Чехия</label>
                   <img class="plans-list__flag" src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
-                  <textarea class="plans-list__textarea" id="czech republic">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <textarea class="plans-list__textarea" id="czech-republic">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </li>
               </ul>
               <div class="new-trip__links">
@@ -426,7 +426,7 @@
             <source media="(min-width: 768px)" type="image/webp" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
             <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
-            <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" src="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
+            <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png, img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
           </picture>
         </a>
         <ul class="page-footer__list social-list">

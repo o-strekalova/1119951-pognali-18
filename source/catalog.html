@@ -18,7 +18,7 @@
     Открытое меню .page-header--open.
     Прокрутка .page-header--scroll
     -->
-    <header class="page-header page-header page-header--inner">
+    <header class="page-header page-header--inner">
       <div class="page-header__wrap container">
         <a class="page-header__logo" href="index.html">
           <picture>
@@ -27,7 +27,7 @@
             <source media="(min-width: 768px)" type="image/webp" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
             <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
-            <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" src="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
+            <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png, img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
           </picture>
         </a>
         <nav class="page-header__main-nav main-nav intro intro--inner">
@@ -70,8 +70,8 @@
           <a class="country-filter__link" aria-label="открыть фильтр по странам">
             <h2 class="country-filter__title country-filter__title--main">Фильтрация по странам</h2>
             <h2 class="country-filter__title country-filter__title--open-link">
-              <span class="country-filter__title--show-all">Показать все</span>
-              <span class="country-filter__title--close-link">Свернуть</span>
+              <span class="country-filter__title-span country-filter__title-span--show-all">Показать все</span>
+              <span class="country-filter__title-span country-filter__title-span--close-link">Свернуть</span>
             </h2>
           </a>
           <div class="country-filter__block">
@@ -758,8 +758,8 @@
                   <label class="profiles-filter__label" for="hardrock">Тяжелый рок</label>
                 </li>
                 <li class="profiles-filter__checkbox-item">
-                  <input class="profiles-filter__checkbox" type="checkbox" name="russian rap" id="russian rap">
-                  <label class="profiles-filter__label" for="russian rap">Русский рэп</label>
+                  <input class="profiles-filter__checkbox" type="checkbox" name="russian-rap" id="russian rap">
+                  <label class="profiles-filter__label" for="russian-rap">Русский рэп</label>
                 </li>
                 <li class="profiles-filter__checkbox-item">
                   <input class="profiles-filter__checkbox" type="checkbox" name="eurodance" id="eurodance">
@@ -842,7 +842,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
                   <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
-                  <img class="catalog-card__img" src="img/firsova-mobile@1x.jpg" src="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
+                  <img class="catalog-card__img" src="img/firsova-mobile@1x.jpg, img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
                 </picture>
               </a>
               <div class="catalog-card__info-wrap">
@@ -882,15 +882,15 @@
                 <ul class="catalog-card__countries-list">
                   <li class="catalog-card__country">
                     <img class="catalog-card__country-flag" src="img/flag-sri-lanka.svg" width="26" height="18" alt="Флаг Шри-Ланки">
-                    <p class="catalog-card__country-name">Шри-Ланка</p class="catalog-card__country-flag">
+                    <p class="catalog-card__country-name">Шри-Ланка</p>
                   </li>
                   <li class="catalog-card__country">
                     <img class="catalog-card__country-flag" src="img/flag-thailand.svg" width="26" height="18" alt="Флаг Таиланда">
-                    <p class="catalog-card__country-name">Таиланд</p class="catalog-card__country-name">
+                    <p class="catalog-card__country-name">Таиланд</p>
                   </li>
                   <li class="catalog-card__country">
                     <img class="catalog-card__country-flag" src="img/flag-seychelles.svg" width="26" height="18" alt="Флаг Сейшел">
-                    <p class="catalog-card__country-name">Сейшелы</p class="catalog-card__country-name">
+                    <p class="catalog-card__country-name">Сейшелы</p>
                   </li>
                 </ul>
               </article>
@@ -903,7 +903,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
                   <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
-                  <img class="catalog-card__img" src="img/demin-mobile@1x.jpg" src="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
+                  <img class="catalog-card__img" src="img/demin-mobile@1x.jpg, img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
                 </picture>
               </a>
               <div class="catalog-card__info-wrap">
@@ -943,11 +943,11 @@
                 <ul class="catalog-card__countries-list">
                   <li class="catalog-card__country">
                     <img class="catalog-card__country-flag" src="img/flag-belgium.svg" width="26" height="18" alt="Флаг Бельгии">
-                    <p class="catalog-card__country-name">Бельгия</p class="catalog-card__country-name">
+                    <p class="catalog-card__country-name">Бельгия</p>
                   </li>
                   <li class="catalog-card__country">
                     <img class="catalog-card__country-flag" src="img/flag-czech.svg" width="26" height="18" alt="Флаг Чехии">
-                    <p class="catalog-card__country-name">Чехия</p class="catalog-card__country-name">
+                    <p class="catalog-card__country-name">Чехия</p>
                   </li>
                 </ul>
               </article>
@@ -960,7 +960,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
                   <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
-                  <img class="catalog-card__img" src="img/smolov-mobile@1x.jpg" src="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
+                  <img class="catalog-card__img" src="img/smolov-mobile@1x.jpg, img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
                 </picture>
               </a>
               <div class="catalog-card__info-wrap">
@@ -1000,15 +1000,15 @@
                 <ul class="catalog-card__countries-list">
                   <li class="catalog-card__country">
                     <img class="catalog-card__country-flag" src="img/flag-usa.svg" width="26" height="18" alt="Флаг США">
-                    <p class="catalog-card__country-name">США</p class="catalog-card__country-name">
+                    <p class="catalog-card__country-name">США</p>
                   </li>
                   <li class="catalog-card__country">
                     <img class="catalog-card__country-flag" src="img/flag-australia.svg" width="26" height="18" alt="Флаг Австралии">
-                    <p class="catalog-card__country-name">Австралия</p class="catalog-card__country-name">
+                    <p class="catalog-card__country-name">Австралия</p>
                   </li>
                   <li class="catalog-card__country">
                     <img class="catalog-card__country-flag" src="img/flag-dominica.svg" width="26" height="18" alt="Флаг Доминиканы">
-                    <p class="catalog-card__country-name">Доминикана</p class="catalog-card__country-name">
+                    <p class="catalog-card__country-name">Доминикана</p>
                   </li>
                 </ul>
               </article>
@@ -1021,7 +1021,7 @@
                   <source media="(min-width: 768px)" type="image/webp" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
                   <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
-                  <img class="catalog-card__img" src="img/rogovaya-mobile@1x.jpg" src="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
+                  <img class="catalog-card__img" src="img/rogovaya-mobile@1x.jpg, img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
                 </picture>
               </a>
               <div class="catalog-card__info-wrap">
@@ -1061,11 +1061,11 @@
                 <ul class="catalog-card__countries-list">
                   <li class="catalog-card__country">
                     <img class="catalog-card__country-flag" src="img/flag-united-kingdom.svg" width="26" height="18" alt="Флаг Великобритании">
-                    <p class="catalog-card__country-name">Великобритания</p class="catalog-card__country-name">
+                    <p class="catalog-card__country-name">Великобритания</p>
                   </li>
                   <li class="catalog-card__country">
                     <img class="catalog-card__country-flag" src="img/flag-bosnia.svg" width="26" height="18" alt="Флаг Германии">
-                    <p class="catalog-card__country-name">Германия</p class="catalog-card__country-name">
+                    <p class="catalog-card__country-name">Германия</p>
                   </li>
                 </ul>
               </article>
@@ -1073,12 +1073,12 @@
           </ul>
           <button class="catalog__show-more" type="button">Показать еще</button>
           <ul class="catalog__pagination">
-            <ul class="catalog__pages-list">
+            <div class="catalog__pages-list">
               <li class="catalog__page-number catalog__page-number--current"><a class="catalog__page-link">1</a></li>
               <li class="catalog__page-number"><a class="catalog__page-link" href="#">2</a></li>
               <li class="catalog__page-number"><a class="catalog__page-link" href="#">3</a></li>
               <li class="catalog__page-number"><a class="catalog__page-link" href="#">4</a></li>
-            </ul>
+            </div>
             <li class="catalog__prev"><a href="#" aria-label="Предыдущая страница"></a></li>
             <li class="catalog__next"><a href="#" aria-label="Следующая страница"></a></li>
           </ul>
@@ -1095,7 +1095,7 @@
             <source media="(min-width: 768px)" type="image/webp" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
             <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
-            <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" src="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
+            <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png, img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
           </picture>
         </a>
         <ul class="page-footer__list social-list">
