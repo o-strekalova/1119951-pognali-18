@@ -15,6 +15,7 @@
 
 .step__step-number {
   margin: 0;
+  display: block;
 }
 
 .step__text {
@@ -171,10 +172,6 @@
   width: 21px;
   height: 21px;
   background-color: #edeff6;
-  background-image: url("../img/small-cross.svg");
-  background-size: 9px;
-  background-position: 50%;
-  background-repeat: no-repeat;
   border-radius: 50%;
   border: none;
   position: absolute;
@@ -277,19 +274,30 @@
       border-radius: 5px 5px 0 0;
 
       &::before {
-        width: 9px;
-        height: 9px;
-        background-image: none;
-        mask-image: url("../img/filter-close.svg");
-        background-color: white;
-        background-size: 9px;
-        background-repeat: no-repeat;
-        opacity: 1;
-        top: 17px;
-        left: 193px;
+        display: none;
       }
     }
   }
+}
+
+.step__delete-icon {
+  opacity: 0.3;
+}
+
+.step__choose-another--choose--open + .step__delete-button {
+  background-color: transparent;
+  position: relative;
+  top: -50px;
+  right: -185px;
+
+  &::after {
+    display: none;
+  }
+}
+
+.step__choose-another--choose--open + .step__delete-button .step__delete-icon {
+  fill: white;
+  opacity: 1;
 }
 
 .step__country-filter {
@@ -307,10 +315,6 @@
 
 .step__choose-another--choose--open ~ .step__country-filter {
   display: block;
-}
-
-.step__choose-another--choose--open + .step__delete-button {
-  display: none;
 }
 
 .step__plans-list {
@@ -452,7 +456,6 @@
     width: 24px;
     height: 24px;
     background-color: transparent;
-    background-size: 24px;
     top: -3px;
     right: -3px;
     padding: 0;
@@ -516,17 +519,31 @@
         background-color: #edeff6;
       }
     }
+  }
 
-    &--choose {
-      &--open {
-        &::before {
-          width: 17px;
-          height: 17px;
-          background-size: 17px;
-          top: 26px;
-        }
-      }
+  .step__delete-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.1;
+  }
+
+  .step__choose-another--choose--open + .step__delete-button {
+    background-color: transparent;
+    position: relative;
+    width: 17px;
+    height: 17px;
+    top: -82px;
+    right: -325px;
+
+    &::after {
+      display: block;
+      right: -61px;
     }
+  }
+
+  .step__choose-another--choose--open + .step__delete-button .step__delete-icon {
+    width: 17px;
+    height: 17px;
   }
 
   .step__country-filter {
@@ -657,6 +674,26 @@
         right: -53px;
       }
     }
+  }
+
+  .step__delete-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .step__choose-another--choose--open + .step__delete-button {
+    width: 18px;
+    height: 18px;
+    right: -685px;
+
+    &::after {
+      right: -79px;
+    }
+  }
+
+  .step__choose-another--choose--open + .step__delete-button .step__delete-icon {
+    width: 17px;
+    height: 17px;
   }
 
   .step__country-filter {

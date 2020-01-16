@@ -35,11 +35,6 @@
     }
   }
 
-  &--close-link,
-  &--show-all {
-    display: none;
-  }
-
   &--open-link {
     position: absolute;
     top: 8px;
@@ -54,6 +49,13 @@
       background-repeat: no-repeat;
       background-size: 17px 3px;
     }
+  }
+}
+
+.country-filter__title-span {
+  &--close-link,
+  &--show-all {
+    display: none;
   }
 }
 
@@ -226,12 +228,15 @@
         right: 3px;
       }
     }
+  }
 
+  .country-filter__title-span {
     &--close-link {
       display: none;
     }
 
     &--show-all {
+      margin-top: 0;
       display: block;
     }
   }
@@ -253,7 +258,9 @@
         right: 9px;
       }
     }
+  }
 
+  .country-filter__wrap--open .country-filter__title-span {
     &--close-link {
       display: block;
     }
