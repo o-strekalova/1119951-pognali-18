@@ -72,7 +72,7 @@ gulp.task("images", function () {
     .pipe(gulp.dest("source/img"));
 });
 
-gulp.task ("webp", function () {
+gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png, jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"));
