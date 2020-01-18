@@ -12,7 +12,7 @@
     <link rel="preload" href="./fonts/bloggersans-italic.woff2" as="font">
   </head>
   <body>
-    <div style="display:none">
+    <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
     <!--
@@ -21,7 +21,7 @@
     Открытое меню .page-header--open.
     Прокрутка .page-header--scroll
     -->
-    <header class="page-header">
+    <header class="page-header page-header--no-js">
       <div class="page-header__wrap container">
         <a class="page-header__logo">
           <picture>
@@ -114,8 +114,7 @@
           <p class="lead__text">
             Любое путешествие веселее<br class="page-main__lines--mobile">
             с попутчиками, которые на<br class="page-main__lines--mobile">
-            одной волне с тобой! Делитесь<br class="page-main__lines--mobile">
-            своими идеями путешествий <br class="page-main__lines--tablet page-main__lines--about">и<br class="page-main__lines--mobile">
+            одной волне с тобой! Делитесь своими идеями путешествий <br class="page-main__lines--tablet page-main__lines--about">и<br class="page-main__lines--mobile">
             черпайте вдохновение в чужих.<br class="page-main__lines--mobile">
           </p>
           <p class="lead__text lead__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
@@ -334,6 +333,7 @@
       </section>
 
       <section class="page-main__address address">
+        <h2 class="address__title visually-hidden">Адрес</h2>
         <div class="address__wrap container">
           <p class="address__text">ул. Большая Конюшенная, 19/8</p>
           <a href="https://goo.gl/maps/sVxnaPraNpxofnFd6" class="address__nav-link">Проложить маршрут</a>
@@ -341,6 +341,7 @@
       </section>
 
       <section class="page-main__map map">
+        <h2 class="map__title visually-hidden">Расположение</h2>
         <div class="map__google-map" id="map"></div>
         <a href="#" class="map__link">
           <picture>

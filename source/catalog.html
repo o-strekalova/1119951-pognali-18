@@ -9,10 +9,9 @@
     <script src="js/picturefill.js" async></script>
     <link rel="preload" href="./fonts/bloggersans.woff2" as="font">
     <link rel="preload" href="./fonts/bloggersans-bold.woff2" as="font">
-    <link rel="preload" href="./fonts/bloggersans-italic.woff2" as="font">
   </head>
   <body>
-    <div style="display:none">
+    <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
     <!--
@@ -21,7 +20,7 @@
     Открытое меню .page-header--open.
     Прокрутка .page-header--scroll
     -->
-    <header class="page-header page-header--inner">
+    <header class="page-header page-header--inner page-header--no-js">
       <div class="page-header__wrap container">
         <a class="page-header__logo" href="index.html">
           <picture>
@@ -89,7 +88,7 @@
     <main class="page-main page-main--inner">
       <div class="page-main__wrap page-main__wrap--inner">
         <h1 class="page-main__title page-main__title--inner page-main__title--catalog">Попутчики</h1>
-        <a class="page-main__index-link">На главную</a>
+        <a href="index.html" class="page-main__index-link">На главную</a>
       </div>
 
       <section class="page-main__country-filter country-filter">
@@ -429,7 +428,7 @@
                       </ul>
                     </td>
                   </tr>
-                  <tr class="letter-table__row">
+                  <tr class="letter-table__row letter-table__row--third">
                     <td class="letter-table__cell">
                       <button class="letter-table__button" type="button">м</button>
                       <ul class="letter-table__countries-list country-filter__countries-list">
@@ -861,9 +860,10 @@
       </section>
 
         <section class="page-main__catalog catalog">
+          <h2 class="catalog__title visually-hidden">Каталог попутчиков</h2>
           <ul class="catalog__list">
             <li class="catalog__item catalog-card">
-              <a href="#">
+              <a class="catalog-card__img-link" href="#">
                 <picture>
                   <source media="(min-width: 1440px)" type="image/webp" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
@@ -874,7 +874,7 @@
                 </picture>
               </a>
               <div class="catalog-card__info-wrap">
-                <a href="#">
+                <a class="catalog-card__name-link" href="#">
                   <h3 class="catalog-card__name catalog-card__name--offline">Таня Фирсова</h3>
                 </a>
                 <p class="catalog-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
@@ -924,7 +924,7 @@
               </article>
             </li>
             <li class="catalog__item catalog-card">
-              <a href="#">
+              <a class="catalog-card__img-link" href="#">
                 <picture>
                   <source media="(min-width: 1440px)" type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
@@ -935,7 +935,7 @@
                 </picture>
               </a>
               <div class="catalog-card__info-wrap">
-                <a href="#">
+                <a class="catalog-card__name-link" href="#">
                   <h3 class="catalog-card__name catalog-card__name--offline">Петя Демин</h3>
                 </a>
                 <p class="catalog-card__tags">#бургер #бар #футбол #концерт #крафт</p>
@@ -981,7 +981,7 @@
               </article>
             </li>
             <li class="catalog__item catalog-card">
-              <a href="#">
+              <a class="catalog-card__img-link" href="#">
                 <picture>
                   <source media="(min-width: 1440px)" type="image/webp" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
@@ -992,7 +992,7 @@
                 </picture>
               </a>
               <div class="catalog-card__info-wrap">
-                <a href="#">
+                <a class="catalog-card__name-link" href="#">
                   <h3 class="catalog-card__name catalog-card__name--offline">Марк Смолов</h3>
                 </a>
                 <p class="catalog-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
@@ -1042,7 +1042,7 @@
               </article>
             </li>
             <li class="catalog__item catalog-card">
-              <a href="#">
+              <a class="catalog-card__img-link" href="#">
                 <picture>
                   <source media="(min-width: 1440px)" type="image/webp" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
@@ -1053,7 +1053,7 @@
                 </picture>
               </a>
               <div class="catalog-card__info-wrap">
-                <a href="#">
+                <a class="catalog-card__name-link" href="#">
                   <h3 class="catalog-card__name catalog-card__name--online">Лариса Роговая</h3>
                 </a>
                 <p class="catalog-card__tags">#образование #карьера #учеба #линкедин</p>
@@ -1109,8 +1109,8 @@
                 <li class="catalog__page-number"><a class="catalog__page-link" href="#">4</a></li>
               </ul>
             </li>
-            <li class="catalog__prev"><a href="#" aria-label="Предыдущая страница"></a></li>
-            <li class="catalog__next"><a href="#" aria-label="Следующая страница"></a></li>
+            <li class="catalog__prev"><a class="catalog__prev-link" href="#" aria-label="Предыдущая страница"></a></li>
+            <li class="catalog__next"><a class="catalog__next-link" href="#" aria-label="Следующая страница"></a></li>
           </ul>
         </section>
       </div>

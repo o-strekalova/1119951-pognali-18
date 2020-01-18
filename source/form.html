@@ -9,10 +9,9 @@
     <script src="js/picturefill.js" async></script>
     <link rel="preload" href="./fonts/bloggersans.woff2" as="font">
     <link rel="preload" href="./fonts/bloggersans-bold.woff2" as="font">
-    <link rel="preload" href="./fonts/bloggersans-italic.woff2" as="font">
   </head>
   <body>
-    <div style="display:none">
+    <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
     <!--
@@ -21,7 +20,7 @@
     Открытое меню .page-header--open.
     Прокрутка .page-header--scroll
     -->
-    <header class="page-header page-header--inner">
+    <header class="page-header page-header--inner page-header--no-js">
       <div class="page-header__wrap container">
         <a class="page-header__logo" href="index.html">
           <picture>
@@ -92,8 +91,10 @@
       </div>
 
       <section class="page-main__profile profile">
+        <h2 class="profile__title visually-hidden">Профиль</h2>
         <div class="profile__wrap container">
           <article class="profile__level level level--form">
+            <h3 class="level__title visually-hidden">Уровень</h3>
             <span class="profile__level-number level__number level__number--blue">80</span>
             <span class="level__word level__word--form">level</span>
             <svg class="level__border level__border--form level__border--80" viewBox="0 0 100 100">
@@ -275,7 +276,7 @@
                   <td class="calendar-table__cell"><button class="calendar-table__button" type="button">5</button></td>
                 </tr>
               </table>
-              <input class="step__date-input visually-hidden" type="date" name="date-chosen" id="date-chosen" value="2019-03-26">
+              <input class="step__date-input visually-hidden" type="text" name="date-chosen" id="date-chosen" value="2019-03-26">
               <a class="step__next-link" href="#step-2">Следующий шаг</a>
             </article>
             <article class="new-trip__article step" id="step-2">
