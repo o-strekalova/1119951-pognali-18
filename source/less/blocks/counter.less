@@ -45,6 +45,15 @@
   padding-left: 15px;
   position: relative;
   margin: 8px auto 11px;
+
+  &:hover,
+  &:focus {
+    border-color: #959bb2;
+  }
+
+  &:active {
+    border-color: #161c35;
+  }
 }
 
 .counter__minus {
@@ -55,7 +64,8 @@
   left: 15px;
   width: 14px;
   height: 2px;
-  background-color: #cbced9;
+  background-color: black;
+  opacity: 0.2;
 }
 
 .counter__plus {
@@ -69,6 +79,19 @@
   right: 14px;
   background-image: url("../img/qty-plus-mobile.svg");
   background-size: 14px;
+  opacity: 0.2;
+}
+
+.counter__minus:hover,
+.counter__minus:focus,
+.counter__plus:hover,
+.counter__plus:focus {
+  opacity: 0.4;
+}
+
+.counter__minus:active,
+.counter__plus:active {
+  opacity: 0.1;
 }
 
 @media (min-width: @tablet) {

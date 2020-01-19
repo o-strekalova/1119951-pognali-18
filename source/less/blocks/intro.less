@@ -45,11 +45,18 @@
   height: 40px;
   border-radius: 50%;
   background-color: #ff8d30;
-  background-image: url("../img/topmenu-phone.svg");
-  background-size: 18px;
-  background-repeat: no-repeat;
-  background-position: 12px;
   display: block;
+  position: relative;
+
+  &::before {
+    content: url("../img/topmenu-phone.svg");
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
 }
 
 .intro__email-link {
@@ -57,11 +64,35 @@
   height: 40px;
   border-radius: 50%;
   background-color: #ffbd30;
-  background-image: url("../img/topmenu-mail.svg");
-  background-size: 18px 14px;
-  background-repeat: no-repeat;
-  background-position: 12px;
   display: block;
+  position: relative;
+
+  &::before {
+    content: url("../img/topmenu-mail.svg");
+    display: block;
+    width: 18px;
+    height: 14px;
+    position: absolute;
+    top: 11px;
+    left: 12px;
+  }
+}
+
+.intro__phone-link:hover,
+.intro__phone-link:focus {
+  background-color: #f26926;
+}
+
+.intro__email-link:hover,
+.intro__email-link:focus {
+  background-color: #ff8d30;
+}
+
+.intro__phone-link:active,
+.intro__email-link:active {
+  &::before {
+    opacity: 0.3;
+  }
 }
 
 .intro__login-link {
@@ -78,6 +109,14 @@
   padding: 8px;
   text-transform: uppercase;
   display: block;
+}
+
+.intro__login-link:hover {
+  background-color: #ffbd30;
+}
+
+.intro__login-link:active {
+  color: rgba(22, 28, 53, 0.3);
 }
 
 .intro__quote {
@@ -328,14 +367,22 @@
     display: block;
     width: 50px;
     height: 50px;
-    background-position: 50%;
+
+    &::before {
+      top: 17px;
+      left: 17px;
+    }
   }
 
   .intro__email-link {
     display: block;
     width: 50px;
     height: 50px;
-    background-position: 50%;
+
+    &::before {
+      top: 18px;
+      left: 17px;
+    }
   }
 
   .intro__quote {

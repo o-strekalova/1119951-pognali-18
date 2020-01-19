@@ -48,8 +48,39 @@
   }
 }
 
+.transport-filter__checkbox:hover + .transport-filter__label,
+.transport-filter__checkbox:focus + .transport-filter__label {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  opacity: 0.3;
+}
+
+.transport-filter__checkbox:active + .transport-filter__label {
+  box-shadow: none;
+  background-color: #e2e5f1;
+  opacity: 0.1;
+}
+
 .transport-filter__checkbox:checked + .transport-filter__label {
   opacity: 1;
+}
+
+.transport-filter__checkbox:checked:hover + .transport-filter__label,
+.transport-filter__checkbox:checked:focus + .transport-filter__label {
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  opacity: 0.7;
+}
+
+.transport-filter__checkbox:checked:active + .transport-filter__label {
+  box-shadow: none;
+  background-color: #e2e5f1;
+  opacity: 0.3;
+}
+
+.transport-filter__checkbox:disabled + .transport-filter__label,
+.transport-filter__checkbox:disabled:hover + .transport-filter__label,
+.transport-filter__checkbox:disabled:focus + .transport-filter__label,
+.transport-filter__checkbox:disabled:active + .transport-filter__label {
+  opacity: 0.1;
 }
 
 .transport-filter__checkbox:focus + .transport-filter__label {

@@ -56,6 +56,17 @@
   padding: 7px;
   margin-bottom: 8px;
 
+  &:hover,
+  &:focus {
+    background-color: #d1d7e9;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
+}
+
+.profile__label {
   &--short {
     display: none;
   }
@@ -75,6 +86,14 @@
 
   &--transport {
     padding: 5px 5px 15px;
+  }
+
+  &:hover {
+    border-color: #aeb4cb;
+  }
+
+  &:active {
+    border-color: #161c35;
   }
 }
 
@@ -98,6 +117,10 @@
   line-height: 22px;
   text-align: left;
   color: #444444;
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.6);
+  }
 }
 
 @media (min-width: @tablet) {
@@ -211,14 +234,15 @@
     border-radius: 0 0 10px 10px;
     padding-top: 15px;
     margin: 1px 95px 8px auto;
+  }
 
+  .profile__label {
     &--long {
       display: none;
     }
 
     &--short {
       display: inline;
-      padding-left: 60px;
     }
   }
 
