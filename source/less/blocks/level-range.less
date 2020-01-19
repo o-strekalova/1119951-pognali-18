@@ -89,6 +89,14 @@
   }
 }
 
+.level-range__input--min:focus ~ .level-range__range-filter .level-range__toggle--min {
+  outline: 5px auto rgba(0, 150, 255, 1);
+}
+
+.level-range__input--max:focus ~ .level-range__range-filter .level-range__toggle--max {
+  outline: 5px auto rgba(0, 150, 255, 1);
+}
+
 @media (min-width: @tablet) {
   .level-range {
     &::before {
@@ -121,11 +129,12 @@
     letter-spacing: 2px;
     margin: 0;
     padding: 0;
+    padding-left: 20px;
     padding-top: 4px;
 
     &--min {
       right: 75px;
-      padding-left: 2px;
+      padding-left: 10px;
     }
 
     &--max {
