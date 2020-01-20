@@ -201,19 +201,30 @@
               <ul class="traveler-card__countries-list">
                 <li class="traveler-card__country">
                   <img class="traveler-card__country-flag" src="img/flag-sri-lanka.svg" width="35" height="24" alt="Флаг Шри-Ланки">
+                  <div class="traveler-card__tooltip">Шри-Ланка</div>
                 </li>
                 <li class="traveler-card__country">
                   <img class="traveler-card__country-flag" src="img/flag-thailand.svg" width="35" height="24" alt="Флаг Таиланда">
+                  <div class="traveler-card__tooltip">Таиланд</div>
                 </li>
                 <li class="traveler-card__country">
                   <img class="traveler-card__country-flag" src="img/flag-seychelles.svg" width="35" height="24" alt="Флаг Сейшел">
+                  <div class="traveler-card__tooltip">Сейшеллы</div>
                 </li>
               </ul>
               <ul class="traveler-card__transport-list">
-                <li class="traveler-card__transport-item traveler-card__transport-item--plane traveler-card__transport-item--checked"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--bus"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--bike"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--on-foot"></li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--plane traveler-card__transport-item--checked">
+                  <div class="traveler-card__tooltip">Авиаперелет</div>
+                </li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--bus">
+                  <div class="traveler-card__tooltip">Автотранспорт</div>
+                </li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--bike">
+                  <div class="traveler-card__tooltip">Велосипед</div>
+                </li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--on-foot">
+                  <div class="traveler-card__tooltip">Пешком</div>
+                </li>
               </ul>
             </li>
             <li class="profiles__item traveler-card">
@@ -233,16 +244,26 @@
               <ul class="traveler-card__countries-list">
                 <li class="traveler-card__country">
                   <img class="traveler-card__country-flag" src="img/flag-belgium.svg" width="35" height="24" alt="Флаг Бельгии">
+                  <div class="traveler-card__tooltip">Бельгия</div>
                 </li>
                 <li class="traveler-card__country">
                   <img class="traveler-card__country-flag" src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
+                  <div class="traveler-card__tooltip">Чехия</div>
                 </li>
               </ul>
               <ul class="traveler-card__transport-list">
-                <li class="traveler-card__transport-item traveler-card__transport-item--plane traveler-card__transport-item--checked"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--bus traveler-card__transport-item--checked"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--bike"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--on-foot traveler-card__transport-item--checked"></li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--plane traveler-card__transport-item--checked">
+                  <div class="traveler-card__tooltip">Авиаперелет</div>
+                </li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--bus traveler-card__transport-item--checked">
+                  <div class="traveler-card__tooltip">Автотранспорт</div>
+                </li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--bike">
+                  <div class="traveler-card__tooltip">Велосипед</div>
+                </li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--on-foot traveler-card__transport-item--checked">
+                  <div class="traveler-card__tooltip">Пешком</div>
+                </li>
               </ul>
             </li>
           </ul>
@@ -308,7 +329,7 @@
             скорее <a class="sign-up__link" href="#">авторизуйтесь</a>.
           </p>
           <form class="sign-up__form" action="https://echo.htmlacademy.ru" method="post">
-            <input class="sign-up__input" type="text" name="email" id="email" placeholder="E-mail">
+            <input class="sign-up__input" type="email" name="email" id="email" placeholder="E-mail">
             <button class="sign-up__button" type="submit" aria-label="Отправить"></button>
           </form>
           <p class="sign-up__text lead__text lead__text--center">
