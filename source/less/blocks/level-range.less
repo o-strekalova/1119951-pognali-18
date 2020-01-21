@@ -40,6 +40,15 @@
   &--max {
     margin-left: -5px;
   }
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active,
+  &:focus {
+    border-color: #161c35;
+  }
 }
 
 .level-range__range-filter {
@@ -87,15 +96,26 @@
   &--max {
     right: 0;
   }
+
+  &:hover {
+    transform: scale(1.5);
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px 0 rgba(29, 46, 91, 0.35);
+  }
 }
 
 .level-range__input--min:focus ~ .level-range__range-filter .level-range__toggle--min {
   outline: 5px auto rgba(0, 150, 255, 1);
+  transform: scale(1.5);
 }
 
 .level-range__input--max:focus ~ .level-range__range-filter .level-range__toggle--max {
   outline: 5px auto rgba(0, 150, 255, 1);
+  transform: scale(1.5);
 }
+
 
 @media (min-width: @tablet) {
   .level-range {

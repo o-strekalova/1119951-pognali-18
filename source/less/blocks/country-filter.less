@@ -49,6 +49,15 @@
       background-repeat: no-repeat;
       background-size: 17px 3px;
     }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -143,6 +152,15 @@
   text-transform: uppercase;
   opacity: 0.3;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 .country-filter__radio:checked + .country-filter__radio-label {
@@ -196,15 +214,34 @@
   text-align: center;
   text-transform: uppercase;
   background-color: #d6daed;
-  background-image: url("../img/filter-close.svg");
-  background-repeat: no-repeat;
-  background-size: 12px;
-  background-position: 85px 50%;
   padding-top: 4px;
   padding-left: 31px;
   margin: 0 auto;
   margin-bottom: 23px;
   cursor: pointer;
+  position: relative;
+
+  &::before {
+    content: url("../img/filter-close.svg");
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 85px;
+    top: 7px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #c8cee8;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: @tablet) {
@@ -380,9 +417,14 @@
     margin-bottom: 74px;
     padding-top: 0;
     padding-left: 40px;
-    background-image: url("../img/close.svg");
-    background-size: 19px;
-    background-position: 243px 49%;
+
+    &::before {
+      content: url("../img/close.svg");
+      width: 19px;
+      height: 19px;
+      left: 243px;
+      top: 37px;
+    }
   }
 }
 
@@ -456,8 +498,13 @@
 
   .country-filter__close-button {
     width: 1320px;
-    background-size: 18px;
-    background-position: 594px 49%;
     left: 60px;
+
+    &::before {
+      content: url("../img/close.svg");
+      width: 18px;
+      height: 18px;
+      left: 594px;
+    }
   }
 }

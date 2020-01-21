@@ -272,6 +272,24 @@
   padding: 12px 30px 8px 10px;
   margin-top: 2px;
 
+  &:hover,
+  &:focus {
+    border-color: #959bb2;
+
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    background-color: #dfe3f0;
+    color: rgba(29, 46, 91, 0.3);
+
+    &::before {
+      opacity: 0.1;
+    }
+  }
+
   &--add {
     background-color: #edeff6;
     margin-bottom: 4px;
@@ -306,6 +324,7 @@
     &:hover,
     &:focus {
       background-color: #e2e5f1;
+      border-color: #e2e5f1;
 
       &::before {
         opacity: 0.3;

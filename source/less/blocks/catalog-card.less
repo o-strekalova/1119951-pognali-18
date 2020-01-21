@@ -4,6 +4,11 @@
   padding: 20px;
   padding-top: 16px;
   padding-bottom: 82px;
+
+  &:hover {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+    transform: scale(1.01);
+  }
 }
 
 .catalog-card__img {
@@ -21,6 +26,15 @@
 
 .catalog-card__name-link {
   width: 190px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-card__name {
@@ -98,6 +112,15 @@
   position: absolute;
   bottom: 22px;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
 }
 
 .catalog-card__like-button {
@@ -105,19 +128,60 @@
   height: 31px;
   border-radius: 50%;
   background-color: #edeff6;
-  background-image: url("../img/heart.svg");
-  background-repeat: no-repeat;
-  background-size: 13px 11px;
-  background-position: 50%;
   border: none;
   margin-left: 47px;
   margin-top: -1px;
   z-index: 1;
   cursor: pointer;
+  position: relative;
+
+  &::before {
+    content: url("../img/heart.svg");
+    width: 13px;
+    height: 11px;
+    top: 9px;
+    left: 9px;
+    position: absolute;
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #e2e5f2;
+
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.1;
+    }
+  }
 
   &--liked {
     background-color: #f9eaea;
-    background-image: url("../img/heart-active.svg");
+
+    &::before {
+      content: url("../img/heart-active.svg");
+      opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #f9d8d8;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      &::before {
+        opacity: 0.3;
+      }
+    }
   }
 }
 
@@ -380,8 +444,13 @@
     width: 50px;
     height: 50px;
     margin: 0;
-    position: relative;
-    background-size: 20px 17px;
+
+    &::before {
+      width: 20px;
+      height: 17px;
+      top: 17px;
+      left: 15px;
+    }
   }
 
   .catalog-card__likes {
