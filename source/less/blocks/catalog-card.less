@@ -229,6 +229,9 @@
   border-radius: 50%;
   background-color: #edeff6;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &::after {
     content: "";
@@ -277,6 +280,37 @@
       opacity: 1;
     }
   }
+}
+
+.catalog-card__tooltip {
+  height: 57px;
+  border-radius: 4px;
+  background-color: #101d41;
+  color: white;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 17px 24px;
+  position: absolute;
+  bottom: -65px;
+  display: none;
+  white-space: nowrap;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 8px;
+    border: 8px solid transparent;
+    border-bottom-color: #101d41;
+    top: -15px;
+    left: calc(50% - 8px);
+    position: absolute;
+  }
+}
+
+.catalog-card__transport-item:hover .catalog-card__tooltip {
+  display: block;
+  opacity: 1;
 }
 
 .catalog-card__countries-article {

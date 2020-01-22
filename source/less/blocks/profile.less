@@ -86,14 +86,14 @@
 
   &--transport {
     padding: 5px 5px 15px;
-  }
 
-  &:hover {
-    border-color: #aeb4cb;
-  }
+    &:hover {
+      border-color: #aeb4cb;
+    }
 
-  &:active {
-    border-color: #161c35;
+    &:active {
+      border-color: #161c35;
+    }
   }
 }
 
@@ -255,6 +255,8 @@
     width: 730px;
     margin-right: auto;
     margin-left: 64px;
+    padding: 0;
+    border: none;
 
     &--transport {
       position: relative;
@@ -263,6 +265,9 @@
       width: 384px;
       margin-right: 0;
       margin-left: auto;
+      border: 1px solid #cbced9;
+      padding: 2px 25px;
+      padding-top: 7px;
     }
   }
 
@@ -275,6 +280,18 @@
   }
 
   .profile__tags {
-    width: 648px;
+    width: 730px;
+    padding: 33px 39px 12px;
+    border: 1px solid #cbced9;
+    border-radius: 10px;
+
+    &:hover {
+      border-color: #aeb4cb;
+    }
+
+    &:active,
+    &:focus {
+      border-color: #161c35;
+    }
   }
 }
