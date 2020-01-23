@@ -33,21 +33,21 @@
             <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
           </picture>
         </a>
-        <nav class="page-header__main-nav main-nav intro intro--inner">
-          <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
-            <svg class="main-nav__toggle-icon main-nav__toggle-icon--menu" width="25" height="11"><use xlink:href="#icon-menu"></use></svg>
-            <svg class="main-nav__toggle-icon main-nav__toggle-icon--menu-close" width="19" height="19"><use xlink:href="#icon-menu-close"></use></svg>
+        <nav class="page-header__main-nav main-nav">
+          <button class="page-header__nav-toggle main-nav__toggle" type="button" aria-label="Открыть меню">
+            <svg class="page-header__toggle-icon page-header__toggle-icon--menu" width="25" height="11"><use xlink:href="#icon-menu"></use></svg>
+            <svg class="page-header__toggle-icon page-header__toggle-icon--menu-close" width="19" height="19"><use xlink:href="#icon-menu-close"></use></svg>
           </button>
-          <ul class="intro__contact-list intro__contact-list--inner">
-            <li class="intro__phone"><a class="intro__phone-link" href="tel:88005558628" aria-label="Позвонить в Погнали"></a></li>
-            <li class="intro__email"><a class="intro__email-link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали"></a></li>
-            <li class="intro__login"><a class="intro__login-link" href="#">Авторизация</a></li>
+          <ul class="page-header__intro-list intro-list">
+            <li class="intro-list__phone"><a class="intro-list__phone-link" href="tel:88005558628" aria-label="Позвонить в Погнали"></a></li>
+            <li class="intro-list__email"><a class="intro-list__email-link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали"></a></li>
+            <li class="intro-list__login"><a class="intro-list__login-link" href="#">Авторизация</a></li>
           </ul>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__site-list site-list">
-              <li class="site-list__item"><a class="site-list__link" href="#about">О сервисе</a></li>
-              <li class="site-list__item"><a class="site-list__link" href="form.html">Направления</a></li>
-              <li class="site-list__item"><a class="site-list__link" href="catalog.html">Попутчики</a></li>
+          <div class="page-header__nav-wrapper main-nav__wrapper">
+            <ul class="page-header__site-list main-nav__site-list site-list">
+              <li class="site-list__item"><a class="page-header__link site-list__link" href="#about"><span class="site-list__link-span" data-hover="О сервисе">О сервисе</span></a></li>
+              <li class="site-list__item"><a class="page-header__link site-list__link" href="form.html"><span class="site-list__link-span" data-hover="Направления">Направления</span></a></li>
+              <li class="site-list__item"><a class="page-header__link site-list__link" href="catalog.html"><span class="site-list__link-span" data-hover="Попутчики">Попутчики</span></a></li>
             </ul>
             <a class="main-nav__login" href="#">Авторизация</a>
             <ul class="main-nav__contact-list contact-list">
@@ -201,19 +201,30 @@
               <ul class="traveler-card__countries-list">
                 <li class="traveler-card__country">
                   <img class="traveler-card__country-flag" src="img/flag-sri-lanka.svg" width="35" height="24" alt="Флаг Шри-Ланки">
+                  <div class="traveler-card__tooltip">Шри-Ланка</div>
                 </li>
                 <li class="traveler-card__country">
                   <img class="traveler-card__country-flag" src="img/flag-thailand.svg" width="35" height="24" alt="Флаг Таиланда">
+                  <div class="traveler-card__tooltip">Таиланд</div>
                 </li>
                 <li class="traveler-card__country">
                   <img class="traveler-card__country-flag" src="img/flag-seychelles.svg" width="35" height="24" alt="Флаг Сейшел">
+                  <div class="traveler-card__tooltip">Сейшеллы</div>
                 </li>
               </ul>
               <ul class="traveler-card__transport-list">
-                <li class="traveler-card__transport-item traveler-card__transport-item--plane traveler-card__transport-item--checked"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--bus"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--bike"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--on-foot"></li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--plane traveler-card__transport-item--checked">
+                  <div class="traveler-card__tooltip">Авиаперелет</div>
+                </li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--bus">
+                  <div class="traveler-card__tooltip">Автотранспорт</div>
+                </li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--bike">
+                  <div class="traveler-card__tooltip">Велосипед</div>
+                </li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--on-foot">
+                  <div class="traveler-card__tooltip">Пешком</div>
+                </li>
               </ul>
             </li>
             <li class="profiles__item traveler-card">
@@ -233,16 +244,26 @@
               <ul class="traveler-card__countries-list">
                 <li class="traveler-card__country">
                   <img class="traveler-card__country-flag" src="img/flag-belgium.svg" width="35" height="24" alt="Флаг Бельгии">
+                  <div class="traveler-card__tooltip">Бельгия</div>
                 </li>
                 <li class="traveler-card__country">
                   <img class="traveler-card__country-flag" src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
+                  <div class="traveler-card__tooltip">Чехия</div>
                 </li>
               </ul>
               <ul class="traveler-card__transport-list">
-                <li class="traveler-card__transport-item traveler-card__transport-item--plane traveler-card__transport-item--checked"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--bus traveler-card__transport-item--checked"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--bike"></li>
-                <li class="traveler-card__transport-item traveler-card__transport-item--on-foot traveler-card__transport-item--checked"></li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--plane traveler-card__transport-item--checked">
+                  <div class="traveler-card__tooltip">Авиаперелет</div>
+                </li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--bus traveler-card__transport-item--checked">
+                  <div class="traveler-card__tooltip">Автотранспорт</div>
+                </li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--bike">
+                  <div class="traveler-card__tooltip">Велосипед</div>
+                </li>
+                <li class="traveler-card__transport-item traveler-card__transport-item--on-foot traveler-card__transport-item--checked">
+                  <div class="traveler-card__tooltip">Пешком</div>
+                </li>
               </ul>
             </li>
           </ul>
@@ -308,7 +329,7 @@
             скорее <a class="sign-up__link" href="#">авторизуйтесь</a>.
           </p>
           <form class="sign-up__form" action="https://echo.htmlacademy.ru" method="post">
-            <input class="sign-up__input" type="text" name="email" id="email" placeholder="E-mail">
+            <input class="sign-up__input" type="email" name="email" id="email" placeholder="E-mail">
             <button class="sign-up__button" type="submit" aria-label="Отправить"></button>
           </form>
           <p class="sign-up__text lead__text lead__text--center">
@@ -336,7 +357,10 @@
         <h2 class="address__title visually-hidden">Адрес</h2>
         <div class="address__wrap container">
           <p class="address__text">ул. Большая Конюшенная, 19/8</p>
-          <a href="https://goo.gl/maps/sVxnaPraNpxofnFd6" class="address__nav-link">Проложить маршрут</a>
+          <a class="address__nav-link" href="https://goo.gl/maps/sVxnaPraNpxofnFd6">
+            Проложить маршрут
+            <svg class="address__nav-icon" width="10" height="14"><use xlink:href="#icon-triangle-arrow-right"></use></svg>
+          </a>
         </div>
       </section>
 
@@ -385,8 +409,8 @@
             </a>
           </li>
         </ul>
-        <p class="page-footer__text">Разработано</p>
         <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="page-footer__text">Разработано</p>
           <img class="page-footer__academy-img" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </div>

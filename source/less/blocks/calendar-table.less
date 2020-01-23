@@ -44,6 +44,15 @@
   background-position: 0 0;
   opacity: 0.3;
   position: absolute;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .calendar-table__prev {
@@ -102,8 +111,25 @@
   }
 
   &--chosen {
+    background-color: #101d41;
+    color: white;
+  }
+
+  &:hover,
+  &:focus {
     background-color: #1d2e5b;
     color: white;
+
+    &::after {
+      content: "";
+      width: 33px;
+      height: 32px;
+      border: 2px solid #ff5c23;
+      position: absolute;
+      z-index: 1;
+      top: -1px;
+      left: -1px;
+    }
   }
 }
 
@@ -121,15 +147,19 @@
   width: 30px;
   position: relative;
 
-  &--focus::after {
-    content: "";
-    width: 33px;
-    height: 32px;
-    border: 2px solid #ff5c23;
-    position: absolute;
-    z-index: 1;
-    top: -1px;
-    left: -1px;
+  &--focus {
+    background-color: #1d2e5b;
+
+    &::after {
+      content: "";
+      width: 33px;
+      height: 32px;
+      border: 2px solid #ff5c23;
+      position: absolute;
+      z-index: 1;
+      top: -1px;
+      left: -1px;
+    }
   }
 }
 
@@ -186,13 +216,24 @@
     font-weight: 500;
     font-size: 20px;
     letter-spacing: 2;
+
+    &:hover,
+    &:focus {
+      &::after {
+        width: 79px;
+        height: 72px;
+        border-width: 4px;
+      }
+    }
   }
 
   .calendar-table__cell {
-    &--focus::after {
-      width: 79px;
-      height: 72px;
-      border-width: 4px;
+    &--focus {
+      &::after {
+        width: 79px;
+        height: 72px;
+        border-width: 4px;
+      }
     }
   }
 }
@@ -232,10 +273,12 @@
   .calendar-table__cell {
     width: 141px;
 
-    &--focus::after {
-      cursor: pointer;
-      width: 145px;
-      height: 74px;
+    &--focus {
+      &::after {
+        cursor: pointer;
+        width: 145px;
+        height: 74px;
+      }
     }
   }
 
@@ -244,6 +287,14 @@
     font-weight: normal;
     text-align: left;
     padding: 15px 0 40px 15px;
+
+    &:hover,
+    &:focus {
+      &::after {
+        width: 145px;
+        height: 74px;
+      }
+    }
   }
 
   .calendar-table__first-of-month {

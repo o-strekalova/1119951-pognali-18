@@ -1,0 +1,94 @@
+@media (min-width: @tablet) {
+  .intro-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .intro-list__phone-link {
+    display: none;
+  }
+
+  .intro-list__email-link {
+    display: none;
+  }
+
+  .intro-list__login-link {
+    font-size: 20px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 12px;
+    color: #161c35;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffd74b;
+    width: 189px;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .intro-list__login-link:hover {
+    background-color: #ffbd30;
+  }
+
+  .intro-list__login-link:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
+}
+
+@media (min-width: @desktop) {
+  .intro-list__phone-link {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff8d30;
+    position: relative;
+
+    &::before {
+      content: url("../img/topmenu-phone.svg");
+      display: block;
+      width: 17px;
+      height: 17px;
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+  }
+
+  .intro-list__email-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffbd30;
+    display: block;
+    position: relative;
+
+    &::before {
+      content: url("../img/topmenu-mail.svg");
+      display: block;
+      width: 18px;
+      height: 17px;
+      position: absolute;
+      top: 16px;
+      left: 16px;
+    }
+  }
+
+  .intro-list__phone-link:hover,
+  .intro-list__phone-link:focus {
+    background-color: #f26926;
+  }
+
+  .intro-list__email-link:hover,
+  .intro-list__email-link:focus {
+    background-color: #ff8d30;
+  }
+
+  .intro-list__phone-link:active,
+  .intro-list__email-link:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}

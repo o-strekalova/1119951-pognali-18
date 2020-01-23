@@ -20,7 +20,7 @@
     Открытое меню .page-header--open.
     Прокрутка .page-header--scroll
     -->
-    <header class="page-header page-header--inner page-header--no-js">
+    <header class="page-header page-header--no-js">
       <div class="page-header__wrap container">
         <a class="page-header__logo" href="index.html">
           <picture>
@@ -32,21 +32,21 @@
             <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
           </picture>
         </a>
-        <nav class="page-header__main-nav main-nav intro intro--inner">
-          <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
-            <svg class="main-nav__toggle-icon main-nav__toggle-icon--menu" width="25" height="11"><use xlink:href="#icon-menu"></use></svg>
-            <svg class="main-nav__toggle-icon main-nav__toggle-icon--menu-close" width="19" height="19"><use xlink:href="#icon-menu-close"></use></svg>
+        <nav class="page-header__main-nav main-nav">
+          <button class="page-header__nav-toggle main-nav__toggle" type="button" aria-label="Открыть меню">
+            <svg class="page-header__toggle-icon page-header__toggle-icon--menu" width="25" height="11"><use xlink:href="#icon-menu"></use></svg>
+            <svg class="page-header__toggle-icon page-header__toggle-icon--menu-close" width="19" height="19"><use xlink:href="#icon-menu-close"></use></svg>
           </button>
-          <ul class="intro__contact-list intro__contact-list--inner">
-            <li class="intro__phone"><a class="intro__phone-link" href="tel:88005558628" aria-label="Позвонить в Погнали"></a></li>
-            <li class="intro__email"><a class="intro__email-link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали"></a></li>
-            <li class="intro__login"><a class="intro__login-link" href="#">Авторизация</a></li>
+          <ul class="page-header__intro-list intro-list">
+            <li class="intro-list__phone"><a class="intro-list__phone-link" href="tel:88005558628" aria-label="Позвонить в Погнали"></a></li>
+            <li class="intro-list__email"><a class="intro-list__email-link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали"></a></li>
+            <li class="intro-list__login"><a class="intro-list__login-link" href="#">Авторизация</a></li>
           </ul>
-          <div class="main-nav__wrapper main-nav__wrapper">
-            <ul class="main-nav__site-list site-list">
-              <li class="site-list__item"><a class="site-list__link" href="#about">О сервисе</a></li>
-              <li class="site-list__item"><a class="site-list__link" href="form.html">Направления</a></li>
-              <li class="site-list__item"><a class="site-list__link" href="catalog.html">Попутчики</a></li>
+          <div class="page-header__nav-wrapper main-nav__wrapper">
+            <ul class="page-header__site-list main-nav__site-list site-list">
+              <li class="site-list__item"><a class="page-header__link site-list__link" href="#about"><span class="site-list__link-span" data-hover="О сервисе">О сервисе</span></a></li>
+              <li class="site-list__item"><a class="page-header__link site-list__link" href="form.html"><span class="site-list__link-span" data-hover="Направления">Направления</span></a></li>
+              <li class="site-list__item"><a class="page-header__link site-list__link" href="catalog.html"><span class="site-list__link-span" data-hover="Попутчики">Попутчики</span></a></li>
             </ul>
             <a class="main-nav__login" href="#">Авторизация</a>
             <ul class="main-nav__contact-list contact-list">
@@ -110,11 +110,11 @@
             <img class="profile__img" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" width="99" height="100" alt="Аватар профиля">
           </picture>
           <input class="profile__img-input visually-hidden" type="file" name="profile-img" id="profile-img">
-          <label class="profile__img-label" for="profile-img"><span class="profile__img-label profile__img-label--long">Сменить фото</span><span class="profile__img-label profile__img-label--short">Фото</span></label>
+          <label class="profile__img-label" for="profile-img"><span class="profile__label profile__label--long">Сменить фото</span><span class="profile__label profile__label--short">Фото</span></label>
           <form class="profile__form" method="post" action="https://echo.htmlacademy.ru">
             <fieldset class="profile__fieldset">
               <legend class="profile__legend">Тэги</legend>
-              <textarea class="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
+              <textarea class="profile__tags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
             </fieldset>
             <fieldset class="profile__fieldset profile__fieldset--transport transport-filter">
               <legend class="profile__legend profile__legend--transport legend">Транспорт</legend>
@@ -192,14 +192,14 @@
                 <fieldset class="step__fieldset counter">
                   <label class="counter__label" for="travelers-number">Ищу попутчиков:</label>
                   <button class="counter__minus" type="button"></button>
-                  <input class="counter__input" type="number" name="travelers-number" id="travelers-number" value="2">
+                  <input class="counter__input" type="text" name="travelers-number" id="travelers-number" value="2">
                   <button class="counter__plus" type="button"></button>
                   <p class="counter__measure">чел.</p>
                 </fieldset>
                 <fieldset class="step__fieldset counter">
                   <label class="counter__label" for="days-number">Длительность:</label>
                   <button class="counter__minus" type="button"></button>
-                  <input class="counter__input" type="number" name="days-number" id="days-number" value="2">
+                  <input class="counter__input" type="text" name="days-number" id="days-number" value="2">
                   <button class="counter__plus" type="button"></button>
                   <p class="counter__measure counter__measure--days">дн.</p>
                 </fieldset>
@@ -434,12 +434,14 @@
                 <li class="plans-list__item">
                   <label class="plans-list__textarea-label" for="bosnia">Босния и Герцеговина</label>
                   <img class="plans-list__flag" src="img/flag-bosnia.svg" width="35" height="24" alt="Флаг Боснии и Герцеговины">
-                  <textarea class="plans-list__textarea" id="bosnia" placeholder="План действий"></textarea>
+                  <textarea class="plans-list__textarea" id="bosnia" placeholder="План действий" required></textarea>
+                  <div class="plans-list__invalid">Это поле должно быть заполнено</div>
                 </li>
                 <li class="plans-list__item">
                   <label class="plans-list__textarea-label" for="czech-republic">Чехия</label>
                   <img class="plans-list__flag" src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
-                  <textarea class="plans-list__textarea" id="czech-republic">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <textarea class="plans-list__textarea" id="czech-republic" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <div class="plans-list__invalid">Это поле должно быть заполнено</div>
                 </li>
               </ul>
               <div class="new-trip__links">
@@ -481,8 +483,8 @@
             </a>
           </li>
         </ul>
-        <p class="page-footer__text">Разработано</p>
         <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="page-footer__text">Разработано</p>
           <img class="page-footer__academy-img" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </div>

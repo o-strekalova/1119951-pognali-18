@@ -67,16 +67,27 @@
   }
 }
 
-.step__checkbox:checked + .step__checkbox-label {
-  &::before {
-    background-image: url("../img/tick.svg");
-  }
+.step__checkbox:hover + .step__checkbox-label::before,
+.step__checkbox:focus + .step__checkbox-label::before {
+  border-color: #959bb2;
 }
 
-.step__checkbox:focus + .step__checkbox-label {
+.step__checkbox:active + .step__checkbox-label::before {
+  background-color: #e2e5f1;
+  border-color: #e2e5f1;
+}
+
+.step__checkbox:checked + .step__checkbox-label::before {
+  background-image: url("../img/tick.svg");
+}
+
+.step__checkbox:checked:active + .step__checkbox-label::before {
+  opacity: 0.7;
+}
+
+.step__checkbox:focus + .step__checkbox-label::before {
   outline: 5px auto rgba(0, 150, 255, 1);
 }
-
 
 .step__calendar {
   width: 221px;
@@ -97,6 +108,15 @@
   margin-top: 22px;
   margin-left: -5px;
   margin-right: auto;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .step__prev-link {
@@ -108,6 +128,15 @@
   text-transform: uppercase;
   margin-top: 13px;
   margin-bottom: -13px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .step__selected-list {
@@ -220,6 +249,10 @@
       background-color: transparent;
     }
   }
+
+  &:focus {
+    outline: 1px solid rgba(0, 150, 255, 1);
+  }
 }
 
 .step__choose-another {
@@ -239,6 +272,24 @@
   padding: 12px 30px 8px 10px;
   margin-top: 2px;
 
+  &:hover,
+  &:focus {
+    border-color: #959bb2;
+
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    background-color: #dfe3f0;
+    color: rgba(29, 46, 91, 0.3);
+
+    &::before {
+      opacity: 0.1;
+    }
+  }
+
   &--add {
     background-color: #edeff6;
     margin-bottom: 4px;
@@ -249,7 +300,7 @@
       background-image: url("../img/qty-plus-mobile.svg");
       background-size: 14px;
       background-repeat: no-repeat;
-      opacity: 1;
+      opacity: 0.2;
       top: 14px;
     }
 
@@ -264,6 +315,29 @@
       right: 48px;
       background-image: none;
       opacity: 1;
+    }
+
+    &:focus {
+      outline: 1px solid rgba(0, 150, 255, 1);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #e2e5f1;
+      border-color: #e2e5f1;
+
+      &::before {
+        opacity: 0.3;
+      }
+    }
+
+    &:active {
+      background-color: #dfe3f0;
+      color: rgba(29, 46, 91, 0.3);
+
+      &::before {
+        opacity: 0.1;
+      }
     }
   }
 
@@ -286,7 +360,16 @@
 }
 
 .step__delete-icon {
+  opacity: 0.1;
+}
+
+.step__delete-icon:hover,
+.step__delete-button:focus .step__delete-icon {
   opacity: 0.3;
+}
+
+.step__delete-button:active .step__delete-icon {
+  opacity: 0.05;
 }
 
 .step__choose-another--choose--open + .step__delete-button {
@@ -302,7 +385,16 @@
 
 .step__choose-another--choose--open + .step__delete-button .step__delete-icon {
   fill: white;
-  opacity: 1;
+  opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .step__country-filter {
@@ -385,10 +477,22 @@
     text-transform: none;
     padding: 30px 34px;
     margin: 46px auto 12px 0;
-    background-image: url("../img/triangle-arrow-right.svg");
-    background-repeat: no-repeat;
-    background-size: 10px 14px;
-    background-position: 240px 35px;
+    position: relative;
+
+    &::after {
+      content: url("../img/triangle-arrow-right.svg");
+      width: 10px;
+      height: 14px;
+      position: absolute;
+      top: 30px;
+      left: 240px;
+    }
+
+    &:active {
+      &::after {
+        opacity: 0.3;
+      }
+    }
   }
 
   .step__prev-link {
@@ -699,6 +803,10 @@
   .step__choose-another--choose--open + .step__delete-button .step__delete-icon {
     width: 17px;
     height: 17px;
+  }
+
+  .step__choose-another--choose--open ~ .step__choose-another--add {
+    margin-top: -50px;
   }
 
   .step__country-filter {

@@ -30,6 +30,11 @@
     border-radius: 50%;
     background-color: #ffd74b;
     margin-right: 0;
+
+    &:hover,
+    &:focus {
+      background-color: #ffbd30;
+    }
   }
 }
 
@@ -56,6 +61,10 @@
     top: 13px;
     left: 14px;
   }
+}
+
+.social-list__item--yellow:active .social-list__item-icon {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet) {

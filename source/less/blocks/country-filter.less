@@ -20,64 +20,72 @@
   position: relative;
   cursor: pointer;
 
-  &--main {
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 5px;
-      left: -27px;
-      width: 15px;
-      height: 10px;
-      background-image: url("../img/filter.svg");
-      background-repeat: no-repeat;
-      background-size: 15px 10px;
-    }
-  }
-
-  &--open-link {
+  &::before {
+    content: "";
+    display: block;
     position: absolute;
-    top: 8px;
-    right: 2px;
-
-    &::before {
-      content: "";
-      display: block;
-      width: 17px;
-      height: 3px;
-      background-image: url("../img/dots.svg");
-      background-repeat: no-repeat;
-      background-size: 17px 3px;
-    }
+    top: 5px;
+    left: -27px;
+    width: 15px;
+    height: 10px;
+    background-image: url("../img/filter.svg");
+    background-repeat: no-repeat;
+    background-size: 15px 10px;
   }
 }
 
-.country-filter__title-span {
+.country-filter__toggle {
+  color: #192144;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 11px;
+  right: 40px;
+  background: transparent;
+  border: none;
+
+  &::before {
+    content: url("../img/dots.svg");
+    display: block;
+    width: 17px;
+    height: 3px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.country-filter__toggle-span {
   &--close-link,
   &--show-all {
     display: none;
   }
 }
 
-.country-filter__wrap--open .country-filter__title {
-  &--open-link {
-    top: 3px;
-    right: 17px;
+.country-filter__wrap--open .country-filter__toggle {
+  top: 13px;
+  right: 38px;
 
-    &::before {
-      display: none;
-    }
+  &::before {
+    display: none;
+  }
 
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      background-image: url("../img/filter-close.svg");
-      background-repeat: no-repeat;
-      background-size: 12px;
-    }
+  &::after {
+    content: url("../img/filter-close.svg");
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
   }
 }
 
@@ -143,6 +151,15 @@
   text-transform: uppercase;
   opacity: 0.3;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 .country-filter__radio:checked + .country-filter__radio-label {
@@ -171,6 +188,15 @@
   text-align: left;
   text-decoration: none;
   margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    color: #1d2e5b;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .country-filter__close-button {
@@ -187,15 +213,34 @@
   text-align: center;
   text-transform: uppercase;
   background-color: #d6daed;
-  background-image: url("../img/filter-close.svg");
-  background-repeat: no-repeat;
-  background-size: 12px;
-  background-position: 85px 50%;
   padding-top: 4px;
   padding-left: 31px;
   margin: 0 auto;
   margin-bottom: 23px;
   cursor: pointer;
+  position: relative;
+
+  &::before {
+    content: url("../img/filter-close.svg");
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 85px;
+    top: 7px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #c8cee8;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: @tablet) {
@@ -213,28 +258,29 @@
 
   .country-filter__title {
     display: none;
+  }
 
-    &--open-link {
-      width: 180px;
-      display: block;
+  .country-filter__toggle {
+    width: 180px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 519px;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 32px 0 32px -3px;
+
+    &::before {
+      width: 27px;
+      height: 5px;
+      background-size: 27px 5px;
       position: absolute;
-      left: 519px;
-      font-size: 20px;
-      line-height: 24px;
-      margin: 32px 0 32px -3px;
-
-      &::before {
-        width: 27px;
-        height: 5px;
-        background-size: 27px 5px;
-        position: absolute;
-        top: 6px;
-        right: 3px;
-      }
+      top: -5px;
+      right: 3px;
     }
   }
 
-  .country-filter__title-span {
+  .country-filter__toggle-span {
     &--close-link {
       display: none;
     }
@@ -245,26 +291,24 @@
     }
   }
 
-  .country-filter__wrap--open .country-filter__title {
-    &--open-link {
-      margin: 37px 0;
+  .country-filter__wrap--open .country-filter__toggle {
+    margin: 27px 0;
+    left: 513px;
 
-      &::before {
-        display: none;
-      }
+    &::before {
+      display: none;
+    }
 
-      &::after {
-        width: 19px;
-        height: 19px;
-        background-image: url("../img/close.svg");
-        background-size: 19px;
-        top: 0;
-        right: 9px;
-      }
+    &::after {
+      content: url("../img/close.svg");
+      width: 19px;
+      height: 19px;
+      top: 3px;
+      right: 3px;
     }
   }
 
-  .country-filter__wrap--open .country-filter__title-span {
+  .country-filter__wrap--open .country-filter__toggle-span {
     &--close-link {
       display: block;
     }
@@ -371,9 +415,14 @@
     margin-bottom: 74px;
     padding-top: 0;
     padding-left: 40px;
-    background-image: url("../img/close.svg");
-    background-size: 19px;
-    background-position: 243px 49%;
+
+    &::before {
+      content: url("../img/close.svg");
+      width: 19px;
+      height: 19px;
+      left: 243px;
+      top: 37px;
+    }
   }
 }
 
@@ -392,25 +441,24 @@
     margin: 0;
     padding: 0;
 
-    &--main {
-      &::before {
-        top: 2px;
-        left: -44px;
-        width: 23px;
-        height: 15px;
-        background-size: 23px 15px;
-      }
-    }
-
-    &--open-link {
-      left: 1140px;
+    &::before {
+      top: 2px;
+      left: -44px;
+      width: 23px;
+      height: 15px;
+      background-size: 23px 15px;
     }
   }
 
-  .country-filter__wrap--open .country-filter__title {
-    &--open-link {
-      margin: 56px 0 40px;
-    }
+  .country-filter__toggle {
+    position: absolute;
+    top: 25px;
+    left: 1137px;
+  }
+
+  .country-filter__wrap--open .country-filter__toggle {
+    margin: 45px 0 40px;
+    left: 1135px;
   }
 
   .country-filter__block {
@@ -447,8 +495,13 @@
 
   .country-filter__close-button {
     width: 1320px;
-    background-size: 18px;
-    background-position: 594px 49%;
     left: 60px;
+
+    &::before {
+      content: url("../img/close.svg");
+      width: 18px;
+      height: 18px;
+      left: 594px;
+    }
   }
 }

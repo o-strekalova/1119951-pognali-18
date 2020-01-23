@@ -102,7 +102,7 @@
     width: 292px;
     height: 352px;
     position: absolute;
-    top: 30px;
+    top: 22px;
     background-image: url("../img/about-mobile@1x.png");
     background-size: 292px 352px;
     background-repeat: no-repeat;
@@ -149,6 +149,7 @@
     min-height: 443px;
     align-self: center;
     display: none;
+    box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
 
     &--open {
       display: block;
@@ -278,22 +279,31 @@
   }
 
   .page-main__index-link {
-    width: @tablet;
+    width: 200px;
     position: absolute;
+    top: 27px;
+    right: 50px;
     display: block;
-    margin-top: 15px;
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
-    text-align: right;
+    text-align: left;
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
-    padding-right: 136px;
     background-image: url("../img/return.svg");
     background-repeat: no-repeat;
     background-size: 32px 16px;
-    background-position: 661px 0;
+    background-position: 142px 2px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .page-main__intro {
@@ -397,10 +407,9 @@
   }
 
   .page-main__index-link {
-    width: @desktop;
-    padding-right: 185px;
-    margin-top: 5px;
-    background-position: 1285px 2px;
+    top: 25px;
+    right: 100px;
+    background-position: 144px 2px;
   }
 
   .page-main__intro {

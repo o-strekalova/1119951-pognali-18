@@ -130,6 +130,15 @@
   text-decoration: none;
   margin: 20px auto 37px 25px;
   display: block;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .prices__close {
@@ -147,6 +156,15 @@
   border-radius: 0 0 20px 20px;
   box-sizing: border-box;
   margin-top: 33px;
+
+  &:hover,
+  &:focus {
+    background-color: #edeff6;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 @media (min-width: @tablet) {

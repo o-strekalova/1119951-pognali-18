@@ -14,15 +14,6 @@
       url("../img/traveller-illustration-mobile@2x.png"),
       url("../img/globe-back-mobile@2x.jpg");
   }
-
-  &--inner {
-    padding-top: 0;
-    background-image: none;
-
-    @media (min-resolution: @retina) {
-      background-image: none;
-    }
-  }
 }
 
 .intro__wrap {
@@ -34,10 +25,6 @@
   padding: 0;
   display: flex;
   margin: 0 auto;
-
-  &--inner {
-    display: none;
-  }
 }
 
 .intro__phone-link {
@@ -45,11 +32,18 @@
   height: 40px;
   border-radius: 50%;
   background-color: #ff8d30;
-  background-image: url("../img/topmenu-phone.svg");
-  background-size: 18px;
-  background-repeat: no-repeat;
-  background-position: 12px;
   display: block;
+  position: relative;
+
+  &::before {
+    content: url("../img/topmenu-phone.svg");
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
 }
 
 .intro__email-link {
@@ -57,11 +51,18 @@
   height: 40px;
   border-radius: 50%;
   background-color: #ffbd30;
-  background-image: url("../img/topmenu-mail.svg");
-  background-size: 18px 14px;
-  background-repeat: no-repeat;
-  background-position: 12px;
   display: block;
+  position: relative;
+
+  &::before {
+    content: url("../img/topmenu-mail.svg");
+    display: block;
+    width: 18px;
+    height: 14px;
+    position: absolute;
+    top: 11px;
+    left: 12px;
+  }
 }
 
 .intro__login-link {
@@ -166,14 +167,6 @@
         url("../img/traveller-illustration-tablet@2x.png"),
         url("../img/globe-back-tablet@2x.jpg");
     }
-
-    &--inner {
-      background-image: none;
-
-      @media (min-resolution: @retina) {
-        background-image: none;
-      }
-    }
   }
 
   .intro__wrap {
@@ -182,32 +175,7 @@
   }
 
   .intro__contact-list {
-    display: flex;
-    position: fixed;
-    top: 40px;
-    left: 50%;
-    z-index: 12;
-    margin-left: 155px;
-  }
-
-  .page-header--no-js .intro--inner .intro__contact-list,
-  .page-header--no-js + .page-main .intro__contact-list {
-    position: absolute;
-  }
-
-  .intro__phone-link {
     display: none;
-  }
-
-  .intro__email-link {
-    display: none;
-  }
-
-  .intro__login-link {
-    font-size: 20px;
-    height: 50px;
-    border-radius: 25px;
-    padding: 11px;
   }
 
   .intro__quote {
@@ -288,14 +256,6 @@
       background-image: url("../img/traveller-illustration-desktop@2x.png"),
         url("../img/globe-back-desktop@2x.jpg");
     }
-
-    &--inner {
-      background-image: none;
-
-      @media (min-resolution: @retina) {
-        background-image: none;
-      }
-    }
   }
 
   .intro__wrap {
@@ -303,39 +263,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 100px;
-  }
-
-  .intro__contact-list {
-    top: 49px;
-    margin-left: 371px;
-  }
-
-  .page-header--scroll .intro--inner {
-    background: transparent;
-  }
-
-  .page-header--scroll .intro--inner .intro__contact-list,
-  .page-header--scroll + .page-main .intro__contact-list {
-    top: 20px;
-  }
-
-  .page-header--no-js .intro--inner .intro__contact-list,
-  .page-header--no-js + .page-main .intro__contact-list {
-    position: fixed;
-  }
-
-  .intro__phone-link {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-position: 50%;
-  }
-
-  .intro__email-link {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-position: 50%;
   }
 
   .intro__quote {

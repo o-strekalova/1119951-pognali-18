@@ -30,6 +30,15 @@
   background-position: 6px 4px;
   background-image: url("../img/show-more-plus.svg");
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog__pagination {
@@ -56,6 +65,15 @@
   background-size: 10px 20px;
   background-position: 50%;
   background-image: url("../img/triangle-arrow-left.svg");
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog__next {
@@ -71,6 +89,15 @@
   background-size: 10px 20px;
   background-position: 50%;
   background-image: url("../img/triangle-arrow-right.svg");
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog__pages-list {
@@ -133,24 +160,32 @@
     min-height: 50px;
   }
 
-  .catalog__page-number {
-    margin: 0 19px;
-    cursor: pointer;
+  .catalog__page-link {
+    color: #161c35;
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 11px 19px;
 
     &--current {
+      display: block;
       width: 50px;
       height: 50px;
       border-radius: 50%;
       background-color: #ffd74b;
-      margin: 0 5px;
-      margin-right: 3px;
       padding: 11px 19px;
-      cursor: auto;
     }
-  }
 
-  .catalog__page-link {
-    color: #161c35;
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 1;
+      border-radius: 50%;
+      background-color: #ffd74b;
+    }
   }
 }
 

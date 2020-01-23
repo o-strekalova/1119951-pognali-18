@@ -86,6 +86,25 @@
   &::placeholder {
     opacity: 0.3;
   }
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active,
+  &:focus {
+    border-color: #161c35;
+  }
+
+  &:invalid {
+    border-color: #f47e7e;
+    background: transparent;
+    z-index: 1;
+  }
+}
+
+.plans-list__invalid {
+  display: none;
 }
 
 .plans-list__flag {
@@ -184,6 +203,24 @@
     width: 730px;
     padding: 25px;
     padding-right: 15px;
+  }
+
+  .plans-list__invalid {
+    color: #ff0000;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 17px 24px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 730px;
+    height: 57px;
+    border-radius: 0 0 4px 4px;
+    background-color: #ffefef;
+  }
+
+  .plans-list__textarea:invalid + .plans-list__invalid {
+    display: block;
   }
 
   .plans-list__flag {

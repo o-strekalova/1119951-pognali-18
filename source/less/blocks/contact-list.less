@@ -17,6 +17,15 @@
 
   &--yellow {
     color: #ffd74b;
+
+    &:hover,
+    &:focus {
+      color: #ffbd30;
+    }
+
+    &:active {
+      color: rgba(255, 189, 48, 0.3);
+    }
   }
 
   &::before {
@@ -41,6 +50,15 @@
   &--mail {
     top: 3px;
   }
+}
+
+.contact-list__link:hover .contact-list__link-icon,
+.contact-list__link:focus .contact-list__link-icon {
+  fill: #ffbd30;
+}
+
+.contact-list__link:active .contact-list__link-icon {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet) {

@@ -5,7 +5,6 @@
 }
 
 .site-list__link {
-  color: #192144;
   text-decoration: none;
   font-family: "Blogger Sans", "Tahoma", sans-serif;
   font-weight: 500;
@@ -34,20 +33,45 @@
   }
 
   .site-list__link {
+    display: inline-block;
+    vertical-align: middle;
     font-size: 20px;
     line-height: 30px;
     color: white;
+    overflow: hidden;
+    height: 30px;
   }
 
-  .site-list__link:hover {
-    color: #ffd74b;
+  .site-list__link-span {
+    position: relative;
+    top: -2px;
+    left: 0;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s;
+    transform: translateY(0);
+
+    &::before {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      content: attr(data-hover);
+      color: #ffd74b;
+    }
+  }
+
+  .site-list__link-span:hover,
+  .site-list__link-span:focus {
+    transform: translateY(-30px);
+  }
+
+  .site-list__link-span:active {
+    &::before {
+      opacity: 0.3;
+    }
   }
 
   .site-list__link:active {
     opacity: 0.3;
-  }
-
-  .page-header--scroll .site-list__link {
-    color: #192144;
   }
 }

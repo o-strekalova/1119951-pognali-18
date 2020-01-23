@@ -15,12 +15,23 @@
 
 .sign-up__link {
   color: #ffd74b;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: #ff8d30;
+  }
+
+  &:active {
+    color: rgba(255, 141, 48, 0.3);
+  }
 }
 
 .sign-up__form {
   width: 270px;
   position: relative;
   margin: 29px auto;
+  display: flex;
 }
 
 .sign-up__input {
@@ -29,9 +40,9 @@
   font-size: 18px;
   line-height: 18px;
   text-align: left;
-  width: 270px;
+  width: 220px;
   height: 62px;
-  border-radius: 10px;
+  border-radius: 10px 0 0 10px;
   padding: 24px;
   border: none;
   margin: 0 auto;
@@ -39,17 +50,34 @@
   &::placeholder {
     color: rgba(68, 68, 68, 0.3);
   }
+
+  &:hover {
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.5);
+    }
+  }
+
+  &:active,
+  &:focus {
+    background: transparent;
+    color: white;
+    border: 4px solid white;
+  }
+
+  &:invalid {
+    background-color: #ffefef;
+    border-color: #ffefef;
+    color: #ff0000;
+  }
 }
 
 .sign-up__button {
   width: 60px;
   height: 62px;
+  margin-left: -10px;
   background: #ffd74b;
   border: none;
   border-radius: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
   background-image: url("../img/triangle-arrow-right.svg");
   background-repeat: no-repeat;
   background-size: 10px 14px;
@@ -86,9 +114,9 @@
   }
 
   .sign-up__input {
-    width: 618px;
+    width: 536px;
     height: 81px;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     font-size: 24px;
     line-height: 24px;
     padding-top: 27px;
@@ -96,6 +124,7 @@
   }
 
   .sign-up__button {
+    margin-left: 0;
     width: 82px;
     height: 81px;
     border-radius: 0 20px 20px 0;
@@ -142,6 +171,10 @@
       display: block;
       padding: 29px 30px;
     }
+  }
+
+  .sign-up__input:invalid + .sign-up__button::after {
+    display: block;
   }
 
   .sign-up__list {

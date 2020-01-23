@@ -52,10 +52,35 @@
   text-decoration: none;
   padding: 20px;
   margin: 0 auto;
-  background-image: url("../img/triangle-arrow-right.svg");
-  background-repeat: no-repeat;
-  background-size: 10px 14px;
-  background-position: 235px 50%;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    background-color: #192144;
+    color: white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.address__nav-icon {
+  width: 10px;
+  height: 14px;
+  position: absolute;
+  left: 235px;
+  top: 22px;
+  fill: #1d2e5b;
+}
+
+.address__nav-link:hover .address__nav-icon,
+.address__nav-link:focus .address__nav-icon {
+  fill: white;
+}
+
+.address__nav-link:active .address__nav-icon {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet) {
@@ -88,7 +113,11 @@
     line-height: 24px;
     padding: 26px 33px;
     margin-bottom: 49px;
-    background-position: 569px 50%;
+  }
+
+  .address__nav-icon {
+    top: 32px;
+    left: 569px;
   }
 }
 
@@ -115,6 +144,10 @@
     color: #192144;
     width: 324px;
     margin: 60px 73px 25px 70px;
-    background-position: 276px 50%;
+  }
+
+  .address__nav-icon {
+    top: 32px;
+    left: 276px;
   }
 }
