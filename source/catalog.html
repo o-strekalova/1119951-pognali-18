@@ -20,7 +20,7 @@
     Открытое меню .page-header--open.
     Прокрутка .page-header--scroll
     -->
-    <header class="page-header page-header--inner page-header--no-js">
+    <header class="page-header page-header--no-js">
       <div class="page-header__wrap container">
         <a class="page-header__logo" href="index.html">
           <picture>
@@ -32,21 +32,21 @@
             <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип Погнали">
           </picture>
         </a>
-        <nav class="page-header__main-nav main-nav intro intro--inner">
-          <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
-            <svg class="main-nav__toggle-icon main-nav__toggle-icon--menu" width="25" height="11"><use xlink:href="#icon-menu"></use></svg>
-            <svg class="main-nav__toggle-icon main-nav__toggle-icon--menu-close" width="19" height="19"><use xlink:href="#icon-menu-close"></use></svg>
+        <nav class="page-header__main-nav main-nav">
+          <button class="page-header__nav-toggle main-nav__toggle" type="button" aria-label="Открыть меню">
+            <svg class="page-header__toggle-icon page-header__toggle-icon--menu" width="25" height="11"><use xlink:href="#icon-menu"></use></svg>
+            <svg class="page-header__toggle-icon page-header__toggle-icon--menu-close" width="19" height="19"><use xlink:href="#icon-menu-close"></use></svg>
           </button>
-          <ul class="intro__contact-list intro__contact-list--inner">
-            <li class="intro__phone"><a class="intro__phone-link" href="tel:88005558628" aria-label="Позвонить в Погнали"></a></li>
-            <li class="intro__email"><a class="intro__email-link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали"></a></li>
-            <li class="intro__login"><a class="intro__login-link" href="#">Авторизация</a></li>
+          <ul class="page-header__intro-list intro-list">
+            <li class="intro-list__phone"><a class="intro-list__phone-link" href="tel:88005558628" aria-label="Позвонить в Погнали"></a></li>
+            <li class="intro-list__email"><a class="intro-list__email-link" href="mailto:mail@htmlacademy.ru" aria-label="Написать письмо в Погнали"></a></li>
+            <li class="intro-list__login"><a class="intro-list__login-link" href="#">Авторизация</a></li>
           </ul>
-          <div class="main-nav__wrapper main-nav__wrapper">
-            <ul class="main-nav__site-list site-list">
-              <li class="site-list__item"><a class="site-list__link" href="#about"><span class="site-list__link-span" data-hover="О сервисе">О сервисе</span></a></li>
-              <li class="site-list__item"><a class="site-list__link" href="form.html"><span class="site-list__link-span" data-hover="Направления">Направления</span></a></li>
-              <li class="site-list__item"><a class="site-list__link" href="catalog.html"><span class="site-list__link-span" data-hover="Попутчики">Попутчики</span></a></li>
+          <div class="page-header__nav-wrapper main-nav__wrapper">
+            <ul class="page-header__site-list main-nav__site-list site-list">
+              <li class="site-list__item"><a class="page-header__link site-list__link" href="#about"><span class="site-list__link-span" data-hover="О сервисе">О сервисе</span></a></li>
+              <li class="site-list__item"><a class="page-header__link site-list__link" href="form.html"><span class="site-list__link-span" data-hover="Направления">Направления</span></a></li>
+              <li class="site-list__item"><a class="page-header__link site-list__link" href="catalog.html"><span class="site-list__link-span" data-hover="Попутчики">Попутчики</span></a></li>
             </ul>
             <a class="main-nav__login" href="#">Авторизация</a>
             <ul class="main-nav__contact-list contact-list">
@@ -87,19 +87,21 @@
 
     <main class="page-main page-main--inner">
       <div class="page-main__wrap page-main__wrap--inner">
-        <h1 class="page-main__title page-main__title--inner page-main__title--catalog">Попутчики</h1>
-        <a href="index.html" class="page-main__index-link">На главную</a>
+        <h1 class="page-main__title page-main__title--inner page-main__title--catalog">
+          Попутчики
+          <a href="index.html" class="page-main__index-link">На главную</a>
+        </h1>
       </div>
 
       <section class="page-main__country-filter country-filter">
         <!--Для открытия фильтра по странам country-filter__wrap--open -->
         <div class="country-filter__wrap country-filter__wrap--open container">
           <a class="country-filter__link" aria-label="открыть фильтр по странам">
-            <h2 class="country-filter__title country-filter__title--main">Фильтрация по странам</h2>
-            <h2 class="country-filter__title country-filter__title--open-link">
-              <span class="country-filter__title-span country-filter__title-span--show-all">Показать все</span>
-              <span class="country-filter__title-span country-filter__title-span--close-link">Свернуть</span>
-            </h2>
+            <h2 class="country-filter__title">Фильтрация по странам</h2>
+            <button class="country-filter__toggle" type="button">
+              <span class="country-filter__toggle-span country-filter__toggle-span--show-all">Показать все</span>
+              <span class="country-filter__toggle-span country-filter__toggle-span--close-link">Свернуть</span>
+            </button>
           </a>
           <div class="country-filter__block">
             <form class="country-filter__form" method="post" action="https://echo.htmlacademy.ru">
