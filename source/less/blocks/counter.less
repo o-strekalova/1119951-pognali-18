@@ -34,17 +34,10 @@
   height: 43px;
   border-radius: 4px;
   border: 1px solid #cbced9;
-  color: #1d2e5b;
-  font-size: 15px;
-  font-family: "Blogger Sans", "Tahoma", sans-serif;
-  font-weight: 500;
-  line-height: 13.5px;
-  letter-spacing: 1.5px;
-  text-align: center;
-  padding-top: 6px;
-  padding-left: 15px;
   position: relative;
   margin: 8px auto 11px;
+  display: flex;
+  align-items: space-between;
 
   &:hover,
   &:focus {
@@ -56,12 +49,21 @@
   }
 }
 
-.counter__minus {
-  position: absolute;
-  z-index: 1;
+.counter__text {
+  color: #1d2e5b;
+  font-size: 15px;
+  font-family: "Blogger Sans", "Tahoma", sans-serif;
+  font-weight: 500;
+  line-height: 13.5px;
+  letter-spacing: 1.5px;
+  text-align: center;
   border: none;
-  top: 56px;
-  left: 15px;
+  width: 150px;
+}
+
+.counter__minus {
+  border: none;
+  margin: 19px auto 0 15px;
   width: 14px;
   height: 2px;
   background-color: black;
@@ -71,12 +73,9 @@
 .counter__plus {
   width: 14px;
   height: 14px;
-  position: absolute;
-  z-index: 1;
   border: none;
   background: transparent;
-  top: 50px;
-  right: 14px;
+  margin: 13px 14px 0 auto;
   background-image: url("../img/qty-plus-mobile.svg");
   background-size: 14px;
   opacity: 0.2;
@@ -115,58 +114,75 @@
   .counter__input {
     width: 531px;
     height: 70px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .counter__text {
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 2px;
-    margin-bottom: 0;
-    padding: 0;
   }
 
   .counter__minus {
     width: 20px;
-    top: 101px;
-    left: 24px;
+    margin-top: 35px;
+    margin-left: 24px;
   }
 
   .counter__plus {
     width: 20px;
     height: 20px;
     background-size: 20px;
-    top: 93px;
-    right: 20px;
+    margin-top: 25px;
+    margin-right: 19px;
   }
 }
 
 @media (min-width: @desktop) {
   .counter__label {
+    width: 200px;
     display: inline-block;
     vertical-align: middle;
-    width: 200px;
   }
 
   .counter__measure {
     position: static;
-    display: inline-block;
-    vertical-align: middle;
     margin-left: 3px;
     color: #1d2e5b;
+    display: inline-block;
+    vertical-align: middle;
+
+    &--days {
+      margin-left: 0;
+    }
   }
 
   .counter__input {
     width: 181px;
-    margin: 0;
-    margin-left: -9px;
+    margin: 0 26px 0 17px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .counter__text {
+    width: 90px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 20px;
   }
 
   .counter__minus {
-    position: relative;
-    top: -5px;
-    left: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 20px;
+    margin-left: 20px;
   }
 
   .counter__plus {
-    position: relative;
-    top: 4px;
-    right: 45px;
+    margin-top: 20px;
+    margin-right: 19px;
+    display: inline-block;
+    vertical-align: middle;
   }
 }
