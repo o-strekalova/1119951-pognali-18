@@ -112,6 +112,7 @@
   position: absolute;
   bottom: 22px;
   cursor: pointer;
+  overflow: hidden;
 
   &:hover,
   &:focus {
@@ -134,6 +135,7 @@
   z-index: 1;
   cursor: pointer;
   position: relative;
+  flex-shrink: 0;
 
   &::before {
     content: url("../img/heart.svg");

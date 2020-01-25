@@ -29,6 +29,17 @@
     top: 19px;
     left: -13px;
   }
+
+  &::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1d2e5b;
+    position: absolute;
+    top: 17px;
+    left: -3px;
+  }
 }
 
 .plans-list__textarea-label {
@@ -45,17 +56,7 @@
   display: inline-block;
   vertical-align: middle;
   position: relative;
-
-  &::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #1d2e5b;
-    position: absolute;
-    top: 6px;
-    left: -3px;
-  }
+  overflow: hidden;
 
   &::after {
     content: "";
@@ -127,6 +128,14 @@
       display: none;
     }
 
+    &::after {
+      width: 15px;
+      height: 15px;
+      top: 27px;
+      left: auto;
+      right: 105px;
+    }
+
     &:last-child {
       margin-bottom: 12px;
     }
@@ -134,24 +143,11 @@
 
   .plans-list__textarea-label {
     font-size: 30px;
+    line-height: 30px;
     font-weight: bold;
     width: 400px;
     padding: 0;
     margin: 22px 57px 43px 0;
-
-    &::before {
-      display: none;
-    }
-
-    &::after {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background: #1d2e5b;
-      position: absolute;
-      top: 2px;
-      right: -26px;
-    }
   }
 
   .plans-list__textarea {
@@ -173,30 +169,34 @@
 
 @media (min-width: @desktop) {
   .plans-list {
-    padding-top: 50px;
+    padding-top: 55px;
+    border-top: 1px solid #d6d9e6;
 
     &::before {
       display: block;
       width: 3px;
       height: 261px;
-      top: 80px;
+      top: 95px;
       left: auto;
       right: 224px;
     }
   }
 
   .plans-list__item {
+    margin-bottom: 10px;
+
     &:last-child {
       margin-bottom: 7px;
+    }
+
+    &::after {
+      top: 33px;
+      right: 218px;
     }
   }
 
   .plans-list__textarea-label {
     width: 730px;
-
-    &::after {
-      right: -52px;
-    }
   }
 
   .plans-list__textarea {
@@ -206,6 +206,7 @@
   }
 
   .plans-list__invalid {
+    font-family: "Blogger Sans", "Tahoma", sans-serif;
     color: #ff0000;
     font-size: 20px;
     line-height: 24px;
@@ -224,6 +225,6 @@
   }
 
   .plans-list__flag {
-    margin: 10px 115px 0 auto;
+    margin: 20px 115px 0 auto;
   }
 }
