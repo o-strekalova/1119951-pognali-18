@@ -1,6 +1,6 @@
 # Personal project «Let’s Go!»
 
-Adaptive web design for three pages: Main, Destinations and Travellers. Build with BEM methodology. This project uses Less preprocessor and Gulp.
+Adaptive HTML and CSS for three pages: Main, Destinations and Travellers. Build with BEM methodology. This project uses Less preprocessor and Gulp.
 
 ## How to run the project
 
